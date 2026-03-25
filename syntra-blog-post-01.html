@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Cargo Theft Is a $35B Problem Nobody Talks About at the Dock | SYNTRA</title>
+<meta name="description" content="Cargo theft costs the U.S. supply chain over $35 billion annually. Here's why it keeps happening — and why visibility is the only answer that scales.">
+<meta property="og:title" content="Why Cargo Theft Is a $35B Problem Nobody Talks About at the Dock">
+<meta property="og:description" content="Cargo theft costs the U.S. supply chain over $35 billion annually. Here's why it keeps happening — and why visibility is the only answer that scales.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.syntraplatform.io/syntra-blog-post-01.html" />
+<meta property="og:image" content="https://www.syntraplatform.io/og-image.png" />
+<meta property="og:site_name" content="SYNTRA Platform" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@syntraplatform" />
+<meta name="twitter:title" content="Why Cargo Theft Is a $35B Problem Nobody Talks About at the Dock" />
+<meta name="twitter:description" content="Cargo theft costs the U.S. supply chain over $35 billion annually. Here's why it keeps happening — and why visibility is the only answer that scales." />
+<meta name="twitter:image" content="https://www.syntraplatform.io/og-image.png" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="SYNTRA Platform" />
+<link rel="canonical" href="https://www.syntraplatform.io/syntra-blog-post-01.html" />
+<link rel="icon" type="image/png" href="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Square.png" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Why Cargo Theft Is a $35B Problem Nobody Talks About at the Dock",
+  "description": "Cargo theft costs the U.S. supply chain over $35 billion annually. Here's why it keeps happening — and why visibility is the only answer that scales.",
+  "datePublished": "2026-03-24",
+  "dateModified": "2026-03-24",
+  "author": {"@type": "Organization", "name": "SYNTRA Platform", "url": "https://www.syntraplatform.io"},
+  "publisher": {"@type": "Organization", "name": "SYNTRA Platform", "url": "https://www.syntraplatform.io", "logo": {"@type": "ImageObject", "url": "https://www.syntraplatform.io/Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Horizontal.png"}},
+  "url": "https://www.syntraplatform.io/syntra-blog-post-01.html",
+  "mainEntityOfPage": "https://www.syntraplatform.io/syntra-blog-post-01.html"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0a0a0a;
+    --surface: #111111;
+    --surface2: #171717;
+    --border: #222222;
+    --border2: #2e2e2e;
+    --text: #f0ede8;
+    --muted: #888880;
+    --faint: #444440;
+    --accent: #e0931e;
+    --accent-dim: #c8861a33;
+    --accent-bg: #1a1508;
+    --red: #e05050;
+    --red-bg: #1a0808;
+    --red-border: #3a1515;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* NAV */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10,10,10,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 40px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  .nav-logo img { height: 28px; width: auto; }
+  .nav-back {
+    font-size: 13px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .nav-back:hover { color: var(--text); text-decoration: none; }
+
+  /* HERO */
+  .hero {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 72px 40px 56px;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--red-bg);
+    border: 1px solid var(--red-border);
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 28px;
+  }
+  .eyebrow::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--red);
+  }
+
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(30px, 5vw, 52px);
+    font-weight: 800;
+    line-height: 1.08;
+    color: #fff;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  .hero-meta span { display: flex; align-items: center; gap: 6px; }
+  .meta-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--faint); }
+
+  .hero-lede {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #c8c5be;
+    border-left: 3px solid var(--accent);
+    padding-left: 24px;
+  }
+
+  /* STAT CALLOUT */
+  .stat-bar {
+    background: var(--surface);
+    border: 1px solid var(--border2);
+    border-radius: 16px;
+    padding: 32px 36px;
+    margin: 48px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 28px;
+  }
+  .stat-item { text-align: center; }
+  .stat-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-label {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* ARTICLE BODY */
+  .article {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+  }
+
+  .article h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    margin: 52px 0 16px;
+    letter-spacing: -0.01em;
+  }
+
+  .article h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #e8e5e0;
+    margin: 36px 0 12px;
+  }
+
+  .article p {
+    color: #b8b4ad;
+    margin-bottom: 20px;
+  }
+
+  .article strong { color: var(--text); font-weight: 500; }
+
+  /* PULLQUOTE */
+  .pullquote {
+    margin: 44px 0;
+    padding: 28px 32px;
+    background: var(--accent-bg);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 12px 12px 0;
+  }
+  .pullquote p {
+    font-family: 'Syne', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #f0ede8;
+    line-height: 1.4;
+    margin: 0;
+    font-style: normal;
+  }
+
+  /* CALLOUT BOX */
+  .callout {
+    background: var(--surface2);
+    border: 1px solid var(--border2);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 36px 0;
+  }
+  .callout-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .callout p {
+    font-size: 15px;
+    color: #9a9690;
+    margin: 0;
+  }
+  .callout ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .callout ul li {
+    font-size: 15px;
+    color: #9a9690;
+    padding: 5px 0;
+    padding-left: 20px;
+    position: relative;
+  }
+  .callout ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.6;
+  }
+
+  /* DIVIDER */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 48px 0;
+  }
+
+  /* CTA */
+  .cta-block {
+    background: var(--surface);
+    border: 1px solid var(--border2);
+    border-radius: 16px;
+    padding: 40px;
+    margin-top: 64px;
+    text-align: center;
+  }
+  .cta-block h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 12px;
+  }
+  .cta-block p {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 0 0 24px;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent);
+    color: #0a0a0a;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    padding: 13px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+  .cta-btn:hover { opacity: 0.88; text-decoration: none; }
+
+  /* FOOTER */
+  .post-footer {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+    border-top: 1px solid var(--border);
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: gap;
+    gap: 16px;
+  }
+  .post-footer-brand {
+    display: flex;
+    align-items: center;
+  }
+  .post-footer-brand img { height: 22px; width: auto; }
+  .post-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    color: var(--muted);
+    background: var(--surface);
+    border: 1px solid var(--border2);
+    border-radius: 999px;
+    padding: 4px 12px;
+  }
+
+  @media (max-width: 600px) {
+    .nav { padding: 0 20px; }
+    .hero, .article { padding-left: 20px; padding-right: 20px; }
+    .stat-bar { padding: 24px 20px; }
+    .pullquote { padding: 20px 20px; }
+    .cta-block { padding: 28px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo"><img src="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Horizontal.png" alt="SYNTRA" /></a>
+  <a href="blog.html" class="nav-back">← All posts</a>
+</nav>
+
+<header class="hero">
+  <div class="eyebrow">Cargo theft &amp; risk</div>
+  <h1>Why cargo theft is a $35B problem nobody talks about at the dock</h1>
+  <div class="hero-meta">
+    <span>SYNTRA Platform</span>
+    <span class="meta-dot"></span>
+    <span>6 min read</span>
+    <span class="meta-dot"></span>
+    <span>Freight Brokers &amp; Shippers</span>
+  </div>
+  <p class="hero-lede">Cargo theft costs the U.S. supply chain more than $35 billion every year. It doesn't make headlines. It doesn't show up in quarterly earnings calls. But it shows up in your loss ratios, your insurance premiums, and your customer churn.</p>
+</header>
+
+<article class="article">
+
+  <div class="stat-bar">
+    <div class="stat-item">
+      <div class="stat-num">$35B+</div>
+      <div class="stat-label">Annual cargo theft losses in the U.S.</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">59%</div>
+      <div class="stat-label">Of thefts involve strategic/fictitious pickups</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">22%</div>
+      <div class="stat-label">Year-over-year increase in reported incidents</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">&lt;20%</div>
+      <div class="stat-label">Of stolen cargo is ever recovered</div>
+    </div>
+  </div>
+
+  <p>There's a reason cargo theft doesn't get the boardroom attention it deserves. It's diffuse. It happens across hundreds of lanes, dozens of carriers, multiple handoff points. No single incident is large enough to trigger a crisis — until it is.</p>
+
+  <p>By then, the load is gone. The carrier's nowhere to be found. And you're explaining to your customer why their $400,000 electronics shipment vanished somewhere between Memphis and Atlanta.</p>
+
+  <h2>The modern cargo thief doesn't break locks</h2>
+
+  <p>The image most people carry of cargo theft is a Hollywood one — bolt cutters, darkened warehouses, a high-speed chase. That's not how it works anymore.</p>
+
+  <p>Today's cargo theft is largely <strong>white collar crime in a work vest</strong>. Fictitious carrier fraud — where criminals pose as legitimate freight carriers to pick up loads — has exploded in recent years. A bad actor creates a DOT number, builds a thin digital footprint, and bids on your load through a broker marketplace. By the time anyone realizes the carrier isn't real, the truck is gone and the freight is being liquidated across state lines.</p>
+
+  <div class="pullquote">
+    <p>"The most dangerous mile in your supply chain isn't the last mile. It's the handoff."</p>
+  </div>
+
+  <p>Strategic theft is equally sophisticated. Criminals surveil staging areas, identify high-value loads by pattern recognition, and strike during the windows you can't see — weekend drops, overnight stops, facility changeovers. They know your operation better than your own team does.</p>
+
+  <h2>Why visibility is the only answer that scales</h2>
+
+  <p>The instinct most operators have is to add process. More check-in calls. More manual confirmations. More paperwork at pickup. These steps help at the margins but they don't scale — and they create friction that drives good carriers away.</p>
+
+  <p>Real-time asset visibility changes the math entirely. When every load has a signal — whether that's a hardwired device on a trailer, a battery-powered tracker on a pallet, or a single-use smart label on a high-value parcel — you compress the window between incident and response from hours to minutes.</p>
+
+  <div class="callout">
+    <div class="callout-label">What visibility actually gives you</div>
+    <ul>
+      <li>Real-time location of every asset and shipment across your network</li>
+      <li>Geofence alerts when a load deviates from its expected corridor</li>
+      <li>Chain-of-custody documentation from pickup to proof of delivery</li>
+      <li>Stop pattern analysis that flags suspicious dwell time</li>
+      <li>Evidence for insurance claims and law enforcement recovery</li>
+    </ul>
+  </div>
+
+  <p>That last point matters more than people realize. Insurance adjusters want documentation. Law enforcement wants last-known coordinates. Without a tracker on that load, you have neither. With one, recovery rates improve dramatically — and your insurer notices.</p>
+
+  <h2>The freight broker's exposure is underappreciated</h2>
+
+  <p>Shippers think about cargo theft in terms of product loss. Freight brokers should be thinking about it in terms of liability exposure and relationship capital.</p>
+
+  <p>When a load goes missing on a carrier you placed, your customer doesn't call the carrier. They call you. Your ability to provide immediate location data, incident documentation, and a recovery timeline is the difference between retaining that shipper relationship and losing it permanently.</p>
+
+  <p>Brokers who equip their carrier network with tracking — or who mandate it for high-value lanes — aren't just protecting cargo. They're building a defensible market position. <strong>Visibility becomes a selling point.</strong></p>
+
+  <h2>The cost you're not calculating</h2>
+
+  <p>When most operators run the numbers on cargo theft, they think about the direct loss. The value of the freight. Maybe the insurance deductible.</p>
+
+  <p>The real cost is larger:</p>
+
+  <div class="callout">
+    <div class="callout-label">Full cost of a single theft incident</div>
+    <ul>
+      <li>Direct product loss (insured or uninsured)</li>
+      <li>Insurance premium increase at renewal</li>
+      <li>Expedited replacement shipment costs</li>
+      <li>Customer compensation or SLA penalties</li>
+      <li>Staff time: investigation, claims, carrier disputes</li>
+      <li>Reputational cost — loss of future business from affected customer</li>
+      <li>Legal exposure if negligence is alleged</li>
+    </ul>
+  </div>
+
+  <p>A single $200,000 theft incident can carry a true total cost of $500,000 or more when you factor in all the downstream effects. Most operations experience multiple incidents per year.</p>
+
+  <h2>What the data says about deterrence</h2>
+
+  <p>Here's something the insurance industry has known for years: <strong>visibility deters theft</strong>. Criminals are opportunists. A load with a known tracking device — or even visible evidence of a device — is a harder target than one flying blind.</p>
+
+  <p>This is the same logic that makes retail loss prevention effective. You don't catch every shoplifter. You make the risk calculation unfavorable for most of them. Asset tracking does the same thing across your freight network.</p>
+
+  <p>When your operation is visibly instrumented — when carriers and dock workers know that every asset has a signal — the risk calculus shifts. Not just for external bad actors, but for internal ones too.</p>
+
+  <hr class="divider">
+
+  <p>Cargo theft is a solvable problem. Not perfectly, not completely — but meaningfully. The operations that are reducing their exposure right now aren't doing it with more process. They're doing it with better signals.</p>
+
+  <p>Every load deserves a signal. The question is what kind fits your operation.</p>
+
+  <div class="cta-block">
+    <h3>See how SYNTRA protects high-value freight</h3>
+    <p>From single-use smart labels to hardwired trailer intelligence — we'll scope the right coverage for your lanes.</p>
+    <a href="book-demo.html" class="cta-btn">Book a 20-minute scoping call →</a>
+  </div>
+
+</article>
+
+<footer class="post-footer">
+  <a href="index.html" class="post-footer-brand"><img src="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Horizontal.png" alt="SYNTRA Platform" /></a>
+  <div class="post-tags">
+    <span class="tag">Cargo theft</span>
+    <span class="tag">Risk management</span>
+    <span class="tag">Freight brokers</span>
+    <span class="tag">Shippers</span>
+    <span class="tag">Asset tracking</span>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200">
+  <title>OG Image Generator — SYNTRA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1200px; height: 630px; overflow: hidden; background: #08090E; }
+
+    .og {
+      width: 1200px;
+      height: 630px;
+      background: #08090E;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Dot grid */
+    .og::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, black 30%, transparent 80%);
+    }
+
+    /* Amber glow left */
+    .glow-amber {
+      position: absolute;
+      left: -100px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 600px;
+      height: 500px;
+      background: radial-gradient(ellipse, rgba(255,149,0,0.18) 0%, transparent 65%);
+    }
+
+    /* Blue glow right */
+    .glow-blue {
+      position: absolute;
+      right: -80px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(ellipse, rgba(33,77,188,0.22) 0%, transparent 65%);
+    }
+
+    /* Top border gradient line */
+    .border-top {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent 0%, #FF9500 30%, #214DBC 70%, transparent 100%);
+    }
+
+    /* Bottom border gradient line */
+    .border-bottom {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08) 30%, rgba(255,255,255,0.08) 70%, transparent);
+    }
+
+    /* Main content */
+    .content {
+      position: relative;
+      z-index: 2;
+      padding: 0 100px;
+      width: 100%;
+    }
+
+    /* Tag */
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #FF9500;
+      border: 1px solid rgba(255,149,0,0.3);
+      background: rgba(255,149,0,0.08);
+      padding: 7px 16px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+    .tag::before {
+      content: '';
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #FF9500;
+    }
+
+    /* Headline */
+    .headline {
+      font-size: 80px;
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+      color: #fff;
+      margin-bottom: 28px;
+    }
+    .headline .gradient {
+      background: linear-gradient(90deg, #FF9500 0%, #214DBC 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Subtext */
+    .sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 22px;
+      color: #8892A4;
+      line-height: 1.55;
+      max-width: 620px;
+      margin-bottom: 48px;
+    }
+
+    /* Proof pills */
+    .pills {
+      display: flex;
+      gap: 12px;
+    }
+    .pill {
+      padding: 10px 20px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 100px;
+      background: rgba(255,255,255,0.04);
+      font-size: 14px;
+      font-weight: 600;
+      color: #B0BAC8;
+      font-family: 'Inter', sans-serif;
+    }
+    .pill strong {
+      color: #fff;
+      font-weight: 700;
+    }
+
+    /* Logo + domain — bottom right */
+    .branding {
+      position: absolute;
+      bottom: 44px;
+      right: 100px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+    }
+    .brand-name {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      color: #fff;
+    }
+    .brand-name span { color: #FF9500; }
+    .brand-url {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.04em;
+    }
+
+    /* Right side abstract visual */
+    .visual {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+  
+    /* ============================================================
+       MOBILE NAV PANEL
+    ============================================================ */
+    #mobile-nav {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: rgba(8,9,14,0.97);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 28px 24px 32px;
+      z-index: 998;
+      transform: translateY(-8px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+    }
+    @media (max-width: 900px) { #mobile-nav { display: block; } }
+    #mobile-nav.open { opacity: 1; transform: translateY(0); visibility: visible; }
+    .mobile-nav-list { list-style: none; padding: 0; margin: 0 0 24px; }
+    .mobile-nav-list li + li { border-top: 1px solid rgba(255,255,255,0.06); }
+    .mobile-nav-list a {
+      display: block; padding: 14px 0;
+      font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 500;
+      color: var(--white); text-decoration: none; transition: color 0.15s;
+    }
+    .mobile-nav-list a:hover { color: var(--amber); }
+    .mobile-nav-footer { padding-top: 8px; }
+    /* Hamburger ↔ X */
+    .nav-mobile-toggle span {
+      transition: transform 0.22s ease, opacity 0.22s ease;
+      transform-origin: center;
+    }
+    .nav-mobile-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-mobile-toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-mobile-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  </style>
+</head>
+<body>
+  <div class="og">
+    <div class="glow-amber"></div>
+    <div class="glow-blue"></div>
+    <div class="border-top"></div>
+    <div class="border-bottom"></div>
+
+    <div class="content">
+      <div class="tag">The Execution Platform</div>
+      <div class="headline">
+        Control<br>
+        <span class="gradient">in Motion.</span>
+      </div>
+      <div class="sub">
+        Connect every system, asset, and shipment.<br>
+        One execution layer. Total control.
+      </div>
+      <div class="pills">
+        <div class="pill"><strong>TMS</strong> · WMS · ERP</div>
+        <div class="pill"><strong>IoT</strong> · GPS · Cellular</div>
+        <div class="pill"><strong>200+</strong> Integrations</div>
+        <div class="pill"><strong>500M+</strong> Data points / day</div>
+      </div>
+    </div>
+
+    <!-- Right side — SVG network visualization -->
+    <div class="visual">
+      <svg width="320" height="420" viewBox="0 0 320 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="og-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stop-color="#FF9500" stop-opacity="0.2"/>
+            <stop offset="100%" stop-color="#FF9500" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <ellipse cx="160" cy="210" rx="140" ry="130" fill="url(#og-glow)"/>
+        <!-- Connection lines -->
+        <line x1="160" y1="210" x2="60"  y2="90"  stroke="#FF9500" stroke-width="1" stroke-opacity="0.25" stroke-dasharray="6 10"/>
+        <line x1="160" y1="210" x2="270" y2="90"  stroke="#214DBC" stroke-width="1" stroke-opacity="0.3"  stroke-dasharray="6 10"/>
+        <line x1="160" y1="210" x2="300" y2="220" stroke="#FF9500" stroke-width="1" stroke-opacity="0.25" stroke-dasharray="6 10"/>
+        <line x1="160" y1="210" x2="270" y2="340" stroke="#214DBC" stroke-width="1" stroke-opacity="0.3"  stroke-dasharray="6 10"/>
+        <line x1="160" y1="210" x2="50"  y2="340" stroke="#FF9500" stroke-width="1" stroke-opacity="0.25" stroke-dasharray="6 10"/>
+        <line x1="160" y1="210" x2="20"  y2="220" stroke="#214DBC" stroke-width="1" stroke-opacity="0.3"  stroke-dasharray="6 10"/>
+        <!-- Center node -->
+        <circle cx="160" cy="210" r="48" fill="#0D0F18" stroke="#FF9500" stroke-width="1.5"/>
+        <text x="160" y="206" text-anchor="middle" fill="#fff" font-family="Montserrat,sans-serif" font-weight="900" font-size="12" letter-spacing="2">SYNTRA</text>
+        <text x="160" y="222" text-anchor="middle" fill="#FF9500" font-family="Montserrat,sans-serif" font-weight="700" font-size="8" letter-spacing="1.5">PLATFORM</text>
+        <!-- Outer nodes -->
+        <circle cx="60"  cy="90"  r="32" fill="#0D0F18" stroke="#FF9500" stroke-width="1" stroke-opacity="0.5"/>
+        <text x="60"  y="87"  text-anchor="middle" fill="#8892A4" font-family="Montserrat,sans-serif" font-weight="700" font-size="9">TMS</text>
+        <text x="60"  y="100" text-anchor="middle" fill="#4A5468" font-family="Inter,sans-serif" font-size="7">Transport</text>
+        <circle cx="270" cy="90"  r="32" fill="#0D0F18" stroke="#214DBC" stroke-width="1" stroke-opacity="0.5"/>
+        <text x="270" y="87"  text-anchor="middle" fill="#8892A4" font-family="Montserrat,sans-serif" font-weight="700" font-size="9">WMS</text>
+        <text x="270" y="100" text-anchor="middle" fill="#4A5468" font-family="Inter,sans-serif" font-size="7">Warehouse</text>
+        <circle cx="300" cy="220" r="32" fill="#0D0F18" stroke="#FF9500" stroke-width="1" stroke-opacity="0.5"/>
+        <text x="300" y="217" text-anchor="middle" fill="#8892A4" font-family="Montserrat,sans-serif" font-weight="700" font-size="9">ERP</text>
+        <text x="300" y="230" text-anchor="middle" fill="#4A5468" font-family="Inter,sans-serif" font-size="7">Enterprise</text>
+        <circle cx="270" cy="340" r="32" fill="#0D0F18" stroke="#214DBC" stroke-width="1" stroke-opacity="0.5"/>
+        <text x="270" y="337" text-anchor="middle" fill="#8892A4" font-family="Montserrat,sans-serif" font-weight="700" font-size="9">IoT</text>
+        <text x="270" y="350" text-anchor="middle" fill="#4A5468" font-family="Inter,sans-serif" font-size="7">Devices</text>
+        <circle cx="50"  cy="340" r="32" fill="#0D0F18" stroke="#FF9500" stroke-width="1" stroke-opacity="0.5"/>
+        <text x="50"  y="337" text-anchor="middle" fill="#8892A4" font-family="Montserrat,sans-serif" font-weight="700" font-size="9">Fleet</text>
+        <text x="50"  y="350" text-anchor="middle" fill="#4A5468" font-family="Inter,sans-serif" font-size="7">Management</text>
+        <circle cx="20"  cy="220" r="32" fill="#0D0F18" stroke="#214DBC" stroke-width="1" stroke-opacity="0.5"/>
+        <text x="20"  y="217" text-anchor="middle" fill="#8892A4" font-family="Montserrat,sans-serif" font-weight="700" font-size="9">API</text>
+        <text x="20"  y="230" text-anchor="middle" fill="#4A5468" font-family="Inter,sans-serif" font-size="7">Partners</text>
+        <!-- Pulse dots -->
+        <circle cx="60"  cy="90"  r="5" fill="#FF9500" opacity="0.9"/>
+        <circle cx="270" cy="340" r="5" fill="#214DBC" opacity="0.9"/>
+      </svg>
+    </div>
+
+    <!-- Branding -->
+    <div class="branding">
+      <div class="brand-name">SYNTRA<span>.</span></div>
+      <div class="brand-url">syntraplatform.io</div>
+    </div>
+
+  </div>
+
+  <script>
+  (function(){
+    var nav    = document.getElementById('main-nav');
+    var toggle = document.querySelector('.nav-mobile-toggle');
+    var src    = document.querySelector('.nav-links');
+    if (!nav || !toggle || !src) return;
+
+    // Build panel
+    var panel = document.createElement('div');
+    panel.id  = 'mobile-nav';
+    panel.innerHTML =
+      '<ul class="mobile-nav-list"></ul>' +
+      '<div class="mobile-nav-footer">' +
+        '<a href="book-demo.html" class="btn btn-primary" ' +
+        'style="display:block;text-align:center;padding:14px 0;width:100%;">Request Demo &rarr;</a>' +
+      '</div>';
+    var ul = panel.querySelector('.mobile-nav-list');
+    src.querySelectorAll('a').forEach(function(a){
+      var li = document.createElement('li');
+      li.appendChild(a.cloneNode(true));
+      ul.appendChild(li);
+    });
+    nav.parentNode.insertBefore(panel, nav.nextSibling);
+
+    function open()  { panel.classList.add('open'); toggle.classList.add('open'); toggle.setAttribute('aria-expanded','true');  document.body.style.overflow='hidden'; }
+    function close() { panel.classList.remove('open'); toggle.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+
+    toggle.addEventListener('click', function(){ panel.classList.contains('open') ? close() : open(); });
+    panel.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+  })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SYNTRA Solutions — Built for Your Operation</title>
+  <meta name="description" content="SYNTRA solutions for freight brokers, shippers, 3PLs, fleet managers, and asset managers. Real-time visibility, IoT tracking, and one execution layer for your entire operation." />
+  <meta name="keywords" content="freight broker software, 3PL platform, shipper visibility, fleet tracking, asset management, logistics execution platform, SYNTRA" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="SYNTRA Platform" />
+  <link rel="canonical" href="https://www.syntraplatform.io/solutions.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://www.syntraplatform.io/solutions.html" />
+  <meta property="og:title"       content="SYNTRA Solutions — Built for Your Operation" />
+  <meta property="og:description" content="Whether you're brokering freight, managing a fleet, or running a 3PL — SYNTRA fits the way you actually work." />
+  <meta property="og:image"       content="https://www.syntraplatform.io/og-image.png" />
+  <meta property="og:site_name"   content="SYNTRA Platform" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@syntraplatform" />
+  <meta name="twitter:title"       content="SYNTRA Solutions — Built for Your Operation" />
+  <meta name="twitter:description" content="Whether you're brokering freight, managing a fleet, or running a 3PL — SYNTRA fits the way you actually work." />
+  <meta name="twitter:image"       content="https://www.syntraplatform.io/og-image.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Square.png" />
+  <link rel="apple-touch-icon"     href="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Square.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       TOKENS
+    ============================================================ */
+    :root {
+      --bg:          #08090E;
+      --surface:     #0D0F18;
+      --surface-2:   #121520;
+      --border:      rgba(255,255,255,0.07);
+      --white:       #FFFFFF;
+      --gray:        #8892A4;
+      --gray-lt:     #B4BCCA;
+      --amber:       #FF9500;
+      --amber-dim:   rgba(255,149,0,0.10);
+      --amber-glow:  rgba(255,149,0,0.18);
+      --blue:        #214DBC;
+      --blue-bright: #2D5FE8;
+      --blue-dim:    rgba(45,95,232,0.12);
+      --grad:        linear-gradient(135deg, #FF9500 0%, #214DBC 100%);
+      --grad-text:   linear-gradient(90deg,  #FF9500 0%, #2D5FE8 100%);
+      --max-w:       1280px;
+      --nav-h:       72px;
+      --radius:      14px;
+    }
+
+    /* ============================================================
+       RESET
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ============================================================
+       TYPOGRAPHY
+    ============================================================ */
+    h1, h2, h3, h4, h5 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+    }
+
+    .gradient-text {
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ============================================================
+       LAYOUT
+    ============================================================ */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 36px;
+    }
+    nav .container {
+      max-width: none;
+      width: 100%;
+      margin: 0;
+      padding: 0 40px;
+    }
+
+    /* ============================================================
+       COMPONENTS
+    ============================================================ */
+
+    /* Tag pill */
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--amber);
+      border: 1px solid rgba(255,149,0,0.28);
+      background: var(--amber-dim);
+      padding: 6px 14px;
+      border-radius: 100px;
+    }
+    .tag::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--amber);
+      animation: blink 2s ease-in-out infinite;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 30px;
+      border-radius: 9px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      border: none;
+      transition: all 0.22s ease;
+    }
+    .btn-primary {
+      background: var(--amber);
+      color: #000;
+      box-shadow: 0 0 28px rgba(255,149,0,0.30);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 48px rgba(255,149,0,0.50);
+      background: #FFAA22;
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(255,255,255,0.28);
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity 0.72s ease, transform 0.72s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* Section divider */
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg,
+        transparent,
+        var(--border) 20%,
+        rgba(255,149,0,0.15) 50%,
+        var(--border) 80%,
+        transparent);
+      margin: 0;
+    }
+
+    /* Chip */
+    .chip {
+      padding: 9px 18px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--gray-lt);
+      transition: all 0.2s;
+    }
+    .chip:hover, .chip.on {
+      border-color: rgba(255,149,0,0.32);
+      color: var(--amber);
+      background: var(--amber-dim);
+    }
+
+    /* ============================================================
+       KEYFRAMES
+    ============================================================ */
+    @keyframes blink {
+      0%,100% { opacity: 1; }
+      50%      { opacity: 0.35; }
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0px); }
+      50%      { transform: translateY(-14px); }
+    }
+
+    /* ============================================================
+       NAV
+    ============================================================ */
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 200;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      background: rgba(8,9,14,0.82);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+    }
+    .nav-logo img { height: 30px; width: auto; display: block; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--gray);
+      font-size: 13.5px;
+      font-weight: 500;
+      transition: color 0.2s;
+          white-space: nowrap;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--white); }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+          padding-left: 20px;
+      border-left: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-right a.login {
+      color: var(--gray);
+      font-size: 13.5px;
+      font-weight: 500;
+      transition: color 0.2s;
+          white-space: nowrap;
+    }
+    .nav-right a.login:hover { color: var(--white); }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    #solutions-hero {
+      display: flex;
+      align-items: center;
+      padding: var(--nav-h) 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Ambient background */
+    .hero-ambient {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    .hero-ambient::before {
+      content: '';
+      position: absolute;
+      top: -10%;
+      right: -5%;
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(255,149,0,0.07) 0%, transparent 65%);
+    }
+    .hero-ambient::after {
+      content: '';
+      position: absolute;
+      bottom: 10%;
+      left: -10%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(45,95,232,0.08) 0%, transparent 65%);
+    }
+
+    /* Dot grid overlay */
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.055) 1px, transparent 1px);
+      background-size: 38px 38px;
+      mask-image: radial-gradient(ellipse 90% 90% at 50% 40%, black 30%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 100px 0 80px;
+      width: 100%;
+      gap: 32px;
+    }
+
+    .hero-h1 {
+      font-size: clamp(54px, 5.8vw, 86px);
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -0.035em;
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      color: var(--gray-lt);
+      line-height: 1.72;
+      max-width: 620px;
+    }
+
+    /* Audience pills */
+    .audience-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 8px;
+    }
+
+    .audience-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 22px;
+      border-radius: 100px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gray-lt);
+      cursor: pointer;
+      transition: all 0.22s ease;
+      letter-spacing: 0.02em;
+    }
+    .audience-pill:hover {
+      border-color: var(--amber);
+      color: var(--amber);
+      background: var(--amber-dim);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(255,149,0,0.15);
+    }
+
+    /* ============================================================
+       STICKY TAB BAR
+    ============================================================ */
+    #tab-bar {
+      position: sticky;
+      top: var(--nav-h);
+      z-index: 90;
+      background: rgba(8,9,14,0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .tab-bar-inner {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .tab-bar-inner::-webkit-scrollbar { display: none; }
+
+    .tab-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 18px 28px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--gray);
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+      transition: color 0.2s, border-color 0.2s;
+      text-transform: uppercase;
+      position: relative;
+      top: 1px;
+    }
+    .tab-btn:hover { color: var(--gray-lt); }
+    .tab-btn.active {
+      color: var(--amber);
+      border-bottom-color: var(--amber);
+    }
+
+    /* ============================================================
+       SOLUTION SECTIONS — SHARED
+    ============================================================ */
+    .solution-section {
+      padding: 120px 0;
+      position: relative;
+      scroll-margin-top: 140px;
+    }
+
+    .solution-section:nth-child(even) {
+      background: linear-gradient(180deg, transparent, rgba(255,149,0,0.015) 50%, transparent);
+    }
+
+    .solution-inner {
+      display: grid;
+      grid-template-columns: 55% 45%;
+      gap: 72px;
+      align-items: center;
+    }
+
+    /* Alternate: odd = content-left/visual-right, even = visual-left/content-right */
+    .solution-inner.reverse {
+      grid-template-columns: 45% 55%;
+    }
+    .solution-inner.reverse .sol-content { order: 2; }
+    .solution-inner.reverse .sol-visual  { order: 1; }
+
+    /* Content side */
+    .sol-content {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .sol-h2 {
+      font-size: clamp(32px, 3.2vw, 48px);
+      line-height: 1.1;
+    }
+
+    .sol-pain-intro {
+      font-size: 16px;
+      color: var(--gray-lt);
+      line-height: 1.72;
+      border-left: 2px solid rgba(255,149,0,0.25);
+      padding-left: 16px;
+    }
+
+    /* Pain points */
+    .pain-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .pain-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 18px;
+      background: rgba(255,60,60,0.04);
+      border: 1px solid rgba(255,80,80,0.15);
+      border-left: 3px solid rgba(255,80,80,0.40);
+      border-radius: 10px;
+    }
+
+    .pain-icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(255,60,60,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: rgba(255,100,100,0.9);
+      font-weight: 700;
+      margin-top: 1px;
+    }
+
+    .pain-item p {
+      font-size: 14px;
+      color: var(--gray-lt);
+      line-height: 1.5;
+    }
+
+    /* Fix items */
+    .fix-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 10px;
+    }
+
+    .fix-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .fix-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 18px;
+      background: rgba(255,149,0,0.04);
+      border: 1px solid rgba(255,149,0,0.12);
+      border-left: 3px solid rgba(255,149,0,0.50);
+      border-radius: 10px;
+    }
+
+    .fix-icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(255,149,0,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: var(--amber);
+      font-weight: 700;
+      margin-top: 1px;
+    }
+
+    .fix-item p {
+      font-size: 14px;
+      color: var(--gray-lt);
+      line-height: 1.5;
+    }
+
+    /* Feature chips row */
+    .feature-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .feature-chip {
+      padding: 7px 14px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--gray-lt);
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0.02em;
+    }
+
+    /* Visual / stat card side */
+    .sol-visual {
+      display: flex;
+      justify-content: center;
+    }
+
+    .stat-card {
+      width: 100%;
+      max-width: 420px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: var(--grad);
+    }
+
+    .stat-card-header {
+      padding: 24px 28px 18px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stat-card-header span {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    .stat-blocks {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-block {
+      padding: 28px 28px;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.2s;
+    }
+    .stat-block:last-child { border-bottom: none; }
+    .stat-block:hover { background: var(--surface-2); }
+
+    .stat-block-num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(32px, 3.5vw, 44px);
+      font-weight: 900;
+      line-height: 1;
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+
+    .stat-block-label {
+      font-size: 13.5px;
+      color: var(--gray);
+      line-height: 1.5;
+    }
+
+    /* ============================================================
+       CROSS-SELL BAND
+    ============================================================ */
+    #crosssell {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #crosssell::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(255,149,0,0.03) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .crosssell-header {
+      text-align: center;
+      margin-bottom: 68px;
+    }
+
+    .crosssell-h2 {
+      font-size: clamp(34px, 3.8vw, 54px);
+      margin-top: 20px;
+    }
+
+    .crosssell-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .crosssell-col {
+      background: var(--surface);
+      padding: 48px 40px;
+      transition: background 0.3s;
+      position: relative;
+    }
+    .crosssell-col::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--grad);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .crosssell-col:hover { background: var(--surface-2); }
+    .crosssell-col:hover::before { opacity: 1; }
+
+    .crosssell-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--amber-dim);
+      border: 1px solid rgba(255,149,0,0.22);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 24px;
+    }
+
+    .crosssell-col h3 {
+      font-size: 20px;
+      margin-bottom: 14px;
+    }
+
+    .crosssell-col p {
+      font-size: 14.5px;
+      color: var(--gray);
+      line-height: 1.75;
+    }
+
+    /* ============================================================
+       CTA BAND
+    ============================================================ */
+    #final-cta { padding: 100px 0; }
+
+    .cta-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 90px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 15%;
+      right: 15%;
+      height: 2px;
+      background: var(--grad);
+    }
+    .cta-box::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      height: 300px;
+      background: radial-gradient(ellipse, rgba(255,149,0,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cta-box h2 {
+      font-size: clamp(34px, 3.8vw, 54px);
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+    .cta-box p {
+      font-size: 17px;
+      color: var(--gray);
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 1;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-actions {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      flex-wrap: wrap;
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 64px 0 40px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+    .footer-logo {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .footer-logo img { height: 26px; width: auto; display: block; }
+    .footer-brand p {
+      font-size: 13.5px;
+      color: var(--gray);
+      line-height: 1.72;
+      max-width: 270px;
+    }
+    .footer-col h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 18px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .footer-col a { font-size: 13.5px; color: var(--gray); transition: color 0.2s; }
+    .footer-col a:hover { color: var(--white); }
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      font-size: 12.5px;
+      color: var(--gray);
+    }
+    .footer-bottom a { color: var(--amber); }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1024px) {
+      .solution-inner { grid-template-columns: 1fr; gap: 48px; }
+      .solution-inner.reverse .sol-content { order: 1; }
+      .solution-inner.reverse .sol-visual  { order: 2; }
+      .crosssell-grid { grid-template-columns: 1fr; gap: 0; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .stat-card { max-width: 100%; }
+    }
+    @media (max-width: 900px) {
+      .nav-links         { display: none !important; }
+      .login             { display: none !important; }
+      .nav-right a.login { display: none !important; }
+      .nav-mobile-toggle { display: block !important; margin-left: auto; }
+      .nav-right .btn-primary { display: none !important; }
+      .nav-mobile-toggle span { display: block; width: 22px; height: 2px; background: var(--amber); border-radius: 2px; }
+      .nav-mobile-toggle span + span { margin-top: 5px; }
+    }
+    }
+        @media (max-width: 640px) {
+      .container { padding: 0 20px; }
+      .solution-section { padding: 80px 0; }
+      .cta-box { padding: 48px 24px; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+      .crosssell-col { padding: 36px 28px; }
+    }
+
+    /* ============================================================
+       MOBILE — 768px
+    ============================================================ */
+    @media (max-width: 768px) {
+      section { padding: 60px 0; }
+      .container { padding: 0 20px; }
+
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+      .footer-brand { grid-column: 1 / -1; }
+
+      .cta-box { padding: 44px 28px; }
+
+      .btn { padding: 13px 22px; font-size: 13px; }
+
+      /* Solution section grids — 2-col to 1-col */
+      .solution-inner { grid-template-columns: 1fr !important; gap: 40px; }
+
+      /* Reverse direction fix on mobile */
+      .solution-inner.reverse .sol-content { order: 1; }
+      .solution-inner.reverse .sol-visual  { order: 2; }
+
+      /* Tab bar */
+      #tab-bar { top: 60px; }
+      .tab-bar-inner { gap: 0; }
+
+      /* Audience pills */
+      .audience-pills { gap: 8px; }
+      .audience-pill { font-size: 12px; padding: 6px 12px; }
+
+      /* Feature chips */
+      .feature-chips { gap: 6px; }
+      .feature-chip { font-size: 11px; }
+    }
+
+    @media (max-width: 480px) {
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+  
+    /* ============================================================
+       MOBILE NAV PANEL
+    ============================================================ */
+    #mobile-nav {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: rgba(8,9,14,0.97);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 28px 24px 32px;
+      z-index: 998;
+      transform: translateY(-8px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+    }
+    @media (max-width: 900px) { #mobile-nav { display: block; } }
+    #mobile-nav.open { opacity: 1; transform: translateY(0); visibility: visible; }
+    .mobile-nav-list { list-style: none; padding: 0; margin: 0 0 24px; }
+    .mobile-nav-list li + li { border-top: 1px solid rgba(255,255,255,0.06); }
+    .mobile-nav-list a {
+      display: block; padding: 14px 0;
+      font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 500;
+      color: var(--white); text-decoration: none; transition: color 0.15s;
+    }
+    .mobile-nav-list a:hover { color: var(--amber); }
+    .mobile-nav-footer { padding-top: 8px; }
+    /* Hamburger ↔ X */
+    .nav-mobile-toggle span {
+      transition: transform 0.22s ease, opacity 0.22s ease;
+      transform-origin: center;
+    }
+    .nav-mobile-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-mobile-toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-mobile-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAV
+  ============================================================ -->
+  <nav id="main-nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo"><img src="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Horizontal.png" alt="SYNTRA" /></a>
+        <ul class="nav-links">
+          <li><a href="index.html#platform">Platform</a></li>
+          <li><a href="index.html#hardware">Hardware</a></li>
+          <li><a href="solutions.html" class="active">Solutions</a></li>
+          <li><a href="use-cases.html">Use Cases</a></li>
+          <li><a href="integrations.html">Integrations</a></li>
+          <li><a href="about.html">Company</a></li>
+        </ul>
+        <div class="nav-right">
+          <a href="https://syntra.scoti.app" target="_blank" rel="noopener" class="login">Sign In</a>
+          <a href="book-demo.html" class="btn btn-primary" style="padding:10px 22px; font-size:12px;">Request Demo</a>
+        </div>
+            <button class="nav-mobile-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section id="solutions-hero">
+    <div class="hero-ambient"></div>
+    <div class="hero-grid"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="reveal"><span class="tag">Solutions</span></div>
+        <h1 class="hero-h1 reveal">
+          Built for your<br>
+          <span class="gradient-text">operation.</span>
+        </h1>
+        <p class="hero-sub reveal">
+          Whether you're brokering freight, managing a fleet, or running a 3PL — SYNTRA fits the way you actually work. Choose your role.
+        </p>
+        <div class="audience-pills reveal">
+          <a href="#brokers" class="audience-pill">Freight Brokers</a>
+          <a href="#shippers" class="audience-pill">Shippers</a>
+          <a href="#3pl" class="audience-pill">3PLs</a>
+          <a href="#fleet" class="audience-pill">Fleet Managers</a>
+          <a href="#assets" class="audience-pill">Asset Managers</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STICKY TAB BAR
+  ============================================================ -->
+  <div id="tab-bar">
+    <div class="container">
+      <div class="tab-bar-inner">
+        <button class="tab-btn active" data-target="brokers">Freight Brokers</button>
+        <button class="tab-btn" data-target="shippers">Shippers</button>
+        <button class="tab-btn" data-target="3pl">3PLs</button>
+        <button class="tab-btn" data-target="fleet">Fleet Managers</button>
+        <button class="tab-btn" data-target="assets">Asset Managers</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SECTION 1: FREIGHT BROKERS
+  ============================================================ -->
+  <section class="solution-section" id="brokers">
+    <div class="container">
+      <div class="solution-inner">
+
+        <!-- Content Left -->
+        <div class="sol-content reveal">
+          <div><span class="tag">Freight Brokers</span></div>
+          <h2 class="sol-h2">
+            Your customers want<br>
+            <span class="gradient-text">real-time answers.</span><br>
+            Now you have them.
+          </h2>
+          <p class="sol-pain-intro">
+            Your customers call you because a shipment went dark. You call the carrier. The carrier checks their system. Nobody knows.
+          </p>
+
+          <div>
+            <div class="fix-label" style="color: rgba(255,100,100,0.8); border-color: rgba(255,80,80,0.3); margin-bottom: 10px;">The problem</div>
+            <div class="pain-list">
+              <div class="pain-item">
+                <div class="pain-icon">✕</div>
+                <p>No live visibility between pickup and delivery</p>
+              </div>
+              <div class="pain-item">
+                <div class="pain-icon">✕</div>
+                <p>Carrier tracking links that break or go stale</p>
+              </div>
+              <div class="pain-item">
+                <div class="pain-icon">✕</div>
+                <p>Zero chain-of-custody when a claim gets filed</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="fix-label">How SYNTRA fixes it</div>
+            <div class="fix-list">
+              <div class="fix-item">
+                <div class="fix-icon">✓</div>
+                <p>PulseXL inside every high-value shipment — live location, condition, tamper alerts</p>
+              </div>
+              <div class="fix-item">
+                <div class="fix-icon">✓</div>
+                <p>One dashboard for every shipment, every carrier, every customer</p>
+              </div>
+              <div class="fix-item">
+                <div class="fix-icon">✓</div>
+                <p>Automated chain-of-custody reports ready when you need them</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-chips">
+            <span class="feature-chip">GPS Tracking</span>
+            <span class="feature-chip">TMS Integration</span>
+            <span class="feature-chip">Chain of Custody</span>
+            <span class="feature-chip">Real-Time Alerts</span>
+            <span class="feature-chip">Customer Visibility Portal</span>
+          </div>
+
+          <div>
+            <a href="book-demo.html" class="btn btn-primary">See it for brokers &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Visual Right -->
+        <div class="sol-visual reveal" style="transition-delay: 0.15s;">
+          <div class="stat-card">
+            <div class="stat-card-header">
+              <span>The impact</span>
+            </div>
+            <div class="stat-blocks">
+              <div class="stat-block">
+                <div class="stat-block-num">87%</div>
+                <div class="stat-block-label">of freight claims lack proper documentation</div>
+              </div>
+              <div class="stat-block">
+                <div class="stat-block-num">4.2hrs</div>
+                <div class="stat-block-label">avg time to locate a missing shipment without SYNTRA</div>
+              </div>
+              <div class="stat-block">
+                <div class="stat-block-num">1 dashboard</div>
+                <div class="stat-block-label">replaces 3+ carrier portals</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================================================
+       SECTION 2: SHIPPERS
+  ============================================================ -->
+  <section class="solution-section" id="shippers">
+    <div class="container">
+      <div class="solution-inner reverse">
+
+        <!-- Content Right (order: 2 on desktop) -->
+        <div class="sol-content reveal">
+          <div><span class="tag">Shippers</span></div>
+          <h2 class="sol-h2">
+            High-value freight<br>
+            <span class="gradient-text">needs more than a tracking number.</span>
+          </h2>
+          <p class="sol-pain-intro">
+            You're shipping product worth thousands. A tracking number that updates once a day isn't visibility — it's a liability.
+          </p>
+
+          <div>
+            <div class="fix-label" style="color: rgba(255,100,100,0.8); margin-bottom: 10px;">The problem</div>
+            <div class="pain-list">
+              <div class="pain-item">
+                <div class="pain-icon">✕</div>
+                <p>Temperature excursions that go undetected until delivery</p>
+              </div>
+              <div class="pain-item">
+                <div class="pain-icon">✕</div>
+                <p>No tamper alerts on high-value cargo</p>
+              </div>
+              <div class="pain-item">
+                <div class="pain-icon">✕</div>
+                <p>Insurance claims with no supporting data</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="fix-label">How SYNTRA fixes it</div>
+            <div class="fix-list">
+              <div class="fix-item">
+                <div class="fix-icon">✓</div>
+                <p>Continuous cold chain monitoring — temperature, humidity, shock from pickup to delivery</p>
+              </div>
+              <div class="fix-item">
+                <div class="fix-icon">✓</div>
+                <p>Tamper detection and geofence alerts the moment something's off</p>
+              </div>
+              <div class="fix-item">
+                <div class="fix-icon">✓</div>
+                <p>Full sensor history and chain-of-custody docs for every claim</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-chips">
+            <span class="feature-chip">Cold Chain</span>
+            <span class="feature-chip">Tamper Detection</span>
+            <span class="feature-chip">Geofencing</span>
+            <span class="feature-chip">Shock Sensing</span>
+            <span class="feature-chip">Claims Documentation</span>
+          </div>
+
+          <div>
+            <a href="book-demo.html" class="btn btn-primary">See it for shippers &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Visual Left (order: 1 on desktop) -->
+        <div class="sol-visual reveal" style="transition-delay: 0.15s;">
+          <div class="stat-card">
+            <div class="stat-card-header">
+              <span>The impact</span>
+            </div>
+            <div class="stat-blocks">
+              <div class="stat-block">
+                <div class="stat-block-num">$50B+</div>
+                <div class="stat-block-label">lost annually to cold chain failures in US logistics</div>
+              </div>
+              <div class="stat-block">
+                <div class="stat-block-num">72%</div>
+                <div class="stat-block-label">of cargo claims are denied due to lack of documentation</div>
+              </div>
+              <div class="stat-block">
+                <div class="stat-block-num">Real-time</div>
+                <div class="stat-block-label">vs next-day — the difference between a catch and a claim</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================================================
+       SECTION 3: 3PLs
+  ============================================================ -->
+  <section class="solution-section" id="3pl">
+    <div class="container">
+      <div class="solution-inner">
+
+        <!-- Content Left -->
+        <div class="sol-content reveal">
+          <div><span class="tag">Third-Party Logistics</span></div>
+          <h2 class="sol-h2">
+            One platform.<br>
+            <span class="gradient-text">Every customer. Every shipment.</span>
+          </h2>
+          <p class="sol-pain-intro">
+            You're managing visibility for 20 customers on 5 different platforms. None of them talk to each other. Your ops team is drowning in tabs.
+          </p>
+
+          <div>
+            <div class="fix-label" style="color: rgba(255,100,100,0.8); margin-bottom: 10px;">The problem</div>
+            <div class="pain-list">
+              <div class="pain-item">
+                <div class="pain-icon">✕</div>
+                <p>Different tracking tools for different customers</p>
+              </div>
+              <div class="pain-item">
+                <div class="pain-icon">✕</div>
+                <p>WMS and TMS that don't share data</p>
+              </div>
+              <div class="pain-item">
+                <div class="pain-icon">✕</div>
+                <p>Manual reporting that takes hours every week</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="fix-label">How SYNTRA fixes it</div>
+            <div class="fix-list">
+              <div class="fix-item">
+                <div class="fix-icon">✓</div>
+                <p>Single execution layer for all customers — one dashboard, all freight</p>
+              </div>
+              <div class="fix-item">
+                <div class="fix-icon">✓</div>
+                <p>Native TMS, WMS, and ERP integrations — data flows automatically</p>
+              </div>
+              <div class="fix-item">
+                <div class="fix-icon">✓</div>
+                <p>Automated reporting per customer, per shipment, per SLA</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-chips">
+            <span class="feature-chip">Multi-Client Dashboard</span>
+            <span class="feature-chip">WMS Integration</span>
+            <span class="feature-chip">ERP Sync</span>
+            <span class="feature-chip">Automated Reporting</span>
+            <span class="feature-chip">EDI Support</span>
+          </div>
+
+          <div>
+            <a href="book-demo.html" class="btn btn-primary">See it for 3PLs &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Visual Right -->
+        <div class="sol-visual reveal" style="transition-delay: 0.15s;">
+          <div class="stat-card">
+            <div class="stat-card-header">
+              <span>The impact</span>
+            </div>
+            <div class="stat-blocks">
+              <div class="stat-block">
+                <div class="stat-block-num">200+</div>
+                <div class="stat-block-label">native integrations across TMS, WMS, ERP, and EDI</div>
+              </div>
+              <div class="stat-block">
+                <div class="stat-block-num">40%</div>
+                <div class="stat-block-label">avg reduction in manual reporting time</div>
+              </div>
+              <div class="stat-block">
+                <div class="stat-block-num">Unlimited</div>
+                <div class="stat-block-label">customers and shipments on one platform</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================================================
+       SECTION 4: FLEET MANAGERS
+  ============================================================ -->
+  <section class="solution-section" id="fleet">
+    <div class="container">
+      <div class="solution-inner reverse">
+
+        <!-- Content Right -->
+        <div class="sol-content reveal">
+          <div><span class="tag">Fleet Managers</span></div>
+          <h2 class="sol-h2">
+            Know where every trailer is.<br>
+            <span class="gradient-text">Know what it's doing.</span>
+          </h2>
+          <p class="sol-pain-intro">
+            Trailers sitting at a dock for 3 days. Reefer units running when they shouldn't be. Doors opening at 2am. You find out after the fact — or not at all.
+          </p>
+
+          <div>
+            <div class="fix-label" style="color: rgba(255,100,100,0.8); margin-bottom: 10px;">The problem</div>
+            <div class="pain-list">
+              <div class="pain-item">
+                <div class="pain-icon">✕</div>
+                <p>Trailers sitting idle — you don't know where or for how long</p>
+              </div>
+              <div class="pain-item">
+                <div class="pain-icon">✕</div>
+                <p>Reefer sync failures that aren't caught until product is compromised</p>
+              </div>
+              <div class="pain-item">
+                <div class="pain-icon">✕</div>
+                <p>Door events with no alert, no log, no accountability</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="fix-label">How SYNTRA fixes it</div>
+            <div class="fix-list">
+              <div class="fix-item">
+                <div class="fix-icon">✓</div>
+                <p>WaypointXL on every trailer — door events, dwell time, geofence alerts in real time</p>
+              </div>
+              <div class="fix-item">
+                <div class="fix-icon">✓</div>
+                <p>Reefer unit sync and temperature corridor monitoring with instant alerts</p>
+              </div>
+              <div class="fix-item">
+                <div class="fix-icon">✓</div>
+                <p>Utilization scoring so you know which trailers are working and which are costing you</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-chips">
+            <span class="feature-chip">Trailer Tracking</span>
+            <span class="feature-chip">Door Events</span>
+            <span class="feature-chip">Reefer Sync</span>
+            <span class="feature-chip">Dwell Analytics</span>
+            <span class="feature-chip">Geofencing</span>
+            <span class="feature-chip">Utilization Scoring</span>
+          </div>
+
+          <div>
+            <a href="book-demo.html" class="btn btn-primary">See it for fleet &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Visual Left -->
+        <div class="sol-visual reveal" style="transition-delay: 0.15s;">
+          <div class="stat-card">
+            <div class="stat-card-header">
+              <span>The impact</span>
+            </div>
+            <div class="stat-blocks">
+              <div class="stat-block">
+                <div class="stat-block-num">23%</div>
+                <div class="stat-block-label">of trailers are idle at any given time in a typical fleet</div>
+              </div>
+              <div class="stat-block">
+                <div class="stat-block-num">Real-time</div>
+                <div class="stat-block-label">door, reefer, and geofence alerts — not next morning</div>
+              </div>
+              <div class="stat-block">
+                <div class="stat-block-num">WaypointXL</div>
+                <div class="stat-block-label">hardwired + battery backup, built for heavy-duty ops</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================================================
+       SECTION 5: ASSET MANAGERS
+  ============================================================ -->
+  <section class="solution-section" id="assets">
+    <div class="container">
+      <div class="solution-inner">
+
+        <!-- Content Left -->
+        <div class="sol-content reveal">
+          <div><span class="tag">Asset Managers</span></div>
+          <h2 class="sol-h2">
+            Stop tracking assets.<br>
+            <span class="gradient-text">Start optimizing them.</span>
+          </h2>
+          <p class="sol-pain-intro">
+            You have millions in equipment. Some of it's working hard. Some of it hasn't moved in 90 days. You don't know which is which — and that's costing you.
+          </p>
+
+          <div>
+            <div class="fix-label" style="color: rgba(255,100,100,0.8); margin-bottom: 10px;">The problem</div>
+            <div class="pain-list">
+              <div class="pain-item">
+                <div class="pain-icon">✕</div>
+                <p>No visibility into equipment utilization across locations</p>
+              </div>
+              <div class="pain-item">
+                <div class="pain-icon">✕</div>
+                <p>Assets going missing or sitting idle with no alert</p>
+              </div>
+              <div class="pain-item">
+                <div class="pain-icon">✕</div>
+                <p>Can't prove ROI on equipment spend without hard data</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="fix-label">How SYNTRA fixes it</div>
+            <div class="fix-list">
+              <div class="fix-item">
+                <div class="fix-icon">✓</div>
+                <p>AI-powered asset utilization scoring via SYNTRA + CSCS — know exactly what's performing</p>
+              </div>
+              <div class="fix-item">
+                <div class="fix-icon">✓</div>
+                <p>Geofence alerts and movement tracking on every piece of equipment</p>
+              </div>
+              <div class="fix-item">
+                <div class="fix-icon">✓</div>
+                <p>Hard data on every asset: usage hours, idle time, location history — ready for your next capital review</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-chips">
+            <span class="feature-chip">Utilization Scoring</span>
+            <span class="feature-chip">AI Intelligence</span>
+            <span class="feature-chip">CSCS Partnership</span>
+            <span class="feature-chip">Location History</span>
+            <span class="feature-chip">Idle Alerts</span>
+            <span class="feature-chip">Capital Planning Data</span>
+          </div>
+
+          <div>
+            <a href="book-demo.html" class="btn btn-primary">See it for asset managers &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Visual Right -->
+        <div class="sol-visual reveal" style="transition-delay: 0.15s;">
+          <div class="stat-card">
+            <div class="stat-card-header">
+              <span>The impact</span>
+            </div>
+            <div class="stat-blocks">
+              <div class="stat-block">
+                <div class="stat-block-num">CSCS AI</div>
+                <div class="stat-block-label">powers predictive intelligence on every asset</div>
+              </div>
+              <div class="stat-block">
+                <div class="stat-block-num">30%</div>
+                <div class="stat-block-label">avg reduction in idle asset time after 90 days on SYNTRA</div>
+              </div>
+              <div class="stat-block">
+                <div class="stat-block-num">Every asset</div>
+                <div class="stat-block-label">GPS + cellular. Package to pallet to trailer to equipment.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CROSS-SELL BAND
+  ============================================================ -->
+  <section id="crosssell">
+    <div class="container">
+      <div class="crosssell-header reveal">
+        <span class="tag">The SYNTRA Difference</span>
+        <h2 class="crosssell-h2">
+          One platform.<br>
+          <span class="gradient-text">Every operation.</span>
+        </h2>
+      </div>
+      <div class="crosssell-grid">
+        <div class="crosssell-col reveal">
+          <div class="crosssell-icon">🔓</div>
+          <h3>No lock-in</h3>
+          <p>Use our hardware, yours, or both. Open integrations mean you're never stuck with a vendor you've outgrown.</p>
+        </div>
+        <div class="crosssell-col reveal" style="transition-delay: 0.12s;">
+          <div class="crosssell-icon">📈</div>
+          <h3>Scales with you</h3>
+          <p>Start with package tracking. Add trailers. Add assets. SYNTRA grows with your operation without a rip-and-replace.</p>
+        </div>
+        <div class="crosssell-col reveal" style="transition-delay: 0.24s;">
+          <div class="crosssell-icon">⚡</div>
+          <h3>Replaces the chaos</h3>
+          <p>Not another tab. Not another dashboard. One execution layer for your entire operation — from the dock to the C-suite.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA BAND
+  ============================================================ -->
+  <section id="final-cta">
+    <div class="container">
+      <div class="cta-box reveal">
+        <h2>Ready to see SYNTRA<br>in your operation?</h2>
+        <p>Pick your role above and we'll show you exactly how it fits. 30 minutes. No slides.</p>
+        <div class="cta-actions">
+          <a href="book-demo.html" class="btn btn-primary">Book a Demo &rarr;</a>
+          <a href="pricing.html" class="btn btn-ghost">See Pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo"><img src="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Horizontal.png" alt="SYNTRA" /></a>
+          <p>The execution platform logistics companies use to connect every system, asset, and shipment — and actually run their operation from one place.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="integrations.html">Integrations</a></li>
+            <li><a href="index.html#hardware">Hardware</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">API Docs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="#brokers">Freight Brokers</a></li>
+            <li><a href="#3pl">3PLs</a></li>
+            <li><a href="#shippers">Shippers</a></li>
+            <li><a href="#fleet">Fleet Managers</a></li>
+            <li><a href="#assets">Asset Managers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About SYNTRA</a></li>
+            <li><a href="about.html#cscs">CSCS Partnership</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 SYNTRA Platform, Inc. All rights reserved.</span>
+        <span><a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms.html" style="color:var(--gray);">Terms of Service</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JS
+  ============================================================ -->
+  <script>
+    // --- Scroll reveal ---
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05 });
+    revealEls.forEach(el => revealObs.observe(el));
+
+    // Mobile reveal fallback — trigger elements already in viewport
+    setTimeout(() => {
+      document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 1.1) el.classList.add('visible');
+      });
+    }, 300);
+
+    // --- Sticky tab bar: IntersectionObserver on sections ---
+    const sectionIds = ['brokers', 'shippers', '3pl', 'fleet', 'assets'];
+    const tabBtns = document.querySelectorAll('.tab-btn');
+
+    function setActiveTab(id) {
+      tabBtns.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.target === id);
+      });
+    }
+
+    const sectionObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setActiveTab(entry.target.id);
+        }
+      });
+    }, {
+      threshold: 0.3,
+      rootMargin: '-140px 0px -40% 0px'
+    });
+
+    sectionIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) sectionObs.observe(el);
+    });
+
+    // --- Tab click: smooth scroll ---
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = document.getElementById(btn.dataset.target);
+        if (target) {
+          const offset = 140; // nav + tab bar height
+          const top = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // --- Audience pills: smooth scroll with offset ---
+    document.querySelectorAll('.audience-pill').forEach(pill => {
+      pill.addEventListener('click', (e) => {
+        e.preventDefault();
+        const href = pill.getAttribute('href');
+        const target = document.querySelector(href);
+        if (target) {
+          const offset = 140;
+          const top = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
+
+  <script>
+  (function(){
+    var nav    = document.getElementById('main-nav');
+    var toggle = document.querySelector('.nav-mobile-toggle');
+    var src    = document.querySelector('.nav-links');
+    if (!nav || !toggle || !src) return;
+
+    // Build panel
+    var panel = document.createElement('div');
+    panel.id  = 'mobile-nav';
+    panel.innerHTML =
+      '<ul class="mobile-nav-list"></ul>' +
+      '<div class="mobile-nav-footer">' +
+        '<a href="book-demo.html" class="btn btn-primary" ' +
+        'style="display:block;text-align:center;padding:14px 0;width:100%;">Request Demo &rarr;</a>' +
+      '</div>';
+    var ul = panel.querySelector('.mobile-nav-list');
+    src.querySelectorAll('a').forEach(function(a){
+      var li = document.createElement('li');
+      li.appendChild(a.cloneNode(true));
+      ul.appendChild(li);
+    });
+    nav.parentNode.insertBefore(panel, nav.nextSibling);
+
+    function open()  { panel.classList.add('open'); toggle.classList.add('open'); toggle.setAttribute('aria-expanded','true');  document.body.style.overflow='hidden'; }
+    function close() { panel.classList.remove('open'); toggle.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+
+    toggle.addEventListener('click', function(){ panel.classList.contains('open') ? close() : open(); });
+    panel.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+  })();
+  </script>
+
+</body>
+</html>

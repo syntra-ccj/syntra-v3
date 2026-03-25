@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers — SYNTRA Platform</title>
+  <meta name="description" content="Join the team building freight's execution layer. No open roles at the moment, but we're always interested in exceptional people." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="SYNTRA Platform" />
+  <link rel="canonical" href="https://www.syntraplatform.io/careers.html" />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://www.syntraplatform.io/careers.html" />
+  <meta property="og:title"       content="Careers — SYNTRA Platform" />
+  <meta property="og:description" content="Join the team building freight's execution layer." />
+  <meta property="og:image"       content="https://www.syntraplatform.io/og-image.png" />
+  <meta property="og:site_name"   content="SYNTRA Platform" />
+
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@syntraplatform" />
+  <meta name="twitter:title"       content="Careers — SYNTRA Platform" />
+  <meta name="twitter:description" content="Join the team building freight's execution layer." />
+  <meta name="twitter:image"       content="https://www.syntraplatform.io/og-image.png" />
+
+  <link rel="icon" type="image/png" href="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Square.png" />
+  <link rel="apple-touch-icon"     href="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Square.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:          #08090E;
+      --surface:     #0D0F18;
+      --surface-2:   #121520;
+      --border:      rgba(255,255,255,0.07);
+      --white:       #FFFFFF;
+      --gray:        #8892A4;
+      --gray-lt:     #B4BCCA;
+      --amber:       #FF9500;
+      --amber-dim:   rgba(255,149,0,0.10);
+      --blue-bright: #2D5FE8;
+      --grad-text:   linear-gradient(90deg, #FF9500 0%, #2D5FE8 100%);
+      --max-w:       1280px;
+      --nav-h:       72px;
+      --radius:      14px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); font-size: 16px; }
+    body { background: var(--bg); color: var(--white); font-family: 'Inter', sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 40px; }
+
+    h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; font-weight: 900; line-height: 1.1; }
+
+    .grad-text {
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 28px; border-radius: 8px;
+      font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600;
+      cursor: pointer; border: none; transition: all 0.22s ease;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--amber); color: #000;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 40px rgba(255,149,0,0.45); background: #FFAA22; }
+    .btn-ghost {
+      background: transparent; color: var(--white);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.28); }
+
+    .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* NAV */
+    nav {
+      position: fixed; inset: 0 0 auto 0; z-index: 200;
+      height: var(--nav-h); display: flex; align-items: center;
+      background: rgba(8,9,14,0.82); backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      border-bottom: 1px solid var(--border); transition: background 0.3s;
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+    .nav-logo { display: flex; align-items: center; }
+    .nav-logo img { height: 30px; width: auto; }
+    .nav-links { display: flex; align-items: center; gap: 8px; list-style: none; }
+    .nav-links a {
+      font-size: 13px; font-weight: 500; color: var(--gray);
+      padding: 6px 12px; border-radius: 6px;
+      transition: color 0.2s, background 0.2s; white-space: nowrap;
+    }
+    .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.05); }
+    .nav-links a.active { color: var(--white); }
+    .nav-right { display: flex; align-items: center; gap: 12px; padding-left: 20px; border-left: 1px solid rgba(255,255,255,0.08); }
+    .login { font-size: 13px; font-weight: 500; color: var(--gray); transition: color 0.2s; }
+    .login:hover { color: var(--white); }
+    .nav-mobile-toggle {
+      display: none; flex-direction: column; justify-content: center;
+      gap: 5px; background: none; border: none; cursor: pointer; padding: 8px;
+    }
+    .nav-mobile-toggle span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; transition: transform 0.22s ease, opacity 0.22s ease; transform-origin: center; }
+    .nav-mobile-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-mobile-toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-mobile-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* HERO */
+    #careers-hero {
+      padding: calc(var(--nav-h) + 100px) 0 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    #careers-hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: 50%;
+      transform: translateX(-50%);
+      width: 800px; height: 500px;
+      background: radial-gradient(ellipse, rgba(255,149,0,0.06) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--amber-dim); border: 1px solid rgba(255,149,0,0.2);
+      padding: 6px 16px; border-radius: 100px;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--amber);
+      margin-bottom: 32px;
+    }
+    .hero-eyebrow::before { content: '●'; font-size: 7px; }
+    #careers-hero h1 {
+      font-size: clamp(44px, 6vw, 80px);
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+    }
+    #careers-hero p {
+      font-size: 18px; color: var(--gray-lt); line-height: 1.7;
+      max-width: 560px; margin: 0 auto 40px;
+    }
+
+    /* NO ROLES CARD */
+    #no-roles {
+      padding: 40px 0 100px;
+    }
+    .no-roles-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 64px;
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+    .no-roles-card::before {
+      content: '';
+      position: absolute;
+      top: -80px; left: 50%;
+      transform: translateX(-50%);
+      width: 400px; height: 300px;
+      background: radial-gradient(ellipse, rgba(45,95,232,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .no-roles-icon {
+      width: 64px; height: 64px;
+      background: var(--amber-dim);
+      border: 1px solid rgba(255,149,0,0.2);
+      border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 28px;
+      font-size: 28px;
+    }
+    .no-roles-card h2 {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+    .no-roles-card p {
+      font-size: 16px;
+      color: var(--gray-lt);
+      line-height: 1.75;
+      margin-bottom: 36px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .no-roles-card .btn { margin-bottom: 36px; }
+
+    .no-roles-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 36px 0;
+    }
+    .no-roles-note {
+      font-size: 13px;
+      color: var(--gray);
+    }
+    .no-roles-note a { color: var(--amber); }
+    .no-roles-note a:hover { text-decoration: underline; }
+
+    /* VALUES */
+    #values {
+      padding: 80px 0 100px;
+      border-top: 1px solid var(--border);
+    }
+    .values-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .values-header .eyebrow {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--amber);
+      margin-bottom: 16px;
+    }
+    .values-header h2 { font-size: clamp(28px, 4vw, 44px); margin-bottom: 16px; }
+    .values-header p { font-size: 16px; color: var(--gray-lt); max-width: 500px; margin: 0 auto; }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .value-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      transition: border-color 0.2s;
+    }
+    .value-card:hover { border-color: rgba(255,149,0,0.25); }
+    .value-icon {
+      font-size: 24px; margin-bottom: 16px;
+    }
+    .value-card h3 {
+      font-size: 17px; margin-bottom: 10px; color: var(--white);
+    }
+    .value-card p {
+      font-size: 14px; color: var(--gray-lt); line-height: 1.7;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 72px 0 40px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 56px;
+    }
+    .footer-logo img { height: 28px; margin-bottom: 20px; }
+    .footer-brand p { font-size: 14px; color: var(--gray); line-height: 1.7; max-width: 280px; }
+    .footer-col h4 { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); margin-bottom: 20px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .footer-col ul li a { font-size: 14px; color: var(--gray); transition: color 0.2s; }
+    .footer-col ul li a:hover { color: var(--white); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 32px; border-top: 1px solid var(--border); font-size: 13px; color: var(--gray); flex-wrap: wrap; gap: 12px; }
+    .footer-bottom a { color: var(--gray); transition: color 0.2s; }
+    .footer-bottom a:hover { color: var(--white); }
+
+    /* MOBILE NAV PANEL */
+    #mobile-nav {
+      display: none;
+      position: fixed;
+      inset: var(--nav-h) 0 0 0;
+      background: rgba(8,9,14,0.98);
+      backdrop-filter: blur(24px);
+      z-index: 199;
+      padding: 32px 40px;
+      flex-direction: column;
+      gap: 0;
+      overflow-y: auto;
+    }
+    #mobile-nav.open { display: flex; }
+    .mobile-nav-list { list-style: none; display: flex; flex-direction: column; gap: 4px; flex: 1; }
+    .mobile-nav-list li a { display: block; font-size: 22px; font-weight: 700; font-family: 'Montserrat', sans-serif; color: var(--gray-lt); padding: 14px 0; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+    .mobile-nav-list li a:hover { color: var(--white); }
+    .mobile-nav-footer { padding-top: 32px; }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .nav-links { display: none !important; }
+      .login { display: none !important; }
+      .nav-right a.login { display: none !important; }
+      .nav-mobile-toggle { display: flex !important; margin-left: auto; }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .container { padding: 0 20px; }
+      .no-roles-card { padding: 40px 24px; }
+      .values-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="main-nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo"><img src="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Horizontal.png" alt="SYNTRA" /></a>
+        <ul class="nav-links">
+          <li><a href="index.html#platform">Platform</a></li>
+          <li><a href="index.html#hardware">Hardware</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="use-cases.html">Use Cases</a></li>
+          <li><a href="integrations.html">Integrations</a></li>
+          <li><a href="about.html" class="active">Company</a></li>
+        </ul>
+        <div class="nav-right">
+          <a href="https://syntra.scoti.app" target="_blank" rel="noopener" class="login">Sign In</a>
+          <a href="book-demo.html" class="btn btn-primary" style="padding:10px 22px; font-size:12px;">Request Demo</a>
+        </div>
+        <button class="nav-mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="careers-hero">
+    <div class="container">
+      <div class="reveal">
+        <div class="hero-eyebrow">Careers</div>
+        <h1>Come build with us.</h1>
+        <p>We're a small team doing meaningful work in an industry that's overdue for it. When we hire, we hire carefully.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NO OPEN ROLES -->
+  <section id="no-roles">
+    <div class="container">
+      <div class="no-roles-card reveal">
+        <div class="no-roles-icon">📭</div>
+        <h2>No open roles at the moment.</h2>
+        <p>We don't post roles until we're ready to move fast. Check back soon — or send us a note and we'll keep you in mind when the right opportunity comes up.</p>
+        <a href="mailto:careers@syntraplatform.io" class="btn btn-primary">Get in touch →</a>
+        <hr class="no-roles-divider" />
+        <p class="no-roles-note">
+          You can also reach us directly at <a href="mailto:careers@syntraplatform.io">careers@syntraplatform.io</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section id="values">
+    <div class="container">
+      <div class="values-header reveal">
+        <p class="eyebrow">What we look for</p>
+        <h2>People who think like operators.</h2>
+        <p>We build for people who move real freight. The best people on our team understand that deeply.</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-card reveal">
+          <div class="value-icon">🔍</div>
+          <h3>Customer-first thinking</h3>
+          <p>Every decision starts with: what does the person running freight at 2am actually need? If you don't ask that question naturally, we're probably not a fit.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-icon">⚡</div>
+          <h3>Bias toward action</h3>
+          <p>We move fast and we ship. We'd rather learn from a real outcome than spend three meetings aligning on a plan that never gets tested.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-icon">🧩</div>
+          <h3>Systems-level thinking</h3>
+          <p>Logistics is all interconnected. The best solutions here don't just solve the immediate problem — they make the surrounding system better too.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-icon">🤝</div>
+          <h3>Direct communication</h3>
+          <p>We say what we mean and mean what we say. No politics, no ambiguity, no passive-aggressive Slack messages. Just honest, clear communication.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-icon">📐</div>
+          <h3>High craft, low ego</h3>
+          <p>We care deeply about the quality of our work — and not at all about who gets credit for it. The best idea wins, regardless of where it came from.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-icon">🌱</div>
+          <h3>Ownership mentality</h3>
+          <p>Everyone here runs something. If something's broken, we fix it. If something's missing, we build it. We don't wait to be told what to do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo"><img src="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Horizontal.png" alt="SYNTRA" /></a>
+          <p>The execution platform logistics companies use to connect every system, asset, and shipment — and actually run their operation from one place.</p>
+        </div>
+        <div class="footer-col"><h4>Platform</h4><ul><li><a href="index.html">Overview</a></li><li><a href="integrations.html">Integrations</a></li><li><a href="index.html#hardware">Hardware</a></li><li><a href="pricing.html">How We Work</a></li><li><a href="#">Security</a></li><li><a href="#">API Docs</a></li></ul></div>
+        <div class="footer-col"><h4>Solutions</h4><ul><li><a href="solutions.html#brokers">Freight Brokers</a></li><li><a href="solutions.html#3pl">3PLs</a></li><li><a href="solutions.html#shippers">Shippers</a></li><li><a href="solutions.html#fleet">Fleet Managers</a></li><li><a href="solutions.html#assets">Asset Managers</a></li><li><a href="use-cases.html">Use Cases</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About SYNTRA</a></li><li><a href="about.html#cscs">CSCS Partnership</a></li><li><a href="careers.html">Careers</a></li><li><a href="contact.html">Contact</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 SYNTRA Platform, Inc. All rights reserved.</span>
+        <span><a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms.html" style="color:var(--gray);">Terms of Service</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.05 });
+    revealEls.forEach(el => obs.observe(el));
+    setTimeout(() => {
+      revealEls.forEach(el => { const r = el.getBoundingClientRect(); if (r.top < window.innerHeight * 1.1) el.classList.add('visible'); });
+    }, 300);
+
+    // Nav solidify
+    const mainNav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      mainNav.style.background = window.scrollY > 60 ? 'rgba(8,9,14,0.98)' : 'rgba(8,9,14,0.82)';
+    }, { passive: true });
+
+    // Mobile nav
+    (function(){
+      var nav    = document.getElementById('main-nav');
+      var toggle = document.querySelector('.nav-mobile-toggle');
+      var src    = document.querySelector('.nav-links');
+      if (!nav || !toggle || !src) return;
+      var panel  = document.createElement('div');
+      panel.id   = 'mobile-nav';
+      panel.innerHTML = '<ul class="mobile-nav-list"></ul><div class="mobile-nav-footer"><a href="book-demo.html" class="btn btn-primary" style="display:block;text-align:center;padding:14px 0;width:100%;">Request Demo &rarr;</a></div>';
+      var ul = panel.querySelector('.mobile-nav-list');
+      src.querySelectorAll('a').forEach(function(a){ var li = document.createElement('li'); li.appendChild(a.cloneNode(true)); ul.appendChild(li); });
+      nav.parentNode.insertBefore(panel, nav.nextSibling);
+      function open()  { panel.classList.add('open'); toggle.classList.add('open'); document.body.style.overflow = 'hidden'; }
+      function close() { panel.classList.remove('open'); toggle.classList.remove('open'); document.body.style.overflow = ''; }
+      toggle.addEventListener('click', function(){ panel.classList.contains('open') ? close() : open(); });
+      panel.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
+      document.addEventListener('keydown', function(e){ if (e.key === 'Escape') close(); });
+    })();
+  </script>
+
+</body>
+</html>

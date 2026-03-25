@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — SYNTRA Platform</title>
+  <meta name="description" content="SYNTRA Platform's Privacy Policy. Learn how we collect, use, and protect your data, including GPS and location data from our IoT hardware." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="SYNTRA Platform" />
+  <link rel="canonical" href="https://www.syntraplatform.io/privacy.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://www.syntraplatform.io/privacy.html" />
+  <meta property="og:title"       content="Privacy Policy — SYNTRA Platform" />
+  <meta property="og:description" content="How SYNTRA Platform collects, uses, and protects your data." />
+  <meta property="og:image"       content="https://www.syntraplatform.io/og-image.png" />
+  <meta property="og:site_name"   content="SYNTRA Platform" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@syntraplatform" />
+  <meta name="twitter:title"       content="Privacy Policy — SYNTRA Platform" />
+  <meta name="twitter:description" content="How SYNTRA Platform collects, uses, and protects your data." />
+  <meta name="twitter:image"       content="https://www.syntraplatform.io/og-image.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Square.png" />
+  <link rel="apple-touch-icon"     href="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Square.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       TOKENS
+    ============================================================ */
+    :root {
+      --bg:          #08090E;
+      --surface:     #0D0F18;
+      --surface-2:   #121520;
+      --border:      rgba(255,255,255,0.07);
+      --white:       #FFFFFF;
+      --gray:        #8892A4;
+      --gray-lt:     #B4BCCA;
+      --amber:       #FF9500;
+      --amber-dim:   rgba(255,149,0,0.10);
+      --amber-glow:  rgba(255,149,0,0.18);
+      --blue:        #214DBC;
+      --blue-bright: #2D5FE8;
+      --blue-dim:    rgba(45,95,232,0.12);
+      --grad:        linear-gradient(135deg, #FF9500 0%, #214DBC 100%);
+      --grad-text:   linear-gradient(90deg,  #FF9500 0%, #2D5FE8 100%);
+      --max-w:       1280px;
+      --nav-h:       72px;
+      --radius:      14px;
+    }
+
+    /* ============================================================
+       RESET
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ============================================================
+       TYPOGRAPHY
+    ============================================================ */
+    h1, h2, h3, h4, h5 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+    }
+
+    .gradient-text {
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ============================================================
+       LAYOUT
+    ============================================================ */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 36px;
+    }
+    nav .container {
+      max-width: none;
+      width: 100%;
+      margin: 0;
+      padding: 0 40px;
+    }
+
+    /* ============================================================
+       COMPONENTS
+    ============================================================ */
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 30px;
+      border-radius: 9px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      border: none;
+      transition: all 0.22s ease;
+    }
+    .btn-primary {
+      background: var(--amber);
+      color: #000;
+      box-shadow: 0 0 28px rgba(255,149,0,0.30);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 48px rgba(255,149,0,0.50);
+      background: #FFAA22;
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity 0.72s ease, transform 0.72s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ============================================================
+       KEYFRAMES
+    ============================================================ */
+    @keyframes blink {
+      0%,100% { opacity: 1; }
+      50%      { opacity: 0.35; }
+    }
+
+    /* ============================================================
+       NAV
+    ============================================================ */
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 200;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      background: rgba(8,9,14,0.82);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+    }
+    .nav-logo img { height: 30px; width: auto; display: block; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--gray);
+      font-size: 13.5px;
+      font-weight: 500;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--white); }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding-left: 20px;
+      border-left: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-right a.login {
+      color: var(--gray);
+      font-size: 13.5px;
+      font-weight: 500;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-right a.login:hover { color: var(--white); }
+    .nav-mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    /* ============================================================
+       MOBILE NAV PANEL
+    ============================================================ */
+    #mobile-nav {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: rgba(8,9,14,0.97);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 28px 24px 32px;
+      z-index: 998;
+      transform: translateY(-8px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+    }
+    @media (max-width: 900px) { #mobile-nav { display: block; } }
+    #mobile-nav.open { opacity: 1; transform: translateY(0); visibility: visible; }
+    .mobile-nav-list { list-style: none; padding: 0; margin: 0 0 24px; }
+    .mobile-nav-list li + li { border-top: 1px solid rgba(255,255,255,0.06); }
+    .mobile-nav-list a {
+      display: block; padding: 14px 0;
+      font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 500;
+      color: var(--white); text-decoration: none; transition: color 0.15s;
+    }
+    .mobile-nav-list a:hover { color: var(--amber); }
+    .mobile-nav-footer { padding-top: 8px; }
+    .nav-mobile-toggle span {
+      transition: transform 0.22s ease, opacity 0.22s ease;
+      transform-origin: center;
+    }
+    .nav-mobile-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-mobile-toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-mobile-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ============================================================
+       LEGAL PAGE — HERO
+    ============================================================ */
+    .legal-hero {
+      padding-top: calc(var(--nav-h) + 80px);
+      padding-bottom: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .legal-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -10%;
+      width: 600px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(255,149,0,0.06) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .legal-hero-inner {
+      position: relative;
+      z-index: 2;
+    }
+    .legal-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--amber);
+      border: 1px solid rgba(255,149,0,0.28);
+      background: var(--amber-dim);
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+    .legal-badge::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--amber);
+      animation: blink 2s ease-in-out infinite;
+    }
+    .legal-hero h1 {
+      font-size: clamp(38px, 4.5vw, 64px);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.0;
+      margin-bottom: 20px;
+    }
+    .legal-meta {
+      font-size: 13.5px;
+      color: var(--gray);
+      margin-bottom: 24px;
+    }
+    .legal-hero-sub {
+      font-size: 17px;
+      color: var(--gray-lt);
+      line-height: 1.72;
+      max-width: 680px;
+    }
+
+    /* ============================================================
+       LEGAL PAGE — LAYOUT
+    ============================================================ */
+    .legal-layout {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 72px;
+      align-items: start;
+      padding-bottom: 120px;
+    }
+
+    /* TOC Sidebar */
+    .legal-toc {
+      position: sticky;
+      top: calc(var(--nav-h) + 32px);
+    }
+    .legal-toc-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 16px;
+    }
+    .legal-toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .legal-toc-list a {
+      display: block;
+      font-size: 12.5px;
+      color: var(--gray);
+      padding: 7px 12px;
+      border-left: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s, background 0.2s;
+      border-radius: 0 6px 6px 0;
+      line-height: 1.4;
+    }
+    .legal-toc-list a:hover {
+      color: var(--white);
+      border-left-color: var(--amber);
+      background: rgba(255,149,0,0.06);
+    }
+    .legal-toc-list a.active {
+      color: var(--amber);
+      border-left-color: var(--amber);
+      background: rgba(255,149,0,0.06);
+    }
+
+    /* Content */
+    .legal-content {
+      min-width: 0;
+    }
+    .legal-section {
+      padding: 0 0 56px;
+      scroll-margin-top: calc(var(--nav-h) + 24px);
+    }
+    .legal-section + .legal-section {
+      border-top: 1px solid var(--border);
+      padding-top: 52px;
+    }
+    .legal-h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      padding-left: 16px;
+      border-left: 3px solid var(--amber);
+      margin-bottom: 24px;
+      line-height: 1.25;
+    }
+    .legal-p {
+      font-family: 'Inter', sans-serif;
+      font-size: 15.5px;
+      color: var(--gray-lt);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .legal-p:last-child { margin-bottom: 0; }
+    .legal-p strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+    .legal-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 16px 0 20px;
+      padding-left: 4px;
+    }
+    .legal-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15.5px;
+      color: var(--gray-lt);
+      line-height: 1.72;
+    }
+    .legal-list li::before {
+      content: '';
+      flex-shrink: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--amber);
+      margin-top: 8px;
+    }
+    .legal-list li strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+    .legal-note {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--blue-bright);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 18px 20px;
+      margin: 20px 0;
+      font-size: 14px;
+      color: var(--gray-lt);
+      line-height: 1.7;
+    }
+    .legal-note strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+    .legal-highlight {
+      background: var(--amber-dim);
+      border: 1px solid rgba(255,149,0,0.18);
+      border-left: 3px solid var(--amber);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 18px 20px;
+      margin: 20px 0;
+      font-size: 14px;
+      color: var(--gray-lt);
+      line-height: 1.7;
+    }
+    .legal-highlight strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+    .legal-contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-top: 24px;
+    }
+    .legal-contact-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 16px;
+    }
+    .legal-contact-card p {
+      font-size: 15px;
+      color: var(--gray-lt);
+      line-height: 1.72;
+      margin-bottom: 6px;
+    }
+    .legal-contact-card a {
+      color: var(--amber);
+      transition: opacity 0.2s;
+    }
+    .legal-contact-card a:hover { opacity: 0.8; }
+
+    /* ============================================================
+       SECTION DIVIDER
+    ============================================================ */
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg,
+        transparent,
+        var(--border) 20%,
+        rgba(255,149,0,0.15) 50%,
+        var(--border) 80%,
+        transparent);
+      margin: 0;
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 64px 0 40px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+    .footer-logo {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .footer-logo img { height: 26px; width: auto; display: block; }
+    .footer-brand p {
+      font-size: 13.5px;
+      color: var(--gray);
+      line-height: 1.72;
+      max-width: 270px;
+    }
+    .footer-col h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 18px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .footer-col a { font-size: 13.5px; color: var(--gray); transition: color 0.2s; }
+    .footer-col a:hover { color: var(--white); }
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      font-size: 12.5px;
+      color: var(--gray);
+    }
+    .footer-bottom a { color: var(--amber); }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1024px) {
+      .legal-layout { grid-template-columns: 200px 1fr; gap: 48px; }
+      .footer-inner  { grid-template-columns: 1fr 1fr; gap: 40px; }
+    }
+    @media (max-width: 900px) {
+      .nav-links          { display: none !important; }
+      .login              { display: none !important; }
+      .nav-right a.login  { display: none !important; }
+      .nav-mobile-toggle  { display: flex !important; margin-left: auto; }
+      .nav-right .btn-primary { display: none !important; }
+      .nav-mobile-toggle span { display: block; width: 22px; height: 2px; background: var(--amber); border-radius: 2px; }
+      .nav-mobile-toggle span + span { margin-top: 5px; }
+      .legal-layout { grid-template-columns: 1fr; gap: 0; }
+      .legal-toc { display: none; }
+    }
+    @media (max-width: 768px) {
+      .container { padding: 0 20px; }
+      .legal-hero { padding-top: calc(var(--nav-h) + 48px); padding-bottom: 40px; }
+      .legal-layout { padding-bottom: 80px; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 480px) {
+      .footer-inner  { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAV
+  ============================================================ -->
+  <nav id="main-nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo"><img src="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Horizontal.png" alt="SYNTRA" /></a>
+        <ul class="nav-links">
+          <li><a href="index.html#platform">Platform</a></li>
+          <li><a href="index.html#hardware">Hardware</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="use-cases.html">Use Cases</a></li>
+          <li><a href="integrations.html">Integrations</a></li>
+          <li><a href="about.html">Company</a></li>
+        </ul>
+        <div class="nav-right">
+          <a href="https://syntra.scoti.app" target="_blank" rel="noopener" class="login">Sign In</a>
+          <a href="book-demo.html" class="btn btn-primary" style="padding:10px 22px; font-size:12px;">Request Demo</a>
+        </div>
+        <button class="nav-mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <div class="legal-hero">
+    <div class="container">
+      <div class="legal-hero-inner reveal">
+        <div class="legal-badge">Legal</div>
+        <h1>Privacy Policy</h1>
+        <p class="legal-meta">Last updated: March 2026</p>
+        <p class="legal-hero-sub">
+          This Privacy Policy describes how SYNTRA Platform, Inc. ("<strong style="color:var(--white);">SYNTRA</strong>," "<strong style="color:var(--white);">we</strong>," "<strong style="color:var(--white);">us</strong>," or "<strong style="color:var(--white);">our</strong>") collects, uses, stores, and shares information when you access our website, use our logistics execution platform, or interact with our IoT hardware and tracking devices. We are committed to handling your data — and the data of your customers and assets — with transparency, care, and appropriate security controls.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================================================
+       MAIN CONTENT
+  ============================================================ -->
+  <div class="container">
+    <div class="legal-layout">
+
+      <!-- TOC Sidebar -->
+      <aside class="legal-toc">
+        <p class="legal-toc-label">Contents</p>
+        <ul class="legal-toc-list">
+          <li><a href="#information-we-collect">1. Information We Collect</a></li>
+          <li><a href="#how-we-use">2. How We Use Your Information</a></li>
+          <li><a href="#data-sharing">3. Data Sharing &amp; Disclosure</a></li>
+          <li><a href="#location-data">4. Location &amp; GPS Data</a></li>
+          <li><a href="#data-retention">5. Data Retention</a></li>
+          <li><a href="#security">6. Security</a></li>
+          <li><a href="#your-rights">7. Your Rights</a></li>
+          <li><a href="#cookies">8. Cookies &amp; Tracking</a></li>
+          <li><a href="#childrens-privacy">9. Children's Privacy</a></li>
+          <li><a href="#illinois">10. Illinois-Specific Disclosures</a></li>
+          <li><a href="#policy-changes">11. Changes to This Policy</a></li>
+          <li><a href="#contact">12. Contact Us</a></li>
+        </ul>
+      </aside>
+
+      <!-- Content -->
+      <main class="legal-content">
+
+        <!-- 1. Information We Collect -->
+        <section id="information-we-collect" class="legal-section reveal">
+          <h2 class="legal-h2">1. Information We Collect</h2>
+          <p class="legal-p">We collect information necessary to deliver, operate, and improve the SYNTRA platform. The categories of information we collect depend on how you interact with our services.</p>
+
+          <p class="legal-p"><strong>Account &amp; Identity Information</strong></p>
+          <ul class="legal-list">
+            <li>Name, business email address, phone number, and job title provided during account registration or demo requests.</li>
+            <li>Company name, industry, fleet size, and operational details you share during onboarding.</li>
+            <li>Billing contact information, payment method details (processed by our PCI-compliant payment processor — we do not store raw card numbers), and invoicing addresses.</li>
+            <li>Login credentials, including hashed passwords and, where enabled, multi-factor authentication records.</li>
+          </ul>
+
+          <p class="legal-p"><strong>GPS &amp; Location Data from Hardware</strong></p>
+          <ul class="legal-list">
+            <li>Real-time and historical GPS coordinates transmitted by SYNTRA tracking devices (trackers, temperature sensors, asset tags) installed on vehicles, trailers, containers, or other assets.</li>
+            <li>Speed, heading, altitude, and geofence entry/exit events generated by our hardware.</li>
+            <li>Sensor readings including temperature, humidity, door open/close status, and vibration data where applicable hardware is deployed.</li>
+            <li>Device identifiers, firmware versions, signal strength, and cellular carrier data for hardware health monitoring.</li>
+          </ul>
+
+          <p class="legal-p"><strong>Platform Usage &amp; Operational Data</strong></p>
+          <ul class="legal-list">
+            <li>Shipment records, load details, carrier assignments, and dispatch events created within the SYNTRA platform.</li>
+            <li>Integration data received from connected TMS, WMS, ERP, and visibility systems through our API or pre-built connectors.</li>
+            <li>User actions, feature interactions, workflow configurations, report queries, and alert rule settings within the platform.</li>
+            <li>Communication logs including in-platform messaging, check-call records, and driver or carrier updates.</li>
+          </ul>
+
+          <p class="legal-p"><strong>Technical &amp; Device Data</strong></p>
+          <ul class="legal-list">
+            <li>IP address, browser type and version, operating system, device type, and screen resolution for users accessing the platform via web browser.</li>
+            <li>Session duration, page views, click-path data, and error logs collected automatically to support platform stability and performance analysis.</li>
+            <li>API request logs including endpoints called, response codes, and request timestamps, used for debugging and rate-limit enforcement.</li>
+          </ul>
+
+          <p class="legal-p"><strong>Cookies &amp; Similar Technologies</strong></p>
+          <p class="legal-p">We use cookies and similar browser-based technologies to maintain authenticated sessions, remember user preferences, and collect aggregate analytics. See Section 8 for full details.</p>
+        </section>
+
+        <!-- 2. How We Use Your Information -->
+        <section id="how-we-use" class="legal-section reveal">
+          <h2 class="legal-h2">2. How We Use Your Information</h2>
+          <p class="legal-p">We use the information we collect only for the purposes described here. We do not use your data for advertising, we do not build consumer profiles for resale, and we do not use location data transmitted by your assets for any purpose outside of delivering the services you have subscribed to.</p>
+
+          <ul class="legal-list">
+            <li><strong>Platform Delivery:</strong> To operate, maintain, and provide access to the SYNTRA logistics execution platform, including real-time tracking dashboards, alert engines, integration pipelines, and reporting tools.</li>
+            <li><strong>Hardware Management:</strong> To provision, configure, monitor, and update SYNTRA IoT devices deployed across your fleet and asset base; to detect hardware faults and push firmware updates remotely.</li>
+            <li><strong>Billing &amp; Account Administration:</strong> To process subscription payments, issue invoices, manage account entitlements, handle renewals and upgrades, and communicate material account changes.</li>
+            <li><strong>Safety &amp; Security:</strong> To detect unauthorized access attempts, investigate potential misuse, enforce our Terms of Service, and protect the integrity and availability of the platform for all customers.</li>
+            <li><strong>Product Improvement:</strong> To analyze aggregated, de-identified usage patterns to inform feature prioritization, identify performance bottlenecks, and improve the reliability of our integrations and hardware connectivity.</li>
+            <li><strong>Customer Support:</strong> To respond to support tickets, diagnose technical issues, replicate reported problems, and communicate resolutions or platform updates relevant to your account.</li>
+            <li><strong>Communications:</strong> To send transactional notifications such as alert triggers, shipment status updates, and platform maintenance windows. With your consent, to send product announcements and industry insights. You may opt out of non-essential communications at any time.</li>
+            <li><strong>Legal &amp; Compliance:</strong> To comply with applicable laws, regulations, and lawful government requests; to enforce contractual agreements; and to protect SYNTRA's legal rights.</li>
+          </ul>
+        </section>
+
+        <!-- 3. Data Sharing -->
+        <section id="data-sharing" class="legal-section reveal">
+          <h2 class="legal-h2">3. Data Sharing &amp; Disclosure</h2>
+          <p class="legal-p">SYNTRA does not sell, rent, or trade your personal information or operational data to third parties. We share information only in the limited circumstances described below.</p>
+
+          <ul class="legal-list">
+            <li><strong>Integration Partners (Customer-Authorized):</strong> When you configure an integration with a third-party TMS, WMS, ERP, visibility network, or carrier portal, data flows between SYNTRA and that system only as needed to execute the integration you have enabled. You control which integrations are active and what data is shared. SYNTRA does not independently connect your data to third-party systems without your explicit authorization.</li>
+            <li><strong>Service Providers:</strong> We engage trusted vendors to help operate our infrastructure, process payments, deliver email, provide cloud hosting, and support customer success activities. Each vendor is subject to a data processing agreement or equivalent contractual obligation requiring them to protect your data, use it only for the services they provide to us, and not disclose it to others. A current list of our sub-processors is available at syntraplatform.io/sub-processors and will be updated when material changes occur.</li>
+            <li><strong>Legal Requirements:</strong> We may disclose information if required to do so by applicable law, subpoena, court order, or lawful government request — including requests from Illinois state authorities. Where permitted, we will notify you before disclosing and will disclose only the minimum information legally required.</li>
+            <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, asset sale, or other business combination involving SYNTRA, your information may be transferred to the successor entity. We will provide notice in advance and ensure your data continues to be protected under equivalent or stronger privacy terms.</li>
+            <li><strong>Protection of Rights:</strong> We may share information when we believe in good faith that disclosure is necessary to prevent fraud, protect the safety of our users or the public, or enforce our Terms of Service.</li>
+          </ul>
+
+          <div class="legal-highlight">
+            <strong>We do not sell personal information.</strong> SYNTRA does not sell, lease, or otherwise transfer personal information or GPS/location data to data brokers, advertising networks, or any third party for commercial purposes unrelated to delivering your contracted services.
+          </div>
+        </section>
+
+        <!-- 4. Location & GPS Data -->
+        <section id="location-data" class="legal-section reveal">
+          <h2 class="legal-h2">4. Location &amp; GPS Data</h2>
+          <p class="legal-p">Location and telematics data represent the operational core of the SYNTRA platform. Because of the sensitivity of this data and its significance to your business operations, we apply specific policies and principles to its handling.</p>
+
+          <p class="legal-p"><strong>Data Ownership Stays With You</strong></p>
+          <p class="legal-p">All GPS coordinates, route histories, geofence records, temperature logs, and sensor data generated by SYNTRA hardware installed on your assets remain your property. SYNTRA processes this data as a data processor on your behalf — your organization is the data controller. We do not acquire ownership rights to this data at any point. Upon termination of your subscription, you may export your historical location data in standard formats before account closure.</p>
+
+          <p class="legal-p"><strong>Purpose Limitation</strong></p>
+          <p class="legal-p">Location data transmitted by your assets is used exclusively to: power your real-time tracking dashboards, generate the alerts and geofence triggers you have configured, fulfill integration data feeds you have authorized, produce the operational reports available within your account, and support customer service and technical troubleshooting on your behalf. We do not use your asset location data to train AI or ML models sold to third parties, nor do we aggregate it for competitive intelligence.</p>
+
+          <p class="legal-p"><strong>Driver &amp; Employee Location Data</strong></p>
+          <p class="legal-p">Where SYNTRA hardware is used to track vehicles operated by employees or contractors, it is your responsibility as the operator to comply with applicable labor, employment, and privacy laws governing employee monitoring in your jurisdiction — including Illinois law and applicable notice and consent requirements. SYNTRA provides the tools; the legal obligation to inform and obtain consent from tracked individuals rests with you as the deploying organization.</p>
+
+          <div class="legal-note">
+            <strong>Retention is Configurable:</strong> Your account administrator can configure how long historical location data is retained within the SYNTRA platform, within the limits described in Section 5. Reducing the retention period will permanently delete older records in accordance with your setting.
+          </div>
+        </section>
+
+        <!-- 5. Data Retention -->
+        <section id="data-retention" class="legal-section reveal">
+          <h2 class="legal-h2">5. Data Retention</h2>
+          <p class="legal-p">We retain data only as long as necessary to deliver our services, meet legal obligations, and support legitimate business operations. The following retention periods apply by default.</p>
+
+          <ul class="legal-list">
+            <li><strong>Account &amp; Profile Data:</strong> Retained for the duration of your active subscription. Upon account cancellation or expiration, account data is retained for 90 days to support account recovery and audit purposes, after which it is permanently deleted from production systems.</li>
+            <li><strong>GPS &amp; Location Data:</strong> Configurable by your account administrator within a range of 30 to 365 days of rolling history. The default retention window for new accounts is 180 days. Data beyond the configured retention window is automatically purged on a rolling basis.</li>
+            <li><strong>Sensor &amp; Telemetry Data:</strong> Retained on the same schedule as GPS data unless your subscription tier includes extended historical telemetry, in which case your contracted retention period applies.</li>
+            <li><strong>Integration &amp; API Logs:</strong> Retained for 90 days for debugging and audit trail purposes, then automatically deleted.</li>
+            <li><strong>Billing &amp; Financial Records:</strong> Retained for a minimum of 7 years in accordance with applicable tax and accounting regulations, regardless of account status.</li>
+            <li><strong>Legal Holds:</strong> If your data becomes subject to a legal hold, litigation, regulatory inquiry, or law enforcement request, we may retain the affected data beyond standard retention periods for the duration of the relevant proceeding. We will notify you of any such holds where legally permissible.</li>
+            <li><strong>Backups:</strong> Data deleted from production systems may persist in encrypted backup archives for up to 30 additional days before being purged from backup media as part of our standard backup rotation.</li>
+          </ul>
+        </section>
+
+        <!-- 6. Security -->
+        <section id="security" class="legal-section reveal">
+          <h2 class="legal-h2">6. Security</h2>
+          <p class="legal-p">SYNTRA takes a defense-in-depth approach to security. We design our platform to meet the control requirements aligned with SOC 2 Type II, and we continuously evaluate our practices against industry standards for cloud-hosted B2B SaaS platforms.</p>
+
+          <ul class="legal-list">
+            <li><strong>Encryption in Transit:</strong> All data transmitted between SYNTRA hardware, our cloud infrastructure, and end users is encrypted using TLS 1.2 or higher. API endpoints and the platform web application enforce HTTPS exclusively.</li>
+            <li><strong>Encryption at Rest:</strong> Customer data stored in SYNTRA databases and object storage is encrypted at rest using AES-256, with encryption keys managed through a dedicated key management service.</li>
+            <li><strong>Access Controls:</strong> Access to customer data within our internal systems is limited to personnel with a legitimate business need. We enforce role-based access controls, require multi-factor authentication for all internal system access, and maintain access logs for review.</li>
+            <li><strong>Infrastructure Security:</strong> Our cloud infrastructure is hosted in SOC 2-certified data centers. We apply network segmentation, regular vulnerability scanning, and automated patch management to our production environment.</li>
+            <li><strong>Penetration Testing:</strong> We conduct periodic third-party penetration tests against our platform and remediate identified vulnerabilities according to severity-based timelines.</li>
+            <li><strong>Incident Response:</strong> In the event of a confirmed data security incident that affects your account data, we will notify you without undue delay and in accordance with applicable breach notification laws, including the Illinois Personal Information Protection Act (PIPA). If the incident affects 500 or more Illinois residents, we will also notify the Illinois Attorney General as required by law. Our notification will describe the nature of the incident, the data affected, and the steps we are taking to contain and remediate it.</li>
+          </ul>
+
+          <p class="legal-p">No system can guarantee absolute security. We encourage you to use strong, unique passwords, enable multi-factor authentication for your SYNTRA account, and promptly report any suspected unauthorized access to <a href="mailto:security@syntraplatform.io" style="color:var(--amber);">security@syntraplatform.io</a>.</p>
+        </section>
+
+        <!-- 7. Your Rights -->
+        <section id="your-rights" class="legal-section reveal">
+          <h2 class="legal-h2">7. Your Rights</h2>
+          <p class="legal-p">Depending on your location and applicable law, you may have the following rights with respect to your personal information. We honor these rights regardless of whether your jurisdiction legally mandates them, because we believe data control is foundational to trust.</p>
+
+          <ul class="legal-list">
+            <li><strong>Access:</strong> You have the right to request a copy of the personal information we hold about you, including account details, usage records, and any personal data processed in connection with your account.</li>
+            <li><strong>Correction:</strong> You have the right to request correction of inaccurate or incomplete personal information. Most account profile fields can be updated directly within your account settings.</li>
+            <li><strong>Deletion:</strong> You have the right to request deletion of your personal information. Note that deletion of account data will result in termination of your SYNTRA subscription. Certain data may be retained as required by law or for legitimate legal defense purposes.</li>
+            <li><strong>Portability:</strong> You have the right to receive your personal information and operational data in a structured, machine-readable format (CSV, JSON) for transfer to another service provider. GPS and shipment history exports are available directly within the platform.</li>
+            <li><strong>Restriction of Processing:</strong> You may request that we restrict processing of your personal information in certain circumstances, such as while the accuracy of data is disputed.</li>
+            <li><strong>Objection:</strong> You may object to certain processing activities, including any use of your data for product improvement or communications not essential to service delivery.</li>
+          </ul>
+
+          <p class="legal-p"><strong>California Residents (CCPA / CPRA)</strong></p>
+          <p class="legal-p">California residents have the right to know what personal information is collected, the right to delete personal information, the right to opt out of the sale or sharing of personal information (SYNTRA does not sell or share personal information as defined under CCPA), the right to correct inaccurate personal information, and the right to limit use of sensitive personal information. California residents may exercise these rights without suffering discrimination in pricing or service access. To submit a verifiable consumer request, contact us at <a href="mailto:privacy@syntraplatform.io" style="color:var(--amber);">privacy@syntraplatform.io</a>.</p>
+
+          <p class="legal-p"><strong>European Users (GDPR)</strong></p>
+          <p class="legal-p">For users in the European Economic Area, United Kingdom, or Switzerland, SYNTRA processes personal data on the legal bases of contractual necessity (to deliver the services you have subscribed to), legitimate interests (for security, fraud prevention, and product improvement), legal obligation (for compliance with applicable laws), and consent (for optional communications). You have the right to lodge a complaint with your national data protection authority. Where SYNTRA acts as a data processor on behalf of your organization, your organization is the data controller and is responsible for ensuring an appropriate legal basis exists for the personal data you provide to or generate within the platform.</p>
+
+          <p class="legal-p">To exercise any of the above rights, contact us at <a href="mailto:privacy@syntraplatform.io" style="color:var(--amber);">privacy@syntraplatform.io</a>. We will respond within 30 days of receiving a verifiable request.</p>
+        </section>
+
+        <!-- 8. Cookies -->
+        <section id="cookies" class="legal-section reveal">
+          <h2 class="legal-h2">8. Cookies &amp; Tracking</h2>
+          <p class="legal-p">SYNTRA uses a minimal set of cookies and browser-based technologies. We do not use advertising cookies, we do not participate in behavioral retargeting networks, and we do not sell data derived from your browsing activity.</p>
+
+          <ul class="legal-list">
+            <li><strong>Essential Cookies (always active):</strong> Required for the platform to function. These include session authentication tokens, CSRF protection tokens, and user preference settings such as timezone and display configuration. These cookies cannot be disabled without breaking core platform functionality.</li>
+            <li><strong>Analytics Cookies (opt-out available):</strong> We use first-party analytics tools to measure aggregate page-level engagement on our public website (syntraplatform.io). These analytics do not track individuals across third-party sites, do not share data with advertising networks, and use IP anonymization. Logged-in platform users are not tracked for marketing analytics purposes.</li>
+            <li><strong>No Advertising Cookies:</strong> We do not deploy third-party advertising pixels, social media tracking scripts, or cross-site behavioral tracking technologies on our platform or website.</li>
+          </ul>
+
+          <p class="legal-p">You can control cookies through your browser settings. Disabling all cookies may impair your ability to log in to the SYNTRA platform. To opt out of analytics tracking on our public website, you may use a browser-level do-not-track setting or contact us at <a href="mailto:privacy@syntraplatform.io" style="color:var(--amber);">privacy@syntraplatform.io</a> to request analytics opt-out.</p>
+        </section>
+
+        <!-- 9. Children's Privacy -->
+        <section id="childrens-privacy" class="legal-section reveal">
+          <h2 class="legal-h2">9. Children's Privacy</h2>
+          <p class="legal-p">The SYNTRA platform is a business-to-business service designed for use by freight brokers, third-party logistics providers, shippers, fleet managers, and enterprise operations teams. Our services are not directed at, and are not intended for use by, individuals under the age of 18.</p>
+          <p class="legal-p">We do not knowingly collect personal information from anyone under 18. If we become aware that we have inadvertently received personal information from a person under 18, we will delete that information promptly. If you believe we may have collected information from a minor, please contact us at <a href="mailto:privacy@syntraplatform.io" style="color:var(--amber);">privacy@syntraplatform.io</a>.</p>
+        </section>
+
+        <!-- 10. Illinois-Specific Disclosures -->
+        <section id="illinois" class="legal-section reveal">
+          <h2 class="legal-h2">10. Illinois-Specific Disclosures</h2>
+          <p class="legal-p">SYNTRA Platform, Inc. is headquartered in Illinois. In addition to the rights and protections described elsewhere in this Privacy Policy, the following provisions apply specifically to residents and operators subject to Illinois law.</p>
+
+          <p class="legal-p"><strong>Illinois Biometric Information Privacy Act (BIPA)</strong></p>
+          <p class="legal-p">Illinois BIPA (740 ILCS 14/) imposes strict requirements on the collection, use, storage, and destruction of biometric identifiers and biometric information, including fingerprints, retina or iris scans, voiceprints, scans of hand or face geometry, and similar identifiers.</p>
+          <p class="legal-p">SYNTRA's current platform and hardware do not collect or process biometric identifiers or biometric information as defined under BIPA. If SYNTRA introduces any feature or integration that would involve biometric data collection in the future, we will:</p>
+          <ul class="legal-list">
+            <li>Publish a written policy establishing a retention schedule and guidelines for permanent destruction of biometric data.</li>
+            <li>Obtain a written release from each individual whose biometric data is collected, prior to collection.</li>
+            <li>Never sell, lease, trade, or profit from biometric data.</li>
+            <li>Never disclose biometric data without consent, except as required by law or to complete a financial transaction authorized by the individual.</li>
+          </ul>
+          <p class="legal-p">If you deploy SYNTRA hardware or integrations that may involve biometric data collection by a third party (for example, driver-facing cameras with facial recognition through a connected system), you as the operator bear responsibility for ensuring BIPA compliance with respect to your employees and contractors. Contact us at <a href="mailto:privacy@syntraplatform.io" style="color:var(--amber);">privacy@syntraplatform.io</a> with any BIPA-related questions.</p>
+
+          <p class="legal-p"><strong>Illinois Personal Information Protection Act (PIPA)</strong></p>
+          <p class="legal-p">Under Illinois PIPA (815 ILCS 530/), SYNTRA is required to notify affected Illinois residents and, where a breach affects 500 or more Illinois residents, the Illinois Attorney General, in the event of a security breach involving personal information. In the event of a confirmed breach affecting Illinois residents, SYNTRA will:</p>
+          <ul class="legal-list">
+            <li>Notify affected Illinois residents in the most expedient time possible and without unreasonable delay.</li>
+            <li>Notify the Illinois Attorney General if 500 or more Illinois residents are affected.</li>
+            <li>Provide notice in the form required by Illinois law, including a description of the incident, the type of personal information involved, contact information for SYNTRA, and steps individuals can take to protect themselves.</li>
+          </ul>
+          <p class="legal-p">Notice may be provided by written notice, electronic notice (where the affected individual has consented to electronic communications), or substitute notice in accordance with PIPA requirements.</p>
+
+          <p class="legal-p"><strong>Illinois Employee Monitoring</strong></p>
+          <p class="legal-p">Illinois law (820 ILCS 40/ — the Illinois Electronic Mail Privacy Act and related statutes) imposes specific requirements on employers who monitor employee electronic communications and activity. If you use SYNTRA to track vehicles operated by Illinois-based employees or contractors, you are responsible for:</p>
+          <ul class="legal-list">
+            <li>Providing employees with advance written notice that electronic monitoring may occur.</li>
+            <li>Complying with all applicable Illinois and federal requirements for employee monitoring consent and disclosure.</li>
+            <li>Maintaining records of employee acknowledgment of monitoring notice as required by applicable law.</li>
+          </ul>
+          <p class="legal-p">SYNTRA provides the platform and hardware; the legal obligations related to employee notice and consent under Illinois law rest with you as the deploying organization.</p>
+        </section>
+
+        <!-- 11. Changes -->
+        <section id="policy-changes" class="legal-section reveal">
+          <h2 class="legal-h2">11. Changes to This Policy</h2>
+          <p class="legal-p">We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or operational procedures. When we make material changes, we will:</p>
+          <ul class="legal-list">
+            <li>Update the "Last updated" date at the top of this page.</li>
+            <li>Send an in-platform notification and email notice to account administrators at least 14 days before material changes take effect.</li>
+            <li>Where required by law, obtain renewed consent for any materially new processing activities.</li>
+          </ul>
+          <p class="legal-p">We encourage you to review this Privacy Policy periodically. Your continued use of the SYNTRA platform after the effective date of any update constitutes acceptance of the revised policy. If you do not agree with a material update, you may terminate your subscription prior to the effective date by contacting our support team.</p>
+          <p class="legal-p">Previous versions of this Privacy Policy are available upon request by emailing <a href="mailto:privacy@syntraplatform.io" style="color:var(--amber);">privacy@syntraplatform.io</a>.</p>
+        </section>
+
+        <!-- 12. Contact -->
+        <section id="contact" class="legal-section reveal">
+          <h2 class="legal-h2">12. Contact Us</h2>
+          <p class="legal-p">If you have questions about this Privacy Policy, wish to exercise your data rights, have a concern about how your information is being handled, or need to report a potential privacy incident, please contact us through any of the following channels. We take all privacy inquiries seriously and will respond within 30 days.</p>
+
+          <div class="legal-contact-card">
+            <h3>Privacy Contact</h3>
+            <p><strong style="color:var(--white);">Email:</strong> <a href="mailto:privacy@syntraplatform.io">privacy@syntraplatform.io</a></p>
+            <p><strong style="color:var(--white);">Security Issues:</strong> <a href="mailto:security@syntraplatform.io">security@syntraplatform.io</a></p>
+            <p style="margin-top:20px;"><strong style="color:var(--white);">Mailing Address:</strong></p>
+            <p>SYNTRA Platform, Inc.<br />Attn: Privacy Team<br />5016 Barnard Mill Road, Suite 113<br />Ringwood, IL 60072</p>
+          </div>
+
+          <p class="legal-p" style="margin-top:24px;">For enterprise customers with a Customer Success Manager or dedicated account contact, you may also raise privacy-related questions directly through your account relationship. Your CSM will route your inquiry to our privacy team with appropriate priority.</p>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo"><img src="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Horizontal.png" alt="SYNTRA" /></a>
+          <p>The execution platform logistics companies use to connect every system, asset, and shipment — and actually run their operation from one place.</p>
+        </div>
+        <div class="footer-col"><h4>Platform</h4><ul><li><a href="index.html">Overview</a></li><li><a href="integrations.html">Integrations</a></li><li><a href="index.html#hardware">Hardware</a></li><li><a href="pricing.html">How We Work</a></li><li><a href="#">Security</a></li><li><a href="#">API Docs</a></li></ul></div>
+        <div class="footer-col"><h4>Solutions</h4><ul><li><a href="solutions.html#brokers">Freight Brokers</a></li><li><a href="solutions.html#3pl">3PLs</a></li><li><a href="solutions.html#shippers">Shippers</a></li><li><a href="solutions.html#fleet">Fleet Managers</a></li><li><a href="solutions.html#assets">Asset Managers</a></li><li><a href="use-cases.html">Use Cases</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About SYNTRA</a></li><li><a href="about.html#cscs">CSCS Partnership</a></li><li><a href="#">Careers</a></li><li><a href="contact.html">Contact</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 SYNTRA Platform, Inc. All rights reserved.</span>
+        <span><a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms.html" style="color:var(--gray);">Terms of Service</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JS — Scroll Reveal + Nav
+  ============================================================ -->
+  <script>
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -48px 0px' });
+    revealEls.forEach(el => revealObs.observe(el));
+
+    // Nav solidify on scroll
+    const mainNav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      mainNav.style.background = window.scrollY > 60
+        ? 'rgba(8,9,14,0.98)'
+        : 'rgba(8,9,14,0.82)';
+    }, { passive: true });
+
+    // TOC active link highlighting
+    const tocLinks = document.querySelectorAll('.legal-toc-list a');
+    const sections = document.querySelectorAll('.legal-section');
+    const tocObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(link => link.classList.remove('active'));
+          const activeLink = document.querySelector(`.legal-toc-list a[href="#${entry.target.id}"]`);
+          if (activeLink) activeLink.classList.add('active');
+        }
+      });
+    }, {
+      rootMargin: `-${72 + 24}px 0px -60% 0px`,
+      threshold: 0
+    });
+    sections.forEach(s => tocObs.observe(s));
+  </script>
+
+  <!-- Mobile Nav -->
+  <script>
+  (function(){
+    var nav    = document.getElementById('main-nav');
+    var toggle = document.querySelector('.nav-mobile-toggle');
+    var src    = document.querySelector('.nav-links');
+    if (!nav || !toggle || !src) return;
+
+    var panel = document.createElement('div');
+    panel.id  = 'mobile-nav';
+    panel.innerHTML =
+      '<ul class="mobile-nav-list"></ul>' +
+      '<div class="mobile-nav-footer">' +
+        '<a href="book-demo.html" class="btn btn-primary" ' +
+        'style="display:block;text-align:center;padding:14px 0;width:100%;">Request Demo &rarr;</a>' +
+      '</div>';
+    var ul = panel.querySelector('.mobile-nav-list');
+    src.querySelectorAll('a').forEach(function(a){
+      var li = document.createElement('li');
+      li.appendChild(a.cloneNode(true));
+      ul.appendChild(li);
+    });
+    nav.parentNode.insertBefore(panel, nav.nextSibling);
+
+    function open()  { panel.classList.add('open'); toggle.classList.add('open'); toggle.setAttribute('aria-expanded','true');  document.body.style.overflow='hidden'; }
+    function close() { panel.classList.remove('open'); toggle.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+
+    toggle.addEventListener('click', function(){ panel.classList.contains('open') ? close() : open(); });
+    panel.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+  })();
+  </script>
+
+</body>
+</html>

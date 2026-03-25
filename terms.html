@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — SYNTRA Platform</title>
+  <meta name="description" content="SYNTRA Platform Terms of Service. Review the terms governing your use of the SYNTRA logistics execution platform, IoT hardware, integrations, and APIs." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="SYNTRA Platform" />
+  <link rel="canonical" href="https://www.syntraplatform.io/terms.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://www.syntraplatform.io/terms.html" />
+  <meta property="og:title"       content="Terms of Service — SYNTRA Platform" />
+  <meta property="og:description" content="Review the terms governing your use of the SYNTRA logistics execution platform, IoT hardware, integrations, and APIs." />
+  <meta property="og:image"       content="https://www.syntraplatform.io/og-image.png" />
+  <meta property="og:site_name"   content="SYNTRA Platform" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@syntraplatform" />
+  <meta name="twitter:title"       content="Terms of Service — SYNTRA Platform" />
+  <meta name="twitter:description" content="Terms governing your use of the SYNTRA platform, hardware, and APIs." />
+  <meta name="twitter:image"       content="https://www.syntraplatform.io/og-image.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Square.png" />
+  <link rel="apple-touch-icon"     href="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Square.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       TOKENS
+    ============================================================ */
+    :root {
+      --bg:          #08090E;
+      --surface:     #0D0F18;
+      --surface-2:   #121520;
+      --border:      rgba(255,255,255,0.07);
+      --white:       #FFFFFF;
+      --gray:        #8892A4;
+      --gray-lt:     #B4BCCA;
+      --amber:       #FF9500;
+      --amber-dim:   rgba(255,149,0,0.10);
+      --amber-glow:  rgba(255,149,0,0.18);
+      --blue:        #214DBC;
+      --blue-bright: #2D5FE8;
+      --blue-dim:    rgba(45,95,232,0.12);
+      --grad:        linear-gradient(135deg, #FF9500 0%, #214DBC 100%);
+      --grad-text:   linear-gradient(90deg,  #FF9500 0%, #2D5FE8 100%);
+      --max-w:       1280px;
+      --nav-h:       72px;
+      --radius:      14px;
+    }
+
+    /* ============================================================
+       RESET
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ============================================================
+       TYPOGRAPHY
+    ============================================================ */
+    h1, h2, h3, h4, h5 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+    }
+
+    .gradient-text {
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ============================================================
+       LAYOUT
+    ============================================================ */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 36px;
+    }
+    nav .container {
+      max-width: none;
+      width: 100%;
+      margin: 0;
+      padding: 0 40px;
+    }
+
+    /* ============================================================
+       BUTTONS
+    ============================================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 30px;
+      border-radius: 9px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      border: none;
+      transition: all 0.22s ease;
+    }
+    .btn-primary {
+      background: var(--amber);
+      color: #000;
+      box-shadow: 0 0 28px rgba(255,149,0,0.30);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 48px rgba(255,149,0,0.50);
+      background: #FFAA22;
+    }
+
+    /* ============================================================
+       SCROLL REVEAL
+    ============================================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity 0.72s ease, transform 0.72s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ============================================================
+       KEYFRAMES
+    ============================================================ */
+    @keyframes blink {
+      0%,100% { opacity: 1; }
+      50%      { opacity: 0.35; }
+    }
+
+    /* ============================================================
+       NAV
+    ============================================================ */
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 200;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      background: rgba(8,9,14,0.82);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .nav-logo { display: flex; align-items: center; }
+    .nav-logo img { height: 30px; width: auto; display: block; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--gray);
+      font-size: 13.5px;
+      font-weight: 500;
+      transition: color 0.2s;
+      white-space: nowrap;
+      padding: 6px 12px;
+      border-radius: 7px;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--white); }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding-left: 20px;
+      border-left: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-right a.login {
+      color: var(--gray);
+      font-size: 13.5px;
+      font-weight: 500;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-right a.login:hover { color: var(--white); }
+    .nav-mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .nav-mobile-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--amber);
+      border-radius: 2px;
+      transition: transform 0.22s ease, opacity 0.22s ease;
+      transform-origin: center;
+    }
+    .nav-mobile-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-mobile-toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-mobile-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ============================================================
+       MOBILE NAV PANEL
+    ============================================================ */
+    #mobile-nav {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: rgba(8,9,14,0.97);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 28px 24px 32px;
+      z-index: 998;
+      transform: translateY(-8px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+    }
+    @media (max-width: 900px) { #mobile-nav { display: block; } }
+    #mobile-nav.open { opacity: 1; transform: translateY(0); visibility: visible; }
+    .mobile-nav-list { list-style: none; padding: 0; margin: 0 0 24px; }
+    .mobile-nav-list li + li { border-top: 1px solid rgba(255,255,255,0.06); }
+    .mobile-nav-list a {
+      display: block; padding: 14px 0;
+      font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 500;
+      color: var(--white); text-decoration: none; transition: color 0.15s;
+    }
+    .mobile-nav-list a:hover { color: var(--amber); }
+    .mobile-nav-footer { padding-top: 8px; }
+
+    /* ============================================================
+       LEGAL PAGE
+    ============================================================ */
+    .legal-page {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 36px 120px;
+    }
+
+    .legal-hero {
+      padding-top: calc(var(--nav-h) + 80px);
+      padding-bottom: 60px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 64px;
+    }
+
+    .legal-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--amber);
+      border: 1px solid rgba(255,149,0,0.28);
+      background: var(--amber-dim);
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+    }
+    .legal-eyebrow::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--amber);
+      animation: blink 2s ease-in-out infinite;
+    }
+
+    .legal-h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .legal-meta {
+      font-size: 13.5px;
+      color: var(--gray);
+      margin-bottom: 24px;
+    }
+
+    .legal-intro {
+      font-size: 16px;
+      color: var(--gray-lt);
+      line-height: 1.78;
+      max-width: 680px;
+    }
+
+    /* Table of contents */
+    .legal-toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--amber);
+      border-radius: var(--radius);
+      padding: 32px 36px;
+      margin-bottom: 64px;
+    }
+    .legal-toc-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 18px;
+    }
+    .legal-toc ol {
+      list-style: none;
+      counter-reset: toc;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 32px;
+    }
+    .legal-toc ol li {
+      counter-increment: toc;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .legal-toc ol li::before {
+      content: counter(toc, decimal-leading-zero);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--amber);
+      opacity: 0.6;
+      flex-shrink: 0;
+    }
+    .legal-toc ol li a {
+      font-size: 13.5px;
+      color: var(--gray-lt);
+      transition: color 0.2s;
+    }
+    .legal-toc ol li a:hover { color: var(--amber); }
+
+    /* Sections */
+    .legal-section {
+      margin-bottom: 56px;
+      scroll-margin-top: calc(var(--nav-h) + 24px);
+    }
+
+    .legal-h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      padding-left: 16px;
+      border-left: 3px solid var(--amber);
+      margin-bottom: 20px;
+    }
+
+    .legal-p {
+      font-family: 'Inter', sans-serif;
+      font-size: 15.5px;
+      color: var(--gray-lt);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .legal-p:last-child { margin-bottom: 0; }
+
+    .legal-list {
+      list-style: none;
+      margin: 12px 0 16px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .legal-list li {
+      font-family: 'Inter', sans-serif;
+      font-size: 15.5px;
+      color: var(--gray-lt);
+      line-height: 1.72;
+      padding-left: 22px;
+      position: relative;
+    }
+    .legal-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--amber);
+      opacity: 0.75;
+    }
+
+    .legal-callout {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin: 20px 0;
+    }
+    .legal-callout .legal-p { margin-bottom: 0; }
+
+    .legal-callout.warning {
+      border-color: rgba(255,149,0,0.22);
+      background: rgba(255,149,0,0.04);
+    }
+
+    strong.amber { color: var(--amber); font-weight: 600; }
+
+    /* Section divider */
+    .legal-divider {
+      height: 1px;
+      background: linear-gradient(90deg,
+        transparent,
+        var(--border) 20%,
+        rgba(255,149,0,0.12) 50%,
+        var(--border) 80%,
+        transparent);
+      margin: 56px 0;
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 64px 0 40px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+    .footer-logo {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .footer-logo img { height: 26px; width: auto; display: block; }
+    .footer-brand p {
+      font-size: 13.5px;
+      color: var(--gray);
+      line-height: 1.72;
+      max-width: 270px;
+    }
+    .footer-col h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 18px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .footer-col a { font-size: 13.5px; color: var(--gray); transition: color 0.2s; }
+    .footer-col a:hover { color: var(--white); }
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      font-size: 12.5px;
+      color: var(--gray);
+    }
+    .footer-bottom a { color: var(--amber); }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 900px) {
+      .nav-links         { display: none !important; }
+      .login             { display: none !important; }
+      .nav-right a.login { display: none !important; }
+      .nav-mobile-toggle { display: flex !important; margin-left: auto; }
+      .nav-right .btn-primary { display: none !important; }
+    }
+    @media (max-width: 768px) {
+      .legal-page { padding: 0 20px 80px; }
+      .legal-toc ol { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .footer-brand { grid-column: 1 / -1; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .footer-inner { grid-template-columns: 1fr; }
+      .legal-toc { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAV
+  ============================================================ -->
+  <nav id="main-nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo"><img src="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Horizontal.png" alt="SYNTRA" /></a>
+        <ul class="nav-links">
+          <li><a href="index.html#platform">Platform</a></li>
+          <li><a href="index.html#hardware">Hardware</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="use-cases.html">Use Cases</a></li>
+          <li><a href="integrations.html">Integrations</a></li>
+          <li><a href="about.html">Company</a></li>
+        </ul>
+        <div class="nav-right">
+          <a href="https://syntra.scoti.app" target="_blank" rel="noopener" class="login">Sign In</a>
+          <a href="book-demo.html" class="btn btn-primary" style="padding:10px 22px; font-size:12px;">Request Demo</a>
+        </div>
+        <button class="nav-mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       PAGE CONTENT
+  ============================================================ -->
+  <main>
+    <div class="legal-page">
+
+      <!-- Hero -->
+      <div class="legal-hero reveal">
+        <span class="legal-eyebrow">Legal</span>
+        <h1 class="legal-h1">Terms of Service</h1>
+        <p class="legal-meta">Last updated: March 2026</p>
+        <p class="legal-intro">
+          These Terms of Service ("Agreement") govern your access to and use of the SYNTRA Platform, including our cloud software, IoT hardware devices, APIs, integrations, and related support services. By accessing or using the SYNTRA platform, you agree to be bound by this Agreement. If you are entering into this Agreement on behalf of a company or other legal entity, you represent that you have authority to bind that entity. If you do not agree to these terms, do not access or use our services.
+        </p>
+      </div>
+
+      <!-- Table of Contents -->
+      <div class="legal-toc reveal">
+        <p class="legal-toc-title">Table of Contents</p>
+        <ol>
+          <li><a href="#acceptance">Acceptance of Terms</a></li>
+          <li><a href="#services">Description of Services</a></li>
+          <li><a href="#accounts">Account Registration &amp; Access</a></li>
+          <li><a href="#hardware">Hardware Terms</a></li>
+          <li><a href="#license">Platform License</a></li>
+          <li><a href="#data">Customer Data &amp; Ownership</a></li>
+          <li><a href="#acceptable-use">Acceptable Use</a></li>
+          <li><a href="#payment">Payment Terms</a></li>
+          <li><a href="#confidentiality">Confidentiality</a></li>
+          <li><a href="#ip">Intellectual Property</a></li>
+          <li><a href="#warranty">Warranty Disclaimer</a></li>
+          <li><a href="#liability">Limitation of Liability</a></li>
+          <li><a href="#indemnification">Indemnification</a></li>
+          <li><a href="#termination">Term &amp; Termination</a></li>
+          <li><a href="#governing-law">Governing Law &amp; Disputes</a></li>
+          <li><a href="#general">General Provisions</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ol>
+      </div>
+
+      <!-- 1. Acceptance of Terms -->
+      <section id="acceptance" class="legal-section reveal">
+        <h2 class="legal-h2">1. Acceptance of Terms</h2>
+        <p class="legal-p">
+          This Agreement is a binding contract between SYNTRA Platform, Inc. ("SYNTRA," "we," "us," or "our"), an Illinois corporation, and the individual or legal entity ("Customer," "you," or "your") accessing or using the SYNTRA services. By clicking "I Agree," signing an Order Form, or otherwise accessing the SYNTRA platform, you accept and agree to be bound by this Agreement in full, including any Order Forms, Statements of Work, or other documents incorporated by reference.
+        </p>
+        <p class="legal-p">
+          SYNTRA reserves the right to update or modify this Agreement at any time. When we make material changes, we will provide at least thirty (30) days' advance notice via email to the address associated with your account or via an in-platform notification. Your continued use of the services after the effective date of any changes constitutes your acceptance of the revised Agreement. If you do not agree to any modification, your sole remedy is to terminate your subscription in accordance with Section 14 before the effective date of the change.
+        </p>
+        <p class="legal-p">
+          If you are accessing SYNTRA services under an enterprise agreement or a separately negotiated contract, the terms of that signed agreement govern to the extent they conflict with this Agreement.
+        </p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <!-- 2. Description of Services -->
+      <section id="services" class="legal-section reveal">
+        <h2 class="legal-h2">2. Description of Services</h2>
+        <p class="legal-p">
+          SYNTRA provides a logistics execution platform designed to unify operational data across systems, assets, and shipments. Our services include, but are not limited to:
+        </p>
+        <ul class="legal-list">
+          <li><strong>Cloud Platform:</strong> A web-based and mobile-accessible software platform for real-time shipment visibility, load management, workflow automation, reporting, and operational intelligence.</li>
+          <li><strong>IoT Hardware:</strong> GPS trackers, temperature sensors, door sensors, cameras, rechargeable tracking and monitoring devices for cold chain shipments, and other physical devices that transmit telemetry and sensor data to the SYNTRA platform.</li>
+          <li><strong>Integrations:</strong> Pre-built and configurable connectors to third-party systems including TMS, WMS, ERP, carrier APIs, and broker portals, enabling bidirectional data exchange.</li>
+          <li><strong>APIs:</strong> RESTful APIs and webhooks that allow Customers to programmatically access platform data, trigger events, and build custom workflows.</li>
+          <li><strong>Support Services:</strong> Technical support, onboarding assistance, and account management as described in the applicable subscription tier or separately executed Support Agreement.</li>
+        </ul>
+        <p class="legal-p">
+          SYNTRA may update, enhance, deprecate, or otherwise modify its services over time. We will provide reasonable notice of any changes that materially diminish core functionality. New features and modules may be subject to additional fees or terms.
+        </p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <!-- 3. Account Registration & Access -->
+      <section id="accounts" class="legal-section reveal">
+        <h2 class="legal-h2">3. Account Registration &amp; Access</h2>
+        <p class="legal-p">
+          <strong class="amber">Eligibility.</strong> You must be at least 18 years of age and legally authorized to enter into binding contracts on behalf of your organization to register for or use SYNTRA services. By creating an account, you represent that the information you provide is accurate and that your use of the platform complies with all applicable laws and regulations.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Account Security.</strong> You are responsible for maintaining the confidentiality of your account credentials and for all activity that occurs under your account. You agree to notify SYNTRA immediately at <a href="mailto:support@syntraplatform.io" style="color:var(--amber);">support@syntraplatform.io</a> of any unauthorized access or suspected security breach. SYNTRA is not liable for any loss or damage arising from unauthorized use of your credentials where such use occurred through no fault of SYNTRA.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Authorized Users.</strong> Your subscription includes a defined number of authorized user seats as specified in your Order Form. Authorized Users are individual employees, contractors, or agents of your organization who are granted access under your account. You are responsible for ensuring that all Authorized Users comply with this Agreement. Sharing credentials across multiple individuals is not permitted.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Enterprise Accounts.</strong> Enterprise customers may designate an account administrator with authority to provision and de-provision user access, configure integrations, and manage billing. SYNTRA will act on instructions from designated administrators for account-level changes. It is your responsibility to keep administrator designations current and to revoke access for any user who leaves your organization or whose access is no longer appropriate.
+        </p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <!-- 4. Hardware Terms -->
+      <section id="hardware" class="legal-section reveal">
+        <h2 class="legal-h2">4. Hardware Terms</h2>
+        <p class="legal-p">
+          <strong class="amber">Purchase and Title Transfer.</strong> Where SYNTRA hardware is purchased outright, title and risk of loss transfer to the Customer upon delivery to the shipping address specified in the Order Form. Delivery is deemed complete upon carrier confirmation of delivery. Shipping costs, duties, and applicable taxes are the Customer's responsibility unless otherwise agreed in writing.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Rechargeable Devices for Cold Chain Shipments.</strong> SYNTRA offers rechargeable tracking and monitoring devices designed for use in cold chain shipment environments. These devices must be handled, charged, and operated in accordance with the product documentation and environmental specifications provided by SYNTRA. Customers are responsible for ensuring that rechargeable devices are properly maintained, stored in appropriate conditions, and charged only when dry and in a safe environment as specified in the applicable product documentation.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Limited Hardware Warranty.</strong> SYNTRA warrants that hardware purchased from SYNTRA will be free from material defects in materials and workmanship for a period of twelve (12) months from the date of delivery ("Warranty Period"). This warranty covers manufacturing defects under normal use conditions and does not extend to third-party hardware components sourced by the Customer independently.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Warranty Exclusions.</strong> The limited hardware warranty does not cover:
+        </p>
+        <ul class="legal-list">
+          <li>Physical damage resulting from accident, misuse, abuse, neglect, or unauthorized modification</li>
+          <li>Damage caused by operating hardware outside the permitted environmental specifications published in the relevant product documentation</li>
+          <li>Damage resulting from service performed by anyone other than SYNTRA or a SYNTRA-authorized service provider</li>
+          <li>Consumable parts, such as batteries, unless damage has occurred due to a defect in materials or workmanship</li>
+          <li>Cosmetic damage, including scratches, dents, and broken plastic on ports, that does not affect functionality</li>
+          <li>Hardware sourced from unauthorized resellers or gray market channels</li>
+          <li>Damage to any rechargeable device resulting from moisture or water exposure at the time of charging, including but not limited to connecting a wet or damp device to a charger or power source. Customers are solely responsible for ensuring rechargeable devices are fully dry before initiating any charging cycle. This exclusion applies to all rechargeable devices, including those used in cold chain shipment environments.</li>
+        </ul>
+        <p class="legal-p">
+          <strong class="amber">RMA Process.</strong> To request warranty service, Customer must contact SYNTRA support to obtain a Return Merchandise Authorization ("RMA") number before shipping any hardware back to SYNTRA. Hardware returned without an RMA number may be refused. SYNTRA will, at its discretion, repair or replace defective hardware covered under warranty. Replacement hardware may be refurbished and will carry the remainder of the original warranty period or ninety (90) days, whichever is longer. Customer is responsible for return shipping costs; SYNTRA covers shipping for replacement units.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">SYNTRA-Managed Hardware (Subscription Model).</strong> Where hardware is provided as part of a subscription arrangement rather than sold outright, title to the hardware remains with SYNTRA at all times. Customer receives a limited right to possess and use the hardware during the active subscription period solely in connection with the SYNTRA platform. Upon termination of the subscription for any reason, Customer must return all SYNTRA-owned hardware in good working condition within thirty (30) days. Failure to return hardware will result in an invoice for the current replacement cost of each unreturned unit.
+        </p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <!-- 5. Platform License -->
+      <section id="license" class="legal-section reveal">
+        <h2 class="legal-h2">5. Platform License</h2>
+        <p class="legal-p">
+          Subject to your compliance with this Agreement and timely payment of all applicable fees, SYNTRA grants you a limited, non-exclusive, non-transferable, non-sublicensable license to access and use the SYNTRA platform and APIs solely for your internal business operations during the term of your subscription.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">License Restrictions.</strong> You agree not to, and will not permit any Authorized User or third party to:
+        </p>
+        <ul class="legal-list">
+          <li>Copy, modify, create derivative works of, or distribute the SYNTRA platform, APIs, firmware, or any component thereof</li>
+          <li>Reverse engineer, decompile, disassemble, or attempt to derive the source code of any software or firmware provided by SYNTRA</li>
+          <li>Resell, sublicense, rent, lease, or otherwise transfer access to the SYNTRA platform to any third party</li>
+          <li>Use the platform to build, train, or improve a competing product or service</li>
+          <li>Remove, alter, or obscure any proprietary notices, labels, or markings on SYNTRA software, hardware, or documentation</li>
+          <li>Use SYNTRA's APIs in a manner that exceeds documented rate limits or circumvents technical access controls</li>
+          <li>Access SYNTRA systems for purposes of benchmarking or competitive analysis without prior written consent</li>
+        </ul>
+        <p class="legal-p">
+          SYNTRA reserves all rights not expressly granted in this Agreement. No implied licenses are granted.
+        </p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <!-- 6. Customer Data & Ownership -->
+      <section id="data" class="legal-section reveal">
+        <h2 class="legal-h2">6. Customer Data &amp; Ownership</h2>
+        <p class="legal-p">
+          <strong class="amber">Customer Owns Their Data.</strong> You retain all ownership rights to the data you upload, transmit, or generate through your use of the SYNTRA platform, including shipment records, sensor telemetry, route data, configuration settings, and any other content submitted by your organization ("Customer Data"). SYNTRA does not claim ownership of Customer Data.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">SYNTRA as Data Processor.</strong> SYNTRA processes Customer Data solely to provide, maintain, and improve the services you have subscribed to. We act as a data processor with respect to Customer Data and will process such data in accordance with your instructions as set forth in this Agreement and our Data Processing Addendum ("DPA"), which is incorporated by reference and available at <a href="https://www.syntraplatform.io/legal/dpa" style="color:var(--amber);">syntraplatform.io/legal/dpa</a>.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">License to Provide Services.</strong> You grant SYNTRA a limited, worldwide, royalty-free license to access, store, process, and use Customer Data solely to the extent necessary to provide the contracted services, respond to support requests, ensure platform security, and fulfill our obligations under this Agreement.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Aggregated and Anonymized Data.</strong> SYNTRA may use de-identified, aggregated data derived from your use of the platform for product improvement, research, and benchmarking purposes. Such data will not identify you or your organization and will not be sold or shared with third parties in a manner that would allow identification of Customer or Customer Data.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Backup Responsibility.</strong> While SYNTRA maintains industry-standard backup procedures, you are responsible for maintaining independent copies of any Customer Data that is critical to your business operations. SYNTRA does not guarantee that any particular data will be recoverable in the event of hardware failure, corruption, or other data loss events beyond our control.
+        </p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <!-- 7. Acceptable Use -->
+      <section id="acceptable-use" class="legal-section reveal">
+        <h2 class="legal-h2">7. Acceptable Use</h2>
+        <p class="legal-p">
+          You agree to use the SYNTRA platform only for lawful purposes and in accordance with this Agreement. You will not, and will not permit others to:
+        </p>
+        <ul class="legal-list">
+          <li>Use the platform to violate any applicable local, state, federal, or international law or regulation, including laws governing data privacy, export controls, and anti-corruption</li>
+          <li>Transmit, store, or process data that infringes on the intellectual property rights, privacy rights, or other rights of any third party</li>
+          <li>Introduce viruses, malware, ransomware, or any other malicious or technologically harmful code into the SYNTRA platform or connected systems</li>
+          <li>Attempt to gain unauthorized access to any portion of the platform, other customer accounts, or any servers, networks, or systems connected to SYNTRA infrastructure</li>
+          <li>Conduct or facilitate denial-of-service attacks, automated scraping, crawling, or any activity that places unreasonable load on platform infrastructure</li>
+          <li>Impersonate any person or entity, or misrepresent your affiliation with any person or entity</li>
+          <li>Use the platform to facilitate the tracking, monitoring, or surveillance of individuals without their knowledge and legally required consent</li>
+          <li>Harvest, collect, or store personal information about other users or third parties without appropriate authorization</li>
+        </ul>
+        <p class="legal-p">
+          SYNTRA reserves the right to investigate potential violations of this section and, where warranted, suspend or terminate access to the platform, refer matters to law enforcement, or take other appropriate action. We will notify you of any such action except where prohibited by law or where doing so would compromise a security investigation.
+        </p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <!-- 8. Payment Terms -->
+      <section id="payment" class="legal-section reveal">
+        <h2 class="legal-h2">8. Payment Terms</h2>
+        <p class="legal-p">
+          <strong class="amber">Subscription Fees.</strong> Subscription fees are as specified in your Order Form and are invoiced in advance on a monthly or annual basis, depending on your selected billing cycle. All fees are quoted and payable in U.S. dollars unless otherwise specified in writing.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Hardware Purchases.</strong> Hardware purchased outright is invoiced upon order confirmation and is due within fifteen (15) days of the invoice date. SYNTRA will not ship hardware until payment has been received or adequate credit has been established in writing.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Invoicing.</strong> SYNTRA will issue invoices to the billing contact on file. It is your responsibility to keep billing contact information current. Invoices not disputed in good faith within fifteen (15) days of issuance are deemed accepted.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Late Payments.</strong> Amounts not paid within thirty (30) days of the invoice due date will accrue interest at a rate of one and one-half percent (1.5%) per month, or the maximum rate permitted by applicable law, whichever is lower. SYNTRA reserves the right to suspend access to the platform for accounts that are more than thirty (30) days past due after providing written notice. Suspension does not relieve you of the obligation to pay outstanding amounts.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Price Changes.</strong> SYNTRA may adjust subscription pricing with at least thirty (30) days' advance written notice. Price changes will take effect at the start of your next billing cycle following the notice period. Your continued use of the services after the effective date of a price change constitutes acceptance of the new pricing.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Taxes.</strong> All fees are exclusive of applicable sales, use, value-added, and similar taxes. You are responsible for all such taxes, except for taxes based on SYNTRA's net income. If you are a tax-exempt organization, you must provide valid tax exemption documentation before invoices are issued.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">No Refunds.</strong> Subscription fees paid are non-refundable except as expressly provided in this Agreement or required by applicable law. Hardware purchases are final and non-refundable except where the hardware is defective and covered under the limited warranty described in Section 4.
+        </p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <!-- 9. Confidentiality -->
+      <section id="confidentiality" class="legal-section reveal">
+        <h2 class="legal-h2">9. Confidentiality</h2>
+        <p class="legal-p">
+          <strong class="amber">Definition.</strong> "Confidential Information" means any non-public information disclosed by one party ("Disclosing Party") to the other ("Receiving Party") in connection with this Agreement that is designated as confidential or that reasonably should be understood to be confidential given the nature of the information and the circumstances of disclosure. Confidential Information includes, without limitation, business plans, pricing, customer lists, technical architecture, trade secrets, financial information, and the terms of this Agreement.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Obligations.</strong> Each party agrees to: (a) hold the other party's Confidential Information in strict confidence using no less care than it uses to protect its own confidential information, but in no event less than reasonable care; (b) use Confidential Information only to exercise rights and perform obligations under this Agreement; and (c) disclose Confidential Information only to employees, contractors, and advisors with a legitimate need to know who are bound by confidentiality obligations at least as protective as those in this Agreement.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Exceptions.</strong> Confidentiality obligations do not apply to information that: (a) is or becomes publicly known without breach of any confidentiality obligation; (b) was known to the Receiving Party before disclosure without restriction; (c) is independently developed by the Receiving Party without use of Confidential Information; or (d) is rightfully received from a third party without confidentiality obligations.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Required Disclosure.</strong> If the Receiving Party is required by law or court order to disclose Confidential Information, it will provide prompt written notice to the Disclosing Party (to the extent legally permitted) and cooperate with the Disclosing Party's efforts to seek a protective order or other appropriate relief.
+        </p>
+        <p class="legal-p">
+          Confidentiality obligations under this section survive termination of this Agreement for a period of three (3) years, except with respect to trade secrets, which shall be protected for as long as they qualify as trade secrets under applicable law.
+        </p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <!-- 10. Intellectual Property -->
+      <section id="ip" class="legal-section reveal">
+        <h2 class="legal-h2">10. Intellectual Property</h2>
+        <p class="legal-p">
+          <strong class="amber">SYNTRA Ownership.</strong> SYNTRA exclusively owns all right, title, and interest in and to the SYNTRA platform, cloud software, APIs, firmware, hardware designs, documentation, training materials, and all intellectual property embodied therein, including all updates, modifications, and derivative works thereof. Nothing in this Agreement transfers or assigns any SYNTRA intellectual property rights to you. Your access to and use of the SYNTRA platform is a license only.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Customer Ownership.</strong> As stated in Section 6, you retain ownership of all Customer Data. You also retain ownership of any custom configurations, workflows, or reports you create using the SYNTRA platform tools, provided such configurations do not incorporate SYNTRA's proprietary algorithms or methodologies in a way that constitutes a derivative work of SYNTRA's technology.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Feedback.</strong> If you provide SYNTRA with suggestions, ideas, enhancement requests, or other feedback regarding the platform ("Feedback"), you grant SYNTRA a perpetual, irrevocable, royalty-free, worldwide license to use, incorporate, and exploit such Feedback in any manner without obligation to you. SYNTRA is not required to treat Feedback as confidential unless separately agreed in writing.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">SYNTRA Trademarks.</strong> You may not use SYNTRA's name, logo, trademarks, or trade dress in any marketing materials, press releases, or public statements without SYNTRA's prior written consent, except as permitted by applicable trademark fair use doctrine.
+        </p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <!-- 11. Warranty Disclaimer -->
+      <section id="warranty" class="legal-section reveal">
+        <h2 class="legal-h2">11. Warranty Disclaimer</h2>
+        <div class="legal-callout warning">
+          <p class="legal-p">
+            THE SYNTRA PLATFORM AND ALL ASSOCIATED CLOUD SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTY OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, SYNTRA EXPRESSLY DISCLAIMS ALL WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.
+          </p>
+        </div>
+        <p class="legal-p">
+          SYNTRA does not warrant that: (a) the platform will be uninterrupted, error-free, or available at any particular time; (b) the platform will meet your specific business requirements; (c) data transmitted through the platform will be secure from unauthorized interception; or (d) any errors or defects in the platform will be corrected within any specified time frame.
+        </p>
+        <p class="legal-p">
+          The foregoing disclaimer does not affect the limited hardware warranty provided in Section 4, which applies solely to physical hardware products sold directly by SYNTRA and subject to the terms and exclusions stated therein.
+        </p>
+        <p class="legal-p">
+          Some jurisdictions do not allow the exclusion of implied warranties, so the above exclusion may not apply to you in full. In such cases, SYNTRA's warranties are limited to the minimum scope and duration required by applicable law.
+        </p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <!-- 12. Limitation of Liability -->
+      <section id="liability" class="legal-section reveal">
+        <h2 class="legal-h2">12. Limitation of Liability</h2>
+        <div class="legal-callout warning">
+          <p class="legal-p">
+            TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, NEITHER PARTY WILL BE LIABLE TO THE OTHER FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, OR EXEMPLARY DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, LOSS OF REVENUE, LOSS OF BUSINESS, LOSS OF GOODWILL, LOSS OF DATA, BUSINESS INTERRUPTION, OR COST OF SUBSTITUTE SERVICES, EVEN IF THAT PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+          </p>
+        </div>
+        <p class="legal-p">
+          <strong class="amber">Liability Cap.</strong> Except for claims arising from a party's gross negligence, willful misconduct, fraud, indemnification obligations under Section 13, or a Customer's obligation to pay fees due, each party's total cumulative liability to the other arising out of or related to this Agreement — whether in contract, tort, statute, or otherwise — will not exceed the total fees paid or payable by Customer to SYNTRA during the twelve (12) calendar months immediately preceding the event giving rise to the claim.
+        </p>
+        <p class="legal-p">
+          The limitations in this section reflect a reasonable allocation of risk between the parties and are an essential basis of the bargain between the parties. SYNTRA would not have entered into this Agreement without these limitations.
+        </p>
+        <p class="legal-p">
+          Some jurisdictions do not allow the limitation or exclusion of certain damages, so some of the above limitations may not apply to you to their full extent.
+        </p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <!-- 13. Indemnification -->
+      <section id="indemnification" class="legal-section reveal">
+        <h2 class="legal-h2">13. Indemnification</h2>
+        <p class="legal-p">
+          <strong class="amber">Customer Indemnification.</strong> You agree to indemnify, defend, and hold harmless SYNTRA, its affiliates, officers, directors, employees, and agents from and against any claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising from: (a) your use of the SYNTRA platform in violation of this Agreement or applicable law; (b) Customer Data, including any claim that Customer Data infringes or misappropriates the intellectual property or privacy rights of any third party; (c) your breach of any representation or warranty made in this Agreement; or (d) the acts or omissions of your Authorized Users.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">SYNTRA Indemnification.</strong> SYNTRA agrees to indemnify, defend, and hold harmless Customer, its affiliates, officers, directors, employees, and agents from and against any third-party claims alleging that the SYNTRA platform, as provided by SYNTRA and used by Customer in accordance with this Agreement, infringes any U.S. patent, copyright, trademark, or trade secret of a third party. If any such claim arises, SYNTRA may, at its election and expense: (a) procure the right for Customer to continue using the affected service; (b) replace or modify the affected service so that it becomes non-infringing; or (c) terminate the affected service and refund any prepaid, unused fees attributable to the terminated service.
+        </p>
+        <p class="legal-p">
+          SYNTRA's indemnification obligation does not apply to claims arising from: (i) modifications to the platform made by or on behalf of Customer; (ii) use of the platform in combination with third-party products or services not authorized by SYNTRA; (iii) Customer's use of the platform in violation of this Agreement; or (iv) Customer's continued use after SYNTRA has provided notice of infringement risk and offered a non-infringing alternative.
+        </p>
+        <p class="legal-p">
+          Each party seeking indemnification must: (a) promptly notify the indemnifying party in writing of the claim; (b) give the indemnifying party sole control of the defense and settlement of the claim; and (c) provide reasonable assistance and information at the indemnifying party's expense. The indemnifying party will not settle any claim in a manner that imposes liability or obligations on the indemnified party without prior written consent, which will not be unreasonably withheld.
+        </p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <!-- 14. Term & Termination -->
+      <section id="termination" class="legal-section reveal">
+        <h2 class="legal-h2">14. Term &amp; Termination</h2>
+        <p class="legal-p">
+          <strong class="amber">Term.</strong> This Agreement begins on the date you first access the SYNTRA platform and continues until terminated in accordance with this section. Your subscription term is as specified in your Order Form (typically monthly or annual).
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Auto-Renewal.</strong> Unless either party provides written notice of non-renewal at least thirty (30) days before the end of the then-current subscription term, the subscription will automatically renew for a successive term of equal duration at the then-current subscription rates. Auto-renewal charges will be applied to the payment method on file.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Termination for Cause.</strong> Either party may terminate this Agreement immediately upon written notice if: (a) the other party materially breaches this Agreement and fails to cure such breach within thirty (30) days after receiving written notice specifying the breach in reasonable detail; or (b) the other party becomes insolvent, makes an assignment for the benefit of creditors, or becomes subject to any bankruptcy, liquidation, or similar proceeding.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Termination for Convenience.</strong> Either party may terminate this Agreement for convenience by providing thirty (30) days' advance written notice. Termination for convenience does not entitle Customer to a refund of any prepaid subscription fees.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Effect of Termination.</strong> Upon expiration or termination of this Agreement for any reason: (a) all licenses granted to you under this Agreement immediately terminate; (b) you must cease all use of the SYNTRA platform and return or destroy all SYNTRA Confidential Information in your possession; and (c) you remain responsible for all fees accrued through the termination date.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Data Export Window.</strong> Following termination, SYNTRA will make Customer Data available for export for a period of thirty (30) days. After this window, SYNTRA has no obligation to retain Customer Data and may delete it from its systems in accordance with our data retention policies. It is your responsibility to export any data you wish to retain before the expiration of this window.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Survival.</strong> Sections 6, 9, 10, 11, 12, 13, 15, and 16, along with any payment obligations accrued before termination, survive the expiration or termination of this Agreement.
+        </p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <!-- 15. Governing Law & Disputes -->
+      <section id="governing-law" class="legal-section reveal">
+        <h2 class="legal-h2">15. Governing Law &amp; Disputes</h2>
+        <p class="legal-p">
+          <strong class="amber">Governing Law.</strong> This Agreement is governed by and construed in accordance with the laws of the State of Illinois, without regard to its conflict of laws provisions. The United Nations Convention on Contracts for the International Sale of Goods does not apply to this Agreement.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Informal Resolution.</strong> Before initiating formal arbitration, the parties agree to attempt to resolve any dispute through good-faith negotiation. Either party may initiate this process by providing written notice to the other describing the dispute in reasonable detail. The parties will have thirty (30) days from such notice to attempt informal resolution.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Binding Arbitration.</strong> If informal resolution fails, any dispute, claim, or controversy arising out of or relating to this Agreement, including questions of arbitrability, will be resolved by binding arbitration administered by JAMS pursuant to its Streamlined Arbitration Rules and Procedures. The arbitration will be conducted in Chicago, Illinois, or via remote hearing by mutual agreement. The arbitrator's decision will be final and binding on both parties and may be entered as a judgment in any court of competent jurisdiction. Either party may seek emergency interim relief from a court of competent jurisdiction to preserve the status quo pending arbitration.
+        </p>
+        <div class="legal-callout warning">
+          <p class="legal-p">
+            <strong class="amber">Class Action Waiver.</strong> YOU AND SYNTRA AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS, CONSOLIDATED, OR REPRESENTATIVE ACTION. THE ARBITRATOR MAY NOT CONSOLIDATE MORE THAN ONE PERSON'S CLAIMS AND MAY NOT PRESIDE OVER ANY FORM OF REPRESENTATIVE OR CLASS PROCEEDING.
+          </p>
+        </div>
+        <p class="legal-p">
+          Notwithstanding the foregoing, either party may bring an individual action in small claims court for disputes that qualify, or may seek injunctive or other equitable relief in a court of competent jurisdiction for claims related to intellectual property infringement or breach of confidentiality obligations.
+        </p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <!-- 16. General Provisions -->
+      <section id="general" class="legal-section reveal">
+        <h2 class="legal-h2">16. General Provisions</h2>
+        <p class="legal-p">
+          <strong class="amber">Entire Agreement.</strong> This Agreement, together with all Order Forms, the Privacy Policy, the Data Processing Addendum, and any other documents incorporated by reference, constitutes the entire agreement between the parties with respect to its subject matter and supersedes all prior and contemporaneous agreements, understandings, negotiations, and representations, whether oral or written, relating to the same subject matter.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Order of Precedence.</strong> In the event of any conflict between this Agreement and an Order Form, the Order Form controls solely with respect to the specific terms addressed therein. In all other respects, this Agreement controls.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Severability.</strong> If any provision of this Agreement is found invalid, illegal, or unenforceable by a court or arbitrator of competent jurisdiction, that provision will be modified to the minimum extent necessary to make it enforceable, or if it cannot be modified, severed from this Agreement. The remaining provisions of this Agreement will continue in full force and effect.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Waiver.</strong> No failure or delay by either party in exercising any right under this Agreement constitutes a waiver of that right. A waiver of any provision or breach must be in writing and signed by an authorized representative of the waiving party to be effective. A waiver in any single instance does not constitute a continuing waiver.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Assignment.</strong> You may not assign or transfer this Agreement, or any rights or obligations hereunder, without SYNTRA's prior written consent, which will not be unreasonably withheld in the case of an assignment in connection with a merger, acquisition, or sale of substantially all of your assets. Any purported assignment in violation of this section is void. SYNTRA may assign this Agreement without restriction. This Agreement binds and benefits the parties and their respective permitted successors and assigns.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Force Majeure.</strong> Neither party will be liable for any failure or delay in performing its obligations under this Agreement to the extent such failure or delay is caused by circumstances beyond that party's reasonable control, including acts of God, natural disasters, war, terrorism, civil unrest, internet or power outages, or acts of government. The affected party must promptly notify the other party and resume performance as soon as reasonably practicable.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Notices.</strong> All legal notices under this Agreement must be in writing and delivered to SYNTRA at <a href="mailto:legal@syntraplatform.io" style="color:var(--amber);">legal@syntraplatform.io</a>. Notices to Customer will be sent to the email address on file for your account. Notices are effective upon confirmed delivery.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Independent Contractors.</strong> The parties are independent contractors. Nothing in this Agreement creates a partnership, joint venture, agency, employment, or franchise relationship between SYNTRA and Customer.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">Publicity.</strong> SYNTRA may reference your organization's name and general use of SYNTRA services as a customer reference in its marketing materials, website, and sales presentations unless you notify SYNTRA in writing that you object to such use.
+        </p>
+        <p class="legal-p">
+          <strong class="amber">No Third-Party Beneficiaries.</strong> This Agreement does not confer any rights or benefits on any third party unless expressly stated otherwise.
+        </p>
+      </section>
+
+      <div class="legal-divider"></div>
+
+      <!-- 17. Contact -->
+      <section id="contact" class="legal-section reveal">
+        <h2 class="legal-h2">17. Contact</h2>
+        <p class="legal-p">
+          If you have questions about these Terms of Service, wish to report a potential violation, or need to provide legal notice to SYNTRA, please contact our legal team:
+        </p>
+        <div class="legal-callout">
+          <p class="legal-p">
+            <strong style="color:var(--white);">SYNTRA Platform, Inc.</strong><br />
+            Legal Department<br />
+            5016 Barnard Mill Road, Suite 113<br />
+            Ringwood, IL 60072<br />
+            Email: <a href="mailto:legal@syntraplatform.io" style="color:var(--amber);">legal@syntraplatform.io</a><br />
+            General inquiries: <a href="mailto:sales@syntraplatform.io" style="color:var(--amber);">sales@syntraplatform.io</a>
+          </p>
+        </div>
+        <p class="legal-p">
+          For platform support requests, billing questions, or account issues, please contact <a href="mailto:support@syntraplatform.io" style="color:var(--amber);">support@syntraplatform.io</a> or visit your account dashboard. Legal notices should be sent only to the legal email address above.
+        </p>
+      </section>
+
+    </div><!-- /.legal-page -->
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo"><img src="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Horizontal.png" alt="SYNTRA" /></a>
+          <p>The execution platform logistics companies use to connect every system, asset, and shipment — and actually run their operation from one place.</p>
+        </div>
+        <div class="footer-col"><h4>Platform</h4><ul><li><a href="index.html">Overview</a></li><li><a href="integrations.html">Integrations</a></li><li><a href="index.html#hardware">Hardware</a></li><li><a href="pricing.html">How We Work</a></li><li><a href="#">Security</a></li><li><a href="#">API Docs</a></li></ul></div>
+        <div class="footer-col"><h4>Solutions</h4><ul><li><a href="solutions.html#brokers">Freight Brokers</a></li><li><a href="solutions.html#3pl">3PLs</a></li><li><a href="solutions.html#shippers">Shippers</a></li><li><a href="solutions.html#fleet">Fleet Managers</a></li><li><a href="solutions.html#assets">Asset Managers</a></li><li><a href="use-cases.html">Use Cases</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About SYNTRA</a></li><li><a href="about.html#cscs">CSCS Partnership</a></li><li><a href="#">Careers</a></li><li><a href="contact.html">Contact</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 SYNTRA Platform, Inc. All rights reserved.</span>
+        <span><a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms.html" style="color:var(--gray);">Terms of Service</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       SCRIPTS
+  ============================================================ -->
+  <script>
+    // Scroll reveal
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!els.length) return;
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function (el) { obs.observe(el); });
+    })();
+
+    // Nav solid on scroll
+    (function () {
+      var nav = document.getElementById('main-nav');
+      if (!nav) return;
+      window.addEventListener('scroll', function () {
+        nav.style.background = window.scrollY > 60
+          ? 'rgba(8,9,14,0.98)'
+          : 'rgba(8,9,14,0.82)';
+      }, { passive: true });
+    })();
+  </script>
+
+  <script>
+    // Mobile nav toggle
+    (function () {
+      var nav    = document.getElementById('main-nav');
+      var toggle = document.querySelector('.nav-mobile-toggle');
+      var src    = document.querySelector('.nav-links');
+      if (!nav || !toggle || !src) return;
+
+      var panel = document.createElement('div');
+      panel.id  = 'mobile-nav';
+      panel.innerHTML =
+        '<ul class="mobile-nav-list"></ul>' +
+        '<div class="mobile-nav-footer">' +
+          '<a href="book-demo.html" class="btn btn-primary" ' +
+          'style="display:block;text-align:center;padding:14px 0;width:100%;">Request Demo &rarr;</a>' +
+        '</div>';
+      var ul = panel.querySelector('.mobile-nav-list');
+      src.querySelectorAll('a').forEach(function (a) {
+        var li = document.createElement('li');
+        li.appendChild(a.cloneNode(true));
+        ul.appendChild(li);
+      });
+      nav.parentNode.insertBefore(panel, nav.nextSibling);
+
+      function open()  { panel.classList.add('open'); toggle.classList.add('open'); toggle.setAttribute('aria-expanded', 'true');  document.body.style.overflow = 'hidden'; }
+      function close() { panel.classList.remove('open'); toggle.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; }
+
+      toggle.addEventListener('click', function () { panel.classList.contains('open') ? close() : open(); });
+      panel.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', close); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+    })();
+  </script>
+
+</body>
+</html>

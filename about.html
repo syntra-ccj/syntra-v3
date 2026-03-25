@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About SYNTRA — Built by Operators, for Operators</title>
+  <meta name="description" content="SYNTRA was built by operators who called customers first. Learn the origin story, meet the founders, and understand why we built an IoT and logistics execution platform around real conversations." />
+  <meta name="keywords" content="SYNTRA about, logistics platform founders, IoT company story, Carlos Carrillo, Chadd Ori, CSCS partnership, logistics execution" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="SYNTRA Platform" />
+  <link rel="canonical" href="https://www.syntraplatform.io/about.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://www.syntraplatform.io/about.html" />
+  <meta property="og:title"       content="About SYNTRA — Built by Operators, for Operators" />
+  <meta property="og:description" content="We didn't guess at what to build. We called customers. Real operators dealing with cold chain gaps, siloed IoT data, and platforms that locked them in." />
+  <meta property="og:image"       content="https://www.syntraplatform.io/og-image.png" />
+  <meta property="og:site_name"   content="SYNTRA Platform" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@syntraplatform" />
+  <meta name="twitter:title"       content="About SYNTRA — Built by Operators, for Operators" />
+  <meta name="twitter:description" content="We didn't guess at what to build. We called customers." />
+  <meta name="twitter:image"       content="https://www.syntraplatform.io/og-image.png" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SYNTRA Platform",
+    "url": "https://www.syntraplatform.io",
+    "logo": "https://www.syntraplatform.io/Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Horizontal.png",
+    "description": "End-to-end logistics execution platform connecting TMS, WMS, ERP, and IoT into one unified layer.",
+    "foundingDate": "2024",
+    "founders": [
+      { "@type": "Person", "name": "Carlos Carrillo Jr." },
+      { "@type": "Person", "name": "Chadd Ori" }
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "url": "https://www.syntraplatform.io/book-demo.html"
+    }
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Square.png" />
+  <link rel="apple-touch-icon"     href="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Square.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       TOKENS
+    ============================================================ */
+    :root {
+      --bg:          #08090E;
+      --surface:     #0D0F18;
+      --surface-2:   #121520;
+      --border:      rgba(255,255,255,0.07);
+      --white:       #FFFFFF;
+      --gray:        #8892A4;
+      --gray-lt:     #B4BCCA;
+      --amber:       #FF9500;
+      --amber-dim:   rgba(255,149,0,0.10);
+      --amber-glow:  rgba(255,149,0,0.18);
+      --blue:        #214DBC;
+      --blue-bright: #2D5FE8;
+      --blue-dim:    rgba(45,95,232,0.12);
+      --grad:        linear-gradient(135deg, #FF9500 0%, #214DBC 100%);
+      --grad-text:   linear-gradient(90deg,  #FF9500 0%, #2D5FE8 100%);
+      --max-w:       1280px;
+      --nav-h:       72px;
+      --radius:      14px;
+    }
+
+    /* ============================================================
+       RESET
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ============================================================
+       TYPOGRAPHY
+    ============================================================ */
+    h1, h2, h3, h4, h5 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+    }
+
+    .gradient-text {
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ============================================================
+       LAYOUT
+    ============================================================ */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 36px;
+    }
+    nav .container {
+      max-width: none;
+      width: 100%;
+      margin: 0;
+      padding: 0 40px;
+    }
+
+    /* ============================================================
+       COMPONENTS
+    ============================================================ */
+
+    /* Tag pill */
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--amber);
+      border: 1px solid rgba(255,149,0,0.28);
+      background: var(--amber-dim);
+      padding: 6px 14px;
+      border-radius: 100px;
+    }
+    .tag::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--amber);
+      animation: blink 2s ease-in-out infinite;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 30px;
+      border-radius: 9px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      border: none;
+      transition: all 0.22s ease;
+    }
+    .btn-primary {
+      background: var(--amber);
+      color: #000;
+      box-shadow: 0 0 28px rgba(255,149,0,0.30);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 48px rgba(255,149,0,0.50);
+      background: #FFAA22;
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(255,255,255,0.28);
+    }
+    .btn-blue {
+      background: var(--blue-bright);
+      color: #fff;
+      box-shadow: 0 0 28px rgba(45,95,232,0.28);
+    }
+    .btn-blue:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 48px rgba(45,95,232,0.44);
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity 0.72s ease, transform 0.72s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* Section divider */
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg,
+        transparent,
+        var(--border) 20%,
+        rgba(255,149,0,0.15) 50%,
+        var(--border) 80%,
+        transparent);
+      margin: 0;
+    }
+
+    /* ============================================================
+       KEYFRAMES
+    ============================================================ */
+    @keyframes blink {
+      0%,100% { opacity: 1; }
+      50%      { opacity: 0.35; }
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0px); }
+      50%      { transform: translateY(-14px); }
+    }
+    @keyframes glowPulse {
+      0%,100% { opacity: 0.5; }
+      50%      { opacity: 1; }
+    }
+
+    /* ============================================================
+       NAV
+    ============================================================ */
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 200;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      background: rgba(8,9,14,0.82);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+    }
+    .nav-logo img { height: 30px; width: auto; display: block; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--gray);
+      font-size: 13.5px;
+      font-weight: 500;
+      transition: color 0.2s;
+          white-space: nowrap;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--white); }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+          padding-left: 20px;
+      border-left: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-right a.login {
+      color: var(--gray);
+      font-size: 13.5px;
+      font-weight: 500;
+      transition: color 0.2s;
+          white-space: nowrap;
+    }
+    .nav-right a.login:hover { color: var(--white); }
+
+    /* ============================================================
+       SECTION SHARED
+    ============================================================ */
+    section { padding: 120px 0; scroll-margin-top: var(--nav-h); }
+    .section-eyebrow { margin-bottom: 20px; }
+    .section-h { font-size: clamp(34px, 3.8vw, 54px); margin-bottom: 18px; }
+    .section-sub {
+      font-size: 17px;
+      color: var(--gray);
+      max-width: 580px;
+      line-height: 1.72;
+    }
+    .section-header { text-align: center; margin-bottom: 68px; }
+    .section-header .section-sub { margin: 0 auto; }
+
+    /* ============================================================
+       HERO — ABOUT
+    ============================================================ */
+    #about-hero {
+      display: flex;
+      align-items: center;
+      padding: var(--nav-h) 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-hero-ambient {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    .about-hero-ambient::before {
+      content: '';
+      position: absolute;
+      top: -15%;
+      left: -8%;
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(255,149,0,0.08) 0%, transparent 65%);
+    }
+    .about-hero-ambient::after {
+      content: '';
+      position: absolute;
+      bottom: 5%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(45,95,232,0.07) 0%, transparent 65%);
+    }
+
+    .about-hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.055) 1px, transparent 1px);
+      background-size: 38px 38px;
+      mask-image: radial-gradient(ellipse 90% 90% at 50% 40%, black 30%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .about-hero-inner {
+      position: relative;
+      z-index: 2;
+      padding: 80px 0 72px;
+      max-width: 820px;
+    }
+    .about-hero-h1 {
+      font-size: clamp(52px, 5.6vw, 86px);
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -0.035em;
+      margin-bottom: 30px;
+    }
+    .about-hero-sub {
+      font-size: 18px;
+      color: var(--gray-lt);
+      line-height: 1.72;
+      max-width: 620px;
+    }
+
+    /* ============================================================
+       ORIGIN STORY
+    ============================================================ */
+    #origin {
+      padding: 120px 0;
+      position: relative;
+    }
+    #origin::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent, rgba(255,149,0,0.02) 50%, transparent);
+      pointer-events: none;
+    }
+
+    .origin-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .origin-content { display: flex; flex-direction: column; gap: 26px; }
+
+    .origin-pull-quote {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(28px, 3.2vw, 44px);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+      color: var(--amber);
+      margin-bottom: 8px;
+    }
+
+    .origin-body {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .origin-body p {
+      font-size: 16px;
+      color: var(--gray-lt);
+      line-height: 1.8;
+    }
+
+    /* Right quote card */
+    .origin-quote-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--amber);
+      border-radius: var(--radius);
+      padding: 52px 48px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      top: 40px;
+    }
+    .origin-quote-card:hover {
+      border-color: rgba(255,149,0,0.4);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.4), -4px 0 40px rgba(255,149,0,0.08);
+    }
+    .origin-quote-mark {
+      font-family: Georgia, serif;
+      font-size: 160px;
+      line-height: 0.8;
+      color: var(--amber);
+      opacity: 0.12;
+      position: absolute;
+      top: 20px;
+      left: 28px;
+      pointer-events: none;
+      user-select: none;
+    }
+    .origin-quote-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(20px, 2.2vw, 28px);
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      position: relative;
+      z-index: 1;
+      margin-bottom: 28px;
+    }
+    .origin-quote-attr {
+      font-size: 13px;
+      color: var(--gray);
+      font-weight: 500;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .origin-quote-attr::before {
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      background: var(--amber);
+      opacity: 0.5;
+    }
+
+    /* ============================================================
+       FOUNDERS
+    ============================================================ */
+    #founders {
+      padding: 120px 0;
+      background: linear-gradient(180deg, transparent, rgba(45,95,232,0.025) 50%, transparent);
+    }
+
+    .founders-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 0;
+    }
+
+    .founder-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 48px 44px;
+      transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .founder-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--grad);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .founder-card:hover {
+      border-color: rgba(255,149,0,0.3);
+      box-shadow: 0 0 60px rgba(255,149,0,0.08), 0 32px 80px rgba(0,0,0,0.4);
+      transform: translateY(-4px);
+    }
+    .founder-card:hover::before { opacity: 1; }
+
+    .founder-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 28px;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: 0.02em;
+      margin-bottom: 28px;
+      flex-shrink: 0;
+    }
+    .founder-avatar.cc {
+      background: linear-gradient(135deg, #FF9500 0%, #214DBC 100%);
+      box-shadow: 0 0 40px rgba(255,149,0,0.25);
+    }
+    .founder-avatar.co {
+      background: linear-gradient(135deg, #214DBC 0%, #FF9500 100%);
+      box-shadow: 0 0 40px rgba(45,95,232,0.25);
+    }
+
+    .founder-name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 4px;
+      letter-spacing: -0.015em;
+    }
+    .founder-title {
+      font-size: 13px;
+      color: var(--amber);
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+    .founder-bio {
+      font-size: 15px;
+      color: var(--gray-lt);
+      line-height: 1.78;
+      margin-bottom: 28px;
+    }
+    .founder-bio .highlight {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    .founder-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .founder-chip {
+      padding: 6px 14px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--gray-lt);
+      font-family: 'Inter', sans-serif;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .founder-chip:hover {
+      border-color: rgba(255,149,0,0.3);
+      color: var(--amber);
+      background: var(--amber-dim);
+    }
+
+    /* ============================================================
+       STATS
+    ============================================================ */
+    #about-stats {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    #about-stats::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(255,149,0,0.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .stat-item {
+      padding: 0 40px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(40px, 4.2vw, 66px);
+      font-weight: 900;
+      line-height: 1;
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 12px;
+    }
+    .stat-label {
+      font-size: 13.5px;
+      color: var(--gray);
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    /* ============================================================
+       CSCS PARTNERSHIP
+    ============================================================ */
+    #cscs {
+      padding: 120px 0;
+    }
+
+    .cscs-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      overflow: hidden;
+      position: relative;
+    }
+    .cscs-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--blue-bright), var(--blue));
+    }
+    .cscs-card-inner {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      align-items: center;
+    }
+    .cscs-left {
+      padding: 64px 64px;
+      border-right: 1px solid var(--border);
+    }
+    .cscs-logo-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 48px;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      background: linear-gradient(90deg, var(--blue-bright), var(--blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+    .cscs-tagline {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--gray-lt);
+      margin-bottom: 22px;
+      line-height: 1.5;
+    }
+    .cscs-body {
+      font-size: 15.5px;
+      color: var(--gray);
+      line-height: 1.78;
+      margin-bottom: 32px;
+      max-width: 520px;
+    }
+
+    .cscs-right {
+      padding: 64px 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .cscs-benefit {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 20px;
+      background: var(--blue-dim);
+      border: 1px solid rgba(45,95,232,0.2);
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--gray-lt);
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .cscs-benefit:hover {
+      border-color: rgba(45,95,232,0.4);
+      background: rgba(45,95,232,0.18);
+      color: var(--white);
+    }
+    .cscs-benefit-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--blue-bright);
+      flex-shrink: 0;
+    }
+
+    /* ============================================================
+       BRAND VALUES
+    ============================================================ */
+    #values {
+      padding: 120px 0;
+      background: linear-gradient(180deg, transparent, rgba(255,149,0,0.02) 50%, transparent);
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .value-card {
+      background: var(--surface);
+      padding: 52px 44px;
+      position: relative;
+      transition: background 0.3s;
+    }
+    .value-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--grad);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .value-card:hover { background: var(--surface-2); }
+    .value-card:hover::before { opacity: 1; }
+
+    .value-num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--amber);
+      margin-bottom: 20px;
+    }
+
+    .value-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 13px;
+      background: var(--amber-dim);
+      border: 1px solid rgba(255,149,0,0.22);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 26px;
+    }
+
+    .value-card h3 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+    .value-card p {
+      font-size: 14.5px;
+      color: var(--gray);
+      line-height: 1.75;
+    }
+
+    /* ============================================================
+       COMPANY FACTS
+    ============================================================ */
+    #facts {
+      padding: 80px 0;
+    }
+
+    .facts-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 48px 60px;
+    }
+
+    .facts-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .fact-item {
+      padding: 0 36px;
+      border-right: 1px solid var(--border);
+    }
+    .fact-item:first-child { padding-left: 0; }
+    .fact-item:last-child { padding-right: 0; border-right: none; }
+
+    .fact-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 10px;
+    }
+    .fact-value {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+    }
+
+    /* ============================================================
+       CTA
+    ============================================================ */
+    #about-cta { padding: 100px 0; }
+    .cta-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 90px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 15%;
+      right: 15%;
+      height: 2px;
+      background: var(--grad);
+    }
+    .cta-box::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      height: 300px;
+      background: radial-gradient(ellipse, rgba(255,149,0,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cta-box h2 {
+      font-size: clamp(34px, 3.8vw, 54px);
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+    .cta-box p {
+      font-size: 17px;
+      color: var(--gray);
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 1;
+    }
+    .cta-actions {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      flex-wrap: wrap;
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 64px 0 40px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+    .footer-logo {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .footer-logo img { height: 26px; width: auto; display: block; }
+    .footer-brand p {
+      font-size: 13.5px;
+      color: var(--gray);
+      line-height: 1.72;
+      max-width: 270px;
+    }
+    .footer-col h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 18px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .footer-col a { font-size: 13.5px; color: var(--gray); transition: color 0.2s; }
+    .footer-col a:hover { color: var(--white); }
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      font-size: 12.5px;
+      color: var(--gray);
+    }
+    .footer-bottom a { color: var(--amber); }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1024px) {
+      .origin-inner          { grid-template-columns: 1fr; gap: 48px; }
+      .origin-quote-card     { top: 0; }
+      .founders-grid         { grid-template-columns: 1fr; }
+      .stats-grid            { grid-template-columns: 1fr 1fr; row-gap: 48px; }
+      .stat-item:nth-child(2){ border-right: none; }
+      .cscs-card-inner       { grid-template-columns: 1fr; }
+      .cscs-left             { border-right: none; border-bottom: 1px solid var(--border); }
+      .values-grid           { grid-template-columns: 1fr; gap: 0; }
+      .facts-grid            { grid-template-columns: 1fr 1fr; row-gap: 36px; }
+      .fact-item:nth-child(2){ border-right: none; }
+      .fact-item:nth-child(3){ padding-left: 0; border-right: 1px solid var(--border); }
+      .fact-item:nth-child(4){ border-right: none; }
+      .footer-inner          { grid-template-columns: 1fr 1fr; gap: 40px; }
+    }
+    @media (max-width: 900px) {
+      .nav-links         { display: none !important; }
+      .login             { display: none !important; }
+      .nav-right a.login { display: none !important; }
+      .nav-mobile-toggle { display: block !important; margin-left: auto; }
+      .nav-right .btn-primary { display: none !important; }
+      .nav-mobile-toggle span { display: block; width: 22px; height: 2px; background: var(--amber); border-radius: 2px; }
+      .nav-mobile-toggle span + span { margin-top: 5px; }
+    }
+    }
+        @media (max-width: 640px) {
+      .container             { padding: 0 20px; }
+      section                { padding: 80px 0; }
+      .about-hero-h1         { font-size: clamp(40px, 10vw, 60px); }
+      .stats-grid            { grid-template-columns: 1fr; }
+      .stat-item             { border-right: none; border-bottom: 1px solid var(--border); padding: 24px 0; }
+      .stat-item:last-child  { border-bottom: none; }
+      .facts-card            { padding: 36px 28px; }
+      .facts-grid            { grid-template-columns: 1fr 1fr; row-gap: 32px; }
+      .fact-item             { padding: 0 16px; }
+      .fact-item:first-child { padding-left: 0; }
+      .fact-item:nth-child(2){ border-right: none; }
+      .fact-item:nth-child(3){ padding-left: 0; border-right: 1px solid var(--border); }
+      .fact-item:last-child  { border-right: none; padding-right: 0; }
+      .cscs-left             { padding: 44px 28px; }
+      .cscs-right            { padding: 36px 28px; }
+      .founder-card          { padding: 36px 28px; }
+      .cta-box               { padding: 48px 24px; }
+      .footer-inner          { grid-template-columns: 1fr; }
+      .footer-bottom         { flex-direction: column; gap: 8px; text-align: center; }
+    }
+
+    /* ============================================================
+       MOBILE — 768px
+    ============================================================ */
+    @media (max-width: 768px) {
+      section { padding: 60px 0; }
+      .container { padding: 0 20px; }
+
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+      .footer-brand { grid-column: 1 / -1; }
+
+      .cta-box { padding: 44px 28px; }
+
+      .btn { padding: 13px 22px; font-size: 13px; }
+
+      /* Founders grid */
+      .founders-grid { grid-template-columns: 1fr; gap: 20px; }
+
+      /* Origin story */
+      .origin-inner { grid-template-columns: 1fr; gap: 40px; }
+
+      /* Stats band */
+      .stats-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+
+      /* Values grid */
+      .values-grid { grid-template-columns: 1fr; gap: 16px; }
+
+      /* Facts band */
+      .facts-grid { grid-template-columns: 1fr 1fr; row-gap: 24px; }
+
+      /* CSCS card */
+      .cscs-card-inner { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    @media (max-width: 480px) {
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+  
+    /* ============================================================
+       MOBILE NAV PANEL
+    ============================================================ */
+    #mobile-nav {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: rgba(8,9,14,0.97);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 28px 24px 32px;
+      z-index: 998;
+      transform: translateY(-8px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+    }
+    @media (max-width: 900px) { #mobile-nav { display: block; } }
+    #mobile-nav.open { opacity: 1; transform: translateY(0); visibility: visible; }
+    .mobile-nav-list { list-style: none; padding: 0; margin: 0 0 24px; }
+    .mobile-nav-list li + li { border-top: 1px solid rgba(255,255,255,0.06); }
+    .mobile-nav-list a {
+      display: block; padding: 14px 0;
+      font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 500;
+      color: var(--white); text-decoration: none; transition: color 0.15s;
+    }
+    .mobile-nav-list a:hover { color: var(--amber); }
+    .mobile-nav-footer { padding-top: 8px; }
+    /* Hamburger ↔ X */
+    .nav-mobile-toggle span {
+      transition: transform 0.22s ease, opacity 0.22s ease;
+      transform-origin: center;
+    }
+    .nav-mobile-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-mobile-toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-mobile-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAV
+  ============================================================ -->
+  <nav id="main-nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo"><img src="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Horizontal.png" alt="SYNTRA" /></a>
+        <ul class="nav-links">
+          <li><a href="index.html#platform">Platform</a></li>
+          <li><a href="index.html#hardware">Hardware</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="use-cases.html">Use Cases</a></li>
+          <li><a href="integrations.html">Integrations</a></li>
+          <li><a href="about.html" class="active">Company</a></li>
+        </ul>
+        <div class="nav-right">
+          <a href="https://syntra.scoti.app" target="_blank" rel="noopener" class="login">Sign In</a>
+          <a href="book-demo.html" class="btn btn-primary" style="padding:10px 22px; font-size:12px;">Request Demo</a>
+        </div>
+            <button class="nav-mobile-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       SECTION 1: HERO
+  ============================================================ -->
+  <section id="about-hero">
+    <div class="about-hero-ambient"></div>
+    <div class="about-hero-grid"></div>
+    <div class="container">
+      <div class="about-hero-inner">
+        <div class="reveal" style="margin-bottom: 28px;">
+          <span class="tag">Our Story</span>
+        </div>
+        <h1 class="about-hero-h1 reveal">
+          Built for operators.<br>
+          <span class="gradient-text">By operators.</span>
+        </h1>
+        <p class="about-hero-sub reveal">
+          We didn't guess at what to build. We called customers. Real operators dealing with cold chain gaps, siloed IoT data, and platforms that locked them in. SYNTRA was built around those conversations.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================================================
+       SECTION 2: ORIGIN STORY
+  ============================================================ -->
+  <section id="origin">
+    <div class="container">
+      <div class="origin-inner">
+
+        <!-- Left: Narrative -->
+        <div class="origin-content reveal">
+          <div class="section-eyebrow"><span class="tag">How We Got Here</span></div>
+          <div class="origin-pull-quote">SYNTRA started<br>in survival mode.</div>
+          <div class="origin-body">
+            <p>A corporate restructuring forced my hand. But if I'm being honest, I'd always wanted to build something of my own. The timing just never felt right. When it finally was, we didn't guess.</p>
+            <p>We called customers. Real operators dealing with cold chain visibility gaps, siloed IoT data, and platforms that locked them into cheap hardware. We built around those conversations.</p>
+            <p>No cookie-cutter platform. A real ecosystem — IoT, BLE, and connected assets — designed for how logistics actually works.</p>
+          </div>
+        </div>
+
+        <!-- Right: Quote Card -->
+        <div class="origin-quote-card reveal">
+          <div class="origin-quote-mark">"</div>
+          <div class="origin-quote-text">
+            We didn't guess at what to build.<br>We called customers.
+          </div>
+          <div class="origin-quote-attr">Carlos Carrillo Jr., Founder &amp; CEO</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================================================
+       SECTION 3: FOUNDERS
+  ============================================================ -->
+  <section id="founders">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow"><span class="tag">The People Behind It</span></div>
+        <h2 class="section-h">Two builders.<br><span class="gradient-text">One mission.</span></h2>
+        <p class="section-sub">Combined 35+ years across technology, telematics, IoT, and logistics operations.</p>
+      </div>
+
+      <div class="founders-grid">
+
+        <!-- Carlos -->
+        <div class="founder-card reveal">
+          <div class="founder-avatar cc">CC</div>
+          <div class="founder-name">Carlos Carrillo Jr., MBA</div>
+          <div class="founder-title">Founder &amp; CEO</div>
+          <p class="founder-bio">
+            20+ years in technology, telematics, and connected devices. IoT, GPS, and SaaS sales leadership. Built SYNTRA from the ground up after a corporate restructuring forced the question every operator eventually asks: why doesn't this work better?
+          </p>
+          <div class="founder-chips">
+            <span class="founder-chip">IoT + GPS</span>
+            <span class="founder-chip">Telematics</span>
+            <span class="founder-chip">SaaS Leadership</span>
+            <span class="founder-chip">Connected Devices</span>
+          </div>
+        </div>
+
+        <!-- Chadd -->
+        <div class="founder-card reveal">
+          <div class="founder-avatar co">CO</div>
+          <div class="founder-name">Chadd Ori</div>
+          <div class="founder-title">CCO &amp; Partner</div>
+          <p class="founder-bio">
+            16+ years across every corner of logistics — except driving the truck. The operational counterpart to Carlos's tech DNA. <span class="highlight">Sold his house, quit his job, and bet everything on building SYNTRA.</span> They've been building things together since they were 5 years old.
+          </p>
+          <div class="founder-chips">
+            <span class="founder-chip">Freight Operations</span>
+            <span class="founder-chip">3PL</span>
+            <span class="founder-chip">Cold Chain</span>
+            <span class="founder-chip">Carrier Relations</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================================================
+       SECTION 4: COMPANY STATS
+  ============================================================ -->
+  <section id="about-stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="stat-num" data-target="30" data-suffix="+">0</div>
+          <div class="stat-label">Customers</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-num" data-target="4000" data-suffix="+">0</div>
+          <div class="stat-label">Devices Deployed</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-num" data-target="25000" data-suffix="+">0</div>
+          <div class="stat-label">Shipments Tracked</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-num stat-static">2024</div>
+          <div class="stat-label">Founded</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================================================
+       SECTION 5: CSCS PARTNERSHIP
+  ============================================================ -->
+  <section id="cscs">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow"><span class="tag">Key Partnership</span></div>
+        <h2 class="section-h">The intelligence layer.<br><span class="gradient-text">Powered by CSCS.</span></h2>
+      </div>
+
+      <div class="cscs-card reveal">
+        <div class="cscs-card-inner">
+          <div class="cscs-left">
+            <div class="cscs-logo-text">CSCS</div>
+            <div class="cscs-tagline">End-to-end tracking visibility. No data silos. Unlimited integrations.</div>
+            <p class="cscs-body">
+              SYNTRA has partnered with CSCS to deliver an end-to-end tracking and visibility solution. TMS, WMS, and ERP systems unified in one execution layer — no more stopping at the dock. Full control. Unlimited connectors. Real operational intelligence.
+            </p>
+            <a href="https://cscs.io" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Learn more at cscs.io &rarr;</a>
+          </div>
+          <div class="cscs-right">
+            <div class="cscs-benefit">
+              <div class="cscs-benefit-dot"></div>
+              Full control + unlimited integrations
+            </div>
+            <div class="cscs-benefit">
+              <div class="cscs-benefit-dot"></div>
+              TMS &middot; WMS &middot; ERP unified
+            </div>
+            <div class="cscs-benefit">
+              <div class="cscs-benefit-dot"></div>
+              No more data silos
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================================================
+       SECTION 6: BRAND VALUES
+  ============================================================ -->
+  <section id="values">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow"><span class="tag">What We Stand For</span></div>
+        <h2 class="section-h">Three things we<br><span class="gradient-text">don't compromise on.</span></h2>
+      </div>
+
+      <div class="values-grid">
+
+        <!-- Integrity -->
+        <div class="value-card reveal">
+          <div class="value-num">01</div>
+          <div class="value-icon">
+            <!-- Shield outline SVG -->
+            <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 1L2 5V12C2 17.55 6.16 22.74 12 24C17.84 22.74 22 17.55 22 12V5L12 1Z" stroke="#FF9500" stroke-width="1.6" stroke-linejoin="round" fill="none"/>
+              <path d="M8 13L10.5 15.5L16 10" stroke="#FF9500" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Integrity</h3>
+          <p>In our technology, our solutions, and our partnerships. We say what we mean and build what we promise.</p>
+        </div>
+
+        <!-- Relentless Innovation -->
+        <div class="value-card reveal">
+          <div class="value-num">02</div>
+          <div class="value-icon">
+            <!-- Lightning bolt outline SVG -->
+            <svg width="20" height="26" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 1L1 15H10L9 25L19 11H10L11 1Z" stroke="#FF9500" stroke-width="1.6" stroke-linejoin="round" fill="none"/>
+            </svg>
+          </div>
+          <h3>Relentless Innovation</h3>
+          <p>We don't ship to ship. Every feature, every integration, every update is built to make logistics operators faster and smarter.</p>
+        </div>
+
+        <!-- Customer-Centric -->
+        <div class="value-card reveal">
+          <div class="value-num">03</div>
+          <div class="value-icon">
+            <!-- People/team outline SVG -->
+            <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="14" cy="6" r="4" stroke="#FF9500" stroke-width="1.6" fill="none"/>
+              <path d="M6 21C6 17.134 9.582 14 14 14C18.418 14 22 17.134 22 21" stroke="#FF9500" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+              <circle cx="4" cy="8" r="3" stroke="#FF9500" stroke-width="1.4" fill="none"/>
+              <path d="M1 21C1 18.239 2.791 16 5 16" stroke="#FF9500" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+              <circle cx="24" cy="8" r="3" stroke="#FF9500" stroke-width="1.4" fill="none"/>
+              <path d="M27 21C27 18.239 25.209 16 23 16" stroke="#FF9500" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+            </svg>
+          </div>
+          <h3>Customer-Centric</h3>
+          <p>We are nothing without our customers and partners. Every decision we make starts with one question: does this make their operation better?</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================================================
+       SECTION 7: COMPANY FACTS
+  ============================================================ -->
+  <section id="facts">
+    <div class="container">
+      <div class="facts-card reveal">
+        <div class="facts-grid">
+          <div class="fact-item">
+            <div class="fact-label">Founded</div>
+            <div class="fact-value">2024</div>
+          </div>
+          <div class="fact-item">
+            <div class="fact-label">Based</div>
+            <div class="fact-value">North Chicagoland, IL</div>
+          </div>
+          <div class="fact-item">
+            <div class="fact-label">Hardware</div>
+            <div class="fact-value">5G Smart Label &middot; GPS + Cold Chain &middot; Smart Tail Lights</div>
+          </div>
+          <div class="fact-item">
+            <div class="fact-label">Platform</div>
+            <div class="fact-value">IoT + BLE + Connected Assets</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================================================
+       SECTION 8: CTA
+  ============================================================ -->
+  <section id="about-cta">
+    <div class="container">
+      <div class="cta-box reveal">
+        <div style="margin-bottom: 24px;"><span class="tag">Ready to see it in action?</span></div>
+        <h2>Ready to see it<br><span class="gradient-text">in action?</span></h2>
+        <p>30 minutes. No slides. Just your operation and our platform.</p>
+        <div class="cta-actions">
+          <a href="book-demo.html" class="btn btn-primary">Book a Demo &rarr;</a>
+          <a href="contact.html" class="btn btn-ghost">Talk to Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo"><img src="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Horizontal.png" alt="SYNTRA" /></a>
+          <p>The execution platform logistics companies use to connect every system, asset, and shipment — and actually run their operation from one place.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="integrations.html">Integrations</a></li>
+            <li><a href="index.html#hardware">Hardware</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">API Docs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="solutions.html#brokers">Freight Brokers</a></li>
+            <li><a href="solutions.html#3pl">3PLs</a></li>
+            <li><a href="solutions.html#shippers">Shippers</a></li>
+            <li><a href="solutions.html#fleet">Fleet Managers</a></li>
+            <li><a href="solutions.html#assets">Asset Managers</a></li>
+            <li><a href="use-cases.html">Use Cases</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About SYNTRA</a></li>
+            <li><a href="#cscs">CSCS Partnership</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 SYNTRA Platform, Inc. All rights reserved.</span>
+        <span><a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms.html" style="color:var(--gray);">Terms of Service</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JS
+  ============================================================ -->
+  <script>
+    // --- Scroll reveal with stagger ---
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05 });
+
+    // Mobile reveal fallback — trigger elements already in viewport
+    setTimeout(() => {
+      document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 1.1) el.classList.add('visible');
+      });
+    }, 300);
+
+    // Stagger siblings in grid/flex parents
+    const staggerParents = [
+      '.founders-grid', '.values-grid', '.stats-grid', '.facts-grid'
+    ];
+    staggerParents.forEach(sel => {
+      document.querySelectorAll(`${sel} .reveal`).forEach((el, i) => {
+        el.style.transitionDelay = `${i * 0.12}s`;
+      });
+    });
+
+    revealEls.forEach(el => revealObs.observe(el));
+
+    // --- Animated stat counters ---
+    const counters = document.querySelectorAll('.stat-num:not(.stat-static)');
+    const countObs = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const el      = entry.target;
+        const target  = parseFloat(el.dataset.target);
+        const suffix  = el.dataset.suffix || '';
+        const dec     = el.dataset.dec ? parseInt(el.dataset.dec) : 0;
+        const dur     = 1800;
+        const fps     = 60;
+        const steps   = Math.round(dur / (1000 / fps));
+        let   frame   = 0;
+        const tick = () => {
+          frame++;
+          const progress = frame / steps;
+          const ease     = 1 - Math.pow(1 - progress, 3);
+          const val      = target * ease;
+          el.textContent = (dec ? val.toFixed(dec) : Math.floor(val)) + suffix;
+          if (frame < steps) requestAnimationFrame(tick);
+          else el.textContent = (dec ? target.toFixed(dec) : target) + suffix;
+        };
+        requestAnimationFrame(tick);
+        countObs.unobserve(el);
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(el => countObs.observe(el));
+
+    // --- Nav solid on scroll ---
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      nav.style.background = window.scrollY > 60
+        ? 'rgba(8,9,14,0.98)'
+        : 'rgba(8,9,14,0.82)';
+    }, { passive: true });
+  </script>
+
+
+  <script>
+  (function(){
+    var nav    = document.getElementById('main-nav');
+    var toggle = document.querySelector('.nav-mobile-toggle');
+    var src    = document.querySelector('.nav-links');
+    if (!nav || !toggle || !src) return;
+
+    // Build panel
+    var panel = document.createElement('div');
+    panel.id  = 'mobile-nav';
+    panel.innerHTML =
+      '<ul class="mobile-nav-list"></ul>' +
+      '<div class="mobile-nav-footer">' +
+        '<a href="book-demo.html" class="btn btn-primary" ' +
+        'style="display:block;text-align:center;padding:14px 0;width:100%;">Request Demo &rarr;</a>' +
+      '</div>';
+    var ul = panel.querySelector('.mobile-nav-list');
+    src.querySelectorAll('a').forEach(function(a){
+      var li = document.createElement('li');
+      li.appendChild(a.cloneNode(true));
+      ul.appendChild(li);
+    });
+    nav.parentNode.insertBefore(panel, nav.nextSibling);
+
+    function open()  { panel.classList.add('open'); toggle.classList.add('open'); toggle.setAttribute('aria-expanded','true');  document.body.style.overflow='hidden'; }
+    function close() { panel.classList.remove('open'); toggle.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+
+    toggle.addEventListener('click', function(){ panel.classList.contains('open') ? close() : open(); });
+    panel.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+  })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Use Cases — SYNTRA | Built for Every Scenario Your Operation Faces</title>
+  <meta name="description" content="From cold chain monitoring to asset recovery, cross-border visibility to carrier accountability — see exactly how SYNTRA solves the problems your team faces every day." />
+  <meta name="keywords" content="cold chain monitoring, freight visibility, asset tracking, reverse logistics, carrier accountability, last mile delivery, supply chain use cases" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="SYNTRA Platform" />
+  <link rel="canonical" href="https://www.syntraplatform.io/use-cases.html" />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Use Cases — SYNTRA" />
+  <meta property="og:description" content="See how SYNTRA handles cold chain, asset recovery, last-mile, reverse logistics, and more." />
+  <meta property="og:url"         content="https://www.syntraplatform.io/use-cases.html" />
+
+  <link rel="icon" type="image/png" href="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Square.png" />
+  <link rel="apple-touch-icon"     href="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Square.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       DESIGN SYSTEM
+    ============================================================ */
+    :root {
+      --bg:          #08090E;
+      --surface:     #0F1117;
+      --surface2:    #141720;
+      --border:      rgba(255,255,255,0.07);
+      --amber:       #FF9500;
+      --amber-dim:   rgba(255,149,0,0.12);
+      --blue-bright: #2D5FE8;
+      --blue-dim:    rgba(45,95,232,0.12);
+      --white:       #F0F2F7;
+      --gray:        #6B7489;
+      --gray-light:  #9AA3B8;
+      --red:         #E84040;
+      --red-dim:     rgba(232,64,64,0.1);
+      --green:       #22C55E;
+      --green-dim:   rgba(34,197,94,0.1);
+      --grad:        linear-gradient(135deg, #FF9500, #2D5FE8);
+      --grad-text:   linear-gradient(90deg, #FF9500 0%, #2D5FE8 100%);
+      --radius:      14px;
+      --radius-sm:   8px;
+      --nav-h:       72px;
+      --transition:  0.35s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    h1,h2,h3,h4,h5 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* ============================================================
+       LAYOUT
+    ============================================================ */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
+    nav .container { max-width: none; width: 100%; margin: 0; padding: 0 40px; }
+    .section-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--amber);
+      background: var(--amber-dim); border: 1px solid rgba(255,149,0,0.2);
+      border-radius: 20px; padding: 5px 14px; margin-bottom: 22px;
+    }
+    .section-label.blue {
+      color: var(--blue-bright);
+      background: var(--blue-dim);
+      border-color: rgba(45,95,232,0.2);
+    }
+    .grad-text {
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ============================================================
+       BUTTONS
+    ============================================================ */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 28px; border-radius: 8px;
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 13.5px; letter-spacing: 0.02em;
+      cursor: pointer; border: none; transition: var(--transition);
+      white-space: nowrap;
+    }
+    .btn-primary { background: var(--amber); color: #08090E; }
+    .btn-primary:hover { background: #FFAA28; transform: translateY(-1px); box-shadow: 0 8px 28px rgba(255,149,0,0.35); }
+    .btn-ghost { background: transparent; color: var(--white); border: 1px solid var(--border); }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.05); }
+    .btn-blue { background: var(--blue-bright); color: #fff; }
+    .btn-blue:hover { background: #3D72F8; transform: translateY(-1px); box-shadow: 0 8px 28px rgba(45,95,232,0.35); }
+    .btn-sm { padding: 10px 20px; font-size: 12.5px; }
+
+    /* ============================================================
+       REVEAL
+    ============================================================ */
+    .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ============================================================
+       NAV
+    ============================================================ */
+    #main-nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: var(--nav-h); z-index: 1000;
+      background: rgba(8,9,14,0.82);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 28px;
+      height: 100%; display: flex; align-items: center; gap: 32px;
+    }
+    .nav-logo img { height: 36px; }
+    .nav-links { display: flex; list-style: none; gap: 8px; flex: 1; }
+    .nav-links a {
+      font-size: 13.5px; font-weight: 600;
+      color: var(--gray-light); padding: 6px 12px;
+      border-radius: 6px; transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--white); }
+    .nav-right { display: flex; align-items: center; gap: 12px; margin-left: auto; padding-left: 20px; border-left: 1px solid rgba(255,255,255,0.08); }
+    .login { font-size: 13.5px; font-weight: 600; color: var(--gray-light); padding: 6px 12px; border-radius: 6px; transition: color 0.2s; white-space: nowrap; }
+    .login:hover { color: var(--white); }
+    .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+    .nav-mobile-toggle span { display: block; width: 22px; height: 2px; background: var(--amber); border-radius: 2px; transition: var(--transition); }
+    .nav-mobile-toggle span + span { margin-top: 5px; }
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .login { display: none; }
+      .nav-mobile-toggle { display: block; margin-left: auto; }
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    #uc-hero {
+      padding-top: calc(var(--nav-h) + 90px);
+      padding-bottom: 80px;
+      text-align: center;
+      position: relative; overflow: hidden;
+    }
+    #uc-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 800px 400px at 50% -5%, rgba(255,149,0,0.08) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-h1 { font-size: clamp(40px, 6vw, 78px); margin-bottom: 24px; max-width: 800px; margin-left: auto; margin-right: auto; }
+    .hero-sub { font-size: 18px; color: var(--gray-light); max-width: 540px; margin: 0 auto 40px; line-height: 1.7; }
+    .hero-pills {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      justify-content: center; margin-bottom: 48px;
+    }
+    .hero-pill {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 20px; padding: 7px 16px;
+      font-size: 13px; font-weight: 600; color: var(--gray-light);
+      cursor: pointer; transition: var(--transition);
+    }
+    .hero-pill:hover { border-color: var(--amber); color: var(--amber); }
+
+    /* ============================================================
+       FILTER BAR
+    ============================================================ */
+    #filter-bar {
+      position: sticky; top: var(--nav-h); z-index: 90;
+      background: rgba(8,9,14,0.92); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .filter-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 28px;
+      display: flex; align-items: center; gap: 2px;
+      overflow-x: auto; scrollbar-width: none;
+    }
+    .filter-inner::-webkit-scrollbar { display: none; }
+    .filter-btn {
+      flex-shrink: 0; background: none; border: none; cursor: pointer;
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 12px; letter-spacing: 0.04em;
+      color: var(--gray); padding: 16px 16px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+    .filter-btn:hover { color: var(--white); }
+    .filter-btn.active { color: var(--amber); border-bottom-color: var(--amber); }
+
+    /* ============================================================
+       USE CASE SECTIONS
+    ============================================================ */
+    .uc-section {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 130px;
+    }
+    .uc-section:last-of-type { border-bottom: none; }
+
+    .uc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .uc-grid.reverse { direction: rtl; }
+    .uc-grid.reverse > * { direction: ltr; }
+
+    /* Text side */
+    .uc-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; }
+    .uc-industry-tag {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gray);
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 20px; padding: 4px 12px;
+    }
+    .uc-h2 { font-size: clamp(26px, 3vw, 40px); margin-bottom: 16px; }
+    .uc-sub { font-size: 15.5px; color: var(--gray-light); line-height: 1.75; margin-bottom: 28px; }
+
+    /* Pain / Fix lists */
+    .uc-lists { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+    .uc-list h4 {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; margin-bottom: 12px;
+    }
+    .uc-list.pain h4 { color: var(--red); }
+    .uc-list.fix  h4 { color: var(--amber); }
+    .uc-list ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .uc-list li {
+      display: flex; gap: 9px; align-items: flex-start;
+      font-size: 13px; color: var(--gray-light); line-height: 1.5;
+    }
+    .uc-list li .mark {
+      width: 17px; height: 17px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 9px; font-weight: 900; flex-shrink: 0; margin-top: 1px;
+    }
+    .uc-list.pain li .mark { background: var(--red-dim); color: var(--red); }
+    .uc-list.fix  li .mark { background: var(--amber-dim); color: var(--amber); }
+
+    /* Chips row */
+    .uc-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+    .uc-chip {
+      font-size: 12px; font-weight: 600;
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 6px; padding: 5px 12px; color: var(--gray-light);
+    }
+    .uc-chip.amber { background: var(--amber-dim); border-color: rgba(255,149,0,0.2); color: var(--amber); }
+    .uc-chip.blue  { background: var(--blue-dim); border-color: rgba(45,95,232,0.2); color: var(--blue-bright); }
+
+    /* Visual side */
+    .uc-visual {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+    .uc-visual-inner { padding: 36px; }
+
+    /* Stat callout inside visual */
+    .uc-stat-big {
+      font-family: 'Montserrat', sans-serif; font-weight: 900;
+      font-size: clamp(52px, 7vw, 80px); letter-spacing: -0.04em;
+      background: var(--grad-text);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; line-height: 1;
+      margin-bottom: 6px;
+    }
+    .uc-stat-label { font-size: 14px; color: var(--gray-light); line-height: 1.5; }
+
+    /* Mini dashboard mock */
+    .dash-mock { display: flex; flex-direction: column; gap: 10px; }
+    .dash-row {
+      display: flex; align-items: center; gap: 12px;
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 10px; padding: 12px 14px;
+    }
+    .dash-icon {
+      width: 32px; height: 32px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 15px; flex-shrink: 0;
+    }
+    .dash-icon.amber { background: var(--amber-dim); }
+    .dash-icon.blue  { background: var(--blue-dim); }
+    .dash-icon.green { background: var(--green-dim); }
+    .dash-icon.red   { background: var(--red-dim); }
+    .dash-text { flex: 1; }
+    .dash-text strong { font-size: 13px; display: block; font-weight: 600; }
+    .dash-text span { font-size: 11.5px; color: var(--gray); }
+    .dash-badge {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; padding: 3px 8px; border-radius: 4px;
+      flex-shrink: 0;
+    }
+    .badge-ok      { background: var(--green-dim); color: var(--green); }
+    .badge-warn    { background: var(--amber-dim); color: var(--amber); }
+    .badge-alert   { background: var(--red-dim); color: var(--red); }
+    .badge-transit { background: var(--blue-dim); color: var(--blue-bright); }
+
+    /* Top accent bar on visual */
+    .uc-visual::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    }
+    .uc-visual.amber-top::before { background: var(--amber); }
+    .uc-visual.blue-top::before  { background: var(--blue-bright); }
+    .uc-visual.green-top::before { background: var(--green); }
+
+    /* ============================================================
+       CROSS-SELL BAND
+    ============================================================ */
+    #cross-sell {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 0;
+    }
+    .cs-inner { text-align: center; margin-bottom: 48px; }
+    .cs-inner h2 { font-size: clamp(26px, 3.5vw, 42px); margin-bottom: 14px; }
+    .cs-inner p  { font-size: 16px; color: var(--gray-light); max-width: 500px; margin: 0 auto; }
+    .cs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+    }
+    .cs-card {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 24px 20px;
+      transition: border-color 0.25s, transform 0.25s;
+      text-align: left;
+    }
+    .cs-card:hover { border-color: rgba(255,255,255,0.15); transform: translateY(-2px); }
+    .cs-card-icon { font-size: 24px; margin-bottom: 12px; }
+    .cs-card h4 { font-size: 14px; margin-bottom: 6px; color: var(--white); }
+    .cs-card p  { font-size: 13px; color: var(--gray); line-height: 1.5; }
+    .cs-card a  { display: inline-flex; align-items: center; gap: 5px; font-size: 12.5px; font-weight: 700; color: var(--amber); margin-top: 12px; transition: gap 0.2s; }
+    .cs-card a:hover { gap: 8px; }
+
+    /* ============================================================
+       CTA
+    ============================================================ */
+    #uc-cta { padding: 100px 0; text-align: center; }
+    .cta-wrap {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 24px; padding: 72px 60px;
+      position: relative; overflow: hidden;
+    }
+    .cta-wrap::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 600px 300px at 50% 0%, rgba(255,149,0,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cta-wrap h2 { font-size: clamp(28px, 4vw, 52px); margin-bottom: 18px; max-width: 640px; margin-left: auto; margin-right: auto; }
+    .cta-wrap p  { font-size: 16px; color: var(--gray-light); margin-bottom: 40px; max-width: 440px; margin-left: auto; margin-right: auto; }
+    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 64px 0 32px;
+    }
+    .footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px; margin-bottom: 56px;
+    }
+    .footer-brand p { font-size: 13.5px; color: var(--gray); line-height: 1.7; margin-top: 16px; max-width: 280px; }
+    .footer-logo img { height: 34px; }
+    .footer-col h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--white); margin-bottom: 18px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .footer-col a { font-size: 13.5px; color: var(--gray); transition: color 0.2s; }
+    .footer-col a:hover { color: var(--white); }
+    .footer-bottom {
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 12px;
+      padding-top: 32px; border-top: 1px solid var(--border);
+      font-size: 12.5px; color: var(--gray);
+    }
+
+    /* ============================================================
+       MOBILE — 768px
+    ============================================================ */
+    @media (max-width: 768px) {
+      section { padding: 60px 0; }
+      .container { padding: 0 20px; }
+
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+      .footer-brand { grid-column: 1 / -1; }
+
+      .cta-wrap { padding: 44px 28px; }
+
+      .btn { padding: 13px 22px; font-size: 13px; }
+
+      /* Use case 2-col grids → 1-col */
+      .uc-grid { grid-template-columns: 1fr; gap: 40px; }
+
+      /* Remove RTL direction trick on mobile */
+      .uc-grid.reverse { direction: ltr; }
+
+      /* Pain/fix lists */
+      .uc-lists { grid-template-columns: 1fr; gap: 20px; }
+
+      /* Hero pills */
+      .hero-pills { gap: 8px; }
+      .hero-pill { font-size: 12px; padding: 6px 12px; }
+
+      /* Cross-sell grid */
+      .cs-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+
+      /* Visual card */
+      .uc-visual-inner { padding: 24px 20px; }
+      .uc-stat-big { font-size: 52px; }
+    }
+
+    @media (max-width: 480px) {
+      .footer-inner { grid-template-columns: 1fr; }
+      .cs-grid { grid-template-columns: 1fr; }
+    }
+  
+    /* ============================================================
+       MOBILE NAV PANEL
+    ============================================================ */
+    #mobile-nav {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: rgba(8,9,14,0.97);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 28px 24px 32px;
+      z-index: 998;
+      transform: translateY(-8px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+    }
+    @media (max-width: 900px) { #mobile-nav { display: block; } }
+    #mobile-nav.open { opacity: 1; transform: translateY(0); visibility: visible; }
+    .mobile-nav-list { list-style: none; padding: 0; margin: 0 0 24px; }
+    .mobile-nav-list li + li { border-top: 1px solid rgba(255,255,255,0.06); }
+    .mobile-nav-list a {
+      display: block; padding: 14px 0;
+      font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 500;
+      color: var(--white); text-decoration: none; transition: color 0.15s;
+    }
+    .mobile-nav-list a:hover { color: var(--amber); }
+    .mobile-nav-footer { padding-top: 8px; }
+    /* Hamburger ↔ X */
+    .nav-mobile-toggle span {
+      transition: transform 0.22s ease, opacity 0.22s ease;
+      transform-origin: center;
+    }
+    .nav-mobile-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-mobile-toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-mobile-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Horizontal.png" alt="SYNTRA" /></a>
+    <ul class="nav-links">
+      <li><a href="index.html#platform">Platform</a></li>
+      <li><a href="index.html#hardware">Hardware</a></li>
+      <li><a href="solutions.html">Solutions</a></li>
+      <li><a href="use-cases.html" class="active">Use Cases</a></li>
+          <li><a href="integrations.html">Integrations</a></li>
+      <li><a href="about.html">Company</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="https://syntra.scoti.app" target="_blank" rel="noopener" class="login">Sign In</a>
+      <a href="book-demo.html" class="btn btn-primary" style="padding:10px 22px; font-size:12px;">Request Demo</a>
+    </div>
+    <button class="nav-mobile-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="uc-hero">
+  <div class="container">
+    <div class="section-label">8 Use Cases</div>
+    <h1 class="hero-h1 reveal">Built for every scenario<br>your operation <span class="grad-text">faces.</span></h1>
+    <p class="hero-sub reveal">Not every operation looks the same. See exactly how SYNTRA handles the problems your team deals with every single day.</p>
+    <div class="hero-pills reveal">
+      <span class="hero-pill" onclick="scrollTo('cold-chain')">🌡️ Cold Chain</span>
+      <span class="hero-pill" onclick="scrollTo('asset-recovery')">📦 Asset Recovery</span>
+      <span class="hero-pill" onclick="scrollTo('cross-border')">🌐 Cross-Border</span>
+      <span class="hero-pill" onclick="scrollTo('last-mile')">🏁 Last Mile</span>
+      <span class="hero-pill" onclick="scrollTo('reverse-logistics')">🔄 Reverse Logistics</span>
+      <span class="hero-pill" onclick="scrollTo('carrier-accountability')">🛡️ Carrier Accountability</span>
+      <span class="hero-pill" onclick="scrollTo('high-value')">💎 High-Value Cargo</span>
+      <span class="hero-pill" onclick="scrollTo('multi-stop')">🗺️ Multi-Stop Execution</span>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER BAR -->
+<div id="filter-bar">
+  <div class="filter-inner">
+    <button class="filter-btn active" data-cat="cold-chain">🌡️ Cold Chain</button>
+    <button class="filter-btn" data-cat="asset-recovery">📦 Asset Recovery</button>
+    <button class="filter-btn" data-cat="cross-border">🌐 Cross-Border</button>
+    <button class="filter-btn" data-cat="last-mile">🏁 Last Mile</button>
+    <button class="filter-btn" data-cat="reverse-logistics">🔄 Reverse Logistics</button>
+    <button class="filter-btn" data-cat="carrier-accountability">🛡️ Carrier Accountability</button>
+    <button class="filter-btn" data-cat="high-value">💎 High-Value Cargo</button>
+    <button class="filter-btn" data-cat="multi-stop">🗺️ Multi-Stop</button>
+  </div>
+</div>
+
+<!-- ============================================================
+     USE CASE 1 — COLD CHAIN MONITORING
+============================================================ -->
+<section class="uc-section" id="cold-chain">
+  <div class="container">
+    <div class="uc-grid">
+      <div class="reveal">
+        <div class="uc-eyebrow">
+          <div class="section-label" style="margin:0">Cold Chain Monitoring</div>
+          <span class="uc-industry-tag">Pharma · Food &amp; Bev · Medical</span>
+        </div>
+        <h2 class="uc-h2">Your cargo can't<br>afford a <span class="grad-text">gap in coverage.</span></h2>
+        <p class="uc-sub">Temperature-sensitive freight demands continuous monitoring — not check-ins every 4 hours. SYNTRA delivers real-time sensor data, automatic excursion alerts, and a complete digital chain of custody from pickup to proof of delivery.</p>
+        <div class="uc-lists">
+          <div class="uc-list pain">
+            <h4>The problem</h4>
+            <ul>
+              <li><span class="mark">✕</span>Temperature breaks discovered after delivery</li>
+              <li><span class="mark">✕</span>Manual temperature logs that get falsified</li>
+              <li><span class="mark">✕</span>No documentation for regulatory audits</li>
+              <li><span class="mark">✕</span>Claims with no chain-of-custody evidence</li>
+            </ul>
+          </div>
+          <div class="uc-list fix">
+            <h4>SYNTRA fixes it</h4>
+            <ul>
+              <li><span class="mark">✓</span>Continuous temp &amp; humidity monitoring</li>
+              <li><span class="mark">✓</span>Instant excursion alerts with GPS location</li>
+              <li><span class="mark">✓</span>Tamper-proof digital audit trail</li>
+              <li><span class="mark">✓</span>Auto-generated compliance reports</li>
+            </ul>
+          </div>
+        </div>
+        <div class="uc-chips">
+          <span class="uc-chip amber">WaypointXL Device</span>
+          <span class="uc-chip amber">Cold Chain Plan</span>
+          <span class="uc-chip blue">Sensitech Integration</span>
+          <span class="uc-chip">FDA Compliant Logs</span>
+          <span class="uc-chip">FSMA 204 Ready</span>
+        </div>
+        <a href="book-demo.html" class="btn btn-primary btn-sm">See cold chain in action &rarr;</a>
+      </div>
+
+      <div class="uc-visual amber-top reveal">
+        <div class="uc-visual-inner">
+          <div style="margin-bottom:24px;">
+            <div class="uc-stat-big" data-target="99.8" data-suffix="%">0%</div>
+            <div class="uc-stat-label">Temperature compliance rate<br>across monitored shipments</div>
+          </div>
+          <div class="dash-mock">
+            <div class="dash-row">
+              <div class="dash-icon amber">🌡️</div>
+              <div class="dash-text">
+                <strong>Reefer Trailer #TLR-0042</strong>
+                <span>Chicago → Atlanta · 2.1°C · On route</span>
+              </div>
+              <span class="dash-badge badge-ok">IN RANGE</span>
+            </div>
+            <div class="dash-row">
+              <div class="dash-icon red">⚠️</div>
+              <div class="dash-text">
+                <strong>Shipment #SHP-1187</strong>
+                <span>Dallas · Temp spike: 9.4°C at 14:22</span>
+              </div>
+              <span class="dash-badge badge-alert">EXCURSION</span>
+            </div>
+            <div class="dash-row">
+              <div class="dash-icon green">✅</div>
+              <div class="dash-text">
+                <strong>POD Logged — Miami DC</strong>
+                <span>Temp log: 1.8°C avg · Audit ready</span>
+              </div>
+              <span class="dash-badge badge-ok">COMPLIANT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     USE CASE 2 — ASSET RECOVERY & UTILIZATION
+============================================================ -->
+<section class="uc-section" id="asset-recovery">
+  <div class="container">
+    <div class="uc-grid reverse">
+      <div class="reveal">
+        <div class="uc-eyebrow">
+          <div class="section-label blue" style="margin:0">Asset Recovery &amp; Utilization</div>
+          <span class="uc-industry-tag">3PLs · Fleet · Shippers</span>
+        </div>
+        <h2 class="uc-h2">Stop losing assets.<br>Start <span class="grad-text">using them better.</span></h2>
+        <p class="uc-sub">Trailers sitting idle at customer docks. Pallets that never came back. Containers you're paying for but can't find. SYNTRA gives you live asset location, utilization scoring, and automated recovery workflows.</p>
+        <div class="uc-lists">
+          <div class="uc-list pain">
+            <h4>The problem</h4>
+            <ul>
+              <li><span class="mark">✕</span>Trailers sitting idle for weeks undetected</li>
+              <li><span class="mark">✕</span>No visibility on where assets actually are</li>
+              <li><span class="mark">✕</span>Manual spreadsheet asset audits (quarterly)</li>
+              <li><span class="mark">✕</span>Lost or stolen assets with no trail</li>
+            </ul>
+          </div>
+          <div class="uc-list fix">
+            <h4>SYNTRA fixes it</h4>
+            <ul>
+              <li><span class="mark">✓</span>Live GPS on every asset in your fleet</li>
+              <li><span class="mark">✓</span>Utilization scoring — idle vs. active vs. lost</li>
+              <li><span class="mark">✓</span>Geofence alerts when assets leave zones</li>
+              <li><span class="mark">✓</span>Automated recovery dispatch workflows</li>
+            </ul>
+          </div>
+        </div>
+        <div class="uc-chips">
+          <span class="uc-chip amber">PulseXL Device</span>
+          <span class="uc-chip amber">WaypointXL Device</span>
+          <span class="uc-chip blue">Samsara Integration</span>
+          <span class="uc-chip">Geofencing</span>
+          <span class="uc-chip">Utilization Dashboard</span>
+        </div>
+        <a href="book-demo.html" class="btn btn-primary btn-sm">See asset tracking live &rarr;</a>
+      </div>
+
+      <div class="uc-visual blue-top reveal">
+        <div class="uc-visual-inner">
+          <div style="margin-bottom:24px;">
+            <div class="uc-stat-big" data-target="34" data-suffix="%">0%</div>
+            <div class="uc-stat-label">Average improvement in<br>asset utilization within 90 days</div>
+          </div>
+          <div class="dash-mock">
+            <div class="dash-row">
+              <div class="dash-icon blue">📡</div>
+              <div class="dash-text">
+                <strong>Trailer #TRL-554</strong>
+                <span>Idle 14 days · Memphis, TN · Customer dock</span>
+              </div>
+              <span class="dash-badge badge-warn">IDLE</span>
+            </div>
+            <div class="dash-row">
+              <div class="dash-icon red">🚨</div>
+              <div class="dash-text">
+                <strong>Pallet Jack #PJ-012</strong>
+                <span>Left geofence at 03:14 · Unscheduled</span>
+              </div>
+              <span class="dash-badge badge-alert">OUT OF ZONE</span>
+            </div>
+            <div class="dash-row">
+              <div class="dash-icon green">📦</div>
+              <div class="dash-text">
+                <strong>Container #CTR-8801</strong>
+                <span>Recovered · Now assigned to LTL run</span>
+              </div>
+              <span class="dash-badge badge-ok">ACTIVE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     USE CASE 3 — CROSS-BORDER VISIBILITY
+============================================================ -->
+<section class="uc-section" id="cross-border">
+  <div class="container">
+    <div class="uc-grid">
+      <div class="reveal">
+        <div class="uc-eyebrow">
+          <div class="section-label" style="margin:0">Cross-Border Visibility</div>
+          <span class="uc-industry-tag">Importers · Exporters · Customs Brokers</span>
+        </div>
+        <h2 class="uc-h2">Visibility doesn't<br>stop at the <span class="grad-text">border.</span></h2>
+        <p class="uc-sub">Your shipment doesn't pause because it crossed into Mexico or Canada. SYNTRA maintains continuous tracking across borders, time zones, and carrier handoffs — with customs milestone logging baked in.</p>
+        <div class="uc-lists">
+          <div class="uc-list pain">
+            <h4>The problem</h4>
+            <ul>
+              <li><span class="mark">✕</span>Tracking disappears at border crossings</li>
+              <li><span class="mark">✕</span>Carrier handoffs create visibility black holes</li>
+              <li><span class="mark">✕</span>Customs delays with no heads-up</li>
+              <li><span class="mark">✕</span>No single record across multiple carriers</li>
+            </ul>
+          </div>
+          <div class="uc-list fix">
+            <h4>SYNTRA fixes it</h4>
+            <ul>
+              <li><span class="mark">✓</span>Continuous GPS through every handoff</li>
+              <li><span class="mark">✓</span>Customs milestone auto-logging</li>
+              <li><span class="mark">✓</span>Multi-carrier unified shipment record</span></li>
+              <li><span class="mark">✓</span>Delay alerts with ETA recalculation</li>
+            </ul>
+          </div>
+        </div>
+        <div class="uc-chips">
+          <span class="uc-chip amber">PulseXL Device</span>
+          <span class="uc-chip blue">TMS Integration</span>
+          <span class="uc-chip blue">EDI 214 Events</span>
+          <span class="uc-chip">Mexico &amp; Canada</span>
+          <span class="uc-chip">Multi-carrier</span>
+        </div>
+        <a href="book-demo.html" class="btn btn-primary btn-sm">See cross-border tracking &rarr;</a>
+      </div>
+
+      <div class="uc-visual amber-top reveal">
+        <div class="uc-visual-inner">
+          <div style="margin-bottom:24px;">
+            <div class="uc-stat-big" data-target="6" data-suffix="h">0h</div>
+            <div class="uc-stat-label">Average earlier exception detection<br>at border crossings</div>
+          </div>
+          <div class="dash-mock">
+            <div class="dash-row">
+              <div class="dash-icon blue">🌐</div>
+              <div class="dash-text">
+                <strong>Laredo Border Crossing</strong>
+                <span>Cleared customs · 09:44 CST · On time</span>
+              </div>
+              <span class="dash-badge badge-ok">CLEARED</span>
+            </div>
+            <div class="dash-row">
+              <div class="dash-icon amber">🔄</div>
+              <div class="dash-text">
+                <strong>Carrier Handoff — El Paso</strong>
+                <span>TMX → CrossBorder Carriers · GPS live</span>
+              </div>
+              <span class="dash-badge badge-transit">IN TRANSIT</span>
+            </div>
+            <div class="dash-row">
+              <div class="dash-icon red">⏱️</div>
+              <div class="dash-text">
+                <strong>Customs Hold — Otay Mesa</strong>
+                <span>+4h delay · ETA updated · Client notified</span>
+              </div>
+              <span class="dash-badge badge-warn">DELAYED</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     USE CASE 4 — LAST-MILE PROOF OF DELIVERY
+============================================================ -->
+<section class="uc-section" id="last-mile">
+  <div class="container">
+    <div class="uc-grid reverse">
+      <div class="reveal">
+        <div class="uc-eyebrow">
+          <div class="section-label blue" style="margin:0">Last-Mile &amp; Proof of Delivery</div>
+          <span class="uc-industry-tag">E-commerce · Distributors · Final Mile</span>
+        </div>
+        <h2 class="uc-h2">The last mile is where<br>trust is <span class="grad-text">won or lost.</span></h2>
+        <p class="uc-sub">Customers don't care about the middle 800 miles — they care about what happens at their door. SYNTRA captures timestamped PODs, triggers customer notifications automatically, and closes the loop on every delivery exception.</p>
+        <div class="uc-lists">
+          <div class="uc-list pain">
+            <h4>The problem</h4>
+            <ul>
+              <li><span class="mark">✕</span>"Delivered" with no documentation</li>
+              <li><span class="mark">✕</span>Customer calls before you know there's an issue</li>
+              <li><span class="mark">✕</span>Disputes with no timestamped evidence</li>
+              <li><span class="mark">✕</span>Manual check-in calls burning dispatch time</li>
+            </ul>
+          </div>
+          <div class="uc-list fix">
+            <h4>SYNTRA fixes it</h4>
+            <ul>
+              <li><span class="mark">✓</span>GPS-verified, timestamped POD capture</li>
+              <li><span class="mark">✓</span>Automated customer delivery notifications</li>
+              <li><span class="mark">✓</span>Exception alerts before customers call</li>
+              <li><span class="mark">✓</span>Geofence arrival triggers downstream workflows</li>
+            </ul>
+          </div>
+        </div>
+        <div class="uc-chips">
+          <span class="uc-chip amber">Smart Tag</span>
+          <span class="uc-chip amber">PulseXL Device</span>
+          <span class="uc-chip blue">WMS Integration</span>
+          <span class="uc-chip">Customer Notifications</span>
+          <span class="uc-chip">Digital POD</span>
+        </div>
+        <a href="book-demo.html" class="btn btn-primary btn-sm">See last-mile execution &rarr;</a>
+      </div>
+
+      <div class="uc-visual green-top reveal">
+        <div class="uc-visual-inner">
+          <div style="margin-bottom:24px;">
+            <div class="uc-stat-big" data-target="91" data-suffix="%">0%</div>
+            <div class="uc-stat-label">Reduction in delivery disputes<br>with digital POD documentation</div>
+          </div>
+          <div class="dash-mock">
+            <div class="dash-row">
+              <div class="dash-icon green">✅</div>
+              <div class="dash-text">
+                <strong>Order #8821 — Delivered</strong>
+                <span>11:32 AM · GPS verified · POD logged</span>
+              </div>
+              <span class="dash-badge badge-ok">CONFIRMED</span>
+            </div>
+            <div class="dash-row">
+              <div class="dash-icon amber">📬</div>
+              <div class="dash-text">
+                <strong>Customer Notified — Order #8822</strong>
+                <span>ETA 2:15 PM · Auto SMS sent</span>
+              </div>
+              <span class="dash-badge badge-transit">ENROUTE</span>
+            </div>
+            <div class="dash-row">
+              <div class="dash-icon red">❌</div>
+              <div class="dash-text">
+                <strong>Order #8830 — Attempted</strong>
+                <span>No one on-site · Reroute triggered</span>
+              </div>
+              <span class="dash-badge badge-warn">EXCEPTION</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     USE CASE 5 — REVERSE LOGISTICS
+============================================================ -->
+<section class="uc-section" id="reverse-logistics">
+  <div class="container">
+    <div class="uc-grid">
+      <div class="reveal">
+        <div class="uc-eyebrow">
+          <div class="section-label" style="margin:0">Reverse Logistics</div>
+          <span class="uc-industry-tag">Returns · Reusables · Repair &amp; Refurb</span>
+        </div>
+        <h2 class="uc-h2">Returns shouldn't be<br>a <span class="grad-text">black hole.</span></h2>
+        <p class="uc-sub">Reverse logistics is where most visibility platforms give up. SYNTRA tracks the full return journey — from customer pickup to inspection to restock — and gives you the utilization data to make reusable packaging actually work.</p>
+        <div class="uc-lists">
+          <div class="uc-list pain">
+            <h4>The problem</h4>
+            <ul>
+              <li><span class="mark">✕</span>Returns disappear once they leave the customer</li>
+              <li><span class="mark">✕</span>No tracking on reusable packaging cycles</li>
+              <li><span class="mark">✕</span>Slow inspection-to-restock timelines</li>
+              <li><span class="mark">✕</span>Can't prove ROI on reusable programs</li>
+            </ul>
+          </div>
+          <div class="uc-list fix">
+            <h4>SYNTRA fixes it</h4>
+            <ul>
+              <li><span class="mark">✓</span>Full visibility on every return leg</li>
+              <li><span class="mark">✓</span>Reusable asset cycle tracking</li>
+              <li><span class="mark">✓</span>Inspection milestone alerts</li>
+              <li><span class="mark">✓</span>ROI dashboard for sustainability programs</li>
+            </ul>
+          </div>
+        </div>
+        <div class="uc-chips">
+          <span class="uc-chip amber">WaypointXL Device</span>
+          <span class="uc-chip amber">Cold Chain Plan</span>
+          <span class="uc-chip blue">WMS Integration</span>
+          <span class="uc-chip">Reusable Packaging</span>
+          <span class="uc-chip">Sustainability Reporting</span>
+        </div>
+        <a href="book-demo.html" class="btn btn-primary btn-sm">See reverse logistics demo &rarr;</a>
+      </div>
+
+      <div class="uc-visual amber-top reveal">
+        <div class="uc-visual-inner">
+          <div style="margin-bottom:24px;">
+            <div class="uc-stat-big" data-target="3.2" data-suffix="×">0×</div>
+            <div class="uc-stat-label">Faster return cycle times<br>with full reverse leg visibility</div>
+          </div>
+          <div class="dash-mock">
+            <div class="dash-row">
+              <div class="dash-icon blue">🔄</div>
+              <div class="dash-text">
+                <strong>Return #RMA-4421</strong>
+                <span>Picked up · En route to Denver DC</span>
+              </div>
+              <span class="dash-badge badge-transit">IN TRANSIT</span>
+            </div>
+            <div class="dash-row">
+              <div class="dash-icon amber">🔍</div>
+              <div class="dash-text">
+                <strong>Tote #T-0091 — Inspection</strong>
+                <span>Arrived DC · Awaiting grade &amp; restock</span>
+              </div>
+              <span class="dash-badge badge-warn">PENDING</span>
+            </div>
+            <div class="dash-row">
+              <div class="dash-icon green">♻️</div>
+              <div class="dash-text">
+                <strong>Cycle #14 Complete — Tote #T-0044</strong>
+                <span>Avg cycle time: 4.2 days · Restocked</span>
+              </div>
+              <span class="dash-badge badge-ok">RESTOCKED</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     USE CASE 6 — CARRIER ACCOUNTABILITY
+============================================================ -->
+<section class="uc-section" id="carrier-accountability">
+  <div class="container">
+    <div class="uc-grid reverse">
+      <div class="reveal">
+        <div class="uc-eyebrow">
+          <div class="section-label blue" style="margin:0">Carrier Accountability</div>
+          <span class="uc-industry-tag">Freight Brokers · Shippers · 3PLs</span>
+        </div>
+        <h2 class="uc-h2">Stop taking carriers<br>at their <span class="grad-text">word.</span></h2>
+        <p class="uc-sub">Independent tracking means you don't need the carrier to tell you what happened — you already know. SYNTRA gives you the evidence to win claims, score carrier performance, and make smarter routing decisions.</p>
+        <div class="uc-lists">
+          <div class="uc-list pain">
+            <h4>The problem</h4>
+            <ul>
+              <li><span class="mark">✕</span>Claims denied because you can't prove what happened</li>
+              <li><span class="mark">✕</span>Carrier-reported data you can't verify</li>
+              <li><span class="mark">✕</span>No visibility on dwell time or delays</li>
+              <li><span class="mark">✕</span>Routing decisions based on gut, not data</li>
+            </ul>
+          </div>
+          <div class="uc-list fix">
+            <h4>SYNTRA fixes it</h4>
+            <ul>
+              <li><span class="mark">✓</span>Independent GPS — carrier-agnostic</li>
+              <li><span class="mark">✓</span>Timestamped chain of custody for claims</li>
+              <li><span class="mark">✓</span>On-time performance scoring by carrier</li>
+              <li><span class="mark">✓</span>Dwell time alerts at pickup &amp; delivery</li>
+            </ul>
+          </div>
+        </div>
+        <div class="uc-chips">
+          <span class="uc-chip amber">PulseXL Device</span>
+          <span class="uc-chip blue">TMS Integration</span>
+          <span class="uc-chip blue">EDI 214 Events</span>
+          <span class="uc-chip">Carrier Scorecards</span>
+          <span class="uc-chip">Claims Documentation</span>
+        </div>
+        <a href="book-demo.html" class="btn btn-primary btn-sm">See carrier scorecards &rarr;</a>
+      </div>
+
+      <div class="uc-visual blue-top reveal">
+        <div class="uc-visual-inner">
+          <div style="margin-bottom:24px;">
+            <div class="uc-stat-big" data-target="78" data-suffix="%">0%</div>
+            <div class="uc-stat-label">Of disputed claims resolved in favor<br>of shippers with independent GPS data</div>
+          </div>
+          <div class="dash-mock">
+            <div class="dash-row">
+              <div class="dash-icon green">⭐</div>
+              <div class="dash-text">
+                <strong>Carrier A — On-Time Rate</strong>
+                <span>94.2% · 187 loads · Last 90 days</span>
+              </div>
+              <span class="dash-badge badge-ok">TOP TIER</span>
+            </div>
+            <div class="dash-row">
+              <div class="dash-icon amber">📋</div>
+              <div class="dash-text">
+                <strong>Carrier B — Claim Filed</strong>
+                <span>GPS log attached · Dwell: 6.4h at pickup</span>
+              </div>
+              <span class="dash-badge badge-warn">CLAIM OPEN</span>
+            </div>
+            <div class="dash-row">
+              <div class="dash-icon red">📉</div>
+              <div class="dash-text">
+                <strong>Carrier C — Performance Alert</strong>
+                <span>On-time dropped to 61% · Review triggered</span>
+              </div>
+              <span class="dash-badge badge-alert">UNDER REVIEW</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     USE CASE 7 — HIGH-VALUE CARGO SECURITY
+============================================================ -->
+<section class="uc-section" id="high-value">
+  <div class="container">
+    <div class="uc-grid">
+      <div class="reveal">
+        <div class="uc-eyebrow">
+          <div class="section-label" style="margin:0">High-Value Cargo Security</div>
+          <span class="uc-industry-tag">Electronics · Medical · Luxury Goods</span>
+        </div>
+        <h2 class="uc-h2">When the cargo is worth<br>protecting <span class="grad-text">every mile.</span></h2>
+        <p class="uc-sub">Electronics, pharmaceuticals, luxury goods, medical devices — when one load can be worth millions, passive tracking isn't enough. SYNTRA provides active security monitoring with tamper detection, unauthorized stop alerts, and route deviation flags.</p>
+        <div class="uc-lists">
+          <div class="uc-list pain">
+            <h4>The problem</h4>
+            <ul>
+              <li><span class="mark">✕</span>Theft discovered hours after it happens</li>
+              <li><span class="mark">✕</span>No alerts for unauthorized stops</li>
+              <li><span class="mark">✕</span>Route deviations go unnoticed</li>
+              <li><span class="mark">✕</span>Tamper events with no documentation</li>
+            </ul>
+          </div>
+          <div class="uc-list fix">
+            <h4>SYNTRA fixes it</h4>
+            <ul>
+              <li><span class="mark">✓</span>Real-time unauthorized stop alerts</li>
+              <li><span class="mark">✓</span>Route deviation detection &amp; notification</li>
+              <li><span class="mark">✓</span>Tamper &amp; shock event logging</li>
+              <li><span class="mark">✓</span>Geofenced security corridors</li>
+            </ul>
+          </div>
+        </div>
+        <div class="uc-chips">
+          <span class="uc-chip amber">PulseXL Device</span>
+          <span class="uc-chip amber">WaypointXL Device</span>
+          <span class="uc-chip">Tamper Detection</span>
+          <span class="uc-chip">Security Corridors</span>
+          <span class="uc-chip">Shock Logging</span>
+        </div>
+        <a href="book-demo.html" class="btn btn-primary btn-sm">See security monitoring &rarr;</a>
+      </div>
+
+      <div class="uc-visual amber-top reveal">
+        <div class="uc-visual-inner">
+          <div style="margin-bottom:24px;">
+            <div class="uc-stat-big" data-target="4" data-suffix="min">0</div>
+            <div class="uc-stat-label">Average alert-to-notification time<br>for unauthorized stop events</div>
+          </div>
+          <div class="dash-mock">
+            <div class="dash-row">
+              <div class="dash-icon red">🚨</div>
+              <div class="dash-text">
+                <strong>Unauthorized Stop — Load #4451</strong>
+                <span>Stopped 47 min · I-40, Needles CA · Not on plan</span>
+              </div>
+              <span class="dash-badge badge-alert">ALERT</span>
+            </div>
+            <div class="dash-row">
+              <div class="dash-icon amber">⚡</div>
+              <div class="dash-text">
+                <strong>Route Deviation — Load #4452</strong>
+                <span>3.2 mi off corridor · Flagged at 22:08</span>
+              </div>
+              <span class="dash-badge badge-warn">DEVIATION</span>
+            </div>
+            <div class="dash-row">
+              <div class="dash-icon green">🔒</div>
+              <div class="dash-text">
+                <strong>Load #4450 — Secured Delivery</strong>
+                <span>All checkpoints passed · Chain of custody clean</span>
+              </div>
+              <span class="dash-badge badge-ok">SECURE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     USE CASE 8 — MULTI-STOP ROUTE EXECUTION
+============================================================ -->
+<section class="uc-section" id="multi-stop">
+  <div class="container">
+    <div class="uc-grid reverse">
+      <div class="reveal">
+        <div class="uc-eyebrow">
+          <div class="section-label blue" style="margin:0">Multi-Stop Route Execution</div>
+          <span class="uc-industry-tag">Distribution · LTL · Fleet</span>
+        </div>
+        <h2 class="uc-h2">Every stop on the route.<br>Every update <span class="grad-text">in real time.</span></h2>
+        <p class="uc-sub">Managing a truck with 12 stops is a different problem than tracking a single shipment. SYNTRA handles complex multi-stop runs — tracking each leg, logging each stop, and giving dispatchers a live view of how the whole route is running.</p>
+        <div class="uc-lists">
+          <div class="uc-list pain">
+            <h4>The problem</h4>
+            <ul>
+              <li><span class="mark">✕</span>No visibility between stops</li>
+              <li><span class="mark">✕</span>Stop-level delays cascade undetected</li>
+              <li><span class="mark">✕</span>Can't tell which customers are next in line</li>
+              <li><span class="mark">✕</span>Drivers calling dispatch for directions</li>
+            </ul>
+          </div>
+          <div class="uc-list fix">
+            <h4>SYNTRA fixes it</h4>
+            <ul>
+              <li><span class="mark">✓</span>Live progress tracking across all stops</li>
+              <li><span class="mark">✓</span>Dynamic ETA recalculation stop-by-stop</li>
+              <li><span class="mark">✓</span>Arrival &amp; departure geofence events</li>
+              <li><span class="mark">✓</span>Customer notifications auto-triggered</li>
+            </ul>
+          </div>
+        </div>
+        <div class="uc-chips">
+          <span class="uc-chip amber">PulseXL Device</span>
+          <span class="uc-chip amber">Smart Tag</span>
+          <span class="uc-chip blue">TMS Integration</span>
+          <span class="uc-chip">Route Intelligence</span>
+          <span class="uc-chip">Dynamic ETA</span>
+        </div>
+        <a href="book-demo.html" class="btn btn-primary btn-sm">See route execution live &rarr;</a>
+      </div>
+
+      <div class="uc-visual blue-top reveal">
+        <div class="uc-visual-inner">
+          <div style="margin-bottom:24px;">
+            <div class="uc-stat-big" data-target="12" data-suffix=" stops">0</div>
+            <div class="uc-stat-label">Avg stops per managed route.<br>Every one tracked. Every one logged.</div>
+          </div>
+          <div class="dash-mock">
+            <div class="dash-row">
+              <div class="dash-icon green">✅</div>
+              <div class="dash-text">
+                <strong>Stop 3 of 11 — Home Depot Aurora</strong>
+                <span>Delivered 09:42 · 8 min dwell · On time</span>
+              </div>
+              <span class="dash-badge badge-ok">DONE</span>
+            </div>
+            <div class="dash-row">
+              <div class="dash-icon blue">🚛</div>
+              <div class="dash-text">
+                <strong>Stop 4 — Costco Thornton</strong>
+                <span>ETA 10:18 · 14 min away · Customer notified</span>
+              </div>
+              <span class="dash-badge badge-transit">NEXT</span>
+            </div>
+            <div class="dash-row">
+              <div class="dash-icon amber">⏱️</div>
+              <div class="dash-text">
+                <strong>Stop 7 — ETA Updated</strong>
+                <span>+22 min delay · Customer auto-notified</span>
+              </div>
+              <span class="dash-badge badge-warn">ADJUSTED</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CROSS-SELL BAND
+============================================================ -->
+<section id="cross-sell">
+  <div class="container">
+    <div class="cs-inner reveal">
+      <div class="section-label" style="margin:0 auto 18px;">Everything connects</div>
+      <h2>One platform.<br><span class="grad-text">All eight scenarios.</span></h2>
+      <p>Every use case runs on the same SYNTRA platform — same data, same devices, same dashboard. No switching tools.</p>
+    </div>
+    <div class="cs-grid">
+      <div class="cs-card reveal">
+        <div class="cs-card-icon">📡</div>
+        <h4>Hardware</h4>
+        <p>PulseXL and WaypointXL built for every scenario — from reusable cold chain to one-way shipments.</p>
+        <a href="index.html#hardware">Explore hardware →</a>
+      </div>
+      <div class="cs-card reveal">
+        <div class="cs-card-icon">🔗</div>
+        <h4>Integrations</h4>
+        <p>200+ native connectors mean your TMS, WMS, and ERP already know what SYNTRA knows.</p>
+        <a href="integrations.html">See integrations →</a>
+      </div>
+      <div class="cs-card reveal">
+        <div class="cs-card-icon">🏢</div>
+        <h4>Solutions by role</h4>
+        <p>Not sure which use cases apply? Find your role — broker, 3PL, shipper, fleet, asset manager.</p>
+        <a href="solutions.html">Find your fit →</a>
+      </div>
+      <div class="cs-card reveal">
+        <div class="cs-card-icon">💳</div>
+        <h4>Pricing</h4>
+        <p>Transparent pricing for every use case. Subscriptions, one-way shipments, and cold chain plans.</p>
+        <a href="pricing.html">See pricing →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="uc-cta">
+  <div class="container">
+    <div class="cta-wrap reveal">
+      <h2>See your use case<br><span class="grad-text">in a live demo.</span></h2>
+      <p>Tell us what you're trying to solve. We'll show you exactly how SYNTRA handles it — in 30 minutes or less.</p>
+      <div class="cta-btns">
+        <a href="book-demo.html" class="btn btn-primary">Book a Demo &rarr;</a>
+        <a href="pricing.html" class="btn btn-ghost">See Pricing</a>
+        <a href="contact.html" class="btn btn-ghost">Talk to Sales</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo"><img src="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Horizontal.png" alt="SYNTRA" /></a>
+        <p>The execution platform connecting every system, asset, and shipment into one intelligent layer.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="integrations.html">Integrations</a></li>
+          <li><a href="index.html#hardware">Hardware</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">API Docs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="solutions.html#brokers">Freight Brokers</a></li>
+          <li><a href="solutions.html#3pl">3PLs</a></li>
+          <li><a href="solutions.html#shippers">Shippers</a></li>
+          <li><a href="solutions.html#fleet">Fleet Managers</a></li>
+          <li><a href="solutions.html#assets">Asset Managers</a></li>
+            <li><a href="use-cases.html">Use Cases</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About SYNTRA</a></li>
+          <li><a href="about.html#cscs">CSCS Partnership</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 SYNTRA Platform, Inc. All rights reserved.</span>
+      <span><a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms.html" style="color:var(--gray);">Terms of Service</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- JS -->
+<script>
+  /* ---- Reveal ---- */
+  const revealEls = document.querySelectorAll('.reveal');
+  const revObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const d = parseFloat(e.target.dataset.delay || 0);
+        setTimeout(() => e.target.classList.add('visible'), d * 1000);
+        revObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.05 });
+
+  // Mobile reveal fallback — trigger elements already in viewport
+  setTimeout(() => {
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 1.1) el.classList.add('visible');
+    });
+  }, 300);
+
+  revealEls.forEach((el, i) => {
+    // Stagger siblings in same grid
+    const parent = el.closest('.uc-grid, .cs-grid, .dash-mock');
+    if (parent) {
+      const siblings = [...parent.querySelectorAll('.reveal')];
+      const idx = siblings.indexOf(el);
+      if (idx > 0) el.dataset.delay = (idx * 0.12).toFixed(2);
+    }
+    revObs.observe(el);
+  });
+
+  /* ---- Stat counters ---- */
+  const cntObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseFloat(el.dataset.target);
+      const suffix = el.dataset.suffix || '';
+      const isDecimal = !Number.isInteger(target);
+      const duration = 1600; const step = 20;
+      let current = 0;
+      const inc = target / (duration / step);
+      const timer = setInterval(() => {
+        current += inc;
+        if (current >= target) { current = target; clearInterval(timer); }
+        el.textContent = (isDecimal ? current.toFixed(1) : Math.floor(current)) + suffix;
+      }, step);
+      cntObs.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-target]').forEach(el => cntObs.observe(el));
+
+  /* ---- Filter bar ---- */
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const target = document.getElementById(btn.dataset.cat);
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  /* ---- Active filter on scroll ---- */
+  const ucSections = document.querySelectorAll('.uc-section');
+  const scrollObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        filterBtns.forEach(btn => btn.classList.toggle('active', btn.dataset.cat === id));
+      }
+    });
+  }, { rootMargin: '-35% 0px -35% 0px' });
+  ucSections.forEach(s => scrollObs.observe(s));
+
+  /* ---- Hero pill scroll ---- */
+  function scrollTo(id) {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
+
+  <script>
+  (function(){
+    var nav    = document.getElementById('main-nav');
+    var toggle = document.querySelector('.nav-mobile-toggle');
+    var src    = document.querySelector('.nav-links');
+    if (!nav || !toggle || !src) return;
+
+    // Build panel
+    var panel = document.createElement('div');
+    panel.id  = 'mobile-nav';
+    panel.innerHTML =
+      '<ul class="mobile-nav-list"></ul>' +
+      '<div class="mobile-nav-footer">' +
+        '<a href="book-demo.html" class="btn btn-primary" ' +
+        'style="display:block;text-align:center;padding:14px 0;width:100%;">Request Demo &rarr;</a>' +
+      '</div>';
+    var ul = panel.querySelector('.mobile-nav-list');
+    src.querySelectorAll('a').forEach(function(a){
+      var li = document.createElement('li');
+      li.appendChild(a.cloneNode(true));
+      ul.appendChild(li);
+    });
+    nav.parentNode.insertBefore(panel, nav.nextSibling);
+
+    function open()  { panel.classList.add('open'); toggle.classList.add('open'); toggle.setAttribute('aria-expanded','true');  document.body.style.overflow='hidden'; }
+    function close() { panel.classList.remove('open'); toggle.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+
+    toggle.addEventListener('click', function(){ panel.classList.contains('open') ? close() : open(); });
+    panel.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+  })();
+  </script>
+
+</body>
+</html>

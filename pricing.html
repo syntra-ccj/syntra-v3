@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How We Work With You — SYNTRA Platform</title>
+  <meta name="description" content="Three ways to deploy SYNTRA. Own the hardware, subscribe to everything, or track shipment by shipment. We build around how you want to operate." />
+  <meta name="keywords" content="SYNTRA deployment, asset tracking pricing, logistics platform, GPS tracking, freight visibility" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="SYNTRA Platform" />
+  <link rel="canonical" href="https://www.syntraplatform.io/pricing.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://www.syntraplatform.io/pricing.html" />
+  <meta property="og:title"       content="How We Work With You — SYNTRA Platform" />
+  <meta property="og:description" content="Three ways to deploy SYNTRA. We build around how you want to operate." />
+  <meta property="og:image"       content="https://www.syntraplatform.io/og-image.png" />
+  <meta property="og:site_name"   content="SYNTRA Platform" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@syntraplatform" />
+  <meta name="twitter:title"       content="How We Work With You — SYNTRA Platform" />
+  <meta name="twitter:description" content="Three ways to deploy SYNTRA. We build around how you want to operate." />
+  <meta name="twitter:image"       content="https://www.syntraplatform.io/og-image.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Square.png" />
+  <link rel="apple-touch-icon"     href="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Square.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       TOKENS
+    ============================================================ */
+    :root {
+      --bg:          #08090E;
+      --surface:     #0D0F18;
+      --surface-2:   #121520;
+      --border:      rgba(255,255,255,0.07);
+      --white:       #FFFFFF;
+      --gray:        #8892A4;
+      --gray-lt:     #B4BCCA;
+      --amber:       #FF9500;
+      --amber-dim:   rgba(255,149,0,0.10);
+      --amber-glow:  rgba(255,149,0,0.18);
+      --blue:        #214DBC;
+      --blue-bright: #2D5FE8;
+      --blue-dim:    rgba(45,95,232,0.12);
+      --grad:        linear-gradient(135deg, #FF9500 0%, #214DBC 100%);
+      --grad-text:   linear-gradient(90deg,  #FF9500 0%, #2D5FE8 100%);
+      --max-w:       1280px;
+      --nav-h:       72px;
+      --radius:      14px;
+    }
+
+    /* ============================================================
+       RESET
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ============================================================
+       TYPOGRAPHY
+    ============================================================ */
+    h1, h2, h3, h4, h5 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+    }
+    .gradient-text {
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ============================================================
+       LAYOUT
+    ============================================================ */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 36px;
+    }
+    nav .container {
+      max-width: none;
+      width: 100%;
+      margin: 0;
+      padding: 0 40px;
+    }
+
+    /* ============================================================
+       COMPONENTS
+    ============================================================ */
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--amber);
+      border: 1px solid rgba(255,149,0,0.28);
+      background: var(--amber-dim);
+      padding: 6px 14px;
+      border-radius: 100px;
+    }
+    .tag::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--amber);
+      animation: blink 2s ease-in-out infinite;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 30px;
+      border-radius: 9px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      border: none;
+      transition: all 0.22s ease;
+    }
+    .btn-primary {
+      background: var(--amber);
+      color: #000;
+      box-shadow: 0 0 28px rgba(255,149,0,0.30);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 48px rgba(255,149,0,0.50);
+      background: #FFAA22;
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(255,255,255,0.28);
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity 0.72s ease, transform 0.72s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ============================================================
+       KEYFRAMES
+    ============================================================ */
+    @keyframes blink {
+      0%,100% { opacity: 1; }
+      50%      { opacity: 0.35; }
+    }
+    @keyframes shimmer {
+      0%   { background-position: -200% 0; }
+      100% { background-position:  200% 0; }
+    }
+
+    /* ============================================================
+       NAV
+    ============================================================ */
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 200;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      background: rgba(8,9,14,0.82);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .nav-logo { display: flex; align-items: center; }
+    .nav-logo img { height: 30px; width: auto; display: block; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--gray);
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: color 0.2s, background 0.2s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.05); }
+    .nav-links a.active { color: var(--white); }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-left: 20px;
+      border-left: 1px solid rgba(255,255,255,0.08);
+    }
+    .login {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--gray);
+      transition: color 0.2s;
+    }
+    .login:hover { color: var(--white); }
+    .nav-mobile-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+    .nav-mobile-toggle span {
+      display: block;
+      width: 22px; height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: transform 0.22s ease, opacity 0.22s ease;
+      transform-origin: center;
+    }
+    .nav-mobile-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-mobile-toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-mobile-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    #mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      top: var(--nav-h);
+      background: var(--bg);
+      z-index: 999;
+      flex-direction: column;
+      padding: 32px 24px 40px;
+      overflow-y: auto;
+    }
+    #mobile-nav.open { display: flex; }
+    .mobile-nav-list { list-style: none; padding: 0; margin: 0 0 24px; }
+    .mobile-nav-list li + li { border-top: 1px solid rgba(255,255,255,0.06); }
+    .mobile-nav-list a {
+      display: block;
+      padding: 16px 0;
+      font-size: 20px;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      color: var(--gray-lt);
+      transition: color 0.2s;
+    }
+    .mobile-nav-list a:hover { color: var(--amber); }
+    .mobile-nav-footer { padding-top: 8px; }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    #deploy-hero {
+      padding: calc(var(--nav-h) + 80px) 0 60px;
+      position: relative;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero-ambient {
+      position: absolute;
+      top: -80px; left: 50%;
+      transform: translateX(-50%);
+      width: 900px; height: 480px;
+      background: radial-gradient(ellipse, rgba(255,149,0,0.07) 0%, transparent 68%);
+      pointer-events: none;
+    }
+    .hero-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 28px;
+      opacity: 0.85;
+    }
+    .hero-h1 {
+      font-size: clamp(42px, 6vw, 76px);
+      font-weight: 900;
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      margin-bottom: 26px;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: var(--gray-lt);
+      line-height: 1.65;
+      max-width: 620px;
+      margin: 0 auto 42px;
+    }
+    .hero-footnote {
+      font-size: 13px;
+      color: var(--gray);
+      margin-top: 20px;
+      font-style: italic;
+    }
+
+    /* ============================================================
+       DEPLOY MODELS
+    ============================================================ */
+    #deploy-models {
+      padding: 60px 0 100px;
+    }
+    .deploy-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 60px;
+      align-items: stretch;
+    }
+    .deploy-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 44px 40px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .deploy-card:hover {
+      border-color: rgba(255,255,255,0.13);
+      box-shadow: 0 28px 80px rgba(0,0,0,0.4);
+      transform: translateY(-4px);
+    }
+    /* Featured card — Subscribe */
+    .deploy-card.featured {
+      border-color: rgba(255,149,0,0.30);
+      background: linear-gradient(160deg, rgba(255,149,0,0.05) 0%, var(--surface) 50%);
+      box-shadow: 0 0 0 1px rgba(255,149,0,0.18), 0 24px 80px rgba(255,149,0,0.10);
+    }
+    .deploy-card.featured:hover {
+      border-color: rgba(255,149,0,0.50);
+      box-shadow: 0 0 0 1px rgba(255,149,0,0.28), 0 32px 100px rgba(255,149,0,0.16);
+    }
+    .featured-badge {
+      position: absolute;
+      top: 20px; right: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #000;
+      background: var(--amber);
+      padding: 4px 10px;
+      border-radius: 100px;
+    }
+    /* Top line accent on hover */
+    .deploy-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--grad);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .deploy-card:hover::before { opacity: 1; }
+    .deploy-card.featured::before { opacity: 1; background: var(--amber); }
+
+    .deploy-num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--gray);
+      margin-bottom: 20px;
+    }
+    .deploy-card.featured .deploy-num { color: var(--amber); opacity: 0.7; }
+
+    .deploy-name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .deploy-card.featured .deploy-name { color: var(--amber); }
+
+    .deploy-tagline {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gray);
+      margin-bottom: 22px;
+      line-height: 1.5;
+    }
+
+    .deploy-divider {
+      height: 1px;
+      background: var(--border);
+      margin-bottom: 24px;
+    }
+
+    .deploy-for {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 10px;
+    }
+    .deploy-desc {
+      font-size: 15px;
+      color: var(--gray-lt);
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+
+    .deploy-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      margin-bottom: 36px;
+      flex: 1;
+    }
+    .deploy-bullets li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--gray-lt);
+      line-height: 1.5;
+    }
+    .deploy-bullets li::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--gray);
+      margin-top: 7px;
+      flex-shrink: 0;
+    }
+    .deploy-card.featured .deploy-bullets li::before { background: var(--amber); }
+
+    .deploy-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 13px 24px;
+      border-radius: 9px;
+      border: 1px solid rgba(255,255,255,0.14);
+      color: var(--white);
+      background: transparent;
+      transition: all 0.22s ease;
+      align-self: flex-start;
+    }
+    .deploy-cta:hover {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(255,255,255,0.28);
+      gap: 11px;
+    }
+    .deploy-card.featured .deploy-cta {
+      background: var(--amber);
+      border-color: var(--amber);
+      color: #000;
+      box-shadow: 0 0 24px rgba(255,149,0,0.28);
+    }
+    .deploy-card.featured .deploy-cta:hover {
+      background: #FFAA22;
+      box-shadow: 0 0 40px rgba(255,149,0,0.45);
+      transform: translateY(-1px);
+    }
+
+    /* ============================================================
+       PHILOSOPHY STRIP
+    ============================================================ */
+    #philosophy {
+      padding: 0 0 100px;
+    }
+    .philosophy-inner {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 60px 72px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .philosophy-left h2 {
+      font-size: clamp(28px, 3.5vw, 42px);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+    }
+    .philosophy-left p {
+      font-size: 16px;
+      color: var(--gray-lt);
+      line-height: 1.7;
+    }
+    .philosophy-right {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .philo-point {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .philo-icon {
+      width: 36px; height: 36px;
+      border-radius: 9px;
+      background: var(--amber-dim);
+      border: 1px solid rgba(255,149,0,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .philo-icon svg { color: var(--amber); }
+    .philo-point-text h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+      letter-spacing: 0;
+    }
+    .philo-point-text p {
+      font-size: 13.5px;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    /* ============================================================
+       FAQ
+    ============================================================ */
+    #deploy-faq {
+      padding: 0 0 100px;
+    }
+    .faq-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .faq-header h2 {
+      font-size: clamp(28px, 4vw, 46px);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-top: 16px;
+    }
+    .faq-list {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      cursor: pointer;
+      padding: 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--white);
+      transition: color 0.2s;
+    }
+    .faq-question:hover { color: var(--amber); }
+    .faq-icon {
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: transform 0.28s ease, border-color 0.2s;
+    }
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+      border-color: var(--amber);
+    }
+    .faq-icon svg { color: var(--gray); transition: color 0.2s; }
+    .faq-item.open .faq-icon svg { color: var(--amber); }
+    .faq-answer {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.38s ease, padding 0.3s ease;
+    }
+    .faq-item.open .faq-answer { max-height: 300px; }
+    .faq-answer-inner {
+      padding: 0 0 24px;
+      font-size: 15px;
+      color: var(--gray-lt);
+      line-height: 1.7;
+    }
+
+    /* ============================================================
+       CTA BAND
+    ============================================================ */
+    #deploy-cta-band {
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-ambient {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px; height: 400px;
+      background: radial-gradient(ellipse, rgba(255,149,0,0.09) 0%, transparent 68%);
+      pointer-events: none;
+    }
+    .cta-band-inner {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .cta-band-inner h2 {
+      font-size: clamp(32px, 5vw, 58px);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+    .cta-band-inner p {
+      font-size: 17px;
+      color: var(--gray-lt);
+      max-width: 500px;
+      margin: 0 auto 40px;
+      line-height: 1.65;
+    }
+    .cta-band-buttons {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ============================================================
+       HARDWARE ADDONS
+    ============================================================ */
+    #hardware-addons {
+      padding: 0 0 100px;
+    }
+    .hw-section-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .hw-section-header h2 {
+      font-size: clamp(28px, 4vw, 46px);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-top: 16px;
+      margin-bottom: 14px;
+    }
+    .hw-section-header p {
+      font-size: 16px;
+      color: var(--gray-lt);
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    .hw-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .hw-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 36px 36px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .hw-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--amber);
+      opacity: 0;
+      transition: opacity 0.28s;
+    }
+    .hw-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255,149,0,0.22);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+    }
+    .hw-card:hover::before { opacity: 1; }
+    .hw-icon {
+      width: 46px; height: 46px;
+      border-radius: 11px;
+      background: rgba(255,149,0,0.10);
+      border: 1px solid rgba(255,149,0,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .hw-icon svg { color: var(--amber); }
+    .hw-cat-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 8px;
+    }
+    .hw-name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+    .hw-desc {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.7;
+      margin-bottom: 22px;
+      flex: 1;
+    }
+    .hw-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .hw-chip {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--gray-lt);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.09);
+      padding: 5px 12px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+    .hw-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--amber);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: gap 0.2s;
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+      margin-top: auto;
+    }
+    .hw-link:hover { gap: 9px; }
+    @media (max-width: 720px) {
+      .hw-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 72px 0 40px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 60px;
+      padding-bottom: 56px;
+    }
+    .footer-logo { display: flex; align-items: center; }
+    .footer-logo img { height: 26px; width: auto; display: block; }
+    .footer-brand p {
+      margin-top: 18px;
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.7;
+      max-width: 280px;
+    }
+    .footer-col h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 18px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .footer-col a { font-size: 13.5px; color: var(--gray); transition: color 0.2s; }
+    .footer-col a:hover { color: var(--white); }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      color: var(--gray);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom a { color: var(--amber); }
+
+    /* ============================================================
+       SECTION DIVIDER
+    ============================================================ */
+    .section-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 0;
+    }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1024px) {
+      .deploy-grid { grid-template-columns: 1fr 1fr; }
+      .deploy-card:nth-child(3) { grid-column: 1 / -1; max-width: 540px; margin: 0 auto; width: 100%; }
+      .philosophy-inner { grid-template-columns: 1fr; gap: 40px; padding: 48px 40px; }
+      .hw-grid { grid-template-columns: 1fr 1fr; }
+      .hw-card:nth-child(3) { grid-column: 1 / -1; max-width: 440px; margin: 0 auto; width: 100%; }
+    }
+    @media (max-width: 900px) {
+      .nav-links         { display: none !important; }
+      .login             { display: none !important; }
+      .nav-right a.login { display: none !important; }
+      .nav-mobile-toggle { display: flex !important; margin-left: auto; }
+      .footer-inner { grid-template-columns: 1fr 1fr; gap: 40px; }
+    }
+    @media (max-width: 640px) {
+      .deploy-grid { grid-template-columns: 1fr; }
+      .deploy-card:nth-child(3) { grid-column: auto; max-width: 100%; }
+      .hw-grid { grid-template-columns: 1fr; }
+      .hw-card:nth-child(3) { grid-column: auto; max-width: 100%; }
+      .philosophy-inner { padding: 36px 24px; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .cta-band-buttons { flex-direction: column; align-items: center; }
+      .hero-sub { font-size: 16px; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAV
+  ============================================================ -->
+  <nav id="main-nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo"><img src="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Horizontal.png" alt="SYNTRA" /></a>
+        <ul class="nav-links">
+          <li><a href="index.html#platform">Platform</a></li>
+          <li><a href="index.html#hardware">Hardware</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="use-cases.html">Use Cases</a></li>
+          <li><a href="integrations.html">Integrations</a></li>
+          <li><a href="about.html">Company</a></li>
+        </ul>
+        <div class="nav-right">
+          <a href="https://syntra.scoti.app" target="_blank" rel="noopener" class="login">Sign In</a>
+          <a href="book-demo.html" class="btn btn-primary" style="padding:10px 22px; font-size:12px;">Request Demo</a>
+        </div>
+        <button class="nav-mobile-toggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section id="deploy-hero">
+    <div class="hero-ambient"></div>
+    <div class="container">
+      <div class="reveal">
+        <p class="hero-label">Deployment &amp; Billing</p>
+        <h1 class="hero-h1">
+          Three ways to work<br>
+          <span class="gradient-text">with SYNTRA.</span>
+        </h1>
+        <p class="hero-sub">
+          Nobody thinks in CapEx vs. SaaS. You think in: <em>how do I want to pay, and what do I own?</em>
+        </p>
+        <a href="book-demo.html" class="btn btn-primary" style="font-size:14px; padding:15px 36px;">
+          Find Your Fit
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M7 2.5l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <p class="hero-footnote">No price sheets. No commitment. Just a conversation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DEPLOY MODELS
+  ============================================================ -->
+  <section id="deploy-models">
+    <div class="container">
+      <div class="deploy-grid">
+
+        <!-- 01 — Own It -->
+        <div class="deploy-card reveal">
+          <div class="deploy-num">01</div>
+          <div class="deploy-name">Own It</div>
+          <div class="deploy-tagline">Full control. Your hardware, our platform.</div>
+          <div class="deploy-divider"></div>
+          <div class="deploy-for">Best for</div>
+          <p class="deploy-desc">Fleets and operations that want full ownership of their physical infrastructure — and prefer a predictable platform fee on top.</p>
+          <ul class="deploy-bullets">
+            <li>Purchase devices once, use them indefinitely</li>
+            <li>Platform subscription covers visibility, alerts &amp; integrations</li>
+            <li>Your assets. Your infrastructure. Your terms.</li>
+          </ul>
+          <a href="book-demo.html" class="deploy-cta">
+            See if this fits
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <!-- 02 — Subscribe (Featured) -->
+        <div class="deploy-card featured reveal" style="transition-delay:0.1s">
+          <div class="featured-badge">Most Popular</div>
+          <div class="deploy-num">02</div>
+          <div class="deploy-name">Subscribe</div>
+          <div class="deploy-tagline">Predictable costs, zero hardware headaches.</div>
+          <div class="deploy-divider"></div>
+          <div class="deploy-for">Best for</div>
+          <p class="deploy-desc">Growing operations that want one monthly or annual line item — hardware included, managed, and replaced by SYNTRA.</p>
+          <ul class="deploy-bullets">
+            <li>Hardware included and managed by SYNTRA</li>
+            <li>Monthly or annual agreements — your choice</li>
+            <li>Scale assets up or down as your operation evolves</li>
+          </ul>
+          <a href="book-demo.html" class="deploy-cta">
+            See if this fits
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <!-- 03 — Ship It Once -->
+        <div class="deploy-card reveal" style="transition-delay:0.2s">
+          <div class="deploy-num">03</div>
+          <div class="deploy-name">Ship It Once</div>
+          <div class="deploy-tagline">Per-shipment. No subscription required.</div>
+          <div class="deploy-divider"></div>
+          <div class="deploy-for">Best for</div>
+          <p class="deploy-desc">High-value one-time shipments, seasonal ops, or pilots. Disposable tracking for freight that can't afford to go dark.</p>
+          <ul class="deploy-bullets">
+            <li>Per-shipment pricing, pay only when you ship</li>
+            <li>Trackers ship with your freight — no returns</li>
+            <li>Full visibility from origin to final-mile delivery</li>
+          </ul>
+          <a href="book-demo.html" class="deploy-cta">
+            See if this fits
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================================================
+       PHILOSOPHY
+  ============================================================ -->
+  <section id="philosophy" style="padding:100px 0;">
+    <div class="container">
+      <div class="philosophy-inner reveal">
+        <div class="philosophy-left">
+          <h2>It's about who<br><span class="gradient-text">owns the liability.</span></h2>
+          <p>Every customer we work with has different risk tolerance, cash flow cycles, and ops structures. We adapt to yours. When you book a call, just tell us which model sounds closest — and your rep will build around your terms from there.</p>
+        </div>
+        <div class="philosophy-right">
+          <div class="philo-point">
+            <div class="philo-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="philo-point-text">
+              <h4>We bill on your terms</h4>
+              <p>Monthly, annual, per-shipment — we structure around your cash flow, not ours.</p>
+            </div>
+          </div>
+          <div class="philo-point">
+            <div class="philo-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="philo-point-text">
+              <h4>Mix and match models</h4>
+              <p>Many customers own some assets, subscribe for others, and use Ship It Once for overflow. We handle the complexity.</p>
+            </div>
+          </div>
+          <div class="philo-point">
+            <div class="philo-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="philo-point-text">
+              <h4>Migrate without penalty</h4>
+              <p>Operations evolve. If your needs change, we move with you — no lock-in, no exit fees.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================================================
+       HARDWARE
+  ============================================================ -->
+  <section id="hardware-addons">
+    <div class="container">
+      <div class="hw-section-header reveal">
+        <div><span class="tag">Hardware Agnostic</span></div>
+        <h2>The devices behind every signal.</h2>
+        <p>Buy direct or bring your own. SYNTRA works with any cellular + GPS device.</p>
+      </div>
+      <div class="hw-grid">
+
+        <!-- Single Use -->
+        <div class="hw-card reveal">
+          <div class="hw-icon">
+            <svg width="20" height="20" viewBox="0 0 22 22" fill="none">
+              <rect x="2" y="6" width="18" height="11" rx="2.5" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M7 6V4.5a4 4 0 0 1 8 0V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="11" cy="11.5" r="1.5" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="hw-cat-label">Single Use</div>
+          <div class="hw-name">Smart Sticker &amp; 5G Label</div>
+          <p class="hw-desc">Disposable tracking for shipments that can't afford to go dark. BLE Smart Sticker for short-range visibility. 5G Smart Label with tamper detection for high-value freight.</p>
+          <div class="hw-chips">
+            <span class="hw-chip">BLE</span>
+            <span class="hw-chip">5G</span>
+            <span class="hw-chip">Tamper detection</span>
+            <span class="hw-chip">No recovery needed</span>
+          </div>
+          <a href="book-demo.html" class="hw-link">
+            Get pricing
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <!-- Rechargeable -->
+        <div class="hw-card reveal" style="transition-delay:0.1s">
+          <div class="hw-icon">
+            <svg width="20" height="20" viewBox="0 0 22 22" fill="none">
+              <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M8 11.5l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="hw-cat-label">Rechargeable</div>
+          <div class="hw-name">Rechargeable Tracker</div>
+          <p class="hw-desc">Purpose-built for assets that come back. Recharge and redeploy. Compact form factor, full visibility between cycles. Built for reverse logistics and high-frequency asset loops.</p>
+          <div class="hw-chips">
+            <span class="hw-chip">GPS + cellular</span>
+            <span class="hw-chip">Reusable</span>
+            <span class="hw-chip">IP-rated</span>
+          </div>
+          <a href="book-demo.html" class="hw-link">
+            Get pricing
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <!-- Battery Powered -->
+        <div class="hw-card reveal" style="transition-delay:0.15s">
+          <div class="hw-icon">
+            <svg width="20" height="20" viewBox="0 0 22 22" fill="none">
+              <rect x="2" y="7" width="16" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M18 9.5v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="6" y1="11" x2="10" y2="11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="8" y1="9" x2="8" y2="13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="hw-cat-label">Battery Powered</div>
+          <div class="hw-name">Long-Life Battery Tracker</div>
+          <p class="hw-desc">Up to 6–12 months on AA Energizer Lithiums. Wake-on-demand and BLE sensor support keeps power where you need it. Easy field battery swap — no tools, no downtime.</p>
+          <div class="hw-chips">
+            <span class="hw-chip">6–12 mo battery</span>
+            <span class="hw-chip">Wake on demand</span>
+            <span class="hw-chip">BLE sensors</span>
+            <span class="hw-chip">Gateway ready</span>
+          </div>
+          <a href="book-demo.html" class="hw-link">
+            Get pricing
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <!-- Hardwired -->
+        <div class="hw-card reveal" style="transition-delay:0.25s">
+          <div class="hw-icon">
+            <svg width="20" height="20" viewBox="0 0 22 22" fill="none">
+              <rect x="2" y="7" width="18" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="6.5" cy="11" r="1.5" fill="currentColor" opacity="0.9"/>
+              <circle cx="11" cy="11" r="1.5" fill="currentColor" opacity="0.55"/>
+              <circle cx="15.5" cy="11" r="1.5" fill="currentColor" opacity="0.25"/>
+              <path d="M6.5 7V5M11 7V4M15.5 7V5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="hw-cat-label">Hardwired</div>
+          <div class="hw-name">Hardwired &amp; Smart Tail Light</div>
+          <p class="hw-desc">Permanent power, permanent visibility. Plug-and-play gateway installation. Smart Tail Light adds brake, turn, and door-event detection — no batteries, no mounting hardware.</p>
+          <div class="hw-chips">
+            <span class="hw-chip">Plug-and-play</span>
+            <span class="hw-chip">Door detection</span>
+            <span class="hw-chip">Brake + turn events</span>
+            <span class="hw-chip">IP67</span>
+          </div>
+          <a href="book-demo.html" class="hw-link">
+            Get pricing
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================================================
+       FAQ
+  ============================================================ -->
+  <section id="deploy-faq" style="padding:100px 0;">
+    <div class="container">
+      <div class="faq-header reveal">
+        <span class="tag">Common Questions</span>
+        <h2>Good questions<br><span class="gradient-text">deserve straight answers.</span></h2>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            Can I mix models across my fleet?
+            <div class="faq-icon">
+              <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 1v9M1 5.5h9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Yes. Many of our customers own some assets outright, subscribe for others, and use Ship It Once for overflow freight or seasonal spikes. We consolidate everything into a single dashboard — billing model doesn't affect what you can see or how your team operates.</div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            What if my needs change after I commit?
+            <div class="faq-icon">
+              <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 1v9M1 5.5h9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">We build in flexibility by design. Migrate between models, scale asset counts up or down, or restructure your agreement — without exit fees or penalties. Operations change. Our commercial terms change with them.</div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            Do you offer pilots before full commitment?
+            <div class="faq-icon">
+              <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 1v9M1 5.5h9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Yes. Most customers start with a short pilot — a defined set of assets or a single lane — before committing to a deployment model. We use the pilot to configure the right integrations, validate data quality, and make sure the platform fits your workflow.</div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            What's included in the platform across all models?
+            <div class="faq-icon">
+              <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 1v9M1 5.5h9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Regardless of how you pay, every SYNTRA customer gets: real-time visibility, configurable alerts, 200+ native integrations, reporting &amp; analytics, API access, and dedicated onboarding support. The platform is the same — the commercial terms are what change.</div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            Can I bring my own hardware?
+            <div class="faq-icon">
+              <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 1v9M1 5.5h9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Absolutely. SYNTRA is hardware agnostic. We connect to any GPS or cellular device via our open API. If you've already invested in a hardware fleet, bring it — we'll connect it. If you want to start clean, we have three devices purpose-built for the work.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA BAND
+  ============================================================ -->
+  <section id="deploy-cta-band">
+    <div class="cta-ambient"></div>
+    <div class="container">
+      <div class="cta-band-inner reveal">
+        <h2>
+          Tell us which lane<br>
+          <span class="gradient-text">sounds closest.</span>
+        </h2>
+        <p>Book a 30-minute discovery call. Come in with a model in mind — we'll validate it, pressure-test it, and build a proposal around your terms.</p>
+        <div class="cta-band-buttons">
+          <a href="book-demo.html" class="btn btn-primary" style="font-size:14px; padding:15px 36px;">
+            Book a Discovery Call
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M7 2.5l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="contact.html" class="btn btn-ghost" style="font-size:14px; padding:15px 36px;">Talk to Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo"><img src="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Horizontal.png" alt="SYNTRA" /></a>
+          <p>The execution platform logistics companies use to connect every system, asset, and shipment — and actually run their operation from one place.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="integrations.html">Integrations</a></li>
+            <li><a href="index.html#hardware">Hardware</a></li>
+            <li><a href="pricing.html">How We Work</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">API Docs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="solutions.html#brokers">Freight Brokers</a></li>
+            <li><a href="solutions.html#3pl">3PLs</a></li>
+            <li><a href="solutions.html#shippers">Shippers</a></li>
+            <li><a href="solutions.html#fleet">Fleet Managers</a></li>
+            <li><a href="solutions.html#assets">Asset Managers</a></li>
+            <li><a href="use-cases.html">Use Cases</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About SYNTRA</a></li>
+            <li><a href="about.html#cscs">CSCS Partnership</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 SYNTRA Platform, Inc. All rights reserved.</span>
+        <span><a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms.html" style="color:var(--gray);">Terms of Service</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JS
+  ============================================================ -->
+  <script>
+    // --- Scroll reveal ---
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05 });
+
+    setTimeout(() => {
+      document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 1.1) el.classList.add('visible');
+      });
+    }, 300);
+
+    revealEls.forEach(el => revealObs.observe(el));
+
+    // --- FAQ accordion ---
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    // --- Mobile nav ---
+    (function(){
+      var nav    = document.getElementById('main-nav');
+      var toggle = document.querySelector('.nav-mobile-toggle');
+      var src    = document.querySelector('.nav-links');
+      if (!nav || !toggle || !src) return;
+      var panel = document.createElement('div');
+      panel.id  = 'mobile-nav';
+      panel.innerHTML =
+        '<ul class="mobile-nav-list"></ul>' +
+        '<div class="mobile-nav-footer">' +
+          '<a href="book-demo.html" class="btn btn-primary" ' +
+          'style="display:block;text-align:center;padding:14px 0;width:100%;">Request Demo &rarr;</a>' +
+        '</div>';
+      var ul = panel.querySelector('.mobile-nav-list');
+      src.querySelectorAll('a').forEach(function(a){
+        var li = document.createElement('li');
+        li.appendChild(a.cloneNode(true));
+        ul.appendChild(li);
+      });
+      nav.parentNode.insertBefore(panel, nav.nextSibling);
+      function open()  { panel.classList.add('open'); toggle.classList.add('open'); toggle.setAttribute('aria-expanded','true');  document.body.style.overflow='hidden'; }
+      function close() { panel.classList.remove('open'); toggle.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+      toggle.addEventListener('click', function(){ panel.classList.contains('open') ? close() : open(); });
+      panel.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
+      document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+    })();
+  </script>
+
+</body>
+</html>

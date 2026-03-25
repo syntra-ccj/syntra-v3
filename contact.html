@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — SYNTRA Platform | Let's Talk</title>
+  <meta name="description" content="Reach SYNTRA directly. Sales, support, or partnerships — no gatekeepers. Someone on our team responds same day." />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="SYNTRA Platform" />
+  <link rel="canonical" href="https://www.syntraplatform.io/contact.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://www.syntraplatform.io/contact.html" />
+  <meta property="og:title"       content="Contact SYNTRA — Let's Talk" />
+  <meta property="og:description" content="Sales, support, partnerships. No gatekeepers. Same-day response on business days." />
+  <meta property="og:image"       content="https://www.syntraplatform.io/og-image.png" />
+  <meta property="og:site_name"   content="SYNTRA Platform" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@syntraplatform" />
+  <meta name="twitter:title"       content="Contact SYNTRA — Let's Talk" />
+  <meta name="twitter:description" content="Sales, support, partnerships. No gatekeepers. Same-day response on business days." />
+  <meta name="twitter:image"       content="https://www.syntraplatform.io/og-image.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Square.png" />
+  <link rel="apple-touch-icon"     href="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Square.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       TOKENS
+    ============================================================ */
+    :root {
+      --bg:          #08090E;
+      --surface:     #0D0F18;
+      --surface-2:   #121520;
+      --border:      rgba(255,255,255,0.07);
+      --white:       #FFFFFF;
+      --gray:        #8892A4;
+      --gray-lt:     #B4BCCA;
+      --amber:       #FF9500;
+      --amber-dim:   rgba(255,149,0,0.10);
+      --amber-glow:  rgba(255,149,0,0.18);
+      --blue:        #214DBC;
+      --blue-bright: #2D5FE8;
+      --blue-dim:    rgba(45,95,232,0.12);
+      --grad:        linear-gradient(135deg, #FF9500 0%, #214DBC 100%);
+      --grad-text:   linear-gradient(90deg,  #FF9500 0%, #2D5FE8 100%);
+      --max-w:       1280px;
+      --nav-h:       72px;
+      --radius:      14px;
+    }
+
+    /* ============================================================
+       RESET
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ============================================================
+       TYPOGRAPHY
+    ============================================================ */
+    h1, h2, h3, h4, h5 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+    }
+
+    .gradient-text {
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ============================================================
+       LAYOUT
+    ============================================================ */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 36px;
+    }
+    nav .container {
+      max-width: none;
+      width: 100%;
+      margin: 0;
+      padding: 0 40px;
+    }
+
+    /* ============================================================
+       COMPONENTS
+    ============================================================ */
+
+    /* Tag pill */
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--amber);
+      border: 1px solid rgba(255,149,0,0.28);
+      background: var(--amber-dim);
+      padding: 6px 14px;
+      border-radius: 100px;
+    }
+    .tag::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--amber);
+      animation: blink 2s ease-in-out infinite;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 30px;
+      border-radius: 9px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      border: none;
+      transition: all 0.22s ease;
+    }
+    .btn-primary {
+      background: var(--amber);
+      color: #000;
+      box-shadow: 0 0 28px rgba(255,149,0,0.30);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 48px rgba(255,149,0,0.50);
+      background: #FFAA22;
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(255,255,255,0.28);
+    }
+    .btn-blue {
+      background: var(--blue-bright);
+      color: #fff;
+      box-shadow: 0 0 28px rgba(45,95,232,0.28);
+    }
+    .btn-blue:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 48px rgba(45,95,232,0.44);
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity 0.72s ease, transform 0.72s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* Section divider */
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg,
+        transparent,
+        var(--border) 20%,
+        rgba(255,149,0,0.15) 50%,
+        var(--border) 80%,
+        transparent);
+      margin: 0;
+    }
+
+    /* ============================================================
+       KEYFRAMES
+    ============================================================ */
+    @keyframes blink {
+      0%,100% { opacity: 1; }
+      50%      { opacity: 0.35; }
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0px); }
+      50%      { transform: translateY(-14px); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ============================================================
+       NAV
+    ============================================================ */
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 200;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      background: rgba(8,9,14,0.82);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+    }
+    .nav-logo img { height: 30px; width: auto; display: block; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--gray);
+      font-size: 13.5px;
+      font-weight: 500;
+      transition: color 0.2s;
+          white-space: nowrap;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--white); }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+          padding-left: 20px;
+      border-left: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-right a.login {
+      color: var(--gray);
+      font-size: 13.5px;
+      font-weight: 500;
+      transition: color 0.2s;
+          white-space: nowrap;
+    }
+    .nav-right a.login:hover { color: var(--white); }
+
+    /* ============================================================
+       SECTION SHARED
+    ============================================================ */
+    section { padding: 120px 0; scroll-margin-top: var(--nav-h); }
+    .section-eyebrow { margin-bottom: 20px; }
+    .section-h { font-size: clamp(34px, 3.8vw, 54px); margin-bottom: 18px; }
+    .section-sub {
+      font-size: 17px;
+      color: var(--gray);
+      max-width: 580px;
+      line-height: 1.72;
+    }
+    .section-header { text-align: center; margin-bottom: 68px; }
+    .section-header .section-sub { margin: 0 auto; }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    #hero {
+      display: flex;
+      align-items: center;
+      padding: var(--nav-h) 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-ambient {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    /* Blue glow on right side */
+    .hero-ambient::before {
+      content: '';
+      position: absolute;
+      top: -5%;
+      right: -8%;
+      width: 720px;
+      height: 720px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(45,95,232,0.10) 0%, transparent 65%);
+    }
+    .hero-ambient::after {
+      content: '';
+      position: absolute;
+      bottom: 5%;
+      left: -8%;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(255,149,0,0.05) 0%, transparent 65%);
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.055) 1px, transparent 1px);
+      background-size: 38px 38px;
+      mask-image: radial-gradient(ellipse 90% 90% at 50% 40%, black 30%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      padding: 80px 0 60px;
+      width: 100%;
+      max-width: 760px;
+    }
+    .hero-tag { margin-bottom: 28px; }
+    .hero-h1 {
+      font-size: clamp(50px, 5.5vw, 84px);
+      font-weight: 900;
+      line-height: 1.02;
+      letter-spacing: -0.035em;
+      margin-bottom: 28px;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: var(--gray-lt);
+      line-height: 1.72;
+      max-width: 600px;
+    }
+
+    /* ============================================================
+       CONTACT OPTIONS
+    ============================================================ */
+    #contact-options {
+      padding: 0 0 120px;
+    }
+    .contact-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 42px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Card 1 amber glow */
+    .contact-card.card-sales:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255,149,0,0.35);
+      box-shadow: 0 0 40px rgba(255,149,0,0.10);
+    }
+    /* Card 2 blue glow */
+    .contact-card.card-support:hover {
+      transform: translateY(-5px);
+      border-color: rgba(45,95,232,0.40);
+      box-shadow: 0 0 40px rgba(45,95,232,0.12);
+    }
+    /* Card 3 gradient glow */
+    .contact-card.card-partner:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255,149,0,0.25);
+      box-shadow: 0 0 40px rgba(255,149,0,0.07), 0 0 40px rgba(45,95,232,0.07);
+    }
+
+    .card-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+      flex-shrink: 0;
+    }
+    .card-icon-wrap.amber-bg {
+      background: rgba(255,149,0,0.10);
+      border: 1px solid rgba(255,149,0,0.22);
+    }
+    .card-icon-wrap.blue-bg {
+      background: rgba(45,95,232,0.12);
+      border: 1px solid rgba(45,95,232,0.25);
+    }
+    .card-icon-wrap.grad-bg {
+      background: linear-gradient(135deg, rgba(255,149,0,0.10), rgba(45,95,232,0.12));
+      border: 1px solid rgba(255,149,0,0.18);
+    }
+
+    .card-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 12px;
+    }
+    .card-label.blue { color: var(--blue-bright); }
+    .card-label.grad {
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .contact-card h3 {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+    .contact-card p {
+      font-size: 14.5px;
+      color: var(--gray);
+      line-height: 1.75;
+      margin-bottom: 28px;
+      flex: 1;
+    }
+
+    .card-cta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      transition: gap 0.2s;
+    }
+    .card-cta-link.amber { color: var(--amber); }
+    .card-cta-link.blue  { color: var(--blue-bright); }
+    .card-cta-link:hover { gap: 10px; }
+
+    /* ============================================================
+       CONTACT FORM SECTION
+    ============================================================ */
+    #contact-form-section {
+      padding: 120px 0;
+      background: linear-gradient(180deg, transparent, rgba(45,95,232,0.025) 50%, transparent);
+    }
+    .form-section-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    /* Left side */
+    .form-left { display: flex; flex-direction: column; gap: 0; }
+    .form-left .section-eyebrow { margin-bottom: 20px; }
+    .form-left-h {
+      font-size: clamp(32px, 3.4vw, 48px);
+      font-weight: 900;
+      margin-bottom: 20px;
+      line-height: 1.08;
+    }
+    .form-left-body {
+      font-size: 16px;
+      color: var(--gray-lt);
+      line-height: 1.75;
+      margin-bottom: 40px;
+    }
+
+    .form-facts {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .form-fact {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .form-fact-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: var(--amber-dim);
+      border: 1px solid rgba(255,149,0,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .form-fact-text {
+      font-size: 14.5px;
+      color: var(--gray-lt);
+      line-height: 1.6;
+    }
+
+    /* Right side — form */
+    .form-right {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 48px 44px;
+      position: relative;
+    }
+    .form-right::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 15%;
+      right: 15%;
+      height: 2px;
+      background: var(--grad);
+      border-radius: 2px;
+    }
+
+    /* Success state */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 48px 24px;
+      animation: fadeIn 0.5s ease forwards;
+    }
+    .form-success.visible { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+    .success-check {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--amber-dim);
+      border: 1px solid rgba(255,149,0,0.28);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .form-success h3 {
+      font-size: 22px;
+      font-weight: 800;
+    }
+    .form-success p {
+      font-size: 15px;
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    /* Form fields */
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    .form-grid.full { grid-template-columns: 1fr; }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 18px;
+    }
+    .form-group.span-2 { grid-column: 1 / -1; }
+
+    label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 18px;
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 14.5px;
+      width: 100%;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    input::placeholder,
+    textarea::placeholder { color: rgba(136,146,164,0.6); }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--amber);
+      box-shadow: 0 0 0 3px rgba(255,149,0,0.10);
+      outline: none;
+    }
+
+    /* Error state */
+    input.error,
+    select.error,
+    textarea.error {
+      border-color: #FF4444;
+    }
+    .field-error {
+      font-size: 11.5px;
+      color: #FF5555;
+      margin-top: 5px;
+      display: none;
+    }
+    .field-error.visible { display: block; }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+      line-height: 1.6;
+    }
+
+    select {
+      cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238892A4' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 40px;
+    }
+    select option { background: #0D0F18; color: var(--white); }
+
+    .btn-submit {
+      width: 100%;
+      justify-content: center;
+      padding: 16px 30px;
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    .form-disclaimer {
+      font-size: 11.5px;
+      color: var(--gray);
+      text-align: center;
+      margin-top: 14px;
+      line-height: 1.6;
+    }
+    .form-disclaimer a {
+      color: var(--amber);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* ============================================================
+       LOCATION BAND
+    ============================================================ */
+    #location {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 48px 0;
+    }
+    .location-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+    .location-left { display: flex; flex-direction: column; gap: 10px; }
+    .location-brand {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--white);
+    }
+    .location-sub {
+      font-size: 14px;
+      color: var(--gray);
+    }
+    .location-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 7px 16px;
+      font-size: 12.5px;
+      color: var(--gray-lt);
+      font-weight: 500;
+      margin-top: 4px;
+      width: fit-content;
+    }
+
+    .location-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.22s, background 0.22s;
+      color: var(--gray);
+    }
+    .social-link:hover {
+      border-color: var(--amber);
+      background: rgba(255,149,0,0.06);
+      color: var(--amber);
+    }
+    .social-link svg { width: 17px; height: 17px; }
+
+    /* ============================================================
+       CTA SECTION
+    ============================================================ */
+    #cta { padding: 100px 0; }
+    .cta-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 90px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 15%;
+      right: 15%;
+      height: 2px;
+      background: var(--grad);
+    }
+    .cta-box::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      height: 300px;
+      background: radial-gradient(ellipse, rgba(255,149,0,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cta-box h2 {
+      font-size: clamp(34px, 3.8vw, 54px);
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+    .cta-box p {
+      font-size: 17px;
+      color: var(--gray);
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 1;
+    }
+    .cta-actions {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      flex-wrap: wrap;
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 64px 0 40px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+    .footer-logo {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .footer-logo img { height: 26px; width: auto; display: block; }
+    .footer-brand p {
+      font-size: 13.5px;
+      color: var(--gray);
+      line-height: 1.72;
+      max-width: 270px;
+    }
+    .footer-col h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 18px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .footer-col a { font-size: 13.5px; color: var(--gray); transition: color 0.2s; }
+    .footer-col a:hover { color: var(--white); }
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      font-size: 12.5px;
+      color: var(--gray);
+    }
+    .footer-bottom a { color: var(--amber); }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1024px) {
+      .contact-cards      { grid-template-columns: 1fr; gap: 16px; }
+      .form-section-inner { grid-template-columns: 1fr; gap: 48px; }
+      .footer-inner       { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .location-inner     { flex-direction: column; align-items: flex-start; gap: 24px; }
+    }
+    @media (max-width: 768px) {
+      .contact-cards      { grid-template-columns: 1fr; }
+      .form-grid          { grid-template-columns: 1fr; }
+      .form-right         { padding: 36px 26px; }
+      .cta-box            { padding: 56px 32px; }
+    }
+    @media (max-width: 900px) {
+      .nav-links         { display: none !important; }
+      .login             { display: none !important; }
+      .nav-right a.login { display: none !important; }
+      .nav-mobile-toggle { display: block !important; margin-left: auto; }
+      .nav-right .btn-primary { display: none !important; }
+      .nav-mobile-toggle span { display: block; width: 22px; height: 2px; background: var(--amber); border-radius: 2px; }
+      .nav-mobile-toggle span + span { margin-top: 5px; }
+    }
+    }
+        @media (max-width: 640px) {
+      .container          { padding: 0 20px; }
+      section             { padding: 80px 0; }
+      #contact-options    { padding-bottom: 80px; }
+      .contact-cards      { grid-template-columns: 1fr; }
+      .form-grid          { grid-template-columns: 1fr; }
+      .form-right         { padding: 28px 20px; }
+      .cta-box            { padding: 48px 24px; }
+      .footer-inner       { grid-template-columns: 1fr; }
+      .footer-bottom      { flex-direction: column; gap: 8px; text-align: center; }
+      .hero-h1            { font-size: clamp(40px, 11vw, 62px); }
+      .location-inner     { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* ============================================================
+       MOBILE — 768px
+    ============================================================ */
+    @media (max-width: 768px) {
+      section { padding: 60px 0; }
+      .container { padding: 0 20px; }
+
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+      .footer-brand { grid-column: 1 / -1; }
+
+      .cta-box { padding: 44px 28px; }
+
+      .btn { padding: 13px 22px; font-size: 13px; }
+
+      /* Contact cards */
+      .contact-cards { grid-template-columns: 1fr; gap: 16px; }
+
+      /* Form */
+      .form-grid { grid-template-columns: 1fr; }
+
+      /* Location band */
+      .location-inner { flex-direction: column; gap: 12px; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .footer-inner { grid-template-columns: 1fr; }
+    }
+  
+    /* ============================================================
+       MOBILE NAV PANEL
+    ============================================================ */
+    #mobile-nav {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: rgba(8,9,14,0.97);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 28px 24px 32px;
+      z-index: 998;
+      transform: translateY(-8px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+    }
+    @media (max-width: 900px) { #mobile-nav { display: block; } }
+    #mobile-nav.open { opacity: 1; transform: translateY(0); visibility: visible; }
+    .mobile-nav-list { list-style: none; padding: 0; margin: 0 0 24px; }
+    .mobile-nav-list li + li { border-top: 1px solid rgba(255,255,255,0.06); }
+    .mobile-nav-list a {
+      display: block; padding: 14px 0;
+      font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 500;
+      color: var(--white); text-decoration: none; transition: color 0.15s;
+    }
+    .mobile-nav-list a:hover { color: var(--amber); }
+    .mobile-nav-footer { padding-top: 8px; }
+    /* Hamburger ↔ X */
+    .nav-mobile-toggle span {
+      transition: transform 0.22s ease, opacity 0.22s ease;
+      transform-origin: center;
+    }
+    .nav-mobile-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-mobile-toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-mobile-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAV
+  ============================================================ -->
+  <nav id="main-nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo"><img src="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Horizontal.png" alt="SYNTRA" /></a>
+        <ul class="nav-links">
+          <li><a href="index.html#platform">Platform</a></li>
+          <li><a href="index.html#hardware">Hardware</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="use-cases.html">Use Cases</a></li>
+          <li><a href="integrations.html">Integrations</a></li>
+          <li><a href="#" class="active">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+          <a href="https://syntra.scoti.app" target="_blank" rel="noopener" class="login">Sign In</a>
+          <a href="book-demo.html" class="btn btn-primary" style="padding:10px 22px; font-size:12px;">Request Demo</a>
+        </div>
+            <button class="nav-mobile-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section id="hero">
+    <div class="hero-ambient"></div>
+    <div class="hero-grid"></div>
+    <div class="container">
+      <div class="hero-inner reveal">
+        <div class="hero-tag"><span class="tag">Get In Touch</span></div>
+        <h1 class="hero-h1">
+          Let's talk.<br>
+          <span class="gradient-text">We don't do gatekeepers.</span>
+        </h1>
+        <p class="hero-sub">
+          Sales, support, partnerships, or just a question. Hit us directly — someone on our team will get back to you same day.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================================================
+       CONTACT OPTIONS
+  ============================================================ -->
+  <section id="contact-options">
+    <div class="container">
+      <div class="contact-cards">
+
+        <!-- Card 1 — Sales -->
+        <div class="contact-card card-sales reveal">
+          <div class="card-icon-wrap amber-bg">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 4L24 14L14 24" stroke="#FF9500" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4 14H24" stroke="#FF9500" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="card-label">Sales</div>
+          <h3>Ready to see SYNTRA in action?</h3>
+          <p>Talk to our team about your operation. We'll show you the platform, walk through your use case, and tell you exactly what it would cost.</p>
+          <a href="book-demo.html" class="btn btn-primary" style="align-self:flex-start;">Book a Demo &rarr;</a>
+        </div>
+
+        <!-- Card 2 — Support -->
+        <div class="contact-card card-support reveal">
+          <div class="card-icon-wrap blue-bg">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="14" cy="14" r="10" stroke="#2D5FE8" stroke-width="2"/>
+              <path d="M9 11.5C9 9 11.24 7 14 7C16.76 7 19 9 19 11.5C19 13.5 17.8 15.2 16 16.1V17.5" stroke="#2D5FE8" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="16" cy="20" r="1" fill="#2D5FE8"/>
+            </svg>
+          </div>
+          <div class="card-label blue">Support</div>
+          <h3>Already a customer?</h3>
+          <p>Our support team is standing by. For platform issues, device questions, or integration help — reach us directly.</p>
+          <a href="mailto:support@syntraplatform.io" class="card-cta-link amber">
+            support@syntraplatform.io
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <!-- Card 3 — Partnerships -->
+        <div class="contact-card card-partner reveal">
+          <div class="card-icon-wrap grad-bg">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="handGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FF9500"/>
+                  <stop offset="100%" stop-color="#2D5FE8"/>
+                </linearGradient>
+              </defs>
+              <path d="M4 16l3-3 3 3 3-3 3 3 3-3" stroke="url(#handGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7 16v4h14v-8l-3-4H10l-3 4" stroke="url(#handGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="card-label grad">Partnerships</div>
+          <h3>Build with SYNTRA.</h3>
+          <p>Technology partners, resellers, integration providers, and ecosystem builders. If you want to connect your platform to ours, let's talk.</p>
+          <a href="mailto:partnerships@syntraplatform.io" class="card-cta-link blue">
+            partnerships@syntraplatform.io
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================================================
+       CONTACT FORM
+  ============================================================ -->
+  <section id="contact-form-section">
+    <div class="container">
+      <div class="form-section-inner">
+
+        <!-- Left -->
+        <div class="form-left reveal">
+          <div class="section-eyebrow"><span class="tag">Send a Message</span></div>
+          <h2 class="form-left-h">
+            Not sure where<br>
+            <span class="gradient-text">to start?</span>
+          </h2>
+          <p class="form-left-body">
+            Fill this out and we'll route it to the right person. No auto-replies. A real human reads every message.
+          </p>
+          <div class="form-facts">
+            <div class="form-fact">
+              <div class="form-fact-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="#FF9500" stroke-width="1.5"/><path d="M8 5v3l2 2" stroke="#FF9500" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <span class="form-fact-text">Same-day response on business days</span>
+            </div>
+            <div class="form-fact">
+              <div class="form-fact-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2C5.8 2 4 4 4 6.5c0 3.5 4 7.5 4 7.5s4-4 4-7.5C12 4 10.2 2 8 2z" stroke="#FF9500" stroke-width="1.5"/><circle cx="8" cy="6.5" r="1.5" fill="#FF9500"/></svg>
+              </div>
+              <span class="form-fact-text">Based in North Chicagoland, IL</span>
+            </div>
+            <div class="form-fact">
+              <div class="form-fact-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4h12v8a1 1 0 01-1 1H3a1 1 0 01-1-1V4z" stroke="#FF9500" stroke-width="1.5"/><path d="M2 4l6 5 6-5" stroke="#FF9500" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <span class="form-fact-text">No spam, no sales cadences — just a real conversation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right — form -->
+        <div class="form-right reveal">
+
+          <!-- Success state -->
+          <div class="form-success" id="formSuccess">
+            <div class="success-check">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 14l6 6 10-12" stroke="#FF9500" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Message sent.</h3>
+            <p>We'll be in touch shortly.</p>
+          </div>
+
+          <!-- The form -->
+          <form id="contactForm" novalidate>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Jane Smith" required />
+                <span class="field-error" id="fullName-error">Please enter your name.</span>
+              </div>
+              <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" placeholder="Acme Logistics" required />
+                <span class="field-error" id="company-error">Please enter your company.</span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@company.com" required />
+                <span class="field-error" id="email-error">Please enter a valid email.</span>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone (optional)</label>
+                <input type="tel" id="phone" name="phone" placeholder="(312) 000-0000" />
+              </div>
+            </div>
+            <div class="form-group" style="margin-bottom:18px;">
+              <label for="role">Role</label>
+              <select id="role" name="role" required>
+                <option value="" disabled selected>Select your role</option>
+                <option value="freight-broker">Freight Broker</option>
+                <option value="shipper">Shipper</option>
+                <option value="3pl">3PL</option>
+                <option value="fleet-manager">Fleet Manager</option>
+                <option value="asset-manager">Asset Manager</option>
+                <option value="tech-partner">Technology Partner</option>
+                <option value="other">Other</option>
+              </select>
+              <span class="field-error" id="role-error">Please select your role.</span>
+            </div>
+            <div class="form-group" style="margin-bottom:24px;">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your operation — what you're tracking, what's breaking, and what you need." required></textarea>
+              <span class="field-error" id="message-error">Please include a message.</span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit">Send Message &rarr;</button>
+            <p class="form-disclaimer">
+              By submitting you agree to our <a href="privacy.html">Privacy Policy</a>. We'll never share your information.
+            </p>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ============================================================
+       LOCATION BAND
+  ============================================================ -->
+  <div id="location">
+    <div class="container">
+      <div class="location-inner">
+        <div class="location-left">
+          <div class="location-brand">SYNTRA Platform</div>
+          <div class="location-sub">North Chicagoland, Illinois</div>
+          <div class="location-chip">
+            <span>📍</span>
+            North Chicagoland, IL &nbsp;·&nbsp; Founded 2024
+          </div>
+        </div>
+        <div class="location-right">
+          <!-- LinkedIn -->
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+          <!-- Twitter / X -->
+          <a href="#" class="social-link" aria-label="Twitter / X">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CTA
+  ============================================================ -->
+  <section id="cta">
+    <div class="container">
+      <div class="cta-box reveal">
+        <div style="margin-bottom:24px;"><span class="tag">Still evaluating?</span></div>
+        <h2>Still evaluating?<br><span class="gradient-text">That's fine.</span></h2>
+        <p>Book a 30-minute call and we'll answer every question you have — no pressure, no pitch deck.</p>
+        <div class="cta-actions">
+          <a href="book-demo.html" class="btn btn-primary">Book a Demo &rarr;</a>
+          <a href="pricing.html" class="btn btn-ghost">See Pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo"><img src="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Horizontal.png" alt="SYNTRA" /></a>
+          <p>The execution platform logistics companies use to connect every system, asset, and shipment — and actually run their operation from one place.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="integrations.html">Integrations</a></li>
+            <li><a href="index.html#hardware">Hardware</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">API Docs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="solutions.html#brokers">Freight Brokers</a></li>
+            <li><a href="solutions.html#3pl">3PLs</a></li>
+            <li><a href="solutions.html#shippers">Shippers</a></li>
+            <li><a href="solutions.html#fleet">Fleet Managers</a></li>
+            <li><a href="solutions.html#assets">Asset Managers</a></li>
+            <li><a href="use-cases.html">Use Cases</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About SYNTRA</a></li>
+            <li><a href="about.html#cscs">CSCS Partnership</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 SYNTRA Platform, Inc. All rights reserved.</span>
+        <span><a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms.html" style="color:var(--gray);">Terms of Service</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JS
+  ============================================================ -->
+  <script>
+    // --- Scroll reveal with stagger ---
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05 });
+
+    // Mobile reveal fallback — trigger elements already in viewport
+    setTimeout(() => {
+      document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 1.1) el.classList.add('visible');
+      });
+    }, 300);
+
+    // Stagger contact cards
+    document.querySelectorAll('.contact-cards .reveal').forEach((el, i) => {
+      el.style.transitionDelay = `${i * 0.12}s`;
+    });
+
+    revealEls.forEach(el => revealObs.observe(el));
+
+    // --- Contact form validation + success state ---
+    const form = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+
+    function showError(fieldId, show) {
+      const field = document.getElementById(fieldId);
+      const errEl = document.getElementById(fieldId + '-error');
+      if (!field || !errEl) return;
+      if (show) {
+        field.classList.add('error');
+        errEl.classList.add('visible');
+      } else {
+        field.classList.remove('error');
+        errEl.classList.remove('visible');
+      }
+    }
+
+    function validateField(field) {
+      if (field.id === 'email') {
+        const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value.trim());
+        showError('email', !valid);
+        return valid;
+      }
+      if (field.required) {
+        const empty = field.value.trim() === '' || (field.tagName === 'SELECT' && field.value === '');
+        showError(field.id, empty);
+        return !empty;
+      }
+      return true;
+    }
+
+    // Live validation on blur
+    ['fullName','company','email','role','message'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('blur', () => validateField(el));
+        el.addEventListener('input', () => {
+          if (el.classList.contains('error')) validateField(el);
+        });
+      }
+    });
+
+    const SHEET_URL = 'https://script.google.com/a/macros/syntraplatform.io/s/AKfycbzvkBUUBRSHHMN9LEGXytyokGz1OQ0mLgpQCO-SzqEZhRdODmHjohioFxhdMfbUSIrv/exec';
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const fields = ['fullName','company','email','role','message'];
+      let allValid = true;
+      fields.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && !validateField(el)) allValid = false;
+      });
+      if (!allValid) return;
+
+      // Disable button while submitting
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+
+      const payload = {
+        fullName: document.getElementById('fullName')?.value || '',
+        company:  document.getElementById('company')?.value  || '',
+        email:    document.getElementById('email')?.value    || '',
+        phone:    document.getElementById('phone')?.value    || '',
+        role:     document.getElementById('role')?.value     || '',
+        message:  document.getElementById('message')?.value  || ''
+      };
+
+      // Google Apps Script requires no-cors — data still lands in the sheet
+      fetch(SHEET_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+      .then(() => {
+        form.style.transition = 'opacity 0.35s ease';
+        form.style.opacity = '0';
+        setTimeout(() => {
+          form.style.display = 'none';
+          formSuccess.classList.add('visible');
+        }, 350);
+      })
+      .catch(() => {
+        // Even on no-cors "errors" the request usually went through — show success
+        form.style.transition = 'opacity 0.35s ease';
+        form.style.opacity = '0';
+        setTimeout(() => {
+          form.style.display = 'none';
+          formSuccess.classList.add('visible');
+        }, 350);
+      });
+    });
+  </script>
+
+
+  <script>
+  (function(){
+    var nav    = document.getElementById('main-nav');
+    var toggle = document.querySelector('.nav-mobile-toggle');
+    var src    = document.querySelector('.nav-links');
+    if (!nav || !toggle || !src) return;
+
+    // Build panel
+    var panel = document.createElement('div');
+    panel.id  = 'mobile-nav';
+    panel.innerHTML =
+      '<ul class="mobile-nav-list"></ul>' +
+      '<div class="mobile-nav-footer">' +
+        '<a href="book-demo.html" class="btn btn-primary" ' +
+        'style="display:block;text-align:center;padding:14px 0;width:100%;">Request Demo &rarr;</a>' +
+      '</div>';
+    var ul = panel.querySelector('.mobile-nav-list');
+    src.querySelectorAll('a').forEach(function(a){
+      var li = document.createElement('li');
+      li.appendChild(a.cloneNode(true));
+      ul.appendChild(li);
+    });
+    nav.parentNode.insertBefore(panel, nav.nextSibling);
+
+    function open()  { panel.classList.add('open'); toggle.classList.add('open'); toggle.setAttribute('aria-expanded','true');  document.body.style.overflow='hidden'; }
+    function close() { panel.classList.remove('open'); toggle.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+
+    toggle.addEventListener('click', function(){ panel.classList.contains('open') ? close() : open(); });
+    panel.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+  })();
+  </script>
+
+</body>
+</html>
