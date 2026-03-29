@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cold Chain Intelligence for Private Fleets | SYNTRA</title>
+  <meta name="description" content="Stop recording cold chain failures. Start preventing them. SYNTRA delivers real-time cargo intelligence across every mile and every handoff for private fleets." />
+  <meta name="keywords" content="cold chain monitoring, private fleet, temperature tracking, cargo intelligence, shipment visibility, cold chain compliance, real-time monitoring" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="SYNTRA Platform" />
+  <link rel="canonical" href="https://www.syntraplatform.io/cold-chain.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://www.syntraplatform.io/cold-chain.html" />
+  <meta property="og:title"       content="Cold Chain Intelligence for Private Fleets | SYNTRA" />
+  <meta property="og:description" content="Stop recording cold chain failures. Start preventing them. SYNTRA delivers real-time cargo intelligence across every mile and every handoff." />
+  <meta property="og:image"       content="https://www.syntraplatform.io/og-image.png" />
+  <meta property="og:site_name"   content="SYNTRA Platform" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@syntraplatform" />
+  <meta name="twitter:title"       content="Cold Chain Intelligence for Private Fleets | SYNTRA" />
+  <meta name="twitter:description" content="Stop recording cold chain failures. Start preventing them. Real-time cargo intelligence across every mile and every handoff." />
+  <meta name="twitter:image"       content="https://www.syntraplatform.io/og-image.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Logos%20%26%20Images%20/Copy%20of%20BlackSyntraPin.png" media="(prefers-color-scheme: light)" />
+  <link rel="icon" type="image/png" href="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraPin.png" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" type="image/png" href="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraPin.png" />
+  <link rel="apple-touch-icon" href="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraPin.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       TOKENS
+    ============================================================ */
+    :root {
+      --bg:          #08090E;
+      --surface:     #0D0F18;
+      --surface-2:   #121520;
+      --border:      rgba(255,255,255,0.07);
+      --white:       #FFFFFF;
+      --gray:        #8892A4;
+      --gray-lt:     #B4BCCA;
+      --amber:       #FF9500;
+      --amber-dim:   rgba(255,149,0,0.10);
+      --amber-glow:  rgba(255,149,0,0.18);
+      --blue:        #214DBC;
+      --blue-bright: #2D5FE8;
+      --blue-dim:    rgba(45,95,232,0.12);
+      --red:         #E84040;
+      --red-dim:     rgba(232,64,64,0.10);
+      --green:       #22C55E;
+      --green-dim:   rgba(34,197,94,0.10);
+      --cyan:        #06B6D4;
+      --cyan-dim:    rgba(6,182,212,0.10);
+      --grad:        linear-gradient(135deg, #FF9500 0%, #214DBC 100%);
+      --grad-text:   linear-gradient(90deg,  #FF9500 0%, #2D5FE8 100%);
+      --max-w:       1280px;
+      --nav-h:       72px;
+      --radius:      14px;
+    }
+
+    /* ============================================================
+       RESET
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    /* ============================================================
+       TYPOGRAPHY
+    ============================================================ */
+    h1, h2, h3, h4, h5 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+    }
+
+    .gradient-text {
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ============================================================
+       LAYOUT
+    ============================================================ */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 36px;
+    }
+    nav .container {
+      max-width: none;
+      width: 100%;
+      margin: 0;
+      padding: 0 40px;
+    }
+
+    /* ============================================================
+       COMPONENTS
+    ============================================================ */
+
+    /* Tag pill */
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--amber);
+      border: 1px solid rgba(255,149,0,0.28);
+      background: var(--amber-dim);
+      padding: 6px 14px;
+      border-radius: 100px;
+    }
+    .tag::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--amber);
+      animation: blink 2s ease-in-out infinite;
+    }
+    .tag.cyan {
+      color: var(--cyan);
+      border-color: rgba(6,182,212,0.28);
+      background: var(--cyan-dim);
+    }
+    .tag.cyan::before { background: var(--cyan); }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 30px;
+      border-radius: 9px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      border: none;
+      transition: all 0.22s ease;
+    }
+    .btn-primary {
+      background: var(--amber);
+      color: #000;
+      box-shadow: 0 0 28px rgba(255,149,0,0.30);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 48px rgba(255,149,0,0.50);
+      background: #FFAA22;
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(255,255,255,0.28);
+    }
+    .btn-lg {
+      padding: 18px 40px;
+      font-size: 15px;
+      border-radius: 11px;
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity 0.72s ease, transform 0.72s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ============================================================
+       KEYFRAMES
+    ============================================================ */
+    @keyframes blink {
+      0%,100% { opacity: 1; }
+      50%      { opacity: 0.35; }
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0px); }
+      50%      { transform: translateY(-14px); }
+    }
+    @keyframes pulse {
+      0%,100% { opacity: 0.4; transform: scale(1); }
+      50%      { opacity: 1; transform: scale(1.05); }
+    }
+    @keyframes scanDown {
+      0%   { transform: translateY(0px);   opacity: 0; }
+      5%   { opacity: 0.7; }
+      95%  { opacity: 0.7; }
+      100% { transform: translateY(200px); opacity: 0; }
+    }
+    @keyframes tempWave {
+      0%   { d: path("M0,30 Q60,10 120,30 T240,30 T360,30"); }
+      50%  { d: path("M0,30 Q60,50 120,30 T240,30 T360,30"); }
+      100% { d: path("M0,30 Q60,10 120,30 T240,30 T360,30"); }
+    }
+    @keyframes dashFlow {
+      to { stroke-dashoffset: -48; }
+    }
+
+    /* ============================================================
+       NAV
+    ============================================================ */
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 200;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      background: rgba(8,9,14,0.82);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+    }
+    .nav-logo img { height: 30px; width: auto; display: block; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--gray);
+      font-size: 13.5px;
+      font-weight: 500;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding-left: 20px;
+      border-left: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-right a.login {
+      color: var(--gray);
+      font-size: 13.5px;
+      font-weight: 500;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-right a.login:hover { color: var(--white); }
+
+    /* ============================================================
+       HERO — COLD CHAIN
+    ============================================================ */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: var(--nav-h);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-ambient {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    .hero-ambient::before {
+      content: '';
+      position: absolute;
+      top: -15%;
+      right: -8%;
+      width: 900px;
+      height: 900px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(6,182,212,0.09) 0%, transparent 60%);
+    }
+    .hero-ambient::after {
+      content: '';
+      position: absolute;
+      bottom: 5%;
+      left: -12%;
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(255,149,0,0.06) 0%, transparent 60%);
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.055) 1px, transparent 1px);
+      background-size: 38px 38px;
+      mask-image: radial-gradient(ellipse 90% 90% at 50% 40%, black 30%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+      padding: 80px 0;
+      width: 100%;
+    }
+    .hero-content { display: flex; flex-direction: column; gap: 28px; }
+    .hero-h1 {
+      font-size: clamp(46px, 5.2vw, 82px);
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -0.035em;
+    }
+    .hero-hook {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(18px, 1.8vw, 24px);
+      font-weight: 700;
+      color: var(--cyan);
+      line-height: 1.4;
+      margin-top: -4px;
+    }
+    .hero-sub {
+      font-size: 17px;
+      color: var(--gray-lt);
+      line-height: 1.72;
+      max-width: 520px;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .hero-proof {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 10px;
+      font-size: 13px;
+      color: var(--gray);
+    }
+    .hero-proof-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--green-dim);
+      border: 1px solid rgba(34,197,94,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    /* Hero visual — cold chain graphic */
+    .hero-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: float 7s ease-in-out infinite;
+    }
+    .hero-svg { width: 100%; max-width: 540px; }
+
+    /* ============================================================
+       DISRUPTION BANNER
+    ============================================================ */
+    #disruption {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 54px 0;
+      background: var(--surface);
+      position: relative;
+      overflow: hidden;
+    }
+    #disruption::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 120% at 50% 50%, rgba(232,64,64,0.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .disruption-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .disruption-stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .disruption-num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(36px, 3.6vw, 52px);
+      font-weight: 900;
+      color: var(--red);
+    }
+    .disruption-label {
+      font-size: 13px;
+      color: var(--gray);
+      max-width: 180px;
+      line-height: 1.5;
+    }
+    .disruption-divider {
+      width: 1px;
+      height: 60px;
+      background: var(--border);
+    }
+
+    /* ============================================================
+       PROBLEM
+    ============================================================ */
+    section { padding: 120px 0; scroll-margin-top: var(--nav-h); }
+    .section-header { text-align: center; margin-bottom: 68px; }
+    .section-eyebrow { margin-bottom: 20px; }
+    .section-h { font-size: clamp(34px, 3.8vw, 54px); margin-bottom: 18px; }
+    .section-sub {
+      font-size: 17px;
+      color: var(--gray);
+      max-width: 620px;
+      line-height: 1.72;
+      margin: 0 auto;
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .problem-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 38px 30px;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .problem-card:hover {
+      border-color: rgba(232,64,64,0.25);
+      transform: translateY(-5px);
+    }
+    .problem-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 11px;
+      background: var(--red-dim);
+      border: 1px solid rgba(232,64,64,0.22);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-bottom: 22px;
+    }
+    .problem-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+    .problem-card p  { font-size: 14px; color: var(--gray); line-height: 1.72; }
+
+    /* ============================================================
+       SOLUTION — WHAT SYNTRA DOES
+    ============================================================ */
+    #solution {
+      background: linear-gradient(180deg, transparent, rgba(6,182,212,0.025) 50%, transparent);
+    }
+    .solution-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .solution-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 44px 36px;
+      transition: border-color 0.3s, transform 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .solution-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--cyan), var(--amber));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .solution-card:hover {
+      border-color: rgba(6,182,212,0.22);
+      transform: translateY(-5px);
+    }
+    .solution-card:hover::before { opacity: 1; }
+    .solution-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 13px;
+      background: var(--cyan-dim);
+      border: 1px solid rgba(6,182,212,0.22);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 24px;
+    }
+    .solution-card h3 {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .solution-card p {
+      font-size: 14.5px;
+      color: var(--gray-lt);
+      line-height: 1.72;
+    }
+
+    /* ============================================================
+       BEFORE / AFTER
+    ============================================================ */
+    #compare {
+      padding: 100px 0;
+    }
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 60px 1fr;
+      gap: 0;
+      align-items: stretch;
+    }
+    .compare-col {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 44px 36px;
+    }
+    .compare-col.before { border-color: rgba(232,64,64,0.18); }
+    .compare-col.after  { border-color: rgba(6,182,212,0.18); }
+    .compare-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+    .compare-label.red {
+      color: var(--red);
+      background: var(--red-dim);
+      border: 1px solid rgba(232,64,64,0.25);
+    }
+    .compare-label.cyan {
+      color: var(--cyan);
+      background: var(--cyan-dim);
+      border: 1px solid rgba(6,182,212,0.25);
+    }
+    .compare-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .compare-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14.5px;
+      color: var(--gray-lt);
+      line-height: 1.6;
+    }
+    .compare-list .icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      margin-top: 2px;
+    }
+    .compare-list .icon.red {
+      background: var(--red-dim);
+      color: var(--red);
+    }
+    .compare-list .icon.cyan {
+      background: var(--cyan-dim);
+      color: var(--cyan);
+    }
+    .compare-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .compare-arrow span {
+      font-size: 28px;
+      color: var(--gray);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    /* ============================================================
+       STATS
+    ============================================================ */
+    #stats {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    #stats::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(6,182,212,0.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .stat-item {
+      padding: 0 40px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(40px, 4.2vw, 66px);
+      font-weight: 900;
+      line-height: 1;
+      background: linear-gradient(90deg, var(--cyan), var(--amber));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 12px;
+    }
+    .stat-label {
+      font-size: 13.5px;
+      color: var(--gray);
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    /* ============================================================
+       HOW IT WORKS
+    ============================================================ */
+    #how {
+      background: linear-gradient(180deg, transparent, rgba(255,149,0,0.02) 50%, transparent);
+    }
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      position: relative;
+      margin-top: 72px;
+    }
+    .how-grid::before {
+      content: '';
+      position: absolute;
+      top: 36px;
+      left: calc(12.5%);
+      right: calc(12.5%);
+      height: 1px;
+      background: linear-gradient(90deg,
+        var(--amber) 0%,
+        rgba(255,149,0,0.5) 33%,
+        rgba(6,182,212,0.5) 66%,
+        var(--cyan) 100%);
+      z-index: 0;
+    }
+    .how-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .how-node {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      margin-bottom: 28px;
+      position: relative;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .how-step:hover .how-node {
+      border-color: var(--amber);
+      box-shadow: 0 0 28px rgba(255,149,0,0.2);
+    }
+    .how-node-num {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--amber);
+      color: #000;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .how-step-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--amber);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    .how-step h3 { font-size: 17px; font-weight: 800; margin-bottom: 10px; }
+    .how-step p  { font-size: 13px; color: var(--gray); line-height: 1.65; }
+
+    /* ============================================================
+       CTA
+    ============================================================ */
+    #cta { padding: 100px 0; }
+    .cta-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 100px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--amber), var(--cyan));
+    }
+    .cta-box::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 400px;
+      background: radial-gradient(ellipse, rgba(6,182,212,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cta-box h2 {
+      font-size: clamp(34px, 3.8vw, 54px);
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+    .cta-box p {
+      font-size: 17px;
+      color: var(--gray);
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 1;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-actions {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      flex-wrap: wrap;
+    }
+    .cta-note {
+      margin-top: 24px;
+      font-size: 13px;
+      color: var(--gray);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 64px 0 40px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+    .footer-logo {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .footer-logo img { height: 26px; width: auto; display: block; }
+    .footer-brand p {
+      font-size: 13.5px;
+      color: var(--gray);
+      line-height: 1.72;
+      max-width: 270px;
+    }
+    .footer-col h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 18px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .footer-col a { font-size: 13.5px; color: var(--gray); transition: color 0.2s; }
+    .footer-col a:hover { color: var(--white); }
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      font-size: 12.5px;
+      color: var(--gray);
+    }
+    .footer-bottom a { color: var(--amber); }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1024px) {
+      .hero-inner        { grid-template-columns: 1fr; gap: 48px; }
+      .hero-visual       { display: none; }
+      .problem-grid      { grid-template-columns: 1fr 1fr; }
+      .solution-grid     { grid-template-columns: 1fr; }
+      .compare-grid      { grid-template-columns: 1fr; gap: 20px; }
+      .compare-arrow     { transform: rotate(90deg); }
+      .stats-grid        { grid-template-columns: 1fr 1fr; row-gap: 48px; }
+      .stat-item:nth-child(2) { border-right: none; }
+      .how-grid          { grid-template-columns: 1fr 1fr; row-gap: 48px; }
+      .how-grid::before  { display: none; }
+      .footer-inner      { grid-template-columns: 1fr 1fr; gap: 40px; }
+    }
+    @media (max-width: 900px) {
+      .nav-links         { display: none !important; }
+      .login             { display: none !important; }
+      .nav-right a.login { display: none !important; }
+      .nav-mobile-toggle { display: block !important; margin-left: auto; }
+      .nav-right .btn-primary { display: none !important; }
+      .nav-mobile-toggle span { display: block; width: 22px; height: 2px; background: var(--amber); border-radius: 2px; }
+      .nav-mobile-toggle span + span { margin-top: 5px; }
+      .disruption-inner { flex-direction: column; gap: 32px; }
+      .disruption-divider { width: 60px; height: 1px; }
+    }
+    @media (max-width: 768px) {
+      section { padding: 60px 0; }
+      .container { padding: 0 20px; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .hero-actions .btn { justify-content: center; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .stat-item { border-right: none; border-bottom: 1px solid var(--border); padding: 24px 0; }
+      .stat-item:last-child { border-bottom: none; }
+      .how-grid { grid-template-columns: 1fr; }
+      .cta-box { padding: 48px 24px; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    }
+    @media (max-width: 640px) {
+      .problem-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ============================================================
+       MOBILE NAV PANEL
+    ============================================================ */
+    #mobile-nav {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: rgba(8,9,14,0.97);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 28px 24px 32px;
+      z-index: 998;
+      transform: translateY(-8px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+    }
+    @media (max-width: 900px) { #mobile-nav { display: block; } }
+    #mobile-nav.open { opacity: 1; transform: translateY(0); visibility: visible; }
+    .mobile-nav-list { list-style: none; padding: 0; margin: 0 0 24px; }
+    .mobile-nav-list li + li { border-top: 1px solid rgba(255,255,255,0.06); }
+    .mobile-nav-list a {
+      display: block; padding: 14px 0;
+      font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 500;
+      color: var(--white); text-decoration: none; transition: color 0.15s;
+    }
+    .mobile-nav-list a:hover { color: var(--amber); }
+    .mobile-nav-footer { padding-top: 8px; }
+    .nav-mobile-toggle {
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 8px;
+      display: none;
+    }
+    .nav-mobile-toggle span {
+      transition: transform 0.22s ease, opacity 0.22s ease;
+      transform-origin: center;
+    }
+    .nav-mobile-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-mobile-toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .nav-mobile-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAV
+  ============================================================ -->
+  <nav id="main-nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo"><img src="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Horizontal.png" alt="SYNTRA" /></a>
+        <ul class="nav-links">
+          <li><a href="index.html#platform">Platform</a></li>
+          <li><a href="index.html#hardware">Hardware</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="use-cases.html">Use Cases</a></li>
+          <li><a href="integrations.html">Integrations</a></li>
+          <li><a href="about.html">Company</a></li>
+        </ul>
+        <div class="nav-right">
+          <a href="https://syntra.scoti.app" target="_blank" rel="noopener" class="login">Sign In</a>
+          <a href="book-demo.html" class="btn btn-primary" style="padding:10px 22px; font-size:12px;">Request Demo</a>
+        </div>
+        <button class="nav-mobile-toggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section id="hero">
+    <div class="hero-ambient"></div>
+    <div class="hero-grid"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <span class="tag cyan">Private Fleet Cold Chain</span>
+          <h1 class="hero-h1">
+            Stop <span class="gradient-text">Recording</span> Failures.<br/>
+            Start <span class="gradient-text">Preventing</span> Them.
+          </h1>
+          <p class="hero-hook">You invested in sensors. Are they preventing problems &mdash; or just recording them?</p>
+          <p class="hero-sub">SYNTRA delivers real-time cargo intelligence across every mile and every handoff. Close the gap between detection and response before product quality is compromised.</p>
+          <div class="hero-actions">
+            <a href="book-demo.html" class="btn btn-primary btn-lg">Book a 15-Minute Call &rarr;</a>
+            <a href="#solution" class="btn btn-ghost btn-lg">See How It Works</a>
+          </div>
+          <div class="hero-proof">
+            <span class="hero-proof-icon">&#x2713;</span>
+            <span>No contracts. 15 minutes. See it live on your fleet data.</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <svg class="hero-svg" viewBox="0 0 480 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Background ring -->
+            <circle cx="240" cy="240" r="200" stroke="rgba(6,182,212,0.08)" stroke-width="1"/>
+            <circle cx="240" cy="240" r="150" stroke="rgba(6,182,212,0.06)" stroke-width="1"/>
+            <circle cx="240" cy="240" r="100" stroke="rgba(6,182,212,0.04)" stroke-width="1"/>
+
+            <!-- Temperature wave -->
+            <path d="M80,240 Q140,200 200,240 T320,240 T400,240" stroke="url(#tempGrad)" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7">
+              <animate attributeName="d" dur="4s" repeatCount="indefinite"
+                values="M80,240 Q140,200 200,240 T320,240 T400,240;
+                        M80,240 Q140,280 200,240 T320,240 T400,240;
+                        M80,240 Q140,200 200,240 T320,240 T400,240"/>
+            </path>
+
+            <!-- Alert zone -->
+            <rect x="295" y="170" width="90" height="48" rx="8" fill="rgba(232,64,64,0.12)" stroke="rgba(232,64,64,0.3)" stroke-width="1">
+              <animate attributeName="opacity" dur="2s" repeatCount="indefinite" values="0.6;1;0.6"/>
+            </rect>
+            <text x="340" y="190" text-anchor="middle" fill="#E84040" font-family="Montserrat" font-size="9" font-weight="700" letter-spacing="0.1em">EXCURSION</text>
+            <text x="340" y="207" text-anchor="middle" fill="#E84040" font-family="Montserrat" font-size="14" font-weight="900">+4.2&deg;F</text>
+
+            <!-- Safe zone -->
+            <rect x="95" y="260" width="90" height="48" rx="8" fill="rgba(34,197,94,0.1)" stroke="rgba(34,197,94,0.25)" stroke-width="1"/>
+            <text x="140" y="280" text-anchor="middle" fill="#22C55E" font-family="Montserrat" font-size="9" font-weight="700" letter-spacing="0.1em">IN RANGE</text>
+            <text x="140" y="297" text-anchor="middle" fill="#22C55E" font-family="Montserrat" font-size="14" font-weight="900">34.1&deg;F</text>
+
+            <!-- Central hub -->
+            <circle cx="240" cy="240" r="36" fill="rgba(6,182,212,0.12)" stroke="rgba(6,182,212,0.4)" stroke-width="1.5"/>
+            <circle cx="240" cy="240" r="18" fill="rgba(6,182,212,0.25)"/>
+            <text x="240" y="244" text-anchor="middle" fill="#06B6D4" font-family="Montserrat" font-size="12" font-weight="900">S</text>
+
+            <!-- Pulsing rings -->
+            <circle cx="240" cy="240" r="36" fill="none" stroke="rgba(6,182,212,0.3)" stroke-width="1">
+              <animate attributeName="r" dur="3s" repeatCount="indefinite" values="36;80;120" />
+              <animate attributeName="opacity" dur="3s" repeatCount="indefinite" values="0.5;0.15;0" />
+            </circle>
+            <circle cx="240" cy="240" r="36" fill="none" stroke="rgba(6,182,212,0.3)" stroke-width="1">
+              <animate attributeName="r" dur="3s" repeatCount="indefinite" values="36;80;120" begin="1.5s"/>
+              <animate attributeName="opacity" dur="3s" repeatCount="indefinite" values="0.5;0.15;0" begin="1.5s"/>
+            </circle>
+
+            <!-- Nodes — trucks/warehouses -->
+            <circle cx="130" cy="160" r="10" fill="rgba(255,149,0,0.15)" stroke="rgba(255,149,0,0.4)" stroke-width="1"/>
+            <text x="130" y="164" text-anchor="middle" font-size="10">&#x1F69A;</text>
+            <line x1="140" y1="166" x2="222" y2="228" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4 4">
+              <animate attributeName="stroke-dashoffset" dur="2s" repeatCount="indefinite" from="0" to="-48"/>
+            </line>
+
+            <circle cx="350" cy="160" r="10" fill="rgba(255,149,0,0.15)" stroke="rgba(255,149,0,0.4)" stroke-width="1"/>
+            <text x="350" y="164" text-anchor="middle" font-size="10">&#x1F3ED;</text>
+            <line x1="340" y1="166" x2="258" y2="228" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4 4">
+              <animate attributeName="stroke-dashoffset" dur="2s" repeatCount="indefinite" from="0" to="-48"/>
+            </line>
+
+            <circle cx="130" cy="340" r="10" fill="rgba(255,149,0,0.15)" stroke="rgba(255,149,0,0.4)" stroke-width="1"/>
+            <text x="130" y="344" text-anchor="middle" font-size="10">&#x1F4E6;</text>
+            <line x1="140" y1="334" x2="222" y2="256" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4 4">
+              <animate attributeName="stroke-dashoffset" dur="2s" repeatCount="indefinite" from="0" to="-48"/>
+            </line>
+
+            <circle cx="350" cy="340" r="10" fill="rgba(255,149,0,0.15)" stroke="rgba(255,149,0,0.4)" stroke-width="1"/>
+            <text x="350" y="344" text-anchor="middle" font-size="10">&#x1F6D2;</text>
+            <line x1="340" y1="334" x2="258" y2="256" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4 4">
+              <animate attributeName="stroke-dashoffset" dur="2s" repeatCount="indefinite" from="0" to="-48"/>
+            </line>
+
+            <!-- Status bar -->
+            <rect x="170" y="400" width="140" height="32" rx="16" fill="rgba(6,182,212,0.1)" stroke="rgba(6,182,212,0.25)" stroke-width="1"/>
+            <text x="240" y="421" text-anchor="middle" fill="#06B6D4" font-family="Montserrat" font-size="10" font-weight="700" letter-spacing="0.08em">LIVE MONITORING</text>
+
+            <defs>
+              <linearGradient id="tempGrad" x1="80" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#22C55E"/>
+                <stop offset="60%" stop-color="#FF9500"/>
+                <stop offset="100%" stop-color="#E84040"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DISRUPTION STATS
+  ============================================================ -->
+  <section id="disruption" class="reveal">
+    <div class="container">
+      <div class="disruption-inner">
+        <div class="disruption-stat">
+          <div class="disruption-num" data-target="35" data-suffix="%">0%</div>
+          <div class="disruption-label">of cold chain shipments experience at least one temperature excursion</div>
+        </div>
+        <div class="disruption-divider"></div>
+        <div class="disruption-stat">
+          <div class="disruption-num" data-target="15" data-suffix="B">$0B</div>
+          <div class="disruption-label">in annual losses from cold chain failures in the U.S. alone</div>
+        </div>
+        <div class="disruption-divider"></div>
+        <div class="disruption-stat">
+          <div class="disruption-num" data-target="90" data-suffix="%">0%</div>
+          <div class="disruption-label">of excursions are caught after delivery &mdash; too late to act</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROBLEM
+  ============================================================ -->
+  <section id="problem">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag section-eyebrow">The Blind Spots</span>
+        <h2 class="section-h">Most Cold Chain Platforms Show You<br/><span class="gradient-text">What Happened.</span></h2>
+        <p class="section-sub">By the time you see the data, the damage is done. Private fleets need intelligence that acts in real time &mdash; not reports that arrive after the fact.</p>
+      </div>
+      <div class="problem-grid">
+        <div class="problem-card reveal">
+          <div class="problem-icon">&#x1F4CA;</div>
+          <h3>Post-Mortem Data</h3>
+          <p>Sensors log temperatures but alerts don't fire until after delivery. You're building a record of failure, not a system of prevention.</p>
+        </div>
+        <div class="problem-card reveal">
+          <div class="problem-icon">&#x1F517;</div>
+          <h3>Handoff Blind Spots</h3>
+          <p>Visibility drops between origin, cross-dock, and final mile. Every gap in the chain is a gap in your compliance posture.</p>
+        </div>
+        <div class="problem-card reveal">
+          <div class="problem-icon">&#x23F3;</div>
+          <h3>Slow Response Loops</h3>
+          <p>By the time the ops team is notified, product has been compromised for hours. The cost of delay compounds with every minute.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SOLUTION — WHAT SYNTRA DOES
+  ============================================================ -->
+  <section id="solution">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag cyan section-eyebrow">The SYNTRA Difference</span>
+        <h2 class="section-h">Real-Time Cargo Intelligence,<br/><span class="gradient-text">Unified Across Everything.</span></h2>
+        <p class="section-sub">Continuous monitoring from origin to destination with no blind spots between handoffs. Synchronized intelligence across devices, systems, and shipments.</p>
+      </div>
+      <div class="solution-grid">
+        <div class="solution-card reveal">
+          <div class="solution-icon">&#x26A1;</div>
+          <h3>Immediate Excursion Alerts</h3>
+          <p>The moment a temperature threshold is breached, your team gets actionable alerts with shipment context &mdash; not just a data point, but what to do about it.</p>
+        </div>
+        <div class="solution-card reveal">
+          <div class="solution-icon">&#x1F310;</div>
+          <h3>Continuous Chain of Custody</h3>
+          <p>No blind spots between handoffs. SYNTRA maintains visibility from the moment cargo leaves your dock to final delivery &mdash; across every carrier and warehouse.</p>
+        </div>
+        <div class="solution-card reveal">
+          <div class="solution-icon">&#x1F4CB;</div>
+          <h3>Automated Compliance Records</h3>
+          <p>FSMA 204, HACCP, and custom SLA documentation generated automatically. Every data point logged, timestamped, and audit-ready without manual effort.</p>
+        </div>
+        <div class="solution-card reveal">
+          <div class="solution-icon">&#x1F50C;</div>
+          <h3>Universal Sensor Integration</h3>
+          <p>Works with your existing sensor hardware. SYNTRA unifies data from any device, any protocol, into a single intelligence layer your team can actually act on.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BEFORE / AFTER
+  ============================================================ -->
+  <section id="compare">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-h">Before SYNTRA <span class="gradient-text">vs. After</span></h2>
+      </div>
+      <div class="compare-grid reveal">
+        <div class="compare-col before">
+          <span class="compare-label red">&#x2716; Without SYNTRA</span>
+          <ul class="compare-list">
+            <li><span class="icon red">&#x2716;</span> Temperature excursions discovered after delivery</li>
+            <li><span class="icon red">&#x2716;</span> Manual compliance documentation and audits</li>
+            <li><span class="icon red">&#x2716;</span> Visibility gaps between every handoff point</li>
+            <li><span class="icon red">&#x2716;</span> Siloed sensor data across different systems</li>
+            <li><span class="icon red">&#x2716;</span> Reactive claim disputes with no real-time evidence</li>
+          </ul>
+        </div>
+        <div class="compare-arrow">
+          <span>&#x279C;</span>
+        </div>
+        <div class="compare-col after">
+          <span class="compare-label cyan">&#x2714; With SYNTRA</span>
+          <ul class="compare-list">
+            <li><span class="icon cyan">&#x2714;</span> Instant alerts the moment thresholds are breached</li>
+            <li><span class="icon cyan">&#x2714;</span> Automated FSMA, HACCP, and SLA documentation</li>
+            <li><span class="icon cyan">&#x2714;</span> Continuous chain-of-custody from dock to door</li>
+            <li><span class="icon cyan">&#x2714;</span> Unified dashboard for every sensor and system</li>
+            <li><span class="icon cyan">&#x2714;</span> Timestamped evidence for every shipment event</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STATS
+  ============================================================ -->
+  <section id="stats" class="reveal">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-num" data-target="97" data-suffix="%">0%</div>
+          <div class="stat-label">Excursion detection rate<br/>in the first mile</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-target="12" data-suffix="min">0min</div>
+          <div class="stat-label">Average response time<br/>from alert to action</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-target="100" data-suffix="%">0%</div>
+          <div class="stat-label">Chain-of-custody coverage<br/>origin to destination</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HOW IT WORKS
+  ============================================================ -->
+  <section id="how">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag section-eyebrow">How It Works</span>
+        <h2 class="section-h">Live in Weeks.<br/><span class="gradient-text">Not Months.</span></h2>
+        <p class="section-sub">SYNTRA layers on top of your existing fleet operations. No rip-and-replace. No sensor lock-in.</p>
+      </div>
+      <div class="how-grid">
+        <div class="how-step reveal">
+          <div class="how-node">
+            &#x1F50C;
+            <span class="how-node-num">1</span>
+          </div>
+          <span class="how-step-label">Step 1</span>
+          <h3>Connect Sensors</h3>
+          <p>Plug in your existing hardware &mdash; any brand, any protocol. SYNTRA normalizes every data stream.</p>
+        </div>
+        <div class="how-step reveal">
+          <div class="how-node">
+            &#x1F4E1;
+            <span class="how-node-num">2</span>
+          </div>
+          <span class="how-step-label">Step 2</span>
+          <h3>Unified Intelligence</h3>
+          <p>All sensor data flows into one real-time dashboard. Temperature, humidity, location, door events &mdash; correlated automatically.</p>
+        </div>
+        <div class="how-step reveal">
+          <div class="how-node">
+            &#x26A0;
+            <span class="how-node-num">3</span>
+          </div>
+          <span class="how-step-label">Step 3</span>
+          <h3>Instant Alerts</h3>
+          <p>Smart thresholds trigger immediate notifications. Your team knows what's happening and what to do before damage occurs.</p>
+        </div>
+        <div class="how-step reveal">
+          <div class="how-node">
+            &#x2705;
+            <span class="how-node-num">4</span>
+          </div>
+          <span class="how-step-label">Step 4</span>
+          <h3>Compliance & Proof</h3>
+          <p>Every event is logged, timestamped, and audit-ready. Automated documentation for FSMA, HACCP, and customer SLAs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA
+  ============================================================ -->
+  <section id="cta">
+    <div class="container">
+      <div class="cta-box reveal">
+        <h2>Stop Watching Your Cold Chain.<br/><span class="gradient-text">Start Protecting It.</span></h2>
+        <p>See how SYNTRA gives your fleet synchronized intelligence across every shipment. Book a 15-minute call &mdash; we'll show you on your own data.</p>
+        <div class="cta-actions">
+          <a href="book-demo.html" class="btn btn-primary btn-lg">Book a 15-Minute Call &rarr;</a>
+          <a href="contact.html" class="btn btn-ghost btn-lg">Talk to Our Team</a>
+        </div>
+        <p class="cta-note">No contracts &middot; No sales pitch &middot; See it live in 15 minutes</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo"><img src="Logos%20%26%20Images%20/Copy%20of%20WhiteSyntraLogo_NoWords_Horizontal.png" alt="SYNTRA" /></a>
+          <p>Real-time cargo intelligence for private fleets. Connect every sensor, system, and shipment &mdash; and protect your cold chain from origin to destination.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="integrations.html">Integrations</a></li>
+            <li><a href="index.html#hardware">Hardware</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="solutions.html#fleet">Fleet Managers</a></li>
+            <li><a href="use-cases.html">Use Cases</a></li>
+            <li><a href="solutions.html#shippers">Shippers</a></li>
+            <li><a href="solutions.html#3pl">3PLs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About SYNTRA</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="book-demo.html">Book a Demo</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 SYNTRA Platform, Inc. All rights reserved.</span>
+        <span><a href="privacy.html">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="terms.html" style="color:var(--gray);">Terms of Service</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JS
+  ============================================================ -->
+  <script>
+    // --- Scroll reveal with stagger ---
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05 });
+
+    setTimeout(() => {
+      document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 1.1) el.classList.add('visible');
+      });
+    }, 300);
+
+    const staggerParents = [
+      '.problem-grid', '.solution-grid', '.how-grid', '.stats-grid'
+    ];
+    staggerParents.forEach(sel => {
+      document.querySelectorAll(`${sel} .reveal`).forEach((el, i) => {
+        el.style.transitionDelay = `${i * 0.12}s`;
+      });
+    });
+
+    revealEls.forEach(el => revealObs.observe(el));
+
+    // --- Animated stat counters ---
+    const counters = document.querySelectorAll('[data-target]');
+    const countObs = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = parseFloat(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        const dec = el.dataset.dec ? parseInt(el.dataset.dec) : 0;
+        const dur = 1800;
+        const fps = 60;
+        const steps = Math.round(dur / (1000 / fps));
+        let frame = 0;
+        const tick = () => {
+          frame++;
+          const progress = frame / steps;
+          const ease = 1 - Math.pow(1 - progress, 3);
+          const val = target * ease;
+          el.textContent = (dec ? val.toFixed(dec) : Math.floor(val)) + suffix;
+          if (frame < steps) requestAnimationFrame(tick);
+          else el.textContent = (dec ? target.toFixed(dec) : target) + suffix;
+        };
+        requestAnimationFrame(tick);
+        countObs.unobserve(el);
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(el => countObs.observe(el));
+
+    // --- Nav solid on scroll ---
+    const navEl = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      navEl.style.background = window.scrollY > 60
+        ? 'rgba(8,9,14,0.98)'
+        : 'rgba(8,9,14,0.82)';
+    }, { passive: true });
+  </script>
+
+  <script>
+  (function(){
+    var nav    = document.getElementById('main-nav');
+    var toggle = document.querySelector('.nav-mobile-toggle');
+    var src    = document.querySelector('.nav-links');
+    if (!nav || !toggle || !src) return;
+
+    var panel = document.createElement('div');
+    panel.id  = 'mobile-nav';
+    panel.innerHTML =
+      '<ul class="mobile-nav-list"></ul>' +
+      '<div class="mobile-nav-footer">' +
+        '<a href="book-demo.html" class="btn btn-primary" ' +
+        'style="display:block;text-align:center;padding:14px 0;width:100%;">Book a 15-Minute Call &rarr;</a>' +
+      '</div>';
+    var ul = panel.querySelector('.mobile-nav-list');
+    src.querySelectorAll('a').forEach(function(a){
+      var li = document.createElement('li');
+      li.appendChild(a.cloneNode(true));
+      ul.appendChild(li);
+    });
+    nav.parentNode.insertBefore(panel, nav.nextSibling);
+
+    function open()  { panel.classList.add('open'); toggle.classList.add('open'); toggle.setAttribute('aria-expanded','true');  document.body.style.overflow='hidden'; }
+    function close() { panel.classList.remove('open'); toggle.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+
+    toggle.addEventListener('click', function(){ panel.classList.contains('open') ? close() : open(); });
+    panel.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+  })();
+  </script>
+
+</body>
+</html>
