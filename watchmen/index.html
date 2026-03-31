@@ -1,0 +1,2190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watchmen Logistics | 5PL Supply Chain Command Center</title>
+  <meta name="description" content="Watchmen Logistics is your supply chain command center. From 3PL execution to full 5PL orchestration — every mode, every lane, one partner. Authorized Trinity Logistics Agent." />
+  <meta name="keywords" content="5PL logistics, 4PL orchestration, 3PL solutions, supply chain management, freight management, ocean freight, air freight, managed logistics, Trinity Logistics agent" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Watchmen Logistics" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Watchmen Logistics | 5PL Supply Chain Command Center" />
+  <meta property="og:description" content="Every ocean container, every air shipment, every truck and rail car — orchestrated as one intelligent system." />
+  <meta property="og:site_name"   content="Watchmen Logistics" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Watchmen Logistics | 5PL Supply Chain Command Center" />
+  <meta name="twitter:description" content="Every ocean container, every air shipment, every truck and rail car — orchestrated as one intelligent system." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       TOKENS
+    ============================================================ */
+    :root {
+      --bg:          #0A0A0A;
+      --surface:     #111111;
+      --surface-2:   #1A1A1A;
+      --surface-3:   #222222;
+      --border:      rgba(255,255,255,0.08);
+      --border-gold: rgba(212,175,55,0.25);
+      --white:       #FFFFFF;
+      --gray:        #6B7280;
+      --gray-lt:     #9CA3AF;
+      --gold:        #D4AF37;
+      --gold-deep:   #A8892C;
+      --gold-bright: #F1D27A;
+      --gold-dim:    rgba(212,175,55,0.10);
+      --gold-glow:   rgba(212,175,55,0.20);
+      --grad:        linear-gradient(135deg, #D4AF37 0%, #A8892C 100%);
+      --grad-text:   linear-gradient(90deg, #F1D27A 0%, #D4AF37 100%);
+      --max-w:       1200px;
+      --nav-h:       72px;
+      --radius:      12px;
+      --section-pad: clamp(80px, 10vw, 120px);
+    }
+
+    /* ============================================================
+       RESET
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ============================================================
+       UTILITIES
+    ============================================================ */
+    .wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+    .section { padding: var(--section-pad) 0; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .eyebrow::before {
+      content: ''; width: 8px; height: 8px; border-radius: 50%;
+      background: var(--gold); box-shadow: 0 0 10px var(--gold-glow);
+    }
+    .section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 800; line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: clamp(16px, 2vw, 18px);
+      color: var(--gray-lt); line-height: 1.7;
+      max-width: 640px;
+    }
+    .section-header { margin-bottom: 56px; }
+    .section-header.center { text-align: center; }
+    .section-header.center .section-sub { margin: 0 auto; }
+    .gradient-text {
+      background: var(--grad-text);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px; font-weight: 700;
+      padding: 14px 32px; border-radius: 8px;
+      cursor: pointer; border: none;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: var(--gold); color: #0A0A0A;
+    }
+    .btn-primary:hover {
+      background: var(--gold-bright);
+      box-shadow: 0 0 30px var(--gold-glow);
+    }
+    .btn-outline {
+      background: transparent; color: var(--white);
+      border: 1px solid var(--border);
+    }
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      border-color: rgba(212,175,55,0.15);
+    }
+    .card-icon {
+      width: 48px; height: 48px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 10px;
+      background: var(--gold-dim);
+      color: var(--gold);
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+    .card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px; font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .card p { color: var(--gray-lt); font-size: 15px; line-height: 1.7; }
+
+    /* Reveal animation */
+    .reveal {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1; transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* ============================================================
+       NAVIGATION
+    ============================================================ */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      height: var(--nav-h);
+      display: flex; align-items: center;
+      background: rgba(10,10,10,0.6);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid transparent;
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+    .nav.scrolled {
+      background: rgba(10,10,10,0.95);
+      border-bottom-color: var(--border);
+    }
+    .nav-inner {
+      max-width: var(--max-w); margin: 0 auto; padding: 0 24px;
+      width: 100%;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 14px;
+    }
+    .nav-logo .logo-mark {
+      width: 130px; height: 130px;
+      margin: -45px -40px -45px -20px;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .nav-logo .logo-mark img {
+      width: 100%; height: 100%;
+      object-fit: contain;
+    }
+    .nav-logo .logo-text {
+      display: flex; flex-direction: column;
+      align-items: center;
+      line-height: 1;
+    }
+    .nav-logo .logo-text .brand {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px; font-weight: 800;
+      letter-spacing: 3px; text-transform: uppercase;
+      color: var(--white);
+    }
+    .nav-logo .logo-text .sub {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px; font-weight: 500;
+      letter-spacing: 4px; text-transform: uppercase;
+      color: var(--gray);
+      margin-top: 3px;
+    }
+    .nav-links {
+      display: flex; align-items: center; gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px; font-weight: 600;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--gray-lt);
+      transition: color 0.3s ease;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: -4px; left: 0;
+      width: 0; height: 2px; background: var(--gold);
+      transition: width 0.3s ease;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px; font-weight: 700;
+      padding: 10px 24px; border-radius: 6px;
+      background: var(--gold); color: #0A0A0A;
+      transition: all 0.3s ease;
+    }
+    .nav-cta:hover {
+      background: var(--gold-bright);
+      box-shadow: 0 0 20px var(--gold-glow);
+    }
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; background: none; border: none; padding: 4px;
+    }
+    .hamburger span {
+      width: 24px; height: 2px; background: var(--white);
+      transition: all 0.3s ease; border-radius: 2px;
+    }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    .mobile-menu {
+      display: none; position: fixed;
+      top: var(--nav-h); left: 0; right: 0;
+      z-index: 999;
+      background: rgba(10,10,10,0.98);
+      backdrop-filter: blur(20px);
+      padding: 24px;
+      border-bottom: 1px solid var(--border);
+      transform: translateY(-10px); opacity: 0;
+      transition: all 0.3s ease;
+    }
+    .mobile-menu.open { transform: translateY(0); opacity: 1; }
+    .mobile-menu a {
+      display: block; padding: 14px 0;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px; font-weight: 600;
+      letter-spacing: 1px; text-transform: uppercase;
+      color: var(--gray-lt);
+      border-bottom: 1px solid var(--border);
+      transition: color 0.3s ease;
+    }
+    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-menu .btn { margin-top: 16px; width: 100%; justify-content: center; }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    .hero {
+      position: relative;
+      min-height: 100vh; display: flex; align-items: center;
+      padding-top: calc(var(--nav-h) + 40px);
+      padding-bottom: 40px;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 70% 30%, rgba(212,175,55,0.06) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 60% at 20% 80%, rgba(212,175,55,0.04) 0%, transparent 70%),
+        var(--bg);
+    }
+    .hero-grid {
+      position: absolute; inset: 0; z-index: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, black 20%, transparent 70%);
+      -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 40%, black 20%, transparent 70%);
+    }
+    /* Animated network visualization on right side of hero */
+    .hero-visual {
+      position: absolute; right: -5%; top: 50%; transform: translateY(-50%);
+      width: 550px; height: 550px; z-index: 0;
+      opacity: 0.35;
+    }
+    .hero-visual .ring {
+      position: absolute; border-radius: 50%;
+      border: 1px solid rgba(212,175,55,0.12);
+    }
+    .hero-visual .ring-1 {
+      width: 100%; height: 100%; top: 0; left: 0;
+      animation: ring-rotate 60s linear infinite;
+    }
+    .hero-visual .ring-2 {
+      width: 75%; height: 75%; top: 12.5%; left: 12.5%;
+      border-color: rgba(212,175,55,0.18);
+      animation: ring-rotate 45s linear infinite reverse;
+    }
+    .hero-visual .ring-3 {
+      width: 50%; height: 50%; top: 25%; left: 25%;
+      border-color: rgba(212,175,55,0.25);
+      animation: ring-rotate 30s linear infinite;
+    }
+    .hero-visual .ring-4 {
+      width: 25%; height: 25%; top: 37.5%; left: 37.5%;
+      border-color: rgba(212,175,55,0.3);
+      animation: ring-pulse 4s ease-in-out infinite;
+    }
+    .hero-visual .node {
+      position: absolute; width: 8px; height: 8px;
+      background: var(--gold); border-radius: 50%;
+      box-shadow: 0 0 12px var(--gold-glow), 0 0 4px var(--gold);
+    }
+    .hero-visual .node::after {
+      content: ''; position: absolute;
+      top: 50%; left: 50%; transform: translate(-50%,-50%);
+      width: 20px; height: 20px; border-radius: 50%;
+      border: 1px solid rgba(212,175,55,0.25);
+      animation: node-ping 3s ease-out infinite;
+    }
+    .hero-visual .node-1 { top: 0%; left: 50%; }
+    .hero-visual .node-2 { top: 25%; left: 93%; animation-delay: 0.5s; }
+    .hero-visual .node-3 { top: 75%; left: 93%; animation-delay: 1s; }
+    .hero-visual .node-4 { top: 100%; left: 50%; animation-delay: 1.5s; }
+    .hero-visual .node-5 { top: 75%; left: 7%; animation-delay: 2s; }
+    .hero-visual .node-6 { top: 25%; left: 7%; animation-delay: 2.5s; }
+    .hero-visual .node-1::after { animation-delay: 0s; }
+    .hero-visual .node-2::after { animation-delay: 0.8s; }
+    .hero-visual .node-3::after { animation-delay: 1.6s; }
+    .hero-visual .node-4::after { animation-delay: 2.4s; }
+    .hero-visual .node-5::after { animation-delay: 3.2s; }
+    .hero-visual .node-6::after { animation-delay: 4s; }
+    /* Center hub */
+    .hero-visual .hub {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.3) 0%, transparent 70%);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero-visual .hub::before {
+      content: ''; width: 16px; height: 16px;
+      background: var(--gold); border-radius: 50%;
+      box-shadow: 0 0 20px var(--gold-glow), 0 0 40px rgba(212,175,55,0.15);
+      animation: hub-pulse 3s ease-in-out infinite;
+    }
+    /* Connection lines */
+    .hero-visual .line {
+      position: absolute; top: 50%; left: 50%;
+      width: 50%; height: 1px;
+      background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.05) 100%);
+      transform-origin: left center;
+    }
+    .hero-visual .line-1 { transform: rotate(0deg); }
+    .hero-visual .line-2 { transform: rotate(60deg); }
+    .hero-visual .line-3 { transform: rotate(120deg); }
+    .hero-visual .line-4 { transform: rotate(180deg); }
+    .hero-visual .line-5 { transform: rotate(240deg); }
+    .hero-visual .line-6 { transform: rotate(300deg); }
+    @keyframes ring-rotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    @keyframes ring-pulse { 0%,100% { opacity: 0.6; transform: scale(1); } 50% { opacity: 1; transform: scale(1.05); } }
+    @keyframes node-ping { 0% { transform: translate(-50%,-50%) scale(1); opacity: 1; } 100% { transform: translate(-50%,-50%) scale(3); opacity: 0; } }
+    @keyframes hub-pulse { 0%,100% { box-shadow: 0 0 20px var(--gold-glow), 0 0 40px rgba(212,175,55,0.15); } 50% { box-shadow: 0 0 30px var(--gold-glow), 0 0 60px rgba(212,175,55,0.25); } }
+    @media (max-width: 1024px) {
+      .hero-visual { width: 400px; height: 400px; right: -10%; opacity: 0.2; }
+    }
+    @media (max-width: 768px) {
+      .hero-visual { display: none; }
+    }
+    .hero-content {
+      position: relative; z-index: 1;
+      max-width: 720px;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 16px; border-radius: 100px;
+      background: var(--gold-dim);
+      border: 1px solid rgba(212,175,55,0.20);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 28px;
+    }
+    .hero-badge svg { width: 14px; height: 14px; fill: currentColor; }
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(42px, 6vw, 72px);
+      font-weight: 900; line-height: 1.05;
+      margin-bottom: 24px;
+      letter-spacing: -1px;
+    }
+    .hero-sub {
+      font-size: clamp(17px, 2.2vw, 20px);
+      color: var(--gray-lt); line-height: 1.7;
+      margin-bottom: 36px;
+      max-width: 580px;
+    }
+    .hero-btns {
+      display: flex; flex-wrap: wrap; gap: 14px;
+      margin-bottom: 56px;
+    }
+    .hero-stats {
+      display: flex; flex-wrap: wrap; gap: 40px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+    }
+    .hero-stat .num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 32px; font-weight: 800;
+      color: var(--white);
+    }
+    .hero-stat .num span { color: var(--gold); }
+    .hero-stat .label {
+      font-size: 13px; color: var(--gray);
+      margin-top: 4px; letter-spacing: 0.5px;
+    }
+
+    /* ============================================================
+       TRUSTED BY
+    ============================================================ */
+    .trusted {
+      padding: 60px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+      overflow: hidden;
+    }
+    .trusted-label {
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 32px;
+    }
+    .trusted-track {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      animation: scroll-logos 30s linear infinite;
+      width: max-content;
+    }
+    .trusted-track:hover { animation-play-state: paused; }
+    .trusted-track img {
+      height: 48px;
+      width: auto;
+      max-width: 160px;
+      object-fit: contain;
+      opacity: 0.5;
+      transition: opacity 0.4s ease;
+      flex-shrink: 0;
+    }
+    .trusted-track img:hover {
+      opacity: 0.85;
+    }
+    /* Placeholder logos before real ones are added */
+    .logo-placeholder {
+      height: 36px;
+      padding: 0 24px;
+      display: flex; align-items: center; justify-content: center;
+      border: 1px dashed rgba(255,255,255,0.12);
+      border-radius: 6px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px; font-weight: 700;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,0.15);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    @keyframes scroll-logos {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @media (max-width: 768px) {
+      .trusted-track { gap: 40px; }
+      .trusted-track img { height: 32px; max-width: 120px; }
+    }
+
+    /* ============================================================
+       PROBLEM SECTION
+    ============================================================ */
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .problem-card {
+      position: relative;
+      padding-left: 20px;
+    }
+    .problem-card::before {
+      content: '';
+      position: absolute; left: 0; top: 0; bottom: 0;
+      width: 3px; border-radius: 3px;
+      background: var(--grad);
+    }
+    .problem-card .num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px; font-weight: 800;
+      color: var(--gold); margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+    .problem-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px; font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .problem-card p {
+      font-size: 14px; color: var(--gray-lt); line-height: 1.7;
+    }
+
+    /* ============================================================
+       SERVICE TIERS
+    ============================================================ */
+    .tiers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .tier-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px 32px;
+      text-align: center;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .tier-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--border);
+      transition: background 0.4s ease;
+    }
+    .tier-card .tier-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 12px;
+    }
+    .tier-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 24px; font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .tier-card p {
+      font-size: 15px; color: var(--gray-lt); line-height: 1.7;
+    }
+    .tier-card.featured {
+      border-color: var(--border-gold);
+      background: linear-gradient(180deg, rgba(212,175,55,0.05) 0%, var(--surface) 40%);
+    }
+    .tier-card.featured::before {
+      background: var(--grad);
+    }
+    .tier-card.featured .tier-label {
+      color: var(--gold);
+    }
+    .tier-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+
+    /* ============================================================
+       5PL DEEP DIVE
+    ============================================================ */
+    .fivepl {
+      position: relative;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .fivepl-glow {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 50% 40% at 50% 0%, rgba(212,175,55,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .fivepl-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      position: relative;
+    }
+    .fivepl-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px;
+      transition: border-color 0.3s ease;
+    }
+    .fivepl-card:hover {
+      border-color: var(--border-gold);
+    }
+    /* 5PL Dashboard mockup */
+    .fivepl-dashboard {
+      margin-top: 48px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative;
+    }
+    .dash-titlebar {
+      display: flex; align-items: center; gap: 8px;
+      padding: 12px 20px;
+      background: rgba(255,255,255,0.03);
+      border-bottom: 1px solid var(--border);
+    }
+    .dash-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .dash-dot.red { background: #ff5f57; }
+    .dash-dot.yellow { background: #ffbd2e; }
+    .dash-dot.green { background: #28c840; }
+    .dash-title {
+      margin-left: 12px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 1px; text-transform: uppercase;
+      color: var(--gray);
+    }
+    .dash-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+    }
+    .dash-panel {
+      background: var(--bg);
+      padding: 24px;
+    }
+    .dash-panel .label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 12px;
+    }
+    .dash-metric {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 28px; font-weight: 800;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .dash-metric span { color: var(--gold); font-size: 16px; }
+    .dash-change {
+      font-size: 12px; font-weight: 600;
+      color: #22C55E;
+    }
+    .dash-change.down { color: #ef4444; }
+    /* Mini chart bars */
+    .dash-bars {
+      display: flex; align-items: flex-end; gap: 3px;
+      height: 40px; margin-top: 12px;
+    }
+    .dash-bar {
+      flex: 1; background: var(--gold-dim);
+      border-radius: 2px 2px 0 0;
+      transition: background 0.3s ease;
+    }
+    .dash-bar:hover { background: var(--gold); }
+    /* Route lines */
+    .dash-routes {
+      display: flex; flex-direction: column; gap: 10px;
+      margin-top: 8px;
+    }
+    .dash-route {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 12px;
+    }
+    .dash-route .from, .dash-route .to {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600; font-size: 11px;
+      letter-spacing: 1px;
+      color: var(--gray-lt);
+      min-width: 36px;
+    }
+    .dash-route .line-track {
+      flex: 1; height: 2px;
+      background: var(--border);
+      border-radius: 2px;
+      position: relative;
+      overflow: hidden;
+    }
+    .dash-route .line-fill {
+      position: absolute; top: 0; left: 0;
+      height: 100%; border-radius: 2px;
+      background: var(--gold);
+      animation: route-move 3s ease-in-out infinite;
+    }
+    .dash-route .status {
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.5px;
+      padding: 2px 8px;
+      border-radius: 100px;
+      background: rgba(34,197,94,0.15);
+      color: #22C55E;
+    }
+    .dash-route .status.transit {
+      background: rgba(212,175,55,0.15);
+      color: var(--gold);
+    }
+    @keyframes route-move {
+      0% { width: 0%; left: 0%; }
+      50% { width: 60%; left: 20%; }
+      100% { width: 0%; left: 100%; }
+    }
+    @media (max-width: 768px) {
+      .dash-body { grid-template-columns: 1fr; }
+    }
+    .fivepl-card .icon {
+      width: 44px; height: 44px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 10px;
+      background: var(--gold-dim);
+      margin-bottom: 18px;
+    }
+    .fivepl-card .icon svg {
+      width: 22px; height: 22px; stroke: var(--gold); fill: none;
+      stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;
+    }
+    .fivepl-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px; font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .fivepl-card p { color: var(--gray-lt); font-size: 15px; line-height: 1.7; }
+
+    /* ============================================================
+       MODES
+    ============================================================ */
+    .modes-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+    .mode-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .mode-card:hover {
+      border-color: var(--border-gold);
+      transform: translateY(-3px);
+    }
+    .mode-card .icon {
+      width: 52px; height: 52px; margin: 0 auto 16px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 12px;
+      background: var(--gold-dim);
+    }
+    .mode-card .icon svg {
+      width: 26px; height: 26px; stroke: var(--gold); fill: none;
+      stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;
+    }
+    .mode-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px; font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .mode-card p { font-size: 13px; color: var(--gray); line-height: 1.6; }
+
+    /* ============================================================
+       CAPABILITIES
+    ============================================================ */
+    .caps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    /* ============================================================
+       TECHNOLOGY PARTNERS
+    ============================================================ */
+    .tech-partners {
+      position: relative;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .tech-partners-glow {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 40% 50% at 50% 50%, rgba(212,175,55,0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .tech-stack-visual {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 0;
+      align-items: center;
+      margin-top: 48px;
+      position: relative;
+    }
+    .partner-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px;
+      position: relative;
+    }
+    .partner-card:hover { border-color: var(--border-gold); }
+    .partner-card .partner-logo {
+      height: 32px; margin-bottom: 20px;
+    }
+    .partner-card .partner-name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 22px; font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .partner-card .partner-type {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .partner-card p { color: var(--gray-lt); font-size: 14px; line-height: 1.7; }
+    .partner-card .partner-features {
+      list-style: none; margin-top: 20px;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .partner-card .partner-features li {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 13px; color: var(--gray-lt);
+    }
+    .partner-card .partner-features li::before {
+      content: '';
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+    /* Connector between partners */
+    .partner-connector {
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 0 32px;
+      position: relative;
+      min-height: 300px;
+    }
+    .connector-line {
+      width: 2px; flex: 1;
+      background: linear-gradient(180deg, transparent 0%, var(--gold) 30%, var(--gold) 70%, transparent 100%);
+      opacity: 0.3;
+    }
+    .connector-hub {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: var(--gold-dim);
+      border: 2px solid rgba(212,175,55,0.3);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+    .connector-hub::before {
+      content: '';
+      position: absolute; inset: -8px;
+      border-radius: 50%;
+      border: 1px solid rgba(212,175,55,0.12);
+      animation: hub-pulse 3s ease-in-out infinite;
+    }
+    .connector-hub svg {
+      width: 28px; height: 28px;
+      stroke: var(--gold); fill: none;
+      stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;
+    }
+    .connector-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--gold);
+      writing-mode: vertical-lr;
+      text-orientation: mixed;
+      margin: 16px 0;
+    }
+
+    /* End-to-end flow bar */
+    .e2e-flow {
+      margin-top: 48px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      overflow: hidden;
+    }
+    .e2e-step {
+      flex: 1;
+      text-align: center;
+      position: relative;
+      padding: 0 12px;
+    }
+    .e2e-step .icon-wrap {
+      width: 44px; height: 44px;
+      margin: 0 auto 10px;
+      border-radius: 50%;
+      background: var(--gold-dim);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .e2e-step .icon-wrap svg {
+      width: 20px; height: 20px; stroke: var(--gold); fill: none;
+      stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;
+    }
+    .e2e-step h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px; font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .e2e-step p { font-size: 11px; color: var(--gray); line-height: 1.5; }
+    .e2e-arrow {
+      flex-shrink: 0;
+      width: 32px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gold); opacity: 0.4;
+      font-size: 18px;
+    }
+    @media (max-width: 1024px) {
+      .tech-stack-visual { grid-template-columns: 1fr; gap: 0; }
+      .partner-connector {
+        flex-direction: row; min-height: auto;
+        padding: 16px 0;
+      }
+      .connector-line {
+        width: auto; height: 2px; flex: 1;
+        background: linear-gradient(90deg, transparent 0%, var(--gold) 30%, var(--gold) 70%, transparent 100%);
+      }
+      .connector-label { writing-mode: horizontal-tb; margin: 0 16px; }
+      .e2e-flow { flex-direction: column; gap: 20px; }
+      .e2e-arrow { transform: rotate(90deg); }
+    }
+
+    /* ============================================================
+       INDUSTRIES
+    ============================================================ */
+    .industries-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .industry-tag {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px 24px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px; font-weight: 600;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .industry-tag:hover {
+      border-color: var(--border-gold);
+      color: var(--gold);
+    }
+
+    /* ============================================================
+       TRINITY PARTNERSHIP
+    ============================================================ */
+    .trinity {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .trinity-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .trinity-stat {
+      text-align: center;
+      padding: 28px 20px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .trinity-stat .num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 36px; font-weight: 800;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .trinity-stat .label {
+      font-size: 13px; color: var(--gray);
+      letter-spacing: 0.5px;
+    }
+
+    /* ============================================================
+       ENGAGEMENT MODEL
+    ============================================================ */
+    .engage-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      position: relative;
+    }
+    .engage-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    .engage-card:hover { border-color: var(--border-gold); }
+    .engage-card .step {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 48px; font-weight: 900;
+      color: rgba(212,175,55,0.12);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    .engage-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px; font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .engage-card p { color: var(--gray-lt); font-size: 15px; line-height: 1.7; }
+    .engage-card .tag {
+      display: inline-block; margin-top: 16px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase;
+      color: var(--gold);
+      padding: 6px 14px;
+      border: 1px solid var(--border-gold);
+      border-radius: 100px;
+    }
+
+    /* ============================================================
+       CTA / CONTACT
+    ============================================================ */
+    .cta-section {
+      position: relative; overflow: hidden;
+    }
+    .cta-glow {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(212,175,55,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cta-inner {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .cta-text h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(32px, 4vw, 44px);
+      font-weight: 800; line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .cta-text p {
+      color: var(--gray-lt); font-size: 17px; line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    .cta-checklist {
+      list-style: none; margin-bottom: 32px;
+    }
+    .cta-checklist li {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 15px; color: var(--gray-lt);
+      padding: 8px 0;
+    }
+    .cta-checklist li svg {
+      width: 18px; height: 18px; stroke: var(--gold); fill: none;
+      stroke-width: 2; flex-shrink: 0;
+    }
+    .contact-form {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px;
+    }
+    .contact-form h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 22px; font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .contact-form .form-sub {
+      color: var(--gray); font-size: 14px;
+      margin-bottom: 28px;
+    }
+    .form-group { margin-bottom: 18px; }
+    .form-group label {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px; font-weight: 600;
+      letter-spacing: 0.5px; text-transform: uppercase;
+      color: var(--gray-lt);
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%; padding: 12px 16px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      transition: border-color 0.3s ease;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+    }
+    .form-group select { cursor: pointer; }
+    .form-group select option { background: var(--surface); }
+    .form-group textarea { resize: vertical; min-height: 90px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-submit {
+      width: 100%; padding: 14px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px; font-weight: 700;
+      background: var(--gold); color: #0A0A0A;
+      border: none; border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 8px;
+    }
+    .form-submit:hover {
+      background: var(--gold-bright);
+      box-shadow: 0 0 30px var(--gold-glow);
+    }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .form-success.show { display: block; }
+    .form-success svg { width: 48px; height: 48px; stroke: var(--gold); margin: 0 auto 16px; }
+    .form-success h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px; font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .form-success p { color: var(--gray-lt); font-size: 15px; }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 60px 0 32px;
+    }
+    .footer-inner {
+      display: flex; justify-content: space-between; align-items: start;
+      gap: 40px; flex-wrap: wrap;
+    }
+    .footer-brand {
+      max-width: 360px;
+    }
+    .footer-logo-lockup {
+      display: flex; align-items: center; gap: 14px;
+      margin-bottom: 16px;
+    }
+    .footer-logo-lockup .logo-mark {
+      width: 130px; height: 130px;
+      margin: -45px -40px -45px -20px;
+      flex-shrink: 0; overflow: hidden;
+    }
+    .footer-logo-lockup .logo-mark img {
+      width: 100%; height: 100%;
+      object-fit: contain;
+    }
+    .footer-logo-lockup .logo-text {
+      display: flex; flex-direction: column;
+      align-items: center; line-height: 1;
+    }
+    .footer-logo-lockup .logo-text .brand {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px; font-weight: 800;
+      letter-spacing: 3px; text-transform: uppercase;
+      color: var(--white);
+    }
+    .footer-logo-lockup .logo-text .sub {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px; font-weight: 500;
+      letter-spacing: 4px; text-transform: uppercase;
+      color: var(--gray); margin-top: 3px;
+    }
+    .footer-brand .logo-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px; font-weight: 800;
+      letter-spacing: 2px; text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .footer-brand p {
+      font-size: 14px; color: var(--gray); line-height: 1.7;
+    }
+    .footer-links {
+      display: flex; gap: 48px;
+    }
+    .footer-col h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .footer-col a {
+      display: block;
+      font-size: 14px; color: var(--gray-lt);
+      padding: 4px 0;
+      transition: color 0.3s ease;
+    }
+    .footer-col a:hover { color: var(--white); }
+    .footer-bottom {
+      margin-top: 48px; padding-top: 24px;
+      border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .footer-bottom p {
+      font-size: 13px; color: var(--gray);
+    }
+    .footer-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; color: var(--gray);
+      padding: 6px 14px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+    }
+    .footer-badge svg { width: 14px; height: 14px; stroke: var(--gold); fill: none; }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1024px) {
+      .problem-grid { grid-template-columns: repeat(2, 1fr); }
+      .tiers-grid { grid-template-columns: repeat(3, 1fr); }
+      .modes-grid { grid-template-columns: repeat(3, 1fr); }
+      .caps-grid { grid-template-columns: repeat(2, 1fr); }
+      .trinity-stats { grid-template-columns: repeat(2, 1fr); }
+      .cta-inner { grid-template-columns: 1fr; gap: 40px; }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .mobile-menu { display: block; }
+
+      .hero h1 { font-size: clamp(34px, 8vw, 48px); }
+      .hero-stats { gap: 24px; }
+      .hero-stat .num { font-size: 26px; }
+
+      .problem-grid { grid-template-columns: 1fr; }
+      .tiers-grid { grid-template-columns: 1fr; }
+      .fivepl-grid { grid-template-columns: 1fr; }
+      .modes-grid { grid-template-columns: repeat(2, 1fr); }
+      .caps-grid { grid-template-columns: 1fr; }
+      .industries-grid { grid-template-columns: repeat(2, 1fr); }
+      .trinity-stats { grid-template-columns: 1fr; }
+      .engage-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; }
+      .footer-links { flex-direction: column; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .hero-btns { flex-direction: column; }
+      .hero-btns .btn { width: 100%; justify-content: center; }
+      .modes-grid { grid-template-columns: 1fr; }
+      .industries-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="logo-mark">
+          <img src="logos/watchmen-shield.png" alt="Watchmen Shield" />
+        </div>
+        <div class="logo-text">
+          <span class="brand">Watchmen</span>
+          <span class="sub">Logistics</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#fivepl">5PL</a></li>
+        <li><a href="#modes">Transport</a></li>
+        <li><a href="#technology">Technology</a></li>
+        <li><a href="#industries">Industries</a></li>
+        <li><a href="#trinity">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Get Assessment</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services">Services</a>
+    <a href="#fivepl">5PL Intelligence</a>
+    <a href="#modes">Transportation</a>
+    <a href="#technology">Technology</a>
+    <a href="#industries">Industries</a>
+    <a href="#trinity">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="btn btn-primary">Get Free Assessment</a>
+  </div>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <!-- Animated network/command center visualization -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="ring ring-1"></div>
+      <div class="ring ring-2"></div>
+      <div class="ring ring-3"></div>
+      <div class="ring ring-4"></div>
+      <div class="line line-1"></div>
+      <div class="line line-2"></div>
+      <div class="line line-3"></div>
+      <div class="line line-4"></div>
+      <div class="line line-5"></div>
+      <div class="line line-6"></div>
+      <div class="node node-1"></div>
+      <div class="node node-2"></div>
+      <div class="node node-3"></div>
+      <div class="node node-4"></div>
+      <div class="node node-5"></div>
+      <div class="node node-6"></div>
+      <div class="hub"></div>
+    </div>
+    <div class="wrap">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg viewBox="0 0 16 16"><path d="M8 0L10 5.5H16L11 9L13 15L8 11.5L3 15L5 9L0 5.5H6L8 0Z"/></svg>
+          Authorized Trinity Logistics Agent
+        </div>
+        <h1>Your Supply Chain <span class="gradient-text">Command Center</span></h1>
+        <p class="hero-sub">Most companies move freight. We orchestrate your entire supply chain &mdash; every ocean container, every air shipment, every truck and rail car &mdash; as one intelligent system.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn btn-primary">Free Network Assessment &rarr;</a>
+          <a href="#fivepl" class="btn btn-outline">Explore 5PL Intelligence</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="num">1,627<span>+</span></div>
+            <div class="label">Shipments Daily</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">426<span>M</span></div>
+            <div class="label">Miles Managed Annually</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">8-15<span>%</span></div>
+            <div class="label">Avg. Cost Reduction</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">30<span>+</span></div>
+            <div class="label">Years of Excellence</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TRUSTED BY
+  ============================================================ -->
+  <section class="trusted" id="trusted">
+    <div class="trusted-label">Trusted by Industry Leaders</div>
+    <div style="overflow:hidden;">
+      <div class="trusted-track" id="logoTrack">
+        <img src="logos/jbs_white_transparent.png" alt="JBS" />
+        <img src="logos/wild_fork_white_transparent.png" alt="Wild Fork Foods" />
+        <img src="logos/grace_good_move_white_transparent.png" alt="Grace Kennedy Foods" />
+        <img src="logos/vima_full_white_transparent.png" alt="Vima Foods" />
+        <img src="logos/thrive_white_transparent.png" alt="Thrive Causemetics" />
+        <img src="logos/by_rosie_jane_white_transparent.png" alt="By Rosie Jane" />
+        <img src="logos/foundation_wellness_white_transparent.png" alt="Foundation Wellness" />
+        <img src="logos/premier_packaging_white_transparent.png" alt="Premier Packaging" />
+        <img src="logos/action_white_transparent.png" alt="Action Gypsum Supply" />
+        <img src="logos/keyston_bros_white_transparent.png" alt="Keyston Bros" />
+        <img src="logos/nt_ruddock_white_transparent.png" alt="NT Ruddock" />
+        <img src="logos/riverside_white_transparent.png" alt="Riverside Natural Foods" style="height:64px;" />
+        <!-- Duplicate set for seamless infinite scroll -->
+        <img src="logos/jbs_white_transparent.png" alt="JBS" />
+        <img src="logos/wild_fork_white_transparent.png" alt="Wild Fork Foods" />
+        <img src="logos/grace_good_move_white_transparent.png" alt="Grace Kennedy Foods" />
+        <img src="logos/vima_full_white_transparent.png" alt="Vima Foods" />
+        <img src="logos/thrive_white_transparent.png" alt="Thrive Causemetics" />
+        <img src="logos/by_rosie_jane_white_transparent.png" alt="By Rosie Jane" />
+        <img src="logos/foundation_wellness_white_transparent.png" alt="Foundation Wellness" />
+        <img src="logos/premier_packaging_white_transparent.png" alt="Premier Packaging" />
+        <img src="logos/action_white_transparent.png" alt="Action Gypsum Supply" />
+        <img src="logos/keyston_bros_white_transparent.png" alt="Keyston Bros" />
+        <img src="logos/nt_ruddock_white_transparent.png" alt="NT Ruddock" />
+        <img src="logos/riverside_white_transparent.png" alt="Riverside Natural Foods" style="height:64px;" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROBLEM SECTION
+  ============================================================ -->
+  <section class="section" id="problem">
+    <div class="wrap">
+      <div class="section-header center reveal">
+        <div class="eyebrow">The Challenge</div>
+        <h2 class="section-title">The Fragmentation Problem</h2>
+        <p class="section-sub">Companies outgrow their logistics infrastructure. Separate providers, separate portals, separate problems &mdash; zero unified visibility.</p>
+      </div>
+      <div class="problem-grid">
+        <div class="problem-card reveal reveal-delay-1">
+          <div class="num">01</div>
+          <h3>Provider &amp; Mode Fragmentation</h3>
+          <p>Managing separate ocean forwarders, air freight brokers, domestic truckers, and rail partners with zero unified visibility.</p>
+        </div>
+        <div class="problem-card reveal reveal-delay-2">
+          <div class="num">02</div>
+          <h3>No Real-Time Visibility</h3>
+          <p>Shipments go dark between ocean and inland. Air freight status lives in a portal. Trucking is a phone call. No single view.</p>
+        </div>
+        <div class="problem-card reveal reveal-delay-3">
+          <div class="num">03</div>
+          <h3>Reactive Operations</h3>
+          <p>Disruptions discovered after the fact. Missed vessels, customs holds, capacity crunches. Premium rates to recover instead of rerouting before impact.</p>
+        </div>
+        <div class="problem-card reveal reveal-delay-4">
+          <div class="num">04</div>
+          <h3>Technology Debt &amp; Data Silos</h3>
+          <p>TMS, WMS, ERP, and carrier portals that don't talk to each other. Reporting is a weekend project. No single source of truth.</p>
+        </div>
+        <div class="problem-card reveal reveal-delay-5">
+          <div class="num">05</div>
+          <h3>Talent &amp; Bandwidth Constraints</h3>
+          <p>Lean logistics teams stretched across ocean bookings, customs compliance, and carrier negotiations. Strategic thinking sacrificed to firefighting.</p>
+        </div>
+        <div class="problem-card reveal reveal-delay-5">
+          <div class="num">06</div>
+          <h3>Compliance &amp; Customs Risk</h3>
+          <p>Cross-border moves create duty, tariff, and documentation exposure. Without expert support, delays and penalties become recurring costs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICE TIERS
+  ============================================================ -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="section-header center reveal">
+        <div class="eyebrow">Service Tiers</div>
+        <h2 class="section-title">One Partner. <span class="gradient-text">Every Solution.</span></h2>
+        <p class="section-sub">From a single managed transport lane to full 5PL orchestration of your entire global supply chain &mdash; we meet you where you are.</p>
+      </div>
+      <div class="tiers-grid">
+        <div class="tier-card reveal reveal-delay-1">
+          <div class="tier-label">Foundation</div>
+          <h3>3PL Solutions</h3>
+          <p>Physical logistics execution &mdash; warehousing, transportation, fulfillment, and customs brokerage. The right carrier, the right lane, executed with precision.</p>
+        </div>
+        <div class="tier-card reveal reveal-delay-2">
+          <div class="tier-label">Advanced</div>
+          <h3>4PL Orchestration</h3>
+          <p>We manage your entire provider ecosystem &mdash; coordinating 3PLs, carriers, and freight forwarders as a single unified network, with full accountability.</p>
+        </div>
+        <div class="tier-card featured reveal reveal-delay-3">
+          <div class="tier-label">Strategic</div>
+          <h3>5PL Intelligence</h3>
+          <p>Tech-driven orchestration of your complete supply chain &mdash; demand sensing, network design, predictive rerouting, and continuous optimization at the system level.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5PL DEEP DIVE
+  ============================================================ -->
+  <section class="section fivepl" id="fivepl">
+    <div class="fivepl-glow"></div>
+    <div class="wrap">
+      <div class="section-header reveal">
+        <div class="eyebrow">The Strategic Tier</div>
+        <h2 class="section-title">5PL Intelligence</h2>
+        <p class="section-sub">The command center for your entire supply chain. We don't just move freight &mdash; we design, optimize, and continuously improve your global logistics network.</p>
+      </div>
+      <div class="fivepl-grid">
+        <div class="fivepl-card reveal reveal-delay-1">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>Demand Sensing</h3>
+          <p>Predictive analytics that anticipate volume shifts, seasonal patterns, and market disruptions before they impact your supply chain.</p>
+        </div>
+        <div class="fivepl-card reveal reveal-delay-2">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3>Network Design</h3>
+          <p>Strategic optimization of your entire logistics network &mdash; lanes, nodes, carriers, and modes &mdash; engineered for cost, speed, and resilience.</p>
+        </div>
+        <div class="fivepl-card reveal reveal-delay-3">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3>Predictive Rerouting</h3>
+          <p>Real-time disruption detection with autonomous rerouting across modes. We solve problems before you know they exist.</p>
+        </div>
+        <div class="fivepl-card reveal reveal-delay-4">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+          </div>
+          <h3>Continuous Optimization</h3>
+          <p>Every shipment generates intelligence. Carrier performance, lane efficiency, cost benchmarks &mdash; your network gets smarter with every move.</p>
+        </div>
+      </div>
+
+      <!-- Command Center Dashboard Mockup -->
+      <div class="fivepl-dashboard reveal" style="position:relative;">
+        <div class="dash-titlebar">
+          <div class="dash-dot red"></div>
+          <div class="dash-dot yellow"></div>
+          <div class="dash-dot green"></div>
+          <div class="dash-title">Watchmen Command Center &mdash; Live Network</div>
+        </div>
+        <div class="dash-body">
+          <div class="dash-panel">
+            <div class="label">Active Shipments</div>
+            <div class="dash-metric">1,627<span>+</span></div>
+            <div class="dash-change">&#9650; 12% vs last month</div>
+            <div class="dash-bars">
+              <div class="dash-bar" style="height:45%"></div>
+              <div class="dash-bar" style="height:60%"></div>
+              <div class="dash-bar" style="height:35%"></div>
+              <div class="dash-bar" style="height:80%"></div>
+              <div class="dash-bar" style="height:55%"></div>
+              <div class="dash-bar" style="height:90%"></div>
+              <div class="dash-bar" style="height:70%"></div>
+              <div class="dash-bar" style="height:95%"></div>
+              <div class="dash-bar" style="height:60%"></div>
+              <div class="dash-bar" style="height:85%"></div>
+              <div class="dash-bar" style="height:75%"></div>
+              <div class="dash-bar" style="height:100%"></div>
+            </div>
+          </div>
+          <div class="dash-panel">
+            <div class="label">On-Time Delivery</div>
+            <div class="dash-metric">97.3<span>%</span></div>
+            <div class="dash-change">&#9650; 2.1% vs benchmark</div>
+            <div class="dash-bars">
+              <div class="dash-bar" style="height:88%"></div>
+              <div class="dash-bar" style="height:92%"></div>
+              <div class="dash-bar" style="height:90%"></div>
+              <div class="dash-bar" style="height:95%"></div>
+              <div class="dash-bar" style="height:89%"></div>
+              <div class="dash-bar" style="height:97%"></div>
+              <div class="dash-bar" style="height:94%"></div>
+              <div class="dash-bar" style="height:96%"></div>
+              <div class="dash-bar" style="height:93%"></div>
+              <div class="dash-bar" style="height:98%"></div>
+              <div class="dash-bar" style="height:97%"></div>
+              <div class="dash-bar" style="height:100%"></div>
+            </div>
+          </div>
+          <div class="dash-panel">
+            <div class="label">Live Routes</div>
+            <div class="dash-routes">
+              <div class="dash-route">
+                <span class="from">SHN</span>
+                <div class="line-track"><div class="line-fill" style="animation-delay:0s"></div></div>
+                <span class="to">LAX</span>
+                <span class="status transit">In Transit</span>
+              </div>
+              <div class="dash-route">
+                <span class="from">HOU</span>
+                <div class="line-track"><div class="line-fill" style="animation-delay:0.5s"></div></div>
+                <span class="to">ATL</span>
+                <span class="status">Delivered</span>
+              </div>
+              <div class="dash-route">
+                <span class="from">RTD</span>
+                <div class="line-track"><div class="line-fill" style="animation-delay:1s"></div></div>
+                <span class="to">NYC</span>
+                <span class="status transit">In Transit</span>
+              </div>
+              <div class="dash-route">
+                <span class="from">MIA</span>
+                <div class="line-track"><div class="line-fill" style="animation-delay:1.5s"></div></div>
+                <span class="to">ORD</span>
+                <span class="status">Delivered</span>
+              </div>
+              <div class="dash-route">
+                <span class="from">SEA</span>
+                <div class="line-track"><div class="line-fill" style="animation-delay:2s"></div></div>
+                <span class="to">DFW</span>
+                <span class="status transit">In Transit</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TRANSPORTATION MODES
+  ============================================================ -->
+  <section class="section" id="modes">
+    <div class="wrap">
+      <div class="section-header center reveal">
+        <div class="eyebrow">Global Coverage</div>
+        <h2 class="section-title">Every Mode. <span class="gradient-text">One Partner.</span></h2>
+        <p class="section-sub">Carrier-agnostic optimization across every transportation mode. We route based on your priorities &mdash; cost, speed, reliability, sustainability.</p>
+      </div>
+      <div class="modes-grid">
+        <div class="mode-card reveal reveal-delay-1">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M2 20l2-2h4l2-4h8l2 4h2l2 2"/><path d="M6 14V8c0-1 1-2 2-2h8c1 0 2 1 2 2v6"/><path d="M10 6V4h4v2"/></svg>
+          </div>
+          <h3>Ocean Freight</h3>
+          <p>FCL, LCL, project cargo, reefer, breakbulk</p>
+        </div>
+        <div class="mode-card reveal reveal-delay-2">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.4-.1.9.3 1.1l5.6 3.2-3 3-2 .5c-.4.1-.6.4-.6.8l.8 1.5 3-1.5 1.5 3 1.5.8c.4 0 .7-.2.8-.6l.5-2 3-3 3.2 5.6c.2.4.7.5 1.1.3l.5-.3c.4-.2.6-.6.5-1.1z"/></svg>
+          </div>
+          <h3>Air Freight</h3>
+          <p>Express, standard, charter, dangerous goods</p>
+        </div>
+        <div class="mode-card reveal reveal-delay-3">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><rect x="1" y="6" width="22" height="12" rx="2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/><path d="M1 12h22"/></svg>
+          </div>
+          <h3>Road Freight</h3>
+          <p>FTL, LTL, intermodal drayage, last mile</p>
+        </div>
+        <div class="mode-card reveal reveal-delay-4">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M4 15h16M4 15l-2 5h20l-2-5M8 15V7c0-1 1-2 2-2h4c1 0 2 1 2 2v8"/><circle cx="7" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/></svg>
+          </div>
+          <h3>Rail Freight</h3>
+          <p>Intermodal, bulk, automotive, cross-border</p>
+        </div>
+        <div class="mode-card reveal reveal-delay-5">
+          <div class="icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Multimodal</h3>
+          <p>Cross-mode optimization, door-to-door</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MANAGED SOLUTION CAPABILITIES
+  ============================================================ -->
+  <section class="section" id="capabilities">
+    <div class="wrap">
+      <div class="section-header center reveal">
+        <div class="eyebrow">Capabilities</div>
+        <h2 class="section-title">White-Glove <span class="gradient-text">Managed Service</span></h2>
+        <p class="section-sub">A dedicated team who knows your business &mdash; not a portal and a chatbot. Proactive, accountable, built around your KPIs.</p>
+      </div>
+      <div class="caps-grid">
+        <div class="card reveal reveal-delay-1">
+          <div class="card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Dedicated Account Management</h3>
+          <p>A named team who knows your network, your customers, and your seasonal rhythms. Proactive, not reactive.</p>
+        </div>
+        <div class="card reveal reveal-delay-2">
+          <div class="card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Control Tower &amp; Visibility</h3>
+          <p>A unified live view across every carrier, mode, and geography. Exceptions surfaced before they become crises.</p>
+        </div>
+        <div class="card reveal reveal-delay-3">
+          <div class="card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2"/><path d="M23 7V5a2 2 0 0 0-2-2H10a2 2 0 0 0-2 2v14"/><path d="M15 3h6v4h-6z"/><path d="M12 11h6"/><path d="M12 15h6"/></svg>
+          </div>
+          <h3>Carrier &amp; Forwarder Management</h3>
+          <p>We own the relationships, the negotiations, and the performance scorecards across your existing providers and our global network.</p>
+        </div>
+        <div class="card reveal reveal-delay-4">
+          <div class="card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3>Customs &amp; Compliance</h3>
+          <p>End-to-end customs brokerage, duty optimization, documentation management, and trade compliance across all cross-border lanes.</p>
+        </div>
+        <div class="card reveal reveal-delay-5">
+          <div class="card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
+          </div>
+          <h3>Technology Integration</h3>
+          <p>We connect to your ERP, WMS, and TMS &mdash; or build the data layer you're missing. Our tech molds to your environment.</p>
+        </div>
+        <div class="card reveal reveal-delay-5">
+          <div class="card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          </div>
+          <h3>Performance Analytics</h3>
+          <p>Custom reporting, carrier scorecards, cost benchmarking, and freight audit &mdash; giving your leadership the data to compete.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TECHNOLOGY PARTNERS
+  ============================================================ -->
+  <section class="section tech-partners" id="technology">
+    <div class="tech-partners-glow"></div>
+    <div class="wrap">
+      <div class="section-header center reveal">
+        <div class="eyebrow">Technology Partners</div>
+        <h2 class="section-title">End-to-End Visibility. <span class="gradient-text">Zero Blind Spots.</span></h2>
+        <p class="section-sub">Watchmen integrates with best-in-class technology partners to deliver complete supply chain intelligence &mdash; from sensor to boardroom.</p>
+      </div>
+
+      <div class="tech-stack-visual">
+        <!-- SYNTRA Card -->
+        <div class="partner-card reveal reveal-delay-1">
+          <div class="partner-type">IoT &amp; Hardware Intelligence</div>
+          <div class="partner-name">SYNTRA</div>
+          <p>Real-time cargo intelligence powered by IoT sensors and an execution platform that unifies your entire logistics stack.</p>
+          <ul class="partner-features">
+            <li>WaypointXL multi-sensor shipment tracking</li>
+            <li>Temperature, humidity, shock &amp; light detection</li>
+            <li>Automated chain-of-custody documentation</li>
+            <li>Asset utilization scoring &amp; risk flagging</li>
+            <li>Sub-90-second alert response times</li>
+          </ul>
+        </div>
+
+        <!-- Connector -->
+        <div class="partner-connector reveal reveal-delay-2">
+          <div class="connector-line"></div>
+          <div class="connector-label">INTEGRATED</div>
+          <div class="connector-hub">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="connector-label">UNIFIED</div>
+          <div class="connector-line"></div>
+        </div>
+
+        <!-- CSCS Card -->
+        <div class="partner-card reveal reveal-delay-3">
+          <div class="partner-type">AI-Powered Supply Chain Software</div>
+          <div class="partner-name">CSCS</div>
+          <p>Cloud Supply Chain Solutions &mdash; AI-driven TMS and WMS platform with the SCOTI&trade; engine that optimizes every decision in real time.</p>
+          <ul class="partner-features">
+            <li>AI-powered transportation management (TMS)</li>
+            <li>Intelligent warehouse management (WMS)</li>
+            <li>SCOTI&trade; AI agents for exception resolution</li>
+            <li>200+ native ERP &amp; system integrations</li>
+            <li>Single-pane visibility from PO to delivery</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- End-to-End Flow -->
+      <div class="e2e-flow reveal">
+        <div class="e2e-step">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <h4>Order Created</h4>
+          <p>ERP &amp; OMS integration</p>
+        </div>
+        <div class="e2e-arrow">&rarr;</div>
+        <div class="e2e-step">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+          </div>
+          <h4>AI Optimization</h4>
+          <p>CSCS SCOTI&trade; routing</p>
+        </div>
+        <div class="e2e-arrow">&rarr;</div>
+        <div class="e2e-step">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h4>Live Tracking</h4>
+          <p>SYNTRA IoT sensors</p>
+        </div>
+        <div class="e2e-arrow">&rarr;</div>
+        <div class="e2e-step">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h4>Exception Alert</h4>
+          <p>AI-driven resolution</p>
+        </div>
+        <div class="e2e-arrow">&rarr;</div>
+        <div class="e2e-step">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h4>Delivered</h4>
+          <p>Chain-of-custody proof</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INDUSTRIES
+  ============================================================ -->
+  <section class="section" id="industries">
+    <div class="wrap">
+      <div class="section-header center reveal">
+        <div class="eyebrow">Industries</div>
+        <h2 class="section-title">Built for Complexity</h2>
+        <p class="section-sub">We serve industries where logistics isn't a cost center &mdash; it's a competitive weapon.</p>
+      </div>
+      <div class="industries-grid">
+        <div class="industry-tag reveal reveal-delay-1">Manufacturing</div>
+        <div class="industry-tag reveal reveal-delay-1">Industrial Distribution</div>
+        <div class="industry-tag reveal reveal-delay-2">E-Commerce &amp; Retail</div>
+        <div class="industry-tag reveal reveal-delay-2">Healthcare &amp; Med-Device</div>
+        <div class="industry-tag reveal reveal-delay-3">Food &amp; Beverage</div>
+        <div class="industry-tag reveal reveal-delay-3">Automotive Aftermarket</div>
+        <div class="industry-tag reveal reveal-delay-4">High-Tech Electronics</div>
+        <div class="industry-tag reveal reveal-delay-4">Energy &amp; Resources</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TRINITY LOGISTICS PARTNERSHIP
+  ============================================================ -->
+  <section class="section trinity" id="trinity">
+    <div class="wrap">
+      <div class="section-header center reveal">
+        <div class="eyebrow">Our Backbone</div>
+        <h2 class="section-title">Powered by <span class="gradient-text">Trinity Logistics</span></h2>
+        <p class="section-sub">As an authorized agent for Trinity Logistics, we bring 30+ years of freight excellence, a carrier network spanning the continent, and the infrastructure to scale.</p>
+      </div>
+      <div class="trinity-stats">
+        <div class="trinity-stat reveal reveal-delay-1">
+          <div class="num">30+</div>
+          <div class="label">Years in Freight</div>
+        </div>
+        <div class="trinity-stat reveal reveal-delay-2">
+          <div class="num">550+</div>
+          <div class="label">Team Members</div>
+        </div>
+        <div class="trinity-stat reveal reveal-delay-3">
+          <div class="num">426M+</div>
+          <div class="label">Miles Annually</div>
+        </div>
+        <div class="trinity-stat reveal reveal-delay-4">
+          <div class="num">Top 5%</div>
+          <div class="label">EcoVadis Gold Rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ENGAGEMENT MODEL
+  ============================================================ -->
+  <section class="section" id="engagement">
+    <div class="wrap">
+      <div class="section-header center reveal">
+        <div class="eyebrow">How We Work</div>
+        <h2 class="section-title">Start Where You Are</h2>
+        <p class="section-sub">We don't ask you to rip and replace. Pick your biggest pain, prove value in 90 days, and grow from there.</p>
+      </div>
+      <div class="engage-grid">
+        <div class="engage-card reveal reveal-delay-1">
+          <div class="step">01</div>
+          <h3>Pain Point Entry</h3>
+          <p>Start focused &mdash; one mode, one lane, one problem. We prove value in 90 days with zero disruption to your current operations.</p>
+          <div class="tag">Low Risk &middot; Fast to Value</div>
+        </div>
+        <div class="engage-card reveal reveal-delay-2">
+          <div class="step">02</div>
+          <h3>Network Orchestration</h3>
+          <p>Watchmen takes command of your full carrier and provider ecosystem &mdash; unified management, continuous optimization, complete accountability.</p>
+          <div class="tag">4PL Model &middot; Most Common</div>
+        </div>
+        <div class="engage-card reveal reveal-delay-3">
+          <div class="step">03</div>
+          <h3>Full Supply Chain</h3>
+          <p>End-to-end strategic partnership &mdash; design, manage, and optimize your entire supply chain globally. Your logistics function, elevated.</p>
+          <div class="tag">5PL Model &middot; Strategic</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA / CONTACT FORM
+  ============================================================ -->
+  <section class="section cta-section" id="contact">
+    <div class="cta-glow"></div>
+    <div class="wrap">
+      <div class="cta-inner">
+        <div class="cta-text reveal">
+          <div class="eyebrow">Get Started</div>
+          <h2>Put a Watchman on Your <span class="gradient-text">Supply Chain</span></h2>
+          <p>Give us 30 minutes and we'll deliver a no-cost network assessment &mdash; every mode, every lane &mdash; and show you exactly where cost and service are being left on the table.</p>
+          <ul class="cta-checklist">
+            <li>
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              No-cost network assessment
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Custom freight spend analysis
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Mode-by-mode optimization roadmap
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Zero obligation, zero disruption
+            </li>
+          </ul>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <div class="contact-form" id="contactForm">
+            <h3>Request Your Assessment</h3>
+            <p class="form-sub">We'll respond within 24 business hours.</p>
+            <form id="assessmentForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input type="text" id="firstName" name="firstName" required placeholder="John" />
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" id="lastName" name="lastName" required placeholder="Smith" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Work Email</label>
+                <input type="email" id="email" name="email" required placeholder="john@company.com" />
+              </div>
+              <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" required placeholder="Acme Corp" />
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="title">Title</label>
+                  <input type="text" id="title" name="title" placeholder="VP Supply Chain" />
+                </div>
+                <div class="form-group">
+                  <label for="spend">Annual Freight Spend</label>
+                  <select id="spend" name="spend">
+                    <option value="" disabled selected>Select range</option>
+                    <option value="under-2m">Under $2M</option>
+                    <option value="2m-10m">$2M - $10M</option>
+                    <option value="10m-50m">$10M - $50M</option>
+                    <option value="50m-plus">$50M+</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="challenge">Biggest Logistics Challenge</label>
+                <textarea id="challenge" name="challenge" placeholder="Tell us about your biggest pain point..."></textarea>
+              </div>
+              <button type="submit" class="form-submit">Request Free Assessment &rarr;</button>
+            </form>
+          </div>
+          <div class="form-success" id="formSuccess">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <h3>Assessment Requested</h3>
+            <p>Our team will reach out within 24 business hours to schedule your no-cost network assessment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo-lockup">
+            <div class="logo-mark">
+              <img src="logos/watchmen-shield.png" alt="Watchmen Shield" />
+            </div>
+            <div class="logo-text">
+              <span class="brand">Watchmen</span>
+              <span class="sub">Logistics</span>
+            </div>
+          </div>
+          <p>Your supply chain command center. From 3PL execution to full 5PL orchestration &mdash; every mode, every lane, one partner.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Services</h4>
+            <a href="#services">3PL Solutions</a>
+            <a href="#services">4PL Orchestration</a>
+            <a href="#fivepl">5PL Intelligence</a>
+            <a href="#capabilities">Managed Solutions</a>
+          </div>
+          <div class="footer-col">
+            <h4>Transport</h4>
+            <a href="#modes">Ocean Freight</a>
+            <a href="#modes">Air Freight</a>
+            <a href="#modes">Road Freight</a>
+            <a href="#modes">Rail &amp; Multimodal</a>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a href="#trinity">About</a>
+            <a href="#industries">Industries</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Watchmen Logistics. All rights reserved.</p>
+        <div class="footer-badge">
+          <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Authorized Trinity Logistics Agent
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+  ============================================================ -->
+  <script>
+    /* ---- Nav scroll behavior ---- */
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    /* ---- Mobile menu ---- */
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+    // Close on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      }
+    });
+
+    /* ---- Scroll reveal ---- */
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => observer.observe(el));
+
+    /* ---- Animated counters ---- */
+    function animateCounter(el, target, suffix = '', duration = 2000) {
+      const isDecimal = String(target).includes('-');
+      if (isDecimal) {
+        el.innerHTML = target + '<span style="color:var(--gold)">' + suffix + '</span>';
+        return;
+      }
+      const num = parseInt(target);
+      if (isNaN(num)) {
+        el.innerHTML = target + '<span style="color:var(--gold)">' + suffix + '</span>';
+        return;
+      }
+      let start = 0;
+      const step = Math.ceil(num / (duration / 16));
+      const timer = setInterval(() => {
+        start += step;
+        if (start >= num) {
+          start = num;
+          clearInterval(timer);
+        }
+        el.innerHTML = start.toLocaleString() + '<span style="color:var(--gold)">' + suffix + '</span>';
+      }, 16);
+    }
+
+    const statObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target.querySelector('.num');
+          const text = el.textContent.trim();
+          // Parse number and suffix
+          const match = text.match(/^([\d,.-]+)(.*)$/);
+          if (match) {
+            animateCounter(el, match[1].replace(/,/g, ''), match[2]);
+          }
+          statObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.hero-stat, .trinity-stat').forEach(s => statObserver.observe(s));
+
+    /* ---- Form handling ---- */
+    const form = document.getElementById('assessmentForm');
+    const formContainer = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      // In production, this would submit to a backend
+      formContainer.style.display = 'none';
+      formSuccess.classList.add('show');
+    });
+  </script>
+</body>
+</html>
