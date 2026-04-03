@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service & Privacy Policy | Watchmen Logistics</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black: #0A0A0A;
+  --charcoal: #111111;
+  --surface: #141414;
+  --border: #222222;
+  --gold: #D4AF37;
+  --gold-border: rgba(212,175,55,0.3);
+  --white: #FFFFFF;
+  --gray: #888888;
+  --gray-lt: #AAAAAA;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--white);font-family:'Inter',sans-serif;line-height:1.7;}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px 0 8px;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.nav-logo{display:flex;align-items:center;text-decoration:none;overflow:hidden;}
+.nav-logo .logo-mark{width:130px;height:130px;margin:-45px -40px -45px -20px;flex-shrink:0;}
+.nav-logo .logo-mark img{width:100%;height:100%;object-fit:contain;}
+.nav-logo .logo-text{display:flex;flex-direction:column;align-items:center;line-height:1;}
+.nav-logo .logo-text .brand{font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--white);}
+.nav-logo .logo-text .sub{font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--gray);margin-top:3px;}
+.nav-links{display:flex;align-items:center;gap:20px;list-style:none;}
+.nav-links a{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gray-lt);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover{color:var(--white);}
+.nav-cta{display:inline-flex;align-items:center;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;padding:10px 24px;border-radius:6px;background:var(--gold);color:#0A0A0A!important;text-transform:uppercase;letter-spacing:1px;transition:opacity 0.2s;text-decoration:none;}
+.nav-cta:hover{opacity:0.85;}
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;transition:all 0.3s;}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+.mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;background:rgba(10,10,10,0.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:24px;z-index:99;flex-direction:column;gap:4px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gray-lt);text-decoration:none;padding:12px 0;border-bottom:1px solid var(--border);}
+.mobile-menu a:last-child{border-bottom:none;}
+.mobile-menu .mob-cta{margin-top:12px;background:var(--gold);color:var(--black)!important;padding:14px;border-radius:4px;text-align:center;}
+@media(max-width:768px){.nav-links{display:none;}.hamburger{display:flex;}}
+
+/* PAGE HERO */
+.page-hero{padding:120px 0 48px;border-bottom:1px solid var(--border);}
+.page-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.page-eyebrow::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;}
+.page-hero h1{font-family:'Montserrat',sans-serif;font-size:clamp(28px,4vw,48px);font-weight:900;letter-spacing:-1px;line-height:1.05;margin-bottom:16px;}
+.page-hero p{color:var(--gray-lt);font-size:15px;max-width:560px;line-height:1.7;}
+.last-updated{font-size:12px;color:var(--gray);margin-top:12px;font-family:'Montserrat',sans-serif;letter-spacing:1px;text-transform:uppercase;}
+
+/* TOC */
+.toc-section{padding:40px 0;border-bottom:1px solid var(--border);}
+.toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.toc-link{display:flex;align-items:center;gap:10px;padding:10px 0;color:var(--gray-lt);text-decoration:none;font-size:13px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);}
+.toc-link:hover{color:var(--gold);}
+.toc-num{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--gold);width:20px;flex-shrink:0;}
+@media(max-width:600px){.toc-grid{grid-template-columns:1fr;}}
+
+/* CONTENT */
+.legal-section{padding:60px 0;border-bottom:1px solid var(--border);}
+.legal-section:last-child{border-bottom:none;}
+.section-eyebrow{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+.legal-section h2{font-family:'Montserrat',sans-serif;font-size:clamp(22px,3vw,32px);font-weight:800;letter-spacing:-0.5px;margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid var(--border);}
+.clause{margin-bottom:32px;}
+.clause-header{display:flex;align-items:flex-start;gap:16px;margin-bottom:12px;}
+.clause-num{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:800;color:var(--gold);background:rgba(212,175,55,0.1);border:1px solid var(--gold-border);border-radius:4px;padding:4px 10px;flex-shrink:0;letter-spacing:1px;margin-top:2px;}
+.clause h3{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;letter-spacing:0.5px;color:var(--white);text-transform:uppercase;}
+.clause p{color:var(--gray-lt);font-size:14px;line-height:1.8;margin-bottom:12px;}
+.clause p:last-child{margin-bottom:0;}
+.clause ul{color:var(--gray-lt);font-size:14px;line-height:1.8;padding-left:20px;margin-bottom:12px;}
+.clause ul li{margin-bottom:6px;}
+.clause .uppercase{font-size:13px;font-weight:600;color:var(--white);line-height:1.7;}
+
+/* CONTACT CARD */
+.contact-card{background:var(--charcoal);border:1px solid var(--gold-border);border-radius:8px;padding:28px;margin-top:32px;}
+.contact-card h4{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.contact-card p{font-size:14px;color:var(--gray-lt);line-height:1.8;}
+.contact-card a{color:var(--gold);text-decoration:none;}
+.contact-card a:hover{text-decoration:underline;}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:32px 0;margin-top:0;}
+.footer-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;}
+.footer-copy{font-size:12px;color:var(--gray);}
+.footer-back{font-size:12px;color:var(--gray);text-decoration:none;transition:color 0.2s;}
+.footer-back:hover{color:var(--gold);}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-mark"><img src="logos/watchmen-shield.png" alt="Watchmen Shield"></div>
+      <div class="logo-text">
+        <span class="brand">Watchmen</span>
+        <span class="sub">Logistics</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="roi.html">ROI Tools</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#fivepl">5PL</a></li>
+      <li><a href="index.html#modes">Transport</a></li>
+      <li><a href="index.html#technology">Technology</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="https://api.bludata.ai/widget/booking/PXKRGlG22uxqd8P2fA8n" target="_blank" rel="noopener" class="nav-cta">Get Assessment</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="roi.html" style="color:var(--gold)">ROI Tools</a>
+  <a href="index.html#services">Services</a>
+  <a href="index.html#fivepl">5PL</a>
+  <a href="index.html#modes">Transport</a>
+  <a href="index.html#technology">Technology</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="https://api.bludata.ai/widget/booking/PXKRGlG22uxqd8P2fA8n" target="_blank" rel="noopener" class="mob-cta">Get Assessment</a>
+</div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="page-eyebrow">Legal</div>
+    <h1>Terms of Service &amp;<br>Privacy Policy</h1>
+    <p>These terms govern your use of Watchmen Logistics services and website. Please read them carefully before engaging our services.</p>
+    <div class="last-updated">Last updated: April 2026</div>
+  </div>
+</section>
+
+<!-- TABLE OF CONTENTS -->
+<section class="toc-section">
+  <div class="wrap">
+    <div class="toc-grid">
+      <a href="#tos" class="toc-link"><span class="toc-num">I</span>Terms of Service — Brokerage</a>
+      <a href="#tou" class="toc-link"><span class="toc-num">II</span>Terms of Use — Website</a>
+      <a href="#privacy" class="toc-link"><span class="toc-num">III</span>Privacy Policy</a>
+      <a href="#contact-legal" class="toc-link"><span class="toc-num">IV</span>Contact Information</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PART I — TERMS OF SERVICE (BROKERAGE)
+============================================================ -->
+<section class="legal-section" id="tos">
+  <div class="wrap">
+    <div class="section-eyebrow">Part I</div>
+    <h2>Terms of Service — Property Brokerage</h2>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§1</span>
+        <h3>Applicability</h3>
+      </div>
+      <p>Unless expressly superseded by a written contract signed by an officer of Watchmen Logistics ("BROKER") and the party requesting services by BROKER including, but not limited to, any shipper, consignor, consignee, broker, forwarder, or any other entity claiming an interest in goods for which BROKER arranges transportation ("CUSTOMER"), these Terms and Conditions, as amended from time to time by BROKER in its sole discretion, shall govern property brokerage service (which, for purposes hereof, shall mean the arrangement of motor carrier transportation to be performed by third party Servicing Motor Carriers as defined below) provided by BROKER ("Services"), including services provided pursuant to a load confirmation. Any terms and conditions on documents exchanged between the parties other than these Terms and Conditions, as revised from time to time, shall not apply to any Services and shall not be binding on or applicable to BROKER.</p>
+      <p>CUSTOMER understands and agrees that BROKER functions as an independent entity, and not as a carrier, in selling, negotiating, and arranging for transportation for compensation, and that the actual transportation of shipments tendered to BROKER shall be performed by third-party motor carriers ("Servicing Motor Carriers") regardless of whether such Servicing Motor Carrier is engaged by BROKER directly or is engaged by a subcontractor retained by BROKER. BROKER and CUSTOMER represent and warrant that their relationship is that of independent contractors and that the respective employees are under their respective exclusive management and control. Nothing in these Terms and Conditions shall be deemed to require BROKER to provide Services upon request of CUSTOMER and BROKER reserves the right to accept or decline, in its sole discretion, any particular request for Services.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§2</span>
+        <h3>Compliance with Law</h3>
+      </div>
+      <p>BROKER represents and warrants that it is duly and legally qualified to operate as a property broker and to provide the Services contemplated herein. BROKER agrees to comply with all applicable federal, state and local laws regarding the provision of such brokerage Services. CUSTOMER warrants and represents that it is authorized to tender the cargo in question to BROKER and that all descriptions of the cargo are complete, accurate, and include all information required by applicable law, rules or regulation.</p>
+      <p>Without in any way limiting the foregoing, if CUSTOMER tenders for transportation cargo designated as hazardous materials or dangerous goods, CUSTOMER shall be solely responsible for complying with any and all applicable laws, rules, regulations, or conventions with respect to classifying, tendering, packaging and labeling such cargo and must provide notice of any such cargo at the time a request for Services is first initiated by CUSTOMER to BROKER.</p>
+      <p>When requesting service with respect to any shipment containing food that is subject to regulations of the Food and Drug Administration ("FDA") ("Food"), CUSTOMER shall be solely responsible for identifying handling obligations necessary for the safe and sanitary handling of food and, at the time of the initial request for services, will provide written notice ("Food Handling Notice") to BROKER that the consignment contains Food, which must also include any special instructions or handling requirements to be imposed on the Servicing Motor Carrier. Any Food Handling Notice shall specifically identify the consignment to which it relates and shall not apply to more than one shipment. In no event will BROKER have any obligation to provide instructions to the Servicing Motor Carrier other than those expressly noted by the CUSTOMER on a load confirmation, and BROKER has no obligation to pass on handling instructions received after the initial request for service.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§3</span>
+        <h3>Payment and Charges</h3>
+      </div>
+      <p>BROKER will charge and CUSTOMER will pay the rates and charges set forth in a load confirmation or as otherwise agreed for services provided by BROKER without offset. CUSTOMER agrees to pay BROKER without offset and within fifteen (15) days of receiving the invoice, with interest accruing monthly at a rate of one percent (1%) per month on any unpaid balance. CUSTOMER shall also be liable for any expenses, including attorney fees, BROKER incurs in collecting its rates and charges.</p>
+      <p>If any information provided by CUSTOMER is inaccurate or incomplete, CUSTOMER acknowledges and agrees that agreed upon rates may, in BROKER's sole discretion, be revised to reflect the goods actually tendered. CUSTOMER shall also be responsible for any additional accessorial charges imposed by the Servicing Motor Carrier which were not anticipated by BROKER at the time BROKER arranged for services, or which were not otherwise included in the rate set forth in the load confirmation.</p>
+      <p>In no event will BROKER have any responsibility for, and CUSTOMER will defend, indemnify, and hold BROKER harmless from, and will pay and reimburse, any charges imposed by third parties with respect to use of equipment in which cargo tendered by, to or on behalf of CUSTOMER is or has been laden, or for charges assessed with respect to storage or handling of any such equipment, including but not limited to charges assessed by steamship lines, rail carriers, rail terminal operators, marine terminal operators or port authorities. BROKER shall have no liability for any such charges arising from or related to port congestion, lack of equipment availability, labor shortages, or other situations impacting port or intermodal transportation operations.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§4</span>
+        <h3>Limitation of Liability</h3>
+      </div>
+      <p class="uppercase">IN NO EVENT SHALL EITHER PARTY BE RESPONSIBLE FOR ANY SPECIAL OR CONSEQUENTIAL DAMAGES REGARDLESS OF WHETHER THE PARTY TO BE CHARGED HAD NOTICE OF THE POSSIBILITY OF SUCH DAMAGES. BROKER IS NOT LIABLE FOR THE CONSEQUENCES OF IDENTITY THEFT OR FRAUDULENT CONDUCT OF THIRD PARTIES, INCLUDING UTILIZING THE SERVICES OF ENTITIES REPRESENTING THEMSELVES TO BE SERVICING MOTOR CARRIERS OR REPRESENTATIVES THEREOF.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§5</span>
+        <h3>Servicing Motor Carriers</h3>
+      </div>
+      <p>BROKER's sole responsibility with respect to selection and retention of Servicing Motor Carriers is to make reasonable efforts to place CUSTOMER's loads with responsible Servicing Motor Carriers: (i) authorized to perform the services required by CUSTOMER; (ii) which such carriers do not hold an "unsatisfactory" or unfit safety rating from the U.S. Department of Transportation; and (iii) that possess all insurance coverages required by applicable law. BROKER makes no express or implied warranties or guarantees concerning delivery time or the location of a Servicing Motor Carrier to provide the transportation services requested by CUSTOMER.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§6</span>
+        <h3>Broker Insurance</h3>
+      </div>
+      <p>BROKER shall comply with all insurance and bonding requirements imposed upon it by law, including its obligation to maintain a surety bond or trust fund agreement.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§7</span>
+        <h3>Cargo Loss, Damage, or Shortage</h3>
+      </div>
+      <p>BROKER shall require Servicing Motor Carriers engaged to provide transportation services to agree to be liable for loss or damage to cargo occurring while in the Servicing Motor Carrier's possession pursuant to the Carmack Amendment at 49 U.S.C. § 14706, which such liability shall be calculated based on the actual replacement cost of the lost or damaged cargo, not to exceed $100,000 per trailer or conveyance for Full Truckload ("FTL") service, and for Less Than Truckload ("LTL") service not to exceed the LTL Servicing Motor Carrier's liability limits pursuant to its tariff, if any, or, if none, then $2.00 per pound per package.</p>
+      <p class="uppercase">CUSTOMER ACKNOWLEDGES AND AGREES THAT ITS SOLE RECOURSE WITH RESPECT TO CARGO LOSS, DAMAGE, OR DELAY SHALL BE AGAINST THE SERVICING MOTOR CARRIER AND IN NO EVENT WILL BROKER BE LIABLE FOR CARGO LOSS, DAMAGE, DELAY OR DESTRUCTION, NOR THE CONSEQUENCES THEREOF UNLESS CAUSED BY BROKER'S GROSS NEGLIGENCE OR WILLFUL MISCONDUCT.</p>
+      <p>CUSTOMER is responsible for filing a claim with BROKER alleging Servicing Motor Carrier's liability for cargo loss and damage within six (6) months of the date of delivery of the cargo in question (or, if none, within six (6) months of the date cargo should have been delivered). Failure to do so will result in an absolute bar to any such claim. Any lawsuit arising from such claim must be commenced within eighteen (18) months of denial of all or any part of such claim.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§8</span>
+        <h3>Rail Transportation</h3>
+      </div>
+      <p>Notwithstanding anything in these Terms and Conditions to the contrary, in the event any portion of the underlying transportation is performed by a rail carrier ("Rail Carrier"), CUSTOMER acknowledges and agrees that the Rail Carrier services, including charges, liability for loss or damage to cargo, and terms and conditions of services are governed by tariffs, circulars or similar documents maintained by the Rail Carrier or other third party logistics provider arranging such Rail Carrier services ("Rail Conditions"). CUSTOMER acknowledges and agrees that CUSTOMER, and not BROKER, shall be deemed as a shipper or beneficial cargo owner for purposes of application of the Rail Conditions.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§9</span>
+        <h3>Shipping Documents and Confidentiality</h3>
+      </div>
+      <p>Shipments tendered hereunder may be evidenced by a bill of lading or similar transportation document. In no event will BROKER being shown as the "carrier" on any such document change BROKER's status as a property broker. CUSTOMER waives access to BROKER's records pursuant to 49 C.F.R. Part 371; without limiting the generality of the foregoing, in no event will BROKER be required to disclose rates or charges paid to, or negotiated with, any Servicing Motor Carrier.</p>
+      <p>Each Party is prohibited from disclosing the Confidential Information of the other except as set forth herein. "Confidential Information" means any information including, without limitation, business information, transportation and freight requirements, pricing and sales information, technical information, business planning and strategies, trade secrets, and management know-how and planning, whether or not such information is identified as confidential at the time of disclosure. BROKER is allowed to disclose shipment specific routing information to the Servicing Motor Carrier, but is expressly forbidden by CUSTOMER to disclose rates or charges negotiated between BROKER and CUSTOMER.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§10</span>
+        <h3>Dispute Resolution</h3>
+      </div>
+      <p>These Terms and Conditions shall be deemed to have been drawn in accordance with the statutes and laws of the State of Texas and in the event of any disagreement or dispute regarding services subject to these Terms and Conditions, to the extent not otherwise governed by federal law, the laws of Texas shall apply and suit must be brought in Texas as each party specifically submits to the exclusive personal jurisdiction of such courts for disputes between them or otherwise involving BROKER's services.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PART II — TERMS OF USE
+============================================================ -->
+<section class="legal-section" id="tou">
+  <div class="wrap">
+    <div class="section-eyebrow">Part II</div>
+    <h2>Terms of Use — Website</h2>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§1</span>
+        <h3>Acceptance of Terms</h3>
+      </div>
+      <p>Watchmen Logistics ("Watchmen") makes its website watchmen-logistics.com (the "Site") available to you subject to the following Terms of Use, which may be updated by Watchmen from time to time without notice. Please check these Terms of Use periodically for changes. If you do not agree to the Terms of Use, please do not use this Site. By using this Site, you acknowledge that you have read, understood and agree to these Terms of Use. Your continued use of this Site following the posting of any changes to the Terms of Use constitutes acceptance of those changes.</p>
+      <p>You agree that at all times you shall keep confidential, maintain and control all user names and passwords used to limit your access to the Site, and that you are exclusively responsible for all activities that occur in connection with such user names and passwords. You agree to immediately notify Watchmen of any disclosure to, or use of, any such user names or passwords by any other individual.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§2</span>
+        <h3>Privacy Policy</h3>
+      </div>
+      <p>Any information including personal data (e.g., your name, address, telephone number, e-mail address) you transmit to this Site will be used by us in accordance with this Site's Privacy Policy, set forth in Part III of this document below.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§3</span>
+        <h3>Use of the Site</h3>
+      </div>
+      <p>Watchmen maintains the Site for your informational, non-commercial personal use, or your commercial use associated with Watchmen Logistics business. Your use of the Site for any other purpose is permissible only upon the express prior written consent of Watchmen. Without limiting the foregoing, you may not:</p>
+      <ul>
+        <li>Use the Site in a commercial manner, including by distributing, transmitting or publishing the Site or any of its content;</li>
+        <li>Interfere with others' use of the Site;</li>
+        <li>Impair the Site's operation or interfere with or disrupt the servers or networks on which it operates;</li>
+        <li>Interfere with Watchmen's exercise of its intellectual property rights;</li>
+        <li>Frame or otherwise co-brand the Site or any of its content;</li>
+        <li>Deep-link to any portion of the Site; or</li>
+        <li>Use the Site for any illegal purpose.</li>
+      </ul>
+      <p>We reserve the right in our sole discretion to terminate or restrict your use of the Site, without notice, for any or no reason, and without liability to you or any third party.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§4</span>
+        <h3>Site Content</h3>
+      </div>
+      <p>You acknowledge and agree that all content of this Site, such as articles, text, graphics, images, links, and other material contained on this site, as well as any support materials (collectively, "Content") is protected by copyrights, trademarks, service marks, patents, trade secrets, or other proprietary rights and laws. You agree that as between you and Watchmen, Watchmen is the owner of all such Content. You may not reproduce, distribute, republish or retransmit any Content or materials posted at this site without the prior written permission of Watchmen.</p>
+      <p>Notwithstanding the above, you may print or download one copy of the Content or materials on this Site on any single computer for your personal, non-commercial use, provided you keep intact all copyright and other proprietary notices.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§5</span>
+        <h3>Third Party Sites / Information</h3>
+      </div>
+      <p>This Site may provide links to, or information gathered from, other sites on the Internet. Watchmen makes no representations whatsoever about these sites or this information. The provision of links to, or information gathered from, other sites on the Internet should not imply Watchmen's endorsement of any such sites or any association between Watchmen and these other sites' operators. Watchmen, its affiliates, and its licensors are not responsible for the accuracy, legality, decency, copyright compliance, or any other content of such sites.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§6</span>
+        <h3>Submissions</h3>
+      </div>
+      <p>You agree that any information submitted on or through the Site is subject to our Privacy Policy, the terms of which are incorporated herein by reference. You represent, warrant and covenant that you will only submit bona fide orders for products and services through the Site. If you provide a trademark (e.g., company logo) owned by you, your company, or your customer, to be used by Watchmen in connection with its provision of services, you also grant to Watchmen a royalty-free, non-exclusive right and license to use such trademark in connection with its provision of services.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§7</span>
+        <h3>Disclaimer of Warranties</h3>
+      </div>
+      <p class="uppercase">ALL CONTENT INCLUDING, WITHOUT LIMITATION, MATERIALS, INFORMATION, SOFTWARE, PRODUCTS, AND SERVICES INCLUDED IN OR AVAILABLE THROUGH THIS SITE, IS PROVIDED "AS IS" AND "AS AVAILABLE" FOR YOUR USE. THE CONTENT IS PROVIDED WITHOUT REPRESENTATIONS OR WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NONINFRINGEMENT. WATCHMEN, ITS AFFILIATES, AND ITS LICENSORS DO NOT WARRANT THAT THE CONTENT IS COMPLETE, ACCURATE, RELIABLE OR CORRECT; THAT THIS SITE WILL BE AVAILABLE AT ANY PARTICULAR TIME OR LOCATION; THAT ANY DEFECTS OR ERRORS WILL BE CORRECTED; OR THAT THE CONTENT IS FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. YOUR USE OF THIS SITE IS SOLELY AT YOUR RISK.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§8</span>
+        <h3>Limitation of Liability</h3>
+      </div>
+      <p class="uppercase">UNDER NO CIRCUMSTANCES SHALL WATCHMEN, ITS AFFILIATES, OR ITS LICENSORS BE LIABLE FOR ANY CONSEQUENTIAL DAMAGES (INCLUDING, WITHOUT LIMITATION, INDIRECT, PUNITIVE, INCIDENTAL OR SPECIAL DAMAGES, DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA OR OTHER INTANGIBLE LOSSES) INCLUDING, WITHOUT LIMITATION, ANY THAT RESULT FROM: (i) THE USE OF, OR INABILITY TO USE, THIS SITE; (ii) THE COST OF PROCUREMENT OF SUBSTITUTE GOODS AND SERVICES; (iii) UNAUTHORIZED ACCESS TO OR ALTERATION OF YOUR TRANSMISSIONS OR DATA; (iv) STATEMENTS OR CONDUCT OF ANY THIRD PARTY ON THE SITE; OR (v) ANY OTHER MATERIAL RELATING TO THE SITE. WATCHMEN SHALL ONLY BE LIABLE TO THE EXTENT OF ACTUAL DAMAGES INCURRED BY YOU, NOT TO EXCEED THE PURCHASE PRICE RECEIVED BY WATCHMEN FOR THE SERVICE GIVING RISE TO THE LIABILITY.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§9</span>
+        <h3>Representations and Warranties</h3>
+      </div>
+      <p>You represent, warrant and covenant that: (a) you have the power and authority to enter into this agreement; (b) you shall not use any rights granted hereunder for any unlawful purpose; and (c) you shall use this Site only as set forth in these Terms of Use.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§10</span>
+        <h3>Indemnity</h3>
+      </div>
+      <p>You agree to indemnify and hold Watchmen Logistics and its subsidiaries, affiliates, officers, agents, co-branders or other partners, and employees, harmless from any claim or demand, including attorneys' fees, made by any third party that arise from your use or misuse of this Site, or breach of any warranty, covenant, representation or term contained in these Terms of Use.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§11</span>
+        <h3>International Use</h3>
+      </div>
+      <p>Watchmen makes no representation that materials or Content on this Site are appropriate or available for use in locations outside the United States, and accessing them from territories where the Content or materials are illegal is prohibited. If you access this Site from locations outside of the United States you do so on your own initiative and you are responsible for compliance with local laws.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§12</span>
+        <h3>Copyright Policy</h3>
+      </div>
+      <p>Watchmen respects the intellectual property rights of others and expects visitors to this Site to do the same. Watchmen will respond to notices of alleged copyright infringement that comply with applicable law and are properly provided to us. If you believe that your content has been copied in a way that constitutes copyright infringement, please provide the following to Watchmen at the contact information below:</p>
+      <ul>
+        <li>A physical or electronic signature of the copyright owner or a person authorized to act on their behalf;</li>
+        <li>Identification of the copyrighted work claimed to have been infringed;</li>
+        <li>Identification of the material that is claimed to be infringing and information reasonably sufficient to permit us to locate the material;</li>
+        <li>Your contact information, including your address, telephone number, and an email address;</li>
+        <li>A statement by you that you have a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law; and</li>
+        <li>A statement that the information in the notification is accurate, and, under penalty of perjury, that you are authorized to act on behalf of the copyright owner.</li>
+      </ul>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§13</span>
+        <h3>Modifications to Service</h3>
+      </div>
+      <p>Watchmen reserves the right at any time and from time to time to modify or discontinue, temporarily or permanently, this Site or some or all of the services offered through this Site, with or without notice. You agree that Watchmen shall not be liable to you or to any third party for any modification, suspension or discontinuance of this Site or services offered through it.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§14</span>
+        <h3>Choice of Law and Forum</h3>
+      </div>
+      <p>These Terms of Use shall be governed by and construed in accordance with the laws of the State of Texas, excluding its conflicts of law rules. You expressly agree that the exclusive jurisdiction and venue for any claim or action arising out of or relating to these Terms of Use or your use of this Site shall be filed only in the state or federal courts located in the State of Texas, and you further agree and submit to the exercise of personal jurisdiction of such courts for the purpose of litigating any such claim or action.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§15</span>
+        <h3>Severability and Integration</h3>
+      </div>
+      <p>This agreement constitutes the entire agreement between you and Watchmen Logistics with respect to this Site and the purchase of products and services through this Site, and supersedes all prior or contemporaneous communications and proposals, whether oral, written, or electronic, between you and Watchmen with respect to this Site. If any part of these Terms of Use is held invalid or unenforceable, that portion shall be construed in a manner consistent with applicable law to reflect, as nearly as possible, the original intentions of the parties, and the remaining portions shall remain in full force and effect.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PART III — PRIVACY POLICY
+============================================================ -->
+<section class="legal-section" id="privacy">
+  <div class="wrap">
+    <div class="section-eyebrow">Part III</div>
+    <h2>Privacy Policy</h2>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§1</span>
+        <h3>Information We Collect</h3>
+      </div>
+      <p>Watchmen Logistics ("we," "us," or "our") collects information you provide directly to us, such as when you request a freight assessment, fill out a contact form, or communicate with us. This may include your name, email address, phone number, company name, job title, and details about your logistics needs.</p>
+      <p>We also automatically collect certain information when you visit our website, including your IP address, browser type, operating system, referring URLs, and pages viewed. We may use cookies and similar tracking technologies to collect this information.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§2</span>
+        <h3>How We Use Your Information</h3>
+      </div>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li>Respond to your inquiries and provide the brokerage services you request;</li>
+        <li>Send you service-related communications, updates, and marketing materials (where permitted by law);</li>
+        <li>Improve our website, services, and customer experience;</li>
+        <li>Comply with applicable legal obligations; and</li>
+        <li>Protect the rights, property, and safety of Watchmen Logistics, our customers, and others.</li>
+      </ul>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§3</span>
+        <h3>Information Sharing</h3>
+      </div>
+      <p>We do not sell, trade, or rent your personal information to third parties. We may share your information with:</p>
+      <ul>
+        <li><strong>Servicing Motor Carriers</strong> — to arrange and fulfill transportation services on your behalf;</li>
+        <li><strong>Service providers</strong> — who assist us in operating our website and conducting our business (e.g., CRM, email, analytics platforms), subject to confidentiality obligations;</li>
+        <li><strong>Legal authorities</strong> — when required by law, court order, or governmental regulation; and</li>
+        <li><strong>Business transfers</strong> — in connection with a merger, acquisition, or sale of assets.</li>
+      </ul>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§4</span>
+        <h3>Cookies and Tracking</h3>
+      </div>
+      <p>Our website may use cookies and similar technologies to enhance your browsing experience and analyze website traffic. You can control cookie settings through your browser preferences. Disabling cookies may affect certain functionality of our website.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§5</span>
+        <h3>Data Retention</h3>
+      </div>
+      <p>We retain personal information for as long as necessary to fulfill the purposes for which it was collected, including satisfying any legal, accounting, or reporting requirements, or as required by applicable law.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§6</span>
+        <h3>Data Security</h3>
+      </div>
+      <p>We implement reasonable technical and organizational measures to protect your personal information against unauthorized access, disclosure, alteration, or destruction. However, no method of transmission over the Internet or electronic storage is completely secure, and we cannot guarantee absolute security.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§7</span>
+        <h3>Your Rights</h3>
+      </div>
+      <p>Depending on your jurisdiction, you may have certain rights regarding your personal information, including the right to access, correct, or request deletion of your personal data. To exercise these rights, please contact us at the information provided below.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§8</span>
+        <h3>SMS / Text Message Communications</h3>
+      </div>
+      <p>If you opt in to receive SMS or text message communications from Watchmen Logistics, message and data rates may apply. Message frequency varies. You may opt out at any time by replying STOP to any message. For help, reply HELP or contact us at <a href="mailto:info@watchmen-logistics.com" style="color:var(--gold)">info@watchmen-logistics.com</a>. We do not share your mobile number with third parties for marketing purposes.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§9</span>
+        <h3>Children's Privacy</h3>
+      </div>
+      <p>Our website and services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If you believe we have inadvertently collected information from a child, please contact us immediately.</p>
+    </div>
+
+    <div class="clause">
+      <div class="clause-header">
+        <span class="clause-num">§10</span>
+        <h3>Changes to This Privacy Policy</h3>
+      </div>
+      <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new Privacy Policy on this page with an updated effective date. Your continued use of our website or services after any changes constitutes your acceptance of the updated policy.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PART IV — CONTACT
+============================================================ -->
+<section class="legal-section" id="contact-legal">
+  <div class="wrap">
+    <div class="section-eyebrow">Part IV</div>
+    <h2>Contact Information</h2>
+
+    <div class="clause">
+      <p>If you have any questions, concerns, or requests regarding these Terms of Service, Terms of Use, or Privacy Policy, please contact us:</p>
+    </div>
+
+    <div class="contact-card">
+      <h4>Watchmen Logistics — Legal & Compliance</h4>
+      <p>
+        <strong>Watchmen Logistics</strong><br>
+        895 Fish Creek Thoroughfare, Unit C<br>
+        Montgomery, Texas 77316<br><br>
+        <strong>Email:</strong> <a href="mailto:info@watchmen-logistics.com">info@watchmen-logistics.com</a><br><br>
+        For security concerns or data privacy requests, please use the same email address with the subject line <strong>"Privacy Request"</strong> or <strong>"Security Concern."</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-copy">&copy; 2026 Watchmen Logistics. An authorized Trinity Logistics agent.</div>
+    <a href="index.html" class="footer-back">&larr; Back to Main Site</a>
+  </div>
+</footer>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  });
+});
+</script>
+</body>
+</html>
