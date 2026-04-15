@@ -275,6 +275,7 @@
       display: none; position: fixed;
       top: var(--nav-h); left: 0; right: 0;
       z-index: 999;
+      pointer-events: none;
       background: rgba(10,10,10,0.98);
       backdrop-filter: blur(20px);
       padding: 24px;
@@ -282,7 +283,7 @@
       transform: translateY(-10px); opacity: 0;
       transition: all 0.3s ease;
     }
-    .mobile-menu.open { transform: translateY(0); opacity: 1; }
+    .mobile-menu.open { transform: translateY(0); opacity: 1; pointer-events: all; }
     .mobile-menu a {
       display: block; padding: 14px 0;
       font-family: 'Montserrat', sans-serif;
@@ -1679,8 +1680,6 @@
     <a href="#trinity">About</a>
     <a href="#contact">Contact</a>
     <a href="https://api.bludata.ai/widget/booking/PXKRGlG22uxqd8P2fA8n" target="_blank" rel="noopener" class="btn btn-primary">See What's Possible &rarr;</a>
-    <a href="/how-it-works.html" class="btn btn-outline">See How It Works &rarr;</a>
-    <a href="/roi.html" class="btn btn-outline">Quantify Your ROI &rarr;</a>
   </div>
 
   <!-- ============================================================
