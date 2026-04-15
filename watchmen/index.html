@@ -121,10 +121,12 @@
       box-shadow: 0 0 30px var(--gold-glow);
     }
     .btn-outline {
-      background: transparent; color: var(--white);
-      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.06);
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.5);
     }
     .btn-outline:hover {
+      background: rgba(212,175,55,0.1);
       border-color: var(--gold);
       color: var(--gold);
     }
@@ -185,9 +187,11 @@
       border-bottom-color: var(--border);
     }
     .nav-inner {
-      max-width: var(--max-w); margin: 0 auto; padding: 0 24px 0 8px;
+      max-width: 1400px; margin: 0 auto; padding: 0 24px 0 8px;
       width: 100%;
-      display: flex; align-items: center; justify-content: space-between;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
     }
     .nav-logo {
       display: flex; align-items: center; gap: 14px;
@@ -221,13 +225,13 @@
       margin-top: 3px;
     }
     .nav-links {
-      display: flex; align-items: center; gap: 20px;
+      display: flex; align-items: center; justify-content: center; gap: 14px;
       list-style: none;
     }
     .nav-links a {
       font-family: 'Montserrat', sans-serif;
-      font-size: 12px; font-weight: 600;
-      letter-spacing: 1.5px; text-transform: uppercase;
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 1px; text-transform: uppercase;
       color: var(--gray-lt);
       transition: color 0.3s ease;
       position: relative;
@@ -242,14 +246,18 @@
     .nav-cta {
       display: inline-flex; align-items: center; gap: 8px;
       font-family: 'Montserrat', sans-serif;
-      font-size: 12px; font-weight: 700;
-      padding: 10px 24px; border-radius: 6px;
+      font-size: 11px; font-weight: 700;
+      padding: 10px 18px; border-radius: 6px;
       background: var(--gold); color: #0A0A0A;
       transition: all 0.3s ease;
+      white-space: nowrap;
     }
     .nav-cta:hover {
       background: var(--gold-bright);
       box-shadow: 0 0 20px var(--gold-glow);
+    }
+    .nav-right {
+      display: flex; align-items: center; gap: 12px;
     }
     .hamburger {
       display: none; flex-direction: column; gap: 5px;
@@ -285,7 +293,14 @@
       transition: color 0.3s ease;
     }
     .mobile-menu a:hover { color: var(--gold); }
-    .mobile-menu .btn { margin-top: 16px; width: 100%; justify-content: center; }
+    .mobile-menu .btn {
+      display: flex; margin-top: 12px;
+      width: 100%; justify-content: center;
+      border-bottom: none; padding: 14px 20px;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      font-size: 13px;
+    }
+    .mobile-menu .btn:hover { color: inherit; }
 
     /* ============================================================
        HERO
@@ -437,6 +452,15 @@
       display: flex; flex-wrap: wrap; gap: 14px;
       margin-bottom: 56px;
     }
+    .cta-btns {
+      display: flex; flex-wrap: wrap; gap: 14px;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+    @media (max-width: 768px) {
+      .cta-btns { flex-direction: column; align-items: stretch; }
+      .cta-btns .btn { width: 100%; justify-content: center; }
+    }
     .hero-stats {
       display: flex; flex-wrap: wrap; gap: 40px;
       padding-top: 40px;
@@ -478,7 +502,7 @@
       animation: scroll-logos 30s linear infinite;
       width: max-content;
     }
-    .trusted-track:hover { animation-play-state: paused; }
+    /* carousel never pauses */
     .trusted-track img {
       height: 48px;
       width: auto;
@@ -488,8 +512,24 @@
       transition: opacity 0.4s ease;
       flex-shrink: 0;
     }
-    .trusted-track img:hover {
-      opacity: 0.85;
+    .trusted-track img:hover { opacity: 0.85; }
+    .carousel-term {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gray-lt);
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: color 0.3s;
+    }
+    .carousel-term:hover { color: var(--gold); }
+    .carousel-dot {
+      color: var(--gold);
+      font-size: 10px;
+      flex-shrink: 0;
+      opacity: 0.6;
     }
     /* Placeholder logos before real ones are added */
     .logo-placeholder {
@@ -512,6 +552,56 @@
     @media (max-width: 768px) {
       .trusted-track { gap: 40px; }
       .trusted-track img { height: 32px; max-width: 120px; }
+    }
+
+    /* ============================================================
+       PROOF STRIP
+    ============================================================ */
+    .proof-strip {
+      background: #0d0d0d;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 0.9rem 0;
+      margin: 2rem 0;
+    }
+    .proof-grid {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+    }
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding-left: 1rem;
+      border-left: 2px solid var(--gold);
+    }
+    .proof-num {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 1.25rem;
+      color: var(--gold);
+      line-height: 1;
+      white-space: nowrap;
+    }
+    .proof-unit {
+      font-size: 0.65em;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-left: 1px;
+    }
+    .proof-label {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-lt);
+    }
+    @media (max-width: 640px) {
+      .proof-grid { flex-direction: column; align-items: flex-start; gap: 1rem; padding: 0 1rem; }
     }
 
     /* ============================================================
@@ -552,7 +642,7 @@
     ============================================================ */
     .tiers-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 24px;
     }
     .tier-card {
@@ -744,8 +834,148 @@
       50% { width: 60%; left: 20%; }
       100% { width: 0%; left: 100%; }
     }
+    /* ── NEW DASHBOARD STYLES ── */
+    .dash-titlebar { justify-content: flex-start; }
+    .dash-live-badge {
+      margin-left: auto;
+      display: flex; align-items: center; gap: 6px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      color: #22C55E;
+    }
+    .dash-live-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: #22C55E;
+      box-shadow: 0 0 6px #22C55E;
+      animation: pulse-green 2s infinite;
+    }
+    @keyframes pulse-green {
+      0%,100% { opacity: 1; } 50% { opacity: 0.4; }
+    }
+    .dash-kpi-row {
+      display: grid; grid-template-columns: repeat(4,1fr);
+      gap: 1px; background: var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .dash-kpi {
+      background: var(--bg); padding: 20px 24px;
+    }
+    .dash-metric.gold { color: var(--gold); }
+    .dash-metric.alert { color: #F97316; }
+    .dash-strong-badge {
+      display: inline-block;
+      background: rgba(212,175,55,0.2);
+      color: var(--gold);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase;
+      padding: 3px 10px; border-radius: 4px;
+      margin-top: 6px;
+    }
+    .dash-sub { font-size: 11px; color: var(--gray); margin-top: 4px; }
+    .dash-bottom {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1px; background: var(--border);
+    }
+    .dash-table-wrap, .dash-alert-wrap {
+      background: var(--bg); padding: 20px 24px;
+    }
+    .dash-section-header {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--gray); margin-bottom: 16px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .dash-table {
+      width: 100%; border-collapse: collapse;
+      font-size: 12px;
+    }
+    .dash-table thead th {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--gray); padding: 6px 8px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+    }
+    .dash-table tbody td {
+      padding: 8px 8px; color: var(--gray-lt);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      vertical-align: middle;
+    }
+    .dash-table-total td {
+      color: var(--white) !important;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700; font-size: 12px;
+      border-top: 1px solid var(--border);
+      border-bottom: none !important;
+    }
+    .mode-dot {
+      display: inline-block; width: 7px; height: 7px;
+      border-radius: 50%; margin-right: 6px;
+    }
+    .mode-dot.ocean { background: #60A5FA; }
+    .mode-dot.air { background: #A78BFA; }
+    .mode-dot.ground { background: #22C55E; }
+    .mode-dot.intermodal { background: var(--gold); }
+    .ai-badge {
+      display: inline-block;
+      background: rgba(212,175,55,0.15);
+      color: var(--gold);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 0.5px; text-transform: uppercase;
+      padding: 2px 8px; border-radius: 4px;
+    }
+    .ai-badge.dim { background: rgba(255,255,255,0.05); color: var(--gray); }
+    .gold-text { color: var(--gold); font-weight: 700; }
+    .gray-text { color: var(--gray); }
+    /* Alert Feed */
+    .alert-feed { display: flex; flex-direction: column; gap: 16px; }
+    .alert-item { padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .alert-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .alert-header { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+    .alert-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .alert-dot.red { background: #EF4444; box-shadow: 0 0 6px #EF4444; }
+    .alert-dot.yellow { background: #F59E0B; box-shadow: 0 0 6px #F59E0B; }
+    .alert-dot.green { background: #22C55E; box-shadow: 0 0 6px #22C55E; }
+    .alert-route {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px; font-weight: 700;
+      color: var(--white); letter-spacing: 0.5px;
+    }
+    .alert-mode {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase;
+      padding: 2px 8px; border-radius: 4px;
+    }
+    .ocean-tag { background: rgba(96,165,250,0.15); color: #60A5FA; }
+    .ground-tag { background: rgba(34,197,94,0.12); color: #22C55E; }
+    .air-tag { background: rgba(167,139,250,0.15); color: #A78BFA; }
+    .alert-msg { font-size: 12px; color: var(--gray-lt); margin-bottom: 6px; }
+    .alert-tags { display: flex; gap: 6px; margin-bottom: 6px; flex-wrap: wrap; }
+    .tag {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase;
+      padding: 2px 8px; border-radius: 4px;
+      background: rgba(255,255,255,0.07); color: var(--gray);
+    }
+    .gold-tag { background: rgba(212,175,55,0.15); color: var(--gold); }
+    .orange-tag { background: rgba(249,115,22,0.15); color: #F97316; }
+    .green-tag { background: rgba(34,197,94,0.12); color: #22C55E; }
+    .alert-detail { font-size: 11px; color: var(--gray); margin-bottom: 4px; }
+    .alert-ai { font-size: 11px; color: var(--gray); font-style: italic; opacity: 0.7; }
+    @media (max-width: 900px) {
+      .dash-kpi-row { grid-template-columns: 1fr 1fr; }
+      .dash-bottom { grid-template-columns: 1fr; }
+    }
     @media (max-width: 768px) {
       .dash-body { grid-template-columns: 1fr; }
+      .dash-kpi-row { grid-template-columns: 1fr 1fr; }
     }
     .fivepl-card .icon {
       width: 44px; height: 44px;
@@ -1072,6 +1302,72 @@
     }
 
     /* ============================================================
+       TESTIMONIALS
+    ============================================================ */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .testimonial-card {
+      background: var(--surface);
+      border: 1px solid var(--border-gold);
+      border-radius: 12px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      background: linear-gradient(180deg, rgba(212,175,55,0.05) 0%, var(--surface) 40%);
+    }
+    .t-stars {
+      color: var(--gold);
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+    }
+    .t-quote {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: var(--gray-lt);
+      font-style: italic;
+      flex: 1;
+      margin: 0;
+    }
+    .t-attribution {
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+    }
+    .t-name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+    .t-company {
+      font-size: 0.78rem;
+      color: var(--gray);
+      margin-top: 0.2rem;
+    }
+    .t-result {
+      display: inline-block;
+      background: rgba(212,175,55,0.10);
+      border: 1px solid rgba(212,175,55,0.3);
+      color: var(--gold);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.45rem 0.9rem;
+      border-radius: 4px;
+    }
+    @media (max-width: 1024px) {
+      .testimonials-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+
+    /* ============================================================
        CTA / CONTACT
     ============================================================ */
     .cta-section {
@@ -1277,7 +1573,7 @@
     ============================================================ */
     @media (max-width: 1024px) {
       .problem-grid { grid-template-columns: repeat(2, 1fr); }
-      .tiers-grid { grid-template-columns: repeat(3, 1fr); }
+      .tiers-grid { grid-template-columns: repeat(2, 1fr); }
       .modes-grid { grid-template-columns: repeat(3, 1fr); }
       .caps-grid { grid-template-columns: repeat(2, 1fr); }
       .trinity-stats { grid-template-columns: repeat(2, 1fr); }
@@ -1287,6 +1583,8 @@
       .nav-links, .nav-cta { display: none; }
       .hamburger { display: flex; }
       .mobile-menu { display: block; }
+      /* Force nav-right to always sit in the 3rd grid column */
+      .nav-right { grid-column: 3; }
 
       .hero h1 { font-size: clamp(34px, 8vw, 48px); }
       .hero-stats { gap: 24px; }
@@ -1304,10 +1602,30 @@
       .footer-inner { flex-direction: column; }
       .footer-links { flex-direction: column; gap: 32px; }
       .footer-bottom { flex-direction: column; text-align: center; }
+
+      /* All button groups stack full-width on mobile */
+      .hero-btns, .cta-btns { flex-direction: column; align-items: stretch; padding-bottom: 20px; }
+      .hero-btns .btn, .cta-btns .btn {
+        display: flex !important;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        box-sizing: border-box;
+        min-height: 52px;
+      }
+      /* Mobile menu buttons */
+      .mobile-menu .btn {
+        display: flex !important;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        box-sizing: border-box;
+        border-bottom: none !important;
+        margin-top: 10px;
+        padding: 14px 20px;
+      }
     }
     @media (max-width: 480px) {
-      .hero-btns { flex-direction: column; }
-      .hero-btns .btn { width: 100%; justify-content: center; }
       .modes-grid { grid-template-columns: 1fr; }
       .industries-grid { grid-template-columns: 1fr; }
     }
@@ -1330,7 +1648,8 @@
         </div>
       </a>
       <ul class="nav-links">
-        <li><a href="roi.html" style="color:var(--gold)">ROI Tools</a></li>
+        <li><a href="/roi.html" style="color:var(--gold)">ROI Tools</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#fivepl">5PL</a></li>
         <li><a href="#modes">Transport</a></li>
@@ -1339,16 +1658,19 @@
         <li><a href="#trinity">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="https://api.bludata.ai/widget/booking/PXKRGlG22uxqd8P2fA8n" target="_blank" rel="noopener" class="nav-cta">Get Assessment</a>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-right">
+        <a href="https://api.bludata.ai/widget/booking/PXKRGlG22uxqd8P2fA8n" target="_blank" rel="noopener" class="nav-cta">See What's Possible</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="roi.html" style="color:var(--gold)">ROI Tools</a>
+    <a href="/roi.html" style="color:var(--gold)">ROI Tools</a>
+    <a href="/how-it-works.html">How It Works</a>
     <a href="#services">Services</a>
     <a href="#fivepl">5PL</a>
     <a href="#modes">Transportation</a>
@@ -1356,7 +1678,9 @@
     <a href="#industries">Industries</a>
     <a href="#trinity">About</a>
     <a href="#contact">Contact</a>
-    <a href="https://api.bludata.ai/widget/booking/PXKRGlG22uxqd8P2fA8n" target="_blank" rel="noopener" class="btn btn-primary">Get Free Assessment</a>
+    <a href="https://api.bludata.ai/widget/booking/PXKRGlG22uxqd8P2fA8n" target="_blank" rel="noopener" class="btn btn-primary">See What's Possible &rarr;</a>
+    <a href="/how-it-works.html" class="btn btn-outline">See How It Works &rarr;</a>
+    <a href="/roi.html" class="btn btn-outline">Quantify Your ROI &rarr;</a>
   </div>
 
   <!-- ============================================================
@@ -1389,68 +1713,81 @@
       <div class="hero-content">
         <div class="hero-badge">
           <svg viewBox="0 0 16 16"><path d="M8 0L10 5.5H16L11 9L13 15L8 11.5L3 15L5 9L0 5.5H6L8 0Z"/></svg>
-          Authorized Trinity Logistics Agent
+          Redefining Supply Chain Performance
         </div>
-        <h1>Your Supply Chain <span class="gradient-text">Command Center</span></h1>
-        <p class="hero-sub">We orchestrate your entire supply chain &mdash; or start with a single pain point. Every mode, every border, every partner, unified and optimized under one intelligent system.</p>
+        <h1>Your Supply Chain<br><span class="gradient-text">Command Center.</span></h1>
+        <p class="hero-sub">Complexity controlled. Costs reduced. Performance delivered. One standard. One partner. Outcomes that exceed expectations from day one.</p>
         <div class="hero-btns">
-          <a href="https://api.bludata.ai/widget/booking/PXKRGlG22uxqd8P2fA8n" target="_blank" rel="noopener" class="btn btn-primary">Free Network Assessment &rarr;</a>
-          <a href="#fivepl" class="btn btn-outline">Explore 5PL Intelligence</a>
-        </div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <div class="num">1,627<span>+</span></div>
-            <div class="label">Shipments Daily</div>
-          </div>
-          <div class="hero-stat">
-            <div class="num">426<span>M</span></div>
-            <div class="label">Miles Managed Annually</div>
-          </div>
-          <div class="hero-stat">
-            <div class="num">8-15<span>%</span></div>
-            <div class="label">Avg. Cost Reduction</div>
-          </div>
-          <div class="hero-stat">
-            <div class="num">30<span>+</span></div>
-            <div class="label">Years of Excellence</div>
-          </div>
+          <a href="https://api.bludata.ai/widget/booking/PXKRGlG22uxqd8P2fA8n" target="_blank" rel="noopener" class="btn btn-primary">See What's Possible &rarr;</a>
+          <a href="/how-it-works.html" class="btn btn-outline">See How It Works &rarr;</a>
+          <a href="/roi.html" class="btn btn-outline">Quantify Your ROI &rarr;</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
+       PROOF STRIP
+  ============================================================ -->
+  <div class="proof-strip">
+    <div class="wrap">
+      <div class="proof-grid">
+        <div class="proof-item">
+          <span class="proof-num">5<span class="proof-unit">min</span></span>
+          <span class="proof-label">Average Quote SLA</span>
+        </div>
+        <div class="proof-item">
+          <span class="proof-num">AI</span>
+          <span class="proof-label">Carrier Matching Engine</span>
+        </div>
+        <div class="proof-item">
+          <span class="proof-num">24/7</span>
+          <span class="proof-label">Real-Time Visibility</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
        TRUSTED BY
   ============================================================ -->
   <section class="trusted" id="trusted">
-    <div class="trusted-label">Trusted by Industry Leaders</div>
+    <div class="trusted-label">Your Supply Chain, Reimagined</div>
     <div style="overflow:hidden;">
       <div class="trusted-track" id="logoTrack">
-        <img src="logos/jbs_white_transparent.png" alt="JBS" />
-        <img src="logos/wild_fork_white_transparent.png" alt="Wild Fork Foods" />
-        <img src="logos/grace_good_move_white_transparent.png" alt="Grace Kennedy Foods" />
-        <img src="logos/vima_full_white_transparent.png" alt="Vima Foods" />
-        <img src="logos/thrive_white_transparent.png" alt="Thrive Causemetics" />
-        <img src="logos/by_rosie_jane_white_transparent.png" alt="By Rosie Jane" />
-        <img src="logos/foundation_wellness_white_transparent.png" alt="Foundation Wellness" />
-        <img src="logos/premier_packaging_white_transparent.png" alt="Premier Packaging" />
-        <img src="logos/action_white_transparent.png" alt="Action Gypsum Supply" />
-        <img src="logos/keyston_bros_white_transparent.png" alt="Keyston Bros" />
-        <img src="logos/nt_ruddock_white_transparent.png" alt="NT Ruddock" />
-        <img src="logos/riverside_white_transparent.png" alt="Riverside Natural Foods" style="height:64px;" />
-        <!-- Duplicate set for seamless infinite scroll -->
-        <img src="logos/jbs_white_transparent.png" alt="JBS" />
-        <img src="logos/wild_fork_white_transparent.png" alt="Wild Fork Foods" />
-        <img src="logos/grace_good_move_white_transparent.png" alt="Grace Kennedy Foods" />
-        <img src="logos/vima_full_white_transparent.png" alt="Vima Foods" />
-        <img src="logos/thrive_white_transparent.png" alt="Thrive Causemetics" />
-        <img src="logos/by_rosie_jane_white_transparent.png" alt="By Rosie Jane" />
-        <img src="logos/foundation_wellness_white_transparent.png" alt="Foundation Wellness" />
-        <img src="logos/premier_packaging_white_transparent.png" alt="Premier Packaging" />
-        <img src="logos/action_white_transparent.png" alt="Action Gypsum Supply" />
-        <img src="logos/keyston_bros_white_transparent.png" alt="Keyston Bros" />
-        <img src="logos/nt_ruddock_white_transparent.png" alt="NT Ruddock" />
-        <img src="logos/riverside_white_transparent.png" alt="Riverside Natural Foods" style="height:64px;" />
+        <span class="carousel-term">Predictive Analytics</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">Data-Driven Decision Making</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">Full Global Supply Chain Visibility</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">Automated Exception Alerts</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">TMS — 3PL / 4PL</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">Managed Transportation / 5PL</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">Average 8–15% Cost Reduction</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">Cross-Vertical Solutions</span>
+        <span class="carousel-dot">✦</span>
+        <!-- Duplicate for seamless loop -->
+        <span class="carousel-term">Predictive Analytics</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">Data-Driven Decision Making</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">Full Global Supply Chain Visibility</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">Automated Exception Alerts</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">TMS — 3PL / 4PL</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">Managed Transportation / 5PL</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">Average 8–15% Cost Reduction</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">Cross-Vertical Solutions</span>
+        <span class="carousel-dot">✦</span>
       </div>
     </div>
   </section>
@@ -1511,21 +1848,31 @@
         <p class="section-sub">From a single managed transport lane to full 5PL orchestration of your entire global supply chain &mdash; we meet you where you are.</p>
       </div>
       <div class="tiers-grid">
-        <div class="tier-card reveal reveal-delay-1">
+        <div class="tier-card featured reveal reveal-delay-1">
           <div class="tier-label">Execution</div>
           <h3>3PL Solutions</h3>
           <p>Physical logistics execution &mdash; warehousing, transportation, fulfillment, and customs brokerage. The right carrier, the right lane, executed with precision.</p>
         </div>
-        <div class="tier-card reveal reveal-delay-2">
+        <div class="tier-card featured reveal reveal-delay-2">
+          <div class="tier-label">Management</div>
+          <h3>Managed Transportation</h3>
+          <p>Day-to-day oversight of your transportation operations &mdash; carrier selection, freight audit, lane optimization, and performance reporting.</p>
+        </div>
+        <div class="tier-card featured reveal reveal-delay-3">
           <div class="tier-label">Orchestration</div>
           <h3>4PL Orchestration</h3>
           <p>We manage your entire provider ecosystem &mdash; coordinating 3PLs, carriers, and freight forwarders as a single unified network, with full accountability.</p>
         </div>
-        <div class="tier-card featured reveal reveal-delay-3">
+        <div class="tier-card featured reveal reveal-delay-4">
           <div class="tier-label">Intelligence</div>
           <h3>5PL Intelligence</h3>
           <p>Tech-driven orchestration of your complete supply chain &mdash; demand sensing, network design, predictive rerouting, and continuous optimization at the system level.</p>
         </div>
+      </div>
+      <div class="cta-btns">
+        <a href="https://api.bludata.ai/widget/booking/PXKRGlG22uxqd8P2fA8n" target="_blank" rel="noopener" class="btn btn-primary">See What's Possible &rarr;</a>
+        <a href="/how-it-works.html" class="btn btn-outline">See How It Works &rarr;</a>
+        <a href="/roi.html" class="btn btn-outline">Quantify Your ROI &rarr;</a>
       </div>
     </div>
   </section>
@@ -1537,8 +1884,8 @@
     <div class="fivepl-glow"></div>
     <div class="wrap">
       <div class="section-header reveal">
-        <div class="eyebrow">For those who are ready to go further</div>
-        <h2 class="section-title">5PL Intelligence</h2>
+        <div class="section-eyebrow">The Highest Level of Supply Chain Partnership</div>
+        <h2 class="section-title">A 3PL Moves Freight.<br>A 4PL Manages It.<br><span class="gradient-text">A 5PL Transforms It.</span></h2>
         <p class="section-sub">The command center for your entire supply chain. We don't just move freight &mdash; we design, optimize, and continuously improve your global logistics network.</p>
       </div>
       <div class="fivepl-grid">
@@ -1574,83 +1921,162 @@
 
       <!-- Command Center Dashboard Mockup -->
       <div class="fivepl-dashboard reveal" style="position:relative;">
+        <!-- Titlebar -->
         <div class="dash-titlebar">
           <div class="dash-dot red"></div>
           <div class="dash-dot yellow"></div>
           <div class="dash-dot green"></div>
-          <div class="dash-title">Watchmen Command Center &mdash; Live Network</div>
+          <div class="dash-title">Watchmen Command Center &mdash; Network Overview</div>
+          <div class="dash-live-badge"><span class="dash-live-dot"></span>All Systems Live</div>
         </div>
-        <div class="dash-body">
-          <div class="dash-panel">
-            <div class="label">Active Shipments</div>
-            <div class="dash-metric">1,627<span>+</span></div>
+
+        <!-- KPI Row -->
+        <div class="dash-kpi-row">
+          <div class="dash-kpi">
+            <div class="label">Global Shipment Volume</div>
+            <div class="dash-metric">84K<span>+</span></div>
             <div class="dash-change">&#9650; 12% vs last month</div>
-            <div class="dash-bars">
-              <div class="dash-bar" style="height:45%"></div>
-              <div class="dash-bar" style="height:60%"></div>
-              <div class="dash-bar" style="height:35%"></div>
-              <div class="dash-bar" style="height:80%"></div>
-              <div class="dash-bar" style="height:55%"></div>
-              <div class="dash-bar" style="height:90%"></div>
-              <div class="dash-bar" style="height:70%"></div>
-              <div class="dash-bar" style="height:95%"></div>
-              <div class="dash-bar" style="height:60%"></div>
-              <div class="dash-bar" style="height:85%"></div>
-              <div class="dash-bar" style="height:75%"></div>
-              <div class="dash-bar" style="height:100%"></div>
-            </div>
           </div>
-          <div class="dash-panel">
-            <div class="label">On-Time Delivery</div>
-            <div class="dash-metric">97.3<span>%</span></div>
-            <div class="dash-change">&#9650; 2.1% vs benchmark</div>
-            <div class="dash-bars">
-              <div class="dash-bar" style="height:88%"></div>
-              <div class="dash-bar" style="height:92%"></div>
-              <div class="dash-bar" style="height:90%"></div>
-              <div class="dash-bar" style="height:95%"></div>
-              <div class="dash-bar" style="height:89%"></div>
-              <div class="dash-bar" style="height:97%"></div>
-              <div class="dash-bar" style="height:94%"></div>
-              <div class="dash-bar" style="height:96%"></div>
-              <div class="dash-bar" style="height:93%"></div>
-              <div class="dash-bar" style="height:98%"></div>
-              <div class="dash-bar" style="height:97%"></div>
-              <div class="dash-bar" style="height:100%"></div>
-            </div>
+          <div class="dash-kpi">
+            <div class="label">Supply Chain Health</div>
+            <div class="dash-metric gold">91.4</div>
+            <div class="dash-strong-badge">Strong</div>
           </div>
-          <div class="dash-panel">
-            <div class="label">Live Routes</div>
-            <div class="dash-routes">
-              <div class="dash-route">
-                <span class="from">SHN</span>
-                <div class="line-track"><div class="line-fill" style="animation-delay:0s"></div></div>
-                <span class="to">LAX</span>
-                <span class="status transit">In Transit</span>
+          <div class="dash-kpi">
+            <div class="label">Freight Under Management</div>
+            <div class="dash-metric">$84<span>M</span></div>
+            <div class="dash-sub">Active spend this period</div>
+          </div>
+          <div class="dash-kpi">
+            <div class="label">Active Predictive Alerts</div>
+            <div class="dash-metric alert">142</div>
+            <div class="dash-sub">AI-monitored across network</div>
+          </div>
+        </div>
+
+        <!-- Bottom: Table + Alert Feed -->
+        <div class="dash-bottom">
+          <!-- Shipments by Mode -->
+          <div class="dash-table-wrap">
+            <div class="dash-section-header">
+              Active Shipments by Mode
+              <span class="dash-live-badge"><span class="dash-live-dot"></span>Live</span>
+            </div>
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Mode</th>
+                  <th>Active</th>
+                  <th>Spend</th>
+                  <th>Exceptions</th>
+                  <th>Pred. Alerts</th>
+                  <th>Cost Avoided</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="mode-dot ocean"></span>Ocean</td>
+                  <td>4,821</td>
+                  <td>$28.4M</td>
+                  <td>18</td>
+                  <td><span class="ai-badge">34 AI</span></td>
+                  <td class="gold-text">7.4%</td>
+                </tr>
+                <tr>
+                  <td><span class="mode-dot air"></span>Air</td>
+                  <td>1,204</td>
+                  <td>$12.1M</td>
+                  <td>4</td>
+                  <td><span class="ai-badge dim">0 AI</span></td>
+                  <td class="gray-text">—</td>
+                </tr>
+                <tr>
+                  <td><span class="mode-dot ground"></span>Ground / FTL</td>
+                  <td>61,204</td>
+                  <td>$32.6M</td>
+                  <td>67</td>
+                  <td><span class="ai-badge">89 AI</span></td>
+                  <td class="gold-text">9.1%</td>
+                </tr>
+                <tr>
+                  <td><span class="mode-dot intermodal"></span>Intermodal</td>
+                  <td>16,771</td>
+                  <td>$11.0M</td>
+                  <td>12</td>
+                  <td><span class="ai-badge">19 AI</span></td>
+                  <td class="gold-text">5.8%</td>
+                </tr>
+                <tr class="dash-table-total">
+                  <td>Network</td>
+                  <td>84K+</td>
+                  <td>$84M</td>
+                  <td>101</td>
+                  <td><span class="ai-badge">142 AI</span></td>
+                  <td class="gold-text">8.2%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Alert Feed -->
+          <div class="dash-alert-wrap">
+            <div class="dash-section-header">Disruption &amp; Alert Feed</div>
+            <div class="alert-feed">
+              <div class="alert-item">
+                <div class="alert-header">
+                  <span class="alert-dot red"></span>
+                  <span class="alert-route">SHN &rarr; LAX</span>
+                  <span class="alert-mode ocean-tag">Ocean</span>
+                </div>
+                <div class="alert-msg">Port congestion — ETA pushed 18hrs.</div>
+                <div class="alert-tags">
+                  <span class="tag">Playbook</span>
+                  <span class="tag gold-tag">Command Center</span>
+                </div>
+                <div class="alert-detail">Carrier Relations coordinating emergency reroute.</div>
+                <div class="alert-ai">&#x2022; AI &nbsp; Alternate routing surfaced — awaiting authorization.</div>
               </div>
-              <div class="dash-route">
-                <span class="from">HOU</span>
-                <div class="line-track"><div class="line-fill" style="animation-delay:0.5s"></div></div>
-                <span class="to">ATL</span>
-                <span class="status">Delivered</span>
+              <div class="alert-item">
+                <div class="alert-header">
+                  <span class="alert-dot yellow"></span>
+                  <span class="alert-route">MIA &rarr; ORD</span>
+                  <span class="alert-mode ground-tag">Ground</span>
+                </div>
+                <div class="alert-msg">Carrier capacity exception detected.</div>
+                <div class="alert-tags">
+                  <span class="tag">Playbook</span>
+                  <span class="tag orange-tag">Rapid Response</span>
+                </div>
+                <div class="alert-detail">Network Ops sourcing backup carrier.</div>
+                <div class="alert-ai">&#x2022; AI &nbsp; 3 qualified carriers identified.</div>
               </div>
-              <div class="dash-route">
-                <span class="from">RTD</span>
-                <div class="line-track"><div class="line-fill" style="animation-delay:1s"></div></div>
-                <span class="to">NYC</span>
-                <span class="status transit">In Transit</span>
+              <div class="alert-item">
+                <div class="alert-header">
+                  <span class="alert-dot yellow"></span>
+                  <span class="alert-route">HOU &rarr; ATL</span>
+                  <span class="alert-mode ground-tag">Ground</span>
+                </div>
+                <div class="alert-msg">Weather advisory active along I-85.</div>
+                <div class="alert-tags">
+                  <span class="tag">Playbook</span>
+                  <span class="tag green-tag">Resolution Team</span>
+                </div>
+                <div class="alert-detail">Risk Desk monitoring — contingency routing on standby.</div>
+                <div class="alert-ai">&#x2022; AI &nbsp; Lane risk elevated — threshold not reached.</div>
               </div>
-              <div class="dash-route">
-                <span class="from">MIA</span>
-                <div class="line-track"><div class="line-fill" style="animation-delay:1.5s"></div></div>
-                <span class="to">ORD</span>
-                <span class="status">Delivered</span>
-              </div>
-              <div class="dash-route">
-                <span class="from">SEA</span>
-                <div class="line-track"><div class="line-fill" style="animation-delay:2s"></div></div>
-                <span class="to">DFW</span>
-                <span class="status transit">In Transit</span>
+              <div class="alert-item">
+                <div class="alert-header">
+                  <span class="alert-dot green"></span>
+                  <span class="alert-route">SEA &rarr; LAX</span>
+                  <span class="alert-mode air-tag">Air</span>
+                </div>
+                <div class="alert-msg">On schedule. No active exceptions.</div>
+                <div class="alert-tags">
+                  <span class="tag">Playbook</span>
+                  <span class="tag green-tag">Resolution Team</span>
+                </div>
+                <div class="alert-detail">Standing by — no intervention required.</div>
+                <div class="alert-ai">&#x2022; AI &nbsp; Continuous monitoring active. All nominal.</div>
               </div>
             </div>
           </div>
@@ -1668,7 +2094,7 @@
       <div class="section-header center reveal">
         <div class="eyebrow">Global Coverage</div>
         <h2 class="section-title">Every Mode. <span class="gradient-text">One Partner.</span></h2>
-        <p class="section-sub">Carrier-agnostic optimization across every transportation mode. We route based on your priorities &mdash; cost, speed, reliability, sustainability.</p>
+        <p class="section-sub">Your customers don't care which mode it moves on &mdash; they care that it arrives. We cover every lane, every mode, so you never have to say "that's not something we handle."</p>
       </div>
       <div class="modes-grid">
         <div class="mode-card reveal reveal-delay-1">
@@ -1889,36 +2315,6 @@
     </div>
   </section>
 
-  <!-- ============================================================
-       TRINITY LOGISTICS PARTNERSHIP
-  ============================================================ -->
-  <section class="section trinity" id="trinity">
-    <div class="wrap">
-      <div class="section-header center reveal">
-        <div class="eyebrow">Our Backbone</div>
-        <h2 class="section-title">Powered by <span class="gradient-text">Trinity Logistics</span></h2>
-        <p class="section-sub">As an authorized agent for Trinity Logistics, we bring 30+ years of freight excellence, a carrier network spanning the continent, and the infrastructure to scale.</p>
-      </div>
-      <div class="trinity-stats">
-        <div class="trinity-stat reveal reveal-delay-1">
-          <div class="num">30+</div>
-          <div class="label">Years in Freight</div>
-        </div>
-        <div class="trinity-stat reveal reveal-delay-2">
-          <div class="num">550+</div>
-          <div class="label">Team Members</div>
-        </div>
-        <div class="trinity-stat reveal reveal-delay-3">
-          <div class="num">426M+</div>
-          <div class="label">Miles Annually</div>
-        </div>
-        <div class="trinity-stat reveal reveal-delay-4">
-          <div class="num">Top 5%</div>
-          <div class="label">EcoVadis Gold Rating</div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ============================================================
        ENGAGEMENT MODEL
@@ -1952,6 +2348,64 @@
       </div>
     </div>
   </section>
+
+  <!-- ============================================================
+       TESTIMONIALS — PROOF OVER PROMISES
+  ============================================================ -->
+  <section class="section testimonials-section" id="results">
+    <div class="wrap">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Client Results</div>
+        <h2 class="section-title">Proof Over<br><span class="gradient-text">Promises</span></h2>
+      </div>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="t-stars">★★★★★</div>
+          <blockquote class="t-quote">"We were skeptical that a boutique brokerage could match what our previous national provider offered in technology. Watchmen's AI-driven visibility and 5-minute quote turnaround exceeded what we had with a firm ten times their size."</blockquote>
+          <div class="t-attribution">
+            <div class="t-name">Director of Logistics</div>
+            <div class="t-company">Regional E-Commerce Retailer · $12M Annual Freight Spend</div>
+          </div>
+          <div class="t-result">↓ 11% Freight Cost Reduction in 60 Days</div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="t-stars">★★★★★</div>
+          <blockquote class="t-quote">"The ROI calculator they showed us in the sales process was spot on — we actually beat the savings projection. More importantly, our ops team stopped spending half their day on check calls. That time is now being used on actual strategy."</blockquote>
+          <div class="t-attribution">
+            <div class="t-name">VP of Supply Chain</div>
+            <div class="t-company">Mid-Market Manufacturer · 180 loads/month</div>
+          </div>
+          <div class="t-result">↓ 47% Reduction in Manual Check Calls</div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-3">
+          <div class="t-stars">★★★★★</div>
+          <blockquote class="t-quote">"Food &amp; beverage is unforgiving on compliance and timing. Watchmen built a carrier program around our temperature and documentation requirements that actually works at scale. Genuinely the best brokerage relationship we've had in 12 years."</blockquote>
+          <div class="t-attribution">
+            <div class="t-name">Supply Chain Manager</div>
+            <div class="t-company">National F&amp;B Distributor · Temperature-controlled freight</div>
+          </div>
+          <div class="t-result">✓ 98.4% On-Time Delivery Rate</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MID-PAGE CTA BUTTONS
+  ============================================================ -->
+  <div style="padding: 2rem 0 3rem; background: var(--bg);">
+    <div class="wrap">
+      <div class="cta-btns">
+        <a href="https://api.bludata.ai/widget/booking/PXKRGlG22uxqd8P2fA8n" target="_blank" rel="noopener" class="btn btn-primary">See What's Possible &rarr;</a>
+        <a href="/how-it-works.html" class="btn btn-outline">See How It Works &rarr;</a>
+        <a href="/roi.html" class="btn btn-outline">Quantify Your ROI &rarr;</a>
+      </div>
+    </div>
+  </div>
 
   <!-- ============================================================
        CTA / CONTACT FORM
@@ -2026,7 +2480,7 @@
                 <label for="challenge">Biggest Logistics Challenge</label>
                 <textarea id="challenge" name="challenge" placeholder="Tell us about your biggest pain point..."></textarea>
               </div>
-              <button type="submit" class="form-submit">Request Free Assessment &rarr;</button>
+              <button type="submit" class="form-submit">See What's Possible &rarr;</button>
             </form>
           </div>
           <div class="form-success" id="formSuccess">
@@ -2045,6 +2499,19 @@
   <!-- ============================================================
        FOOTER
   ============================================================ -->
+  <!-- ============================================================
+       TRINITY LOGISTICS PARTNERSHIP
+  ============================================================ -->
+  <section class="section trinity" id="trinity">
+    <div class="wrap">
+      <div class="section-header center reveal">
+        <div class="eyebrow">Our Backbone</div>
+        <h2 class="section-title">Powered by <span class="gradient-text">Trinity Logistics</span></h2>
+        <p class="section-sub">As an authorized agent for Trinity Logistics, we bring 30+ years of freight excellence, a carrier network spanning the continent, and the infrastructure to scale.</p>
+      </div>
+    </div>
+  </section>
+
   <footer class="footer">
     <div class="wrap">
       <div class="footer-inner">
@@ -2088,7 +2555,7 @@
         <p>&copy; 2026 Watchmen Logistics. All rights reserved.</p>
         <div class="footer-badge">
           <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          Authorized Trinity Logistics Agent
+          Always Watching. Always Delivering.
         </div>
       </div>
     </div>
@@ -2111,9 +2578,9 @@
       hamburger.classList.toggle('open');
       mobileMenu.classList.toggle('open');
     });
-    // Close on link click
+    // Close menu on any link click — never preventDefault
     mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
+      link.addEventListener('click', function() {
         hamburger.classList.remove('open');
         mobileMenu.classList.remove('open');
       });
@@ -2189,10 +2656,10 @@
       submitBtn.disabled = true;
 
       const data = {
-        first_name: form.querySelector('[name="firstName"]').value,
-        last_name: form.querySelector('[name="lastName"]').value,
+        firstName: form.querySelector('[name="firstName"]').value,
+        lastName: form.querySelector('[name="lastName"]').value,
         email: form.querySelector('[name="email"]').value,
-        company: form.querySelector('[name="company"]').value,
+        companyName: form.querySelector('[name="company"]').value,
         title: form.querySelector('[name="title"]').value,
         annual_freight_spend: form.querySelector('[name="spend"]').value,
         biggest_challenge: form.querySelector('[name="challenge"]').value,
@@ -2213,5 +2680,12 @@
       formSuccess.classList.add('show');
     });
   </script>
+  <!-- GHL Chat Widget -->
+  <script
+    src="https://widgets.leadconnectorhq.com/loader.js"
+    data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+    data-widget-id="69d1715c26d68bde379efb57">
+  </script>
+
 </body>
 </html>
